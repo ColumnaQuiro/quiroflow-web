@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { BOOKING_URL } from '~/utils/links'
+</script>
+
 <template>
   <section id="precios" class="py-24 text-center">
     <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 px-8">
@@ -9,7 +13,7 @@
         El precio depende del número de sedes y profesionales. Cuéntanos sobre tu clínica y te preparamos una
         propuesta — incluida la migración desde tu sistema actual.
       </p>
-      <a href="#contacto" class="mt-2 inline-flex items-center justify-center rounded-ctl bg-brand px-[26px] py-[13px] text-[15px] font-semibold text-white hover:bg-brand-hover">
+      <a :href="BOOKING_URL" target="_blank" rel="noopener" class="mt-2 inline-flex items-center justify-center rounded-ctl bg-brand px-[26px] py-[13px] text-[15px] font-semibold text-white hover:bg-brand-hover">
         Hablar con nosotros
       </a>
     </div>
