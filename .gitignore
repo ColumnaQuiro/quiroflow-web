@@ -25,3 +25,6 @@ logs
 
 # Local Netlify folder
 .netlify
+
+# pnpm local store (appears if a container mounts this dir as its pnpm store)
+.pnpm-store
