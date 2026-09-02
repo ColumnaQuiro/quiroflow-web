@@ -34,3 +34,7 @@ and italic placeholder text:
 `netlify.toml` runs `npm run generate` (static export) and publishes
 `.output/public`. Point the `quiroflow.com` domain at a new Netlify site
 built from this repo.
+
+## Deployment status
+
+Continuous deployment from `main` is connected — every push to `main` auto-deploys to production.
