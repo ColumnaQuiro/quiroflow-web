@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm run generate"
+  command = "sh -c 'node -v > /tmp/diag.log; pnpm -v >> /tmp/diag.log 2>&1; echo ---INSTALL--- >> /tmp/diag.log; pnpm install >> /tmp/diag.log 2>&1; echo ---GENERATE--- >> /tmp/diag.log; pnpm run generate >> /tmp/diag.log 2>&1; mkdir -p .output/public; cp /tmp/diag.log .output/public/diag.log; echo OK'"
   publish = ".output/public"
 
 [build.environment]
