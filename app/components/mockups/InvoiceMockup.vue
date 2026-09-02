@@ -13,8 +13,13 @@
       <span>Total</span>
       <span>425,00 €</span>
     </div>
-    <span class="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-success-bg px-2.5 py-[5px] text-[11.5px] font-semibold text-success-text">
-      Pago recurrente activo · Stripe
-    </span>
+    <div class="mt-2.5 flex flex-wrap gap-1.5">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-success-bg px-2.5 py-[5px] text-[11.5px] font-semibold text-success-text">
+        Pago recurrente activo · Stripe
+      </span>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-tint px-2.5 py-[5px] text-[11.5px] font-semibold text-brand-text">
+        Factura legal automática
+      </span>
+    </div>
   </div>
 </template>
