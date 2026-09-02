@@ -38,3 +38,5 @@ built from this repo.
 ## Deployment status
 
 Continuous deployment from `main` is connected — every push to `main` auto-deploys to production.
+
+Continuous deployment verified end-to-end: push to `main` -> Netlify build -> live on quiroflow.com.
