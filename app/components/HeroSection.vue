@@ -13,8 +13,8 @@ import { BOOKING_URL } from '~/utils/links'
           Menos tiempo administrando.<br>Más tiempo ajustando.
         </h1>
         <p class="max-w-[480px] text-[17px] leading-[1.55] text-ink-muted">
-          Agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por
-          WhatsApp — todo en una sola plataforma pensada para clínicas quiroprácticas de una o varias sedes.
+          Agenda con seguimiento del flujo de tu consulta, historiales clínicos, facturación, bonos y recordatorios
+          por WhatsApp — todo en una sola plataforma pensada para clínicas quiroprácticas de una o varias sedes.
         </p>
         <div class="mt-1 flex gap-3">
           <a :href="BOOKING_URL" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-ctl bg-brand px-[26px] py-[13px] text-[15px] font-semibold text-white hover:bg-brand-hover">

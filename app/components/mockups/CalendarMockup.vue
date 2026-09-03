@@ -1,15 +1,23 @@
 <script setup lang="ts">
-interface Appt { day: number; label: string; tone: 'brand' | 'success' | 'danger' }
+type ApptType = 'Ajuste' | '1ª visita' | 'Revisión' | 'Cancelada'
+interface Appt { day: number; name: string; type: ApptType }
 const rows: { time: string; appts: (Appt | null)[] }[] = [
-  { time: '09', appts: [{ day: 0, label: 'Ana · Ajuste', tone: 'brand' }, null, { day: 2, label: 'Marco · Revisión', tone: 'success' }] },
-  { time: '10', appts: [null, { day: 1, label: 'Elena · 1ª visita', tone: 'brand' }, null] },
-  { time: '11', appts: [{ day: 0, label: 'Sofía · Cancelada', tone: 'danger' }, null, { day: 2, label: 'Diego · Ajuste', tone: 'success' }] },
-  { time: '12', appts: [{ day: 0, label: 'Lucía · Ajuste', tone: 'brand' }, null, null] },
+  { time: '09', appts: [{ day: 0, name: 'Ana', type: 'Ajuste' }, null, { day: 2, name: 'Marco', type: 'Revisión' }] },
+  { time: '10', appts: [null, { day: 1, name: 'Elena', type: '1ª visita' }, null] },
+  { time: '11', appts: [{ day: 0, name: 'Sofía', type: 'Cancelada' }, null, { day: 2, name: 'Diego', type: 'Ajuste' }] },
+  { time: '12', appts: [{ day: 0, name: 'Lucía', type: 'Ajuste' }, null, null] },
 ]
-const toneClasses: Record<Appt['tone'], string> = {
-  brand: 'bg-brand-tint border-brand text-brand-text',
-  success: 'bg-success-bg border-[#1D8A5B] text-success-text',
-  danger: 'bg-danger-bg border-[#B4230F] text-danger-text',
+const toneClasses: Record<ApptType, string> = {
+  'Ajuste': 'bg-brand-tint border-brand text-brand-text',
+  '1ª visita': 'bg-[#FDF3E7] border-[#B4650A] text-[#8A4E08]',
+  'Revisión': 'bg-success-bg border-[#1D8A5B] text-success-text',
+  'Cancelada': 'bg-danger-bg border-[#B4230F] text-danger-text',
+}
+const dotClasses: Record<ApptType, string> = {
+  'Ajuste': 'bg-brand',
+  '1ª visita': 'bg-[#B4650A]',
+  'Revisión': 'bg-[#1D8A5B]',
+  'Cancelada': 'bg-[#B4230F]',
 }
 </script>
 
@@ -35,12 +43,18 @@ const toneClasses: Record<Appt['tone'], string> = {
           <div
             v-if="row.appts[col - 1]"
             class="rounded-[5px] border-l-[3px] px-1.5 py-1 text-[11px] font-semibold"
-            :class="toneClasses[row.appts[col - 1]!.tone]"
+            :class="toneClasses[row.appts[col - 1]!.type]"
           >
-            {{ row.appts[col - 1]!.label }}
+            {{ row.appts[col - 1]!.name }} · {{ row.appts[col - 1]!.type }}
           </div>
         </div>
       </template>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 border-t border-line-control/60 pt-2.5">
+      <div v-for="type in Object.keys(toneClasses) as ApptType[]" :key="type" class="flex items-center gap-1.5">
+        <span class="h-[7px] w-[7px] rounded-full" :class="dotClasses[type]" />
+        <span class="text-[10px] text-ink-faint">{{ type }}</span>
+      </div>
     </div>
   </div>
 </template>

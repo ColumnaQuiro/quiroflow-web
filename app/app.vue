@@ -18,7 +18,7 @@
     <FeatureSection
       eyebrow="Todo en un mismo sitio"
       title="Una sola plataforma para gestionar tu consulta"
-      description="Los mensajes de tus pacientes te llegan aquí, puedes crear campañas automáticas (recuperar pacientes inactivos, agradecer referidos, pedir reseñas en Google) y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas."
+      description="Los mensajes de tus pacientes te llegan aquí, puedes convertir leads nuevos en pacientes con plantillas de mensajes automáticas (bienvenida, seguimiento, recordatorio de reserva), lanzar campañas de recall y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas."
     >
       <template #visual>
         <div class="rounded-card border border-line bg-white p-[22px]">
@@ -26,6 +26,10 @@
             <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
               <span class="text-[13px] font-semibold text-ink-600">Bandeja de mensajes</span>
               <span class="rounded-full bg-brand px-2 py-[3px] text-[11px] font-semibold text-white">3 nuevos</span>
+            </div>
+            <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
+              <span class="text-[13px] font-semibold text-ink-600">Plantilla: lead nuevo → seguimiento</span>
+              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">Activa</span>
             </div>
             <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
               <span class="text-[13px] font-semibold text-ink-600">Campaña: recall pacientes inactivos</span>
@@ -43,21 +47,24 @@
     <FeatureSection
       reverse
       eyebrow="Agenda"
-      title="Asignación automática de sala o camilla"
-      description="QuiroFlow asigna cada cita a una sala o camilla libre automáticamente, para que nunca tengas que comprobar a mano si hay un hueco. Vista por día, semana laboral o semana completa, con seguimiento de flujo por consulta (llegó, en sesión, en caja) — y soporte para varias sedes desde la misma cuenta si tu clínica tiene más de una ubicación."
+      title="Sabe siempre dónde está cada paciente"
+      description="QuiroFlow gestiona el flujo de tu consulta de principio a fin: sabes en todo momento quién ha llegado, quién está en sesión y quién está en caja, con asignación automática de sala o camilla de fondo para que nunca tengas que comprobarlo a mano. Vista por día, semana laboral o semana completa — y soporte para varias sedes desde la misma cuenta si tu clínica tiene más de una ubicación."
     >
       <template #visual>
         <div class="rounded-card border border-line bg-white p-[22px]">
-          <p class="mb-3 text-xs font-semibold text-ink-faint">SALAS</p>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="rounded-ctl border border-line-control/60 p-2.5">
-              <p class="mb-2 text-[11px] font-semibold text-ink-faint">Sala 1</p>
-              <div class="mb-1.5 rounded-[5px] border-l-[3px] border-brand bg-brand-tint px-2 py-1.5 text-[11.5px] font-semibold text-brand-text">09:00 Ana</div>
-              <div class="rounded-[5px] border-l-[3px] border-brand bg-brand-tint px-2 py-1.5 text-[11.5px] font-semibold text-brand-text">10:30 Diego</div>
+          <p class="mb-3 text-xs font-semibold text-ink-faint">FLUJO DE CONSULTA</p>
+          <div class="flex flex-col gap-1.5">
+            <div class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
+              <span class="text-[12.5px] font-semibold text-ink-600">09:00 Ana · Sala 1</span>
+              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">En sesión</span>
             </div>
-            <div class="rounded-ctl border border-line-control/60 p-2.5">
-              <p class="mb-2 text-[11px] font-semibold text-ink-faint">Sala 2</p>
-              <div class="rounded-[5px] border-l-[3px] border-[#1D8A5B] bg-success-bg px-2 py-1.5 text-[11.5px] font-semibold text-success-text">09:15 Elena</div>
+            <div class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
+              <span class="text-[12.5px] font-semibold text-ink-600">09:15 Elena · Sala 2</span>
+              <span class="rounded-full bg-brand-tint px-2 py-[3px] text-[11px] font-semibold text-brand-text">Ha llegado</span>
+            </div>
+            <div class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
+              <span class="text-[12.5px] font-semibold text-ink-600">10:30 Diego · Sala 1</span>
+              <span class="rounded-full bg-surface-page px-2 py-[3px] text-[11px] font-semibold text-ink-faint">En caja</span>
             </div>
           </div>
         </div>
@@ -66,8 +73,8 @@
 
     <FeatureSection
       eyebrow="WhatsApp integrado"
-      title="Recordatorios y recalls por el canal que tus pacientes ya usan"
-      description="Activa confirmaciones de cita por WhatsApp si las necesitas, junto con recordatorios automáticos y recalls para pacientes inactivos. Además, tus pacientes pueden elegir cuántos recordatorios quieren recibir — sin depender de que abran un email."
+      title="Todo tu WhatsApp, dentro de QuiroFlow"
+      description="Recordatorios automáticos con botones para confirmar o cambiar la cita en un toque, recalls para pacientes inactivos, y los mensajes que te escriben tus pacientes llegan directamente a tu bandeja en QuiroFlow — sin cambiar de app ni depender de que abran un email."
     >
       <template #visual>
         <MockupsWhatsappMockup />
@@ -135,7 +142,7 @@
       reverse
       eyebrow="Informes"
       title="Tu clínica, en números claros"
-      description="Ocupación, ingresos, PVA (precio medio por visita), retención, conversión, número de primeras visitas y estadísticas por profesional, actualizados en tiempo real — sin exportar nada a una hoja de cálculo. Todo lo que necesitas para tomar decisiones y crecer mejor."
+      description="Ocupación, ingresos, PVA (precio medio por visita), retención, conversión, número de primeras visitas y estadísticas por profesional, al minuto y comparadas con el periodo anterior — no solo cuántas visitas tienes, sino cómo evoluciona tu negocio día a día. Sin exportar nada a una hoja de cálculo."
     >
       <template #visual>
         <MockupsReportsMockup />
