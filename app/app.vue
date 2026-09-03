@@ -118,6 +118,8 @@
 
     <TestimonialSection />
 
+    <ComparisonSection />
+
     <PricingSection />
 
     <FinalCta />

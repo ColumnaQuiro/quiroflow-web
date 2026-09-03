@@ -12,6 +12,7 @@ import { BOOKING_URL } from '~/utils/links'
       <nav class="hidden items-center gap-8 md:flex">
         <a href="#funcionalidades" class="text-sm font-medium text-ink-600 hover:text-ink-900">Funcionalidades</a>
         <a href="#precios" class="text-sm font-medium text-ink-600 hover:text-ink-900">Precios</a>
+        <a href="#comparativa" class="text-sm font-medium text-ink-600 hover:text-ink-900">Comparativa</a>
         <a href="#practicehub" class="text-sm font-medium text-ink-600 hover:text-ink-900">Cambiar desde PracticeHub</a>
         <a href="#contacto" class="text-sm font-medium text-ink-600 hover:text-ink-900">Contacto</a>
       </nav>
