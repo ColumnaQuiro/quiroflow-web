@@ -18,7 +18,7 @@
     <FeatureSection
       eyebrow="Todo en un mismo sitio"
       title="Una sola plataforma para gestionar tu consulta"
-      description="Los mensajes de tus pacientes te llegan aquí, puedes crear campañas para recuperar pacientes inactivos y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas."
+      description="Los mensajes de tus pacientes te llegan aquí, puedes crear campañas automáticas (recuperar pacientes inactivos, agradecer referidos, pedir reseñas en Google) y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas."
     >
       <template #visual>
         <div class="rounded-card border border-line bg-white p-[22px]">
@@ -44,7 +44,7 @@
       reverse
       eyebrow="Agenda"
       title="Asignación automática de sala o camilla"
-      description="QuiroFlow asigna cada cita a una sala o camilla libre automáticamente, para que nunca tengas que comprobar a mano si hay un hueco. Vista por día, semana laboral o semana completa, con seguimiento de flujo por consulta (llegó, en sesión, en caja)."
+      description="QuiroFlow asigna cada cita a una sala o camilla libre automáticamente, para que nunca tengas que comprobar a mano si hay un hueco. Vista por día, semana laboral o semana completa, con seguimiento de flujo por consulta (llegó, en sesión, en caja) — y soporte para varias sedes desde la misma cuenta si tu clínica tiene más de una ubicación."
     >
       <template #visual>
         <div class="rounded-card border border-line bg-white p-[22px]">
@@ -86,6 +86,32 @@
     </FeatureSection>
 
     <FeatureSection
+      eyebrow="Lista de espera y continuidad"
+      title="Ningún hueco vacío ni paciente perdido a medio tratamiento"
+      description="Cuando se cancela una cita, QuiroFlow ofrece automáticamente ese hueco al primer paciente en lista de espera, con un enlace para reservarlo al momento. Y si un paciente con un plan de tratamiento activo se retrasa respecto a su propia cadencia, te avisa antes de que deje de venir."
+    >
+      <template #visual>
+        <div class="rounded-card border border-line bg-white p-[22px]">
+          <p class="mb-3 text-xs font-semibold text-ink-faint">CITA CANCELADA → REOFRECIDA</p>
+          <div class="mb-3 flex items-center justify-between rounded-ctl border border-line-control/60 p-2.5">
+            <span class="text-[12.5px] text-ink-faint line-through">Jue 10:00 · Sala 2</span>
+            <span class="rounded-full bg-danger-bg px-2 py-[3px] text-[11px] font-semibold text-danger-text">Cancelada</span>
+          </div>
+          <div class="mb-4 flex items-center justify-between rounded-[5px] border-l-[3px] border-brand bg-brand-tint px-3 py-2">
+            <span class="text-[12.5px] font-semibold text-brand-text">Ofrecida a María G.</span>
+            <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">Reservada</span>
+          </div>
+          <p class="mb-2 text-xs font-semibold text-ink-faint">PLAN DE TRATAMIENTO RETRASADO</p>
+          <div class="flex items-center justify-between rounded-ctl border border-line-control/60 p-2.5">
+            <span class="text-[12.5px] text-ink-600">Carlos R. · cada 1 semana</span>
+            <span class="rounded-full bg-danger-bg px-2 py-[3px] text-[11px] font-semibold text-danger-text">12 días de retraso</span>
+          </div>
+        </div>
+      </template>
+    </FeatureSection>
+
+    <FeatureSection
+      reverse
       eyebrow="Facturación y bonos"
       title="Bonos y membresías con cobro automático"
       description="Facturas al momento, bonos de sesiones y membresías con cobro recurrente automatizado vía Stripe. Si quieres, activa la facturación legal y automática para tus membresías — sin perseguir pagos manualmente cada mes."
@@ -96,7 +122,6 @@
     </FeatureSection>
 
     <FeatureSection
-      reverse
       eyebrow="Docs"
       title="Formularios sin papel"
       description="Crea tus propios formularios de intake y consentimiento con un generador simple de arrastrar y soltar. El paciente los rellena antes de la cita, desde el móvil."
@@ -107,6 +132,7 @@
     </FeatureSection>
 
     <FeatureSection
+      reverse
       eyebrow="Informes"
       title="Tu clínica, en números claros"
       description="Ocupación, ingresos, PVA (precio medio por visita), retención, conversión, número de primeras visitas y estadísticas por profesional, actualizados en tiempo real — sin exportar nada a una hoja de cálculo. Todo lo que necesitas para tomar decisiones y crecer mejor."

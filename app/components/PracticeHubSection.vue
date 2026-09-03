@@ -36,6 +36,13 @@ const items = ['Pacientes', 'Citas', 'Pagos', 'Notas clínicas', 'Planes de trat
             </svg>
             <span>Puedes volver a ejecutar la importación cuando quieras: lo ya migrado nunca se duplica.</span>
           </li>
+          <li class="flex items-start gap-2.5 text-[14.5px] text-ink-600">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mt-px shrink-0">
+              <circle cx="9" cy="9" r="9" fill="#EEF0FE" />
+              <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+            <span>¿Vienes de otro sistema (Cliniko, MyClinic, un Excel...)? Importa tus pacientes por CSV mapeando tus propias columnas, sin depender de un formato fijo.</span>
+          </li>
         </ul>
       </div>
 

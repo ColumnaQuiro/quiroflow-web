@@ -25,6 +25,10 @@ const rows: Row[] = [
   { feature: 'Formularios digitales de intake y consentimiento', quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
   { feature: 'Facturas legales automáticas para bonos y membresías', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: true },
   { feature: 'Estadísticas de retención, conversión y valor por visita', quiroflow: true, practicehub: false, praxxos: true, doctoralia: true, quirocitas: false },
+  { feature: 'Lista de espera: reoferta automática de huecos cancelados', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
+  { feature: 'Alerta cuando un paciente se retrasa en su plan de tratamiento', quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
+  { feature: 'Campaña automática de agradecimiento a pacientes que refieren', quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
+  { feature: 'Solicitud automática de reseña de Google tras la visita', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
 ]
 </script>
 
