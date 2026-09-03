@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { BOOKING_URL } from '~/utils/links'
+
+const { locale, setLocale } = useLocale()
+const t = useT()
 </script>
 
 <template>
@@ -10,20 +13,42 @@ import { BOOKING_URL } from '~/utils/links'
         <span class="text-[17px] font-bold tracking-tightTitle text-ink-900">QuiroFlow</span>
       </div>
       <nav class="hidden items-center gap-8 md:flex">
-        <a href="#funcionalidades" class="text-sm font-medium text-ink-600 hover:text-ink-900">Funcionalidades</a>
-        <a href="#precios" class="text-sm font-medium text-ink-600 hover:text-ink-900">Precios</a>
-        <a href="#comparativa" class="text-sm font-medium text-ink-600 hover:text-ink-900">Comparativa</a>
-        <a href="#practicehub" class="text-sm font-medium text-ink-600 hover:text-ink-900">Cambiar desde PracticeHub</a>
-        <a href="#contacto" class="text-sm font-medium text-ink-600 hover:text-ink-900">Contacto</a>
+        <a href="#funcionalidades" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
+        <a href="#precios" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
+        <a href="#comparativa" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
+        <a href="#practicehub" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
+        <a href="#contacto" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.contact') }}</a>
       </nav>
-      <a
-        :href="BOOKING_URL"
-        target="_blank"
-        rel="noopener"
-        class="inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover"
-      >
-        Reservar demo
-      </a>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center rounded-full border border-line-control bg-surface-page p-0.5 text-[12.5px] font-semibold">
+          <button
+            type="button"
+            class="rounded-full px-2.5 py-1 transition-colors"
+            :class="locale === 'es' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
+            :aria-pressed="locale === 'es'"
+            @click="setLocale('es')"
+          >
+            ES
+          </button>
+          <button
+            type="button"
+            class="rounded-full px-2.5 py-1 transition-colors"
+            :class="locale === 'en' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
+            :aria-pressed="locale === 'en'"
+            @click="setLocale('en')"
+          >
+            EN
+          </button>
+        </div>
+        <a
+          :href="BOOKING_URL"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover"
+        >
+          {{ t('nav.bookDemo') }}
+        </a>
+      </div>
     </div>
   </header>
 </template>

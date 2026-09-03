@@ -1,8 +1,7 @@
 <script setup lang="ts">
 type Cell = boolean
 
-interface Row {
-  feature: string
+interface RowFlags {
   quiroflow: Cell
   practicehub: Cell
   praxxos: Cell
@@ -17,19 +16,22 @@ const competitors = [
   { key: 'quirocitas', name: 'Quirocitas' },
 ] as const
 
-const rows: Row[] = [
-  { feature: 'Asigna sala o camilla libre en automático', quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { feature: 'Recordatorios y confirmación de cita por WhatsApp', quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { feature: 'El paciente elige cuántos recordatorios recibir', quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { feature: 'Página de reserva online en tu propio subdominio', quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { feature: 'Formularios digitales de intake y consentimiento', quiroflow: true, practicehub: true, praxxos: false, doctoralia: false, quirocitas: false },
-  { feature: 'Facturas legales automáticas para bonos y membresías', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: true },
-  { feature: 'Estadísticas de retención, conversión y valor por visita', quiroflow: true, practicehub: true, praxxos: true, doctoralia: true, quirocitas: false },
-  { feature: 'Lista de espera: reoferta automática de huecos cancelados', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
-  { feature: 'Alerta cuando un paciente se retrasa en su plan de tratamiento', quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { feature: 'Campaña automática de agradecimiento a pacientes que refieren', quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { feature: 'Solicitud automática de reseña de Google tras la visita', quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
+const rowFlags: RowFlags[] = [
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: true, praxxos: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: true },
+  { quiroflow: true, practicehub: true, praxxos: true, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
 ]
+
+const t = useT()
+const rows = computed(() => (t('comparison.rows') as string[]).map((feature, i) => ({ feature, ...rowFlags[i] })))
 </script>
 
 <template>
@@ -37,11 +39,11 @@ const rows: Row[] = [
     <div class="mx-auto max-w-[1120px] px-8">
       <div class="mx-auto mb-10 flex max-w-[640px] flex-col items-center gap-4 text-center">
         <span class="w-fit rounded-full border border-brand-tintBorder bg-brand-tint px-3 py-[5px] text-[13px] font-semibold text-brand-text">
-          Comparativa
+          {{ t('comparison.badge') }}
         </span>
-        <h2 class="text-[30px] tracking-tightTitle text-ink-900">Cómo se compara QuiroFlow</h2>
+        <h2 class="text-[30px] tracking-tightTitle text-ink-900">{{ t('comparison.title') }}</h2>
         <p class="text-[15.5px] leading-[1.6] text-ink-muted">
-          Sin exagerar: esto es lo que cada plataforma muestra públicamente en su propia web.
+          {{ t('comparison.subtitle') }}
         </p>
       </div>
 
@@ -50,7 +52,7 @@ const rows: Row[] = [
           <thead>
             <tr class="border-b border-line">
               <th class="sticky left-0 w-[280px] bg-white px-5 py-4 text-[13px] font-semibold text-ink-faint">
-                Funcionalidad
+                {{ t('comparison.featureHeader') }}
               </th>
               <th class="bg-brand-tint px-4 py-4 text-center text-[13.5px] font-bold text-brand-text">
                 QuiroFlow
@@ -85,9 +87,7 @@ const rows: Row[] = [
       </div>
 
       <p class="mt-4 text-[12.5px] leading-[1.6] text-ink-faint">
-        Comparativa elaborada a partir de la información publicada en las webs oficiales de cada proveedor
-        (septiembre de 2026). Un "—" indica que el proveedor no lo muestra públicamente, no que no exista —
-        confirma directamente con cada uno antes de decidir.
+        {{ t('comparison.footnote') }}
       </p>
     </div>
   </section>
