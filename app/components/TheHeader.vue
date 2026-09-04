@@ -15,10 +15,10 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
 <template>
   <header class="sticky top-0 z-20 border-b border-line bg-white/90 backdrop-blur">
     <div class="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-8">
-      <div class="flex items-center gap-2.5">
+      <NuxtLink :to="localePath('index')" class="flex items-center gap-2.5">
         <LogoMark :size="26" />
         <span class="text-[17px] font-bold tracking-tightTitle text-ink-900">QuiroFlow</span>
-      </div>
+      </NuxtLink>
       <nav class="hidden items-center gap-8 md:flex">
         <a :href="homeAnchor('funcionalidades')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
         <a :href="homeAnchor('precios')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
