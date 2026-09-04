@@ -325,7 +325,16 @@ const c = computed(() => content[locale.value])
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
   title: `${c.value.title} | QuiroFlow`,
-  meta: [{ name: 'description', content: c.value.seoDescription }],
+  meta: [
+    { name: 'description', content: c.value.seoDescription },
+    { property: 'og:title', content: `${c.value.title} | QuiroFlow` },
+    { property: 'og:description', content: c.value.seoDescription },
+    { property: 'og:url', content: 'https://quiroflow.com/politica-de-privacidad' },
+    // Same reasoning as aviso-legal.vue -- legal boilerplate adds no search
+    // value and would only compete with the homepage for the same queries.
+    { name: 'robots', content: 'noindex, follow' },
+  ],
+  link: [{ rel: 'canonical', href: 'https://quiroflow.com/politica-de-privacidad' }],
 }))
 </script>
 

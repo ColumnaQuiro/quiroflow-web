@@ -2,17 +2,61 @@
 const t = useT()
 const { locale } = useLocale()
 
+const title = computed(() => locale.value === 'en'
+  ? 'QuiroFlow — Practice management software for chiropractic clinics'
+  : 'QuiroFlow — Software de gestión para clínicas quiroprácticas')
+const description = computed(() => locale.value === 'en'
+  ? 'A calendar with automatic room assignment, billing, and WhatsApp reminders, all in one platform for your clinic. Migrate from PracticeHub in a weekend.'
+  : 'Agenda con asignación automática de salas, facturación y recordatorios por WhatsApp, todo en una plataforma para tu clínica. Migra desde PracticeHub en un fin de semana.')
+
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
-  title: locale.value === 'en'
-    ? 'QuiroFlow — Practice management software for chiropractic clinics'
-    : 'QuiroFlow — Software de gestión para clínicas quiroprácticas',
+  title: title.value,
   meta: [
+    { name: 'description', content: description.value },
+    { property: 'og:title', content: title.value },
+    { property: 'og:description', content: description.value },
+    { property: 'og:url', content: 'https://quiroflow.com/' },
+    { name: 'twitter:title', content: title.value },
+    { name: 'twitter:description', content: description.value },
+  ],
+  link: [{ rel: 'canonical', href: 'https://quiroflow.com/' }],
+  // SoftwareApplication + Organization JSON-LD -- the two schema types that
+  // actually match what this page is (a SaaS product's marketing site),
+  // rather than reaching for FAQPage/BreadcrumbList schema the site has no
+  // real content to back honestly.
+  script: [
     {
-      name: 'description',
-      content: locale.value === 'en'
-        ? 'A calendar with automatic room assignment, clinical records, billing, packages, and WhatsApp reminders — all in one platform. Migrate from PracticeHub in a weekend.'
-        : 'Agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp — todo en una sola plataforma. Migra desde PracticeHub en un fin de semana.',
+      // Without a stable key, useHead treats each locale switch's
+      // recomputed innerHTML as a brand new tag and appends it rather than
+      // replacing the previous one -- caught by inspecting the rendered
+      // head after toggling locale, which showed two duplicate <script>
+      // blocks (one per language) instead of one.
+      key: 'ld-json-software-application',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': 'https://quiroflow.com/#organization',
+            name: 'QuiroFlow',
+            url: 'https://quiroflow.com/',
+            logo: 'https://quiroflow.com/icon-512.png',
+          },
+          {
+            '@type': 'SoftwareApplication',
+            name: 'QuiroFlow',
+            url: 'https://quiroflow.com/',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            description: locale.value === 'en'
+              ? 'Practice management software for chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.'
+              : 'Software de gestión para clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
+            publisher: { '@id': 'https://quiroflow.com/#organization' },
+          },
+        ],
+      }),
     },
   ],
 }))

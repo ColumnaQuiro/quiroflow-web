@@ -241,7 +241,17 @@ const c = computed(() => content[locale.value])
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
   title: `${c.value.title} | QuiroFlow`,
-  meta: [{ name: 'description', content: c.value.seoDescription }],
+  meta: [
+    { name: 'description', content: c.value.seoDescription },
+    { property: 'og:title', content: `${c.value.title} | QuiroFlow` },
+    { property: 'og:description', content: c.value.seoDescription },
+    { property: 'og:url', content: 'https://quiroflow.com/aviso-legal' },
+    // Legal boilerplate has no value ranking in search results and would
+    // only ever compete with the homepage for the same queries -- excluded
+    // from the index rather than left to rank on thin/duplicate-feeling content.
+    { name: 'robots', content: 'noindex, follow' },
+  ],
+  link: [{ rel: 'canonical', href: 'https://quiroflow.com/aviso-legal' }],
 }))
 </script>
 
