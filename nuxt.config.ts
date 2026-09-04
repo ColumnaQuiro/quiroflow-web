@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'es', language: 'es-ES', name: 'Español' },
       { code: 'en', language: 'en-US', name: 'English' },
+      { code: 'fr', language: 'fr-FR', name: 'Français' },
     ],
     defaultLocale: 'es',
     strategy: 'prefix_except_default',
@@ -50,7 +51,14 @@ export default defineNuxtConfig({
   // the generated sitemap too, in both locales -- a URL that's both listed
   // and noindexed is a common inconsistency flagged by SEO audits.
   sitemap: {
-    exclude: ['/aviso-legal', '/politica-de-privacidad', '/en/legal-notice', '/en/privacy-policy'],
+    exclude: [
+      '/aviso-legal',
+      '/politica-de-privacidad',
+      '/en/legal-notice',
+      '/en/privacy-policy',
+      '/fr/mentions-legales',
+      '/fr/politique-de-confidentialite',
+    ],
   },
   app: {
     head: {

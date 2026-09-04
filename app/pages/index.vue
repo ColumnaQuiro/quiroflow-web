@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Locale } from '~/composables/useLocale'
+
 const t = useT()
 const { tm } = useI18n()
 const { locale } = useLocale()
@@ -11,12 +13,23 @@ const route = useRoute()
 const i18nHead = useLocaleHead({ seo: true })
 const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
 
-const title = computed(() => locale.value === 'en'
-  ? 'QuiroFlow — Practice management software for chiropractic clinics'
-  : 'QuiroFlow — Software de gestión para clínicas quiroprácticas')
-const description = computed(() => locale.value === 'en'
-  ? 'A calendar with automatic room assignment, billing, and WhatsApp reminders, all in one platform for your clinic. Migrate from PracticeHub in a weekend.'
-  : 'Agenda con asignación automática de salas, facturación y recordatorios por WhatsApp, todo en una plataforma para tu clínica. Migra desde PracticeHub en un fin de semana.')
+const titles: Record<Locale, string> = {
+  es: 'QuiroFlow — Software de gestión para clínicas quiroprácticas',
+  en: 'QuiroFlow — Practice management software for chiropractic clinics',
+  fr: 'QuiroFlow — Logiciel de gestion pour cabinets de chiropraxie',
+}
+const descriptions: Record<Locale, string> = {
+  es: 'Agenda con asignación automática de salas, facturación y recordatorios por WhatsApp, todo en una plataforma para tu clínica. Migra desde PracticeHub en un fin de semana.',
+  en: 'A calendar with automatic room assignment, billing, and WhatsApp reminders, all in one platform for your clinic. Migrate from PracticeHub in a weekend.',
+  fr: "Un agenda avec attribution automatique des salles, facturation et rappels WhatsApp, le tout sur une seule plateforme pour votre cabinet. Migrez depuis PracticeHub en un week-end.",
+}
+const jsonLdDescriptions: Record<Locale, string> = {
+  es: 'Software de gestión para clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
+  en: 'Practice management software for chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
+  fr: "Logiciel de gestion pour cabinets de chiropraxie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
+}
+const title = computed(() => titles[locale.value])
+const description = computed(() => descriptions[locale.value])
 
 useHead(() => ({
   htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
@@ -60,9 +73,7 @@ useHead(() => ({
             url: pageUrl.value,
             applicationCategory: 'BusinessApplication',
             operatingSystem: 'Web',
-            description: locale.value === 'en'
-              ? 'Practice management software for chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.'
-              : 'Software de gestión para clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
+            description: jsonLdDescriptions[locale.value],
             publisher: { '@id': 'https://quiroflow.com/#organization' },
           },
         ],

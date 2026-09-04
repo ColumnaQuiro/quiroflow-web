@@ -2,7 +2,7 @@
 // English lives at /en/privacy-policy rather than /en/politica-de-privacidad
 // -- same reasoning as aviso-legal.vue, and matches columnaquiro.com's own
 // /en/privacy-policy route for the equivalent page.
-definePageMeta({ i18n: { paths: { en: '/privacy-policy' } } })
+definePageMeta({ i18n: { paths: { en: '/privacy-policy', fr: '/politique-de-confidentialite' } } })
 
 const { locale } = useLocale()
 const route = useRoute()
@@ -17,7 +17,7 @@ interface Section {
 // identity block is the same; only the brand framing and contact email
 // change for QuiroFlow, plus a note about clinic/patient data specific to
 // software that stores health-adjacent records on behalf of clinics.
-const content: Record<'es' | 'en', { title: string; intro: string; sections: Section[]; seoDescription: string }> = {
+const content: Record<'es' | 'en' | 'fr', { title: string; intro: string; sections: Section[]; seoDescription: string }> = {
   es: {
     title: 'Política de Privacidad',
     intro:
@@ -323,6 +323,159 @@ const content: Record<'es' | 'en', { title: string; intro: string; sections: Sec
       },
     ],
     seoDescription: 'Privacy policy for QuiroFlow, practice management software for chiropractic clinics.',
+  },
+  fr: {
+    title: 'Politique de confidentialité',
+    intro:
+      "Conformément aux dispositions du Règlement Général sur la Protection des Données 2016/679 (RGPD) et de la Loi organique 3/2018 relative à la protection des données et à la garantie des droits numériques (LOPDGDD) du 5 décembre 2018, nous vous informons :",
+    sections: [
+      {
+        heading: '1. RESPONSABLE DU TRAITEMENT',
+        parts: [
+          {
+            type: 'list',
+            items: [
+              'Identité : COLUMNAQUIRO S.L., NIF B16365504, titulaire de QuiroFlow, ci-après « le Titulaire »',
+              'Adresse : Calle dels vivons, 29 - 0 iz, 46006, Valence',
+              'Téléphone : 744735363',
+              'E-mail de contact : hola@quiroflow.com',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '2. FINALITÉ DU TRAITEMENT DES DONNÉES',
+        parts: [
+          { type: 'p', text: 'Nous vous informons que les données que vous nous fournissez via ce site web seront traitées dans le but de :' },
+          {
+            type: 'list',
+            items: [
+              'Gérer les services fournis par le biais de ce Portail Internet.',
+              'Vous tenir informé des activités, fonctionnalités et nouveautés de QuiroFlow.',
+              "Développement, exécution et suivi du contrat d'abonnement au logiciel, ainsi que des demandes liées au service sollicité via le site web.",
+              'Service client.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'De même, conformément au RGPD, un registre des activités de traitement est tenu, précisant, selon leurs finalités, les activités de traitement réalisées ainsi que les autres circonstances établies par le RGPD.',
+          },
+          {
+            type: 'p',
+            text: 'Les informations personnelles ne pourront être utilisées à des fins autres que celles liées aux services contractés. Aucune décision automatisée ne sera prise sur la base de ce profil.',
+          },
+          {
+            type: 'p',
+            text: "Cette politique couvre les données recueillies via ce site web (formulaires de contact, réservation de démo, navigation). Le traitement des données des patients que les cabinets clients saisissent au sein de l'application QuiroFlow est régi par le contrat de sous-traitance signé avec chaque cabinet, en sa qualité de responsable de ces données.",
+          },
+        ],
+      },
+      {
+        heading: '3. BASE LÉGALE DU TRAITEMENT',
+        parts: [
+          { type: 'p', text: 'La base légale du traitement de vos données repose sur :' },
+          {
+            type: 'list',
+            items: [
+              'Le consentement donné par l\'Utilisateur par l\'acceptation de la présente Politique et de la case correspondante.',
+              "L'intérêt légitime à répondre aux demandes ou questions posées par les différents moyens de contact.",
+              "L'Utilisateur a fourni ses données personnelles dans le cadre d'une relation contractuelle ou précontractuelle pour le traitement de sa demande et/ou question, et leur traitement est donc nécessaire au maintien de cette relation.",
+              'Les obligations légales applicables au Titulaire, qui exigent le traitement des données personnelles conformément aux services fournis ou à des questions fiscales.',
+            ],
+          },
+          {
+            type: 'p',
+            text: "L'Utilisateur pourra, à tout moment, révoquer son consentement au traitement de ses données personnelles. En aucun cas le retrait de ce consentement ne conditionne la fourniture du service et/ou l'exécution des contrats avec le Titulaire.",
+          },
+        ],
+      },
+      {
+        heading: '4. DONNÉES PERSONNELLES TRAITÉES ET LEUR ORIGINE',
+        parts: [
+          {
+            type: 'p',
+            text: "Les données personnelles que nous traitons via ce site web sont de nature identificative et ont été fournies par l'Utilisateur lui-même en remplissant le formulaire de contact, en réservant une démo, en envoyant des e-mails ou en utilisant les fonctionnalités proposées sur le site web.",
+          },
+          {
+            type: 'p',
+            text: "L'utilisation des rubriques de contact, le remplissage de formulaires et/ou les fonctionnalités proposées sur le Portail sont facultatifs. Toutefois, le remplissage de certains champs du formulaire ou leur fourniture par le biais d'autres fonctionnalités est nécessaire pour traiter et gérer correctement votre demande ; le refus de l'Utilisateur de fournir les informations requises empêchera donc le Titulaire de la traiter et de la gérer correctement.",
+          },
+          {
+            type: 'p',
+            text: "L'Utilisateur garantit que les données qu'il nous fournit sont véridiques, exactes et complètes. Les données seront annulées, supprimées ou bloquées lorsqu'elles s'avèrent inexactes, incomplètes ou ne sont plus nécessaires ou pertinentes à leur finalité conformément à la législation en vigueur.",
+          },
+        ],
+      },
+      {
+        heading: '5. PROTECTION DES DONNÉES DES MINEURS',
+        parts: [
+          {
+            type: 'p',
+            text: "Conformément au RGPD et à la LOPDGDD, seules les personnes de plus de 14 ans peuvent donner valablement leur consentement au traitement de leurs données personnelles. Seules les personnes de plus de 14 ans peuvent fournir des données personnelles sur ce site web. Pour les mineurs de moins de 14 ans, le consentement de leurs parents ou tuteurs est obligatoire pour pouvoir traiter leurs données personnelles.",
+          },
+        ],
+      },
+      {
+        heading: '6. DURÉE DE CONSERVATION DES DONNÉES PERSONNELLES',
+        parts: [
+          {
+            type: 'p',
+            text: "Les données personnelles fournies par l'Utilisateur seront conservées tant que la relation avec QuiroFlow est maintenue, tant que l'Utilisateur n'en demande pas la suppression, ou pendant le délai légalement établi. Elles pourront également être conservées lorsque cela est nécessaire pour se conformer à une obligation légale ou pour la formulation, l'exercice ou la défense de réclamations.",
+          },
+          {
+            type: 'p',
+            text: "Si l'Utilisateur retire son consentement ou exerce ses droits d'opposition ou de suppression, ses données seront conservées bloquées à la disposition de l'Administration de la Justice pendant les délais légalement établis pour répondre aux éventuelles responsabilités découlant du traitement des données personnelles.",
+          },
+        ],
+      },
+      {
+        heading: '7. SECRET ET SÉCURITÉ DES DONNÉES PERSONNELLES',
+        parts: [
+          {
+            type: 'p',
+            text: "Le Titulaire s'engage à adopter les mesures techniques et organisationnelles nécessaires, selon le niveau de sécurité adapté au risque des données recueillies, de manière à garantir la sécurité des données à caractère personnel et à éviter leur destruction, perte ou altération accidentelle ou illicite, ou leur communication ou accès non autorisé.",
+          },
+          {
+            type: 'p',
+            text: "Les données personnelles seront traitées comme confidentielles par le Titulaire, qui s'engage à informer et à garantir, par le biais d'une obligation légale ou contractuelle, que cette confidentialité soit respectée par ses employés, collaborateurs et toute personne à qui les informations sont rendues accessibles.",
+          },
+        ],
+      },
+      {
+        heading: '8. CESSIONS ET DESTINATAIRES DES DONNÉES PERSONNELLES',
+        parts: [
+          {
+            type: 'p',
+            text: "Vos données personnelles seront communiquées dans les cas légalement prévus, par exemple aux Administrations Publiques pour le respect des obligations directement exigibles du Titulaire, ou lorsque cela est nécessaire pour répondre aux finalités du traitement indiquées ci-dessus ou pour fournir des services strictement nécessaires au développement de l'activité (par exemple, prestataires d'hébergement, envoi de WhatsApp/e-mail ou traitement des paiements).",
+          },
+        ],
+      },
+      {
+        heading: '9. DROITS DES UTILISATEURS',
+        parts: [
+          { type: 'p', text: 'Quels sont vos droits lorsque vous nous fournissez vos données ?' },
+          {
+            type: 'list',
+            items: [
+              'L\'Utilisateur a le droit d\'obtenir la confirmation que nous traitons ou non des données personnelles le concernant.',
+              "L'Utilisateur a le droit d'accéder à ses données personnelles, ainsi que de demander la rectification des données inexactes ou, le cas échéant, d'en demander la suppression lorsque, entre autres motifs, les données ne sont plus nécessaires aux fins pour lesquelles elles ont été recueillies.",
+              "Dans certaines circonstances, l'Utilisateur pourra demander la limitation du traitement de ses données, auquel cas nous ne les conserverons que pour l'exercice ou la défense de réclamations.",
+              "Dans certaines circonstances et pour des raisons liées à sa situation particulière, l'Utilisateur pourra s'opposer au traitement de ses données ; le responsable du traitement cessera alors de traiter les données, sauf motifs légitimes impérieux, ou pour l'exercice ou la défense d'éventuelles réclamations.",
+              "Dans les cas où cela est légalement applicable, l'Utilisateur aura droit à la portabilité des données, ce qui implique le droit de recevoir les données personnelles le concernant que nous traitons et de les stocker sur son propre appareil.",
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Vous pouvez exercer auprès du Titulaire, le cas échéant, les droits d\'accès, de rectification, d\'opposition, de suppression, de limitation du traitement, de portabilité et d\'opposition à faire l\'objet de décisions individuelles automatisées, par communication écrite accompagnée d\'une photocopie de votre pièce d\'identité pour justifier de votre identité, avec la référence « Droits RGPD », adressée à : Calle dels vivons, 29 - 0 iz, 46006, Valence, ou à l\'adresse e-mail : hola@quiroflow.com.',
+          },
+          {
+            type: 'p',
+            text: "Nous vous informons également que vous pouvez adresser toute réclamation en matière de protection des données personnelles à l'Agence espagnole de protection des données (www.aepd.es), autorité de contrôle espagnole.",
+          },
+        ],
+      },
+    ],
+    seoDescription: 'Politique de confidentialité de QuiroFlow, logiciel de gestion pour cabinets de chiropraxie.',
   },
 }
 

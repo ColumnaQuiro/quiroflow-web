@@ -1,4 +1,4 @@
-export type Locale = 'es' | 'en'
+export type Locale = 'es' | 'en' | 'fr'
 
 // Thin wrapper over useI18n() so every existing call site (const { locale,
 // setLocale } = useLocale()) keeps working unchanged after the move to
@@ -16,9 +16,5 @@ export function useLocale() {
     return navigateTo(switchLocalePath(l))
   }
 
-  function toggleLocale() {
-    return setLocale(locale.value === 'es' ? 'en' : 'es')
-  }
-
-  return { locale, setLocale, toggleLocale }
+  return { locale, setLocale }
 }

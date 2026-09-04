@@ -47,6 +47,14 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
           >
             EN
           </NuxtLink>
+          <NuxtLink
+            :to="switchLocalePath('fr')"
+            class="rounded-full px-2.5 py-1 transition-colors"
+            :class="locale === 'fr' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
+            :aria-current="locale === 'fr' ? 'true' : undefined"
+          >
+            FR
+          </NuxtLink>
         </div>
         <a
           :href="BOOKING_URL"
