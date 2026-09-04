@@ -19,9 +19,9 @@ export const es = {
 
   practicehub: {
     badge: 'Migración',
-    titleLine1: '¿Vienes de PracticeHub?',
+    titleLine1: '¿Vienes de otro sistema?',
     titleLine2: 'Cambia en un fin de semana.',
-    description: 'Nada de exportar, revisar y volver a subir durante semanas. QuiroFlow trae un importador construido específicamente para clínicas que migran desde PracticeHub.',
+    description: 'Nada de exportar, revisar y volver a subir durante semanas. QuiroFlow trae un importador construido específicamente para clínicas que migran desde su software anterior (por ejemplo, PracticeHub).',
     bullets: [
       'Pacientes y citas se importan desde tu propio export de PracticeHub.',
       'Pagos, notas clínicas, planes de tratamiento y formularios se sincronizan directamente por API — sin tocar un CSV.',

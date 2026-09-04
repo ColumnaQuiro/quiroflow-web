@@ -21,9 +21,9 @@ export const en: Messages = {
 
   practicehub: {
     badge: 'Migration',
-    titleLine1: 'Coming from PracticeHub?',
+    titleLine1: 'Coming from another system?',
     titleLine2: 'Switch over in a weekend.',
-    description: 'No exporting, reviewing, and re-uploading for weeks. QuiroFlow ships an importer built specifically for clinics migrating from PracticeHub.',
+    description: 'No exporting, reviewing, and re-uploading for weeks. QuiroFlow ships an importer built specifically for clinics migrating from their previous software (for example, PracticeHub).',
     bullets: [
       'Patients and appointments are imported straight from your own PracticeHub export.',
       'Payments, clinical notes, treatment plans, and forms sync directly via API — no touching a CSV.',
