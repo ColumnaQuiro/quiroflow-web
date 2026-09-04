@@ -187,10 +187,10 @@ export const es = {
     features: 'Funcionalidades',
     pricing: 'Precios',
     migrate: 'Cambiar desde PracticeHub',
-    contactPlaceholder: '[email de contacto]',
+    contactEmail: 'hola@quiroflow.com',
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
-    privacy: '[Política de privacidad]',
-    terms: '[Términos y condiciones]',
+    privacy: 'Política de privacidad',
+    terms: 'Aviso legal',
   },
 
   mockups: {

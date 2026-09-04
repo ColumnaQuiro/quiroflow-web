@@ -13,11 +13,11 @@ const t = useT()
         <span class="text-[17px] font-bold tracking-tightTitle text-ink-900">QuiroFlow</span>
       </div>
       <nav class="hidden items-center gap-8 md:flex">
-        <a href="#funcionalidades" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
-        <a href="#precios" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
-        <a href="#comparativa" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
-        <a href="#practicehub" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
-        <a href="#contacto" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.contact') }}</a>
+        <a href="/#funcionalidades" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
+        <a href="/#precios" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
+        <a href="/#comparativa" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
+        <a href="/#practicehub" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
+        <a href="/#contacto" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.contact') }}</a>
       </nav>
       <div class="flex items-center gap-3">
         <div class="flex items-center rounded-full border border-line-control bg-surface-page p-0.5 text-[12.5px] font-semibold">
