@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const t = useT()
+// tm(), not t() -- these two keys resolve to arrays of strings, and t()
+// would stringify them instead of returning the raw array to v-for.
+const { tm } = useI18n()
 </script>
 
 <template>
@@ -14,7 +17,7 @@ const t = useT()
           {{ t('practicehub.description') }}
         </p>
         <ul class="mt-2 flex flex-col gap-3">
-          <li v-for="bullet in t('practicehub.bullets')" :key="bullet" class="flex items-start gap-2.5 text-[14.5px] text-ink-600">
+          <li v-for="bullet in tm('practicehub.bullets')" :key="bullet" class="flex items-start gap-2.5 text-[14.5px] text-ink-600">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mt-px shrink-0">
               <circle cx="9" cy="9" r="9" fill="#EEF0FE" />
               <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -38,7 +41,7 @@ const t = useT()
           </div>
         </div>
         <div class="grid grid-cols-2 gap-2.5">
-          <div v-for="item in t('practicehub.items')" :key="item" class="flex items-center gap-2 rounded-[7px] bg-surface-page px-3 py-[9px]">
+          <div v-for="item in tm('practicehub.items')" :key="item" class="flex items-center gap-2 rounded-[7px] bg-surface-page px-3 py-[9px]">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2.5 7.3l2.7 2.7 6-6" stroke="#1D8A5B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
             </svg>

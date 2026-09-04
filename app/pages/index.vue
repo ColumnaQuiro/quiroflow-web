@@ -1,6 +1,15 @@
 <script setup lang="ts">
 const t = useT()
+const { tm } = useI18n()
 const { locale } = useLocale()
+const route = useRoute()
+
+// useLocaleHead supplies htmlAttrs.lang/dir, the hreflang alternate links,
+// the canonical link, and og:locale/og:locale:alternate -- all correctly
+// per-locale from the current route, which a hand-written version of this
+// page's old useHead() could only ever get right for one language at a time.
+const i18nHead = useLocaleHead({ seo: true })
+const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
 
 const title = computed(() => locale.value === 'en'
   ? 'QuiroFlow — Practice management software for chiropractic clinics'
@@ -10,17 +19,18 @@ const description = computed(() => locale.value === 'en'
   : 'Agenda con asignación automática de salas, facturación y recordatorios por WhatsApp, todo en una plataforma para tu clínica. Migra desde PracticeHub en un fin de semana.')
 
 useHead(() => ({
-  htmlAttrs: { lang: locale.value },
+  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
   title: title.value,
+  link: [...(i18nHead.value.link ?? [])],
   meta: [
+    ...(i18nHead.value.meta ?? []),
     { name: 'description', content: description.value },
     { property: 'og:title', content: title.value },
     { property: 'og:description', content: description.value },
-    { property: 'og:url', content: 'https://quiroflow.com/' },
+    { property: 'og:url', content: pageUrl.value },
     { name: 'twitter:title', content: title.value },
     { name: 'twitter:description', content: description.value },
   ],
-  link: [{ rel: 'canonical', href: 'https://quiroflow.com/' }],
   // SoftwareApplication + Organization JSON-LD -- the two schema types that
   // actually match what this page is (a SaaS product's marketing site),
   // rather than reaching for FAQPage/BreadcrumbList schema the site has no
@@ -47,7 +57,7 @@ useHead(() => ({
           {
             '@type': 'SoftwareApplication',
             name: 'QuiroFlow',
-            url: 'https://quiroflow.com/',
+            url: pageUrl.value,
             applicationCategory: 'BusinessApplication',
             operatingSystem: 'Web',
             description: locale.value === 'en'
@@ -116,7 +126,7 @@ useHead(() => ({
         <div class="rounded-card border border-line bg-white p-[22px]">
           <p class="mb-3 text-xs font-semibold text-ink-faint">{{ t('agenda.visual.header') }}</p>
           <div class="flex flex-col gap-1.5">
-            <div v-for="row in t('agenda.visual.rows')" :key="row.label" class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
+            <div v-for="row in tm('agenda.visual.rows')" :key="row.label" class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
               <span class="text-[12.5px] font-semibold text-ink-600">{{ row.label }}</span>
               <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">{{ row.status }}</span>
             </div>

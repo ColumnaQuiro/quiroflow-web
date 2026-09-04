@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -11,7 +13,7 @@ export default defineNuxtConfig({
   // load-bearing for this project. Safe to flip back once sitemap (or
   // Nuxt's own devtools-kit) ships a compatible version.
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/sitemap'],
   css: ['~/assets/css/main.css'],
   // Canonical production origin -- backs the sitemap's <loc> entries and
   // every page's canonical/og:url tag (each page builds its own absolute
@@ -20,11 +22,35 @@ export default defineNuxtConfig({
   site: {
     url: 'https://quiroflow.com',
   },
+  // Real per-locale routes for proper bilingual SEO -- the ES/EN toggle
+  // used to just flip client state at the same URL, which meant Google
+  // could only ever index the Spanish version of every page. Spanish stays
+  // unprefixed (the actual market, and matches every URL already indexed);
+  // English lives under /en/*. detectBrowserLanguage is off on purpose --
+  // auto-redirecting by Accept-Language serves different content at the
+  // same URL depending on who's asking, which is exactly what search
+  // engines flag as cloaking-adjacent. Messages come from the existing
+  // es.ts/en.ts dictionaries via app/i18n/i18n.config.ts. Both a relative
+  // path here and relying on auto-discovery silently resolved to zero
+  // messages (every t()/tm() call logged "not found", which then crashed
+  // rendering wherever a tm() result got iterated) -- an absolute path
+  // sidesteps whatever directory the module was resolving against.
+  i18n: {
+    locales: [
+      { code: 'es', language: 'es-ES', name: 'Español' },
+      { code: 'en', language: 'en-US', name: 'English' },
+    ],
+    defaultLocale: 'es',
+    strategy: 'prefix_except_default',
+    baseUrl: 'https://quiroflow.com',
+    detectBrowserLanguage: false,
+    vueI18n: fileURLToPath(new URL('./app/i18n/i18n.config.ts', import.meta.url)),
+  },
   // Keeps the two noindex'd legal pages (see their own robots meta) out of
-  // the generated sitemap too -- a URL that's both listed and noindexed is
-  // a common inconsistency flagged by SEO audits.
+  // the generated sitemap too, in both locales -- a URL that's both listed
+  // and noindexed is a common inconsistency flagged by SEO audits.
   sitemap: {
-    exclude: ['/aviso-legal', '/politica-de-privacidad'],
+    exclude: ['/aviso-legal', '/politica-de-privacidad', '/en/legal-notice', '/en/privacy-policy'],
   },
   app: {
     head: {
@@ -36,10 +62,12 @@ export default defineNuxtConfig({
         // they live here rather than being repeated in each page's useHead.
         // Per-page og:title/og:description/og:url still override these
         // where a page sets its own (Nuxt's useHead merges by tag key).
+        // og:locale/og:locale:alternate are NOT set here -- @nuxtjs/i18n's
+        // useLocaleHead({ seo: true }) generates those per-page based on
+        // the actual route locale, and a static pair here would just be
+        // wrong on every /en/* page.
         { property: 'og:site_name', content: 'QuiroFlow' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:locale', content: 'es_ES' },
-        { property: 'og:locale:alternate', content: 'en_US' },
         { property: 'og:image', content: 'https://quiroflow.com/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },

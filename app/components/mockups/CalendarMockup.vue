@@ -22,6 +22,9 @@ const dotClasses: Record<ApptType, string> = {
 const types: ApptType[] = ['ajuste', 'primeraVisita', 'revision', 'cancelada']
 
 const t = useT()
+// tm(), not t() -- resolves to an array of day labels, and t() would
+// stringify it instead of returning the raw array to v-for.
+const { tm } = useI18n()
 </script>
 
 <template>
@@ -38,7 +41,7 @@ const t = useT()
     </div>
     <div class="grid grid-cols-[36px_repeat(3,minmax(0,1fr))]">
       <div />
-      <div v-for="d in t('mockups.calendar.days')" :key="d" class="pb-2 text-center text-[11px] font-semibold text-ink-faint">{{ d }}</div>
+      <div v-for="d in tm('mockups.calendar.days')" :key="d" class="pb-2 text-center text-[11px] font-semibold text-ink-faint">{{ d }}</div>
 
       <template v-for="row in rows" :key="row.time">
         <div class="pr-1.5 text-right text-[10px] text-ink-faint/70">{{ row.time }}</div>

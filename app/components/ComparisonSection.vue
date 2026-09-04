@@ -31,7 +31,11 @@ const rowFlags: RowFlags[] = [
 ]
 
 const t = useT()
-const rows = computed(() => (t('comparison.rows') as string[]).map((feature, i) => ({ feature, ...rowFlags[i] })))
+// tm(), not t() -- resolves to an array of feature-name strings, and t()
+// would stringify the whole array into one unusable string instead of
+// returning it raw for .map() to iterate.
+const { tm } = useI18n()
+const rows = computed(() => (tm('comparison.rows') as string[]).map((feature, i) => ({ feature, ...rowFlags[i] })))
 </script>
 
 <template>

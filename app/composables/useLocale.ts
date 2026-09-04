@@ -1,15 +1,23 @@
 export type Locale = 'es' | 'en'
 
+// Thin wrapper over useI18n() so every existing call site (const { locale,
+// setLocale } = useLocale()) keeps working unchanged after the move to
+// real per-locale routes -- locale now reflects the current URL (via
+// @nuxtjs/i18n) rather than a client-only useState flipped by a button,
+// and setLocale navigates to that locale's URL instead of just mutating
+// state at the same URL.
 export function useLocale() {
-  const locale = useState<Locale>('locale', () => 'es')
+  const { locale: i18nLocale } = useI18n()
+  const switchLocalePath = useSwitchLocalePath()
+
+  const locale = computed<Locale>(() => i18nLocale.value as Locale)
 
   function setLocale(l: Locale) {
-    locale.value = l
-    if (import.meta.client) localStorage.setItem('quiroflow-locale', l)
+    return navigateTo(switchLocalePath(l))
   }
 
   function toggleLocale() {
-    setLocale(locale.value === 'es' ? 'en' : 'es')
+    return setLocale(locale.value === 'es' ? 'en' : 'es')
   }
 
   return { locale, setLocale, toggleLocale }

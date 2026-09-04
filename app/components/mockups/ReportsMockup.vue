@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const t = useT()
+// tm(), not t() -- resolves to an array of {label, value} objects, and
+// t() would stringify it instead of returning the raw array to v-for.
+const { tm } = useI18n()
 </script>
 
 <template>
@@ -9,7 +12,7 @@ const t = useT()
       <p class="text-[11px] text-ink-faint">{{ t('reports.visual.compareLabel') }}</p>
     </div>
     <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-      <div v-for="stat in t('reports.visual.stats')" :key="stat.label" class="rounded-[8px] bg-surface-page p-3">
+      <div v-for="stat in tm('reports.visual.stats')" :key="stat.label" class="rounded-[8px] bg-surface-page p-3">
         <p class="mb-1 text-[11px] text-ink-faint">{{ stat.label }}</p>
         <div class="flex items-baseline gap-1.5">
           <p class="text-[17px] font-bold text-ink-900">{{ stat.value }}</p>

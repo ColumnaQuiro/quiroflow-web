@@ -1,5 +1,11 @@
 <script setup lang="ts">
+// English lives at /en/privacy-policy rather than /en/politica-de-privacidad
+// -- same reasoning as aviso-legal.vue, and matches columnaquiro.com's own
+// /en/privacy-policy route for the equivalent page.
+definePageMeta({ i18n: { paths: { en: '/privacy-policy' } } })
+
 const { locale } = useLocale()
+const route = useRoute()
 
 interface Section {
   heading: string
@@ -321,20 +327,23 @@ const content: Record<'es' | 'en', { title: string; intro: string; sections: Sec
 }
 
 const c = computed(() => content[locale.value])
+const i18nHead = useLocaleHead({ seo: true })
+const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
 
 useHead(() => ({
-  htmlAttrs: { lang: locale.value },
+  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
   title: `${c.value.title} | QuiroFlow`,
+  link: [...(i18nHead.value.link ?? [])],
   meta: [
+    ...(i18nHead.value.meta ?? []),
     { name: 'description', content: c.value.seoDescription },
     { property: 'og:title', content: `${c.value.title} | QuiroFlow` },
     { property: 'og:description', content: c.value.seoDescription },
-    { property: 'og:url', content: 'https://quiroflow.com/politica-de-privacidad' },
+    { property: 'og:url', content: pageUrl.value },
     // Same reasoning as aviso-legal.vue -- legal boilerplate adds no search
     // value and would only compete with the homepage for the same queries.
     { name: 'robots', content: 'noindex, follow' },
   ],
-  link: [{ rel: 'canonical', href: 'https://quiroflow.com/politica-de-privacidad' }],
 }))
 </script>
 

@@ -189,7 +189,6 @@ export const en: Messages = {
     features: 'Features',
     pricing: 'Pricing',
     migrate: 'Switch from PracticeHub',
-    contactEmail: 'hola@quiroflow.com',
     copyright: '© 2026 QuiroFlow. All rights reserved.',
     privacy: 'Privacy policy',
     terms: 'Legal notice',

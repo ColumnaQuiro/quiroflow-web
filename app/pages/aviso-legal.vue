@@ -1,5 +1,13 @@
 <script setup lang="ts">
+// English lives at /en/legal-notice rather than /en/aviso-legal -- an
+// English reader landing on a Spanish-slugged URL reads as sloppier
+// bilingual support than translating the slug too, and columnaquiro.com
+// (same legal entity, same content shape) already sets this precedent with
+// its own /en/legal-notice route.
+definePageMeta({ i18n: { paths: { en: '/legal-notice' } } })
+
 const { locale } = useLocale()
+const route = useRoute()
 
 interface Section {
   heading: string
@@ -237,21 +245,24 @@ const content: Record<'es' | 'en', { title: string; sections: Section[]; seoDesc
 }
 
 const c = computed(() => content[locale.value])
+const i18nHead = useLocaleHead({ seo: true })
+const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
 
 useHead(() => ({
-  htmlAttrs: { lang: locale.value },
+  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
   title: `${c.value.title} | QuiroFlow`,
+  link: [...(i18nHead.value.link ?? [])],
   meta: [
+    ...(i18nHead.value.meta ?? []),
     { name: 'description', content: c.value.seoDescription },
     { property: 'og:title', content: `${c.value.title} | QuiroFlow` },
     { property: 'og:description', content: c.value.seoDescription },
-    { property: 'og:url', content: 'https://quiroflow.com/aviso-legal' },
+    { property: 'og:url', content: pageUrl.value },
     // Legal boilerplate has no value ranking in search results and would
     // only ever compete with the homepage for the same queries -- excluded
     // from the index rather than left to rank on thin/duplicate-feeling content.
     { name: 'robots', content: 'noindex, follow' },
   ],
-  link: [{ rel: 'canonical', href: 'https://quiroflow.com/aviso-legal' }],
 }))
 </script>
 
