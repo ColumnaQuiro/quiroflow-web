@@ -250,6 +250,18 @@ export const es = {
         },
       ],
     },
+    capture: {
+      title: '¿Todavía no quieres una demo?',
+      description: 'Te enviamos los precios y un resumen de funcionalidades por email, y lo miras con calma. Sin llamadas y sin compromiso.',
+      emailLabel: 'Tu email',
+      clinicLabel: 'Nombre de tu clínica (opcional)',
+      consentBefore: 'He leído y acepto la',
+      consentLink: 'política de privacidad',
+      button: 'Enviar',
+      sending: 'Enviando...',
+      success: 'Recibido. Te escribimos en menos de 24 horas.',
+      error: 'No hemos podido enviarlo. Inténtalo de nuevo o escríbenos directamente.',
+    },
     cta: {
       title: 'Ve QuiroFlow con los datos de tu clínica',
       description: 'Cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de fisioterapia — sin compromiso.',

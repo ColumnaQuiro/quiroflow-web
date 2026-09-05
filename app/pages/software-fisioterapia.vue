@@ -15,6 +15,7 @@ const t = useT()
 // below, where a compiled message would serialise as an empty object.
 const { tm, rt } = useI18n()
 const { locale } = useLocale()
+const localePath = useLocalePath()
 const route = useRoute()
 
 const i18nHead = useLocaleHead({ seo: true })
@@ -42,6 +43,40 @@ const descriptions: Record<Locale, string> = {
 }
 const title = computed(() => titles[locale.value])
 const description = computed(() => descriptions[locale.value])
+
+// Netlify Forms: the form is submitted with fetch so the visitor gets an inline
+// confirmation instead of Netlify's generic success page, but the real <form>
+// with data-netlify stays in the prerendered HTML because that markup is what
+// Netlify's build step scans to register the form at all. Without JS the native
+// POST still works, so this degrades rather than breaks.
+const FORM_NAME = 'fisioterapia-info'
+const email = ref('')
+const clinic = ref('')
+const consent = ref(false)
+const status = ref<'idle' | 'sending' | 'ok' | 'error'>('idle')
+
+async function submitCapture() {
+  if (status.value === 'sending' || !email.value || !consent.value) return
+  status.value = 'sending'
+  try {
+    const body = new URLSearchParams({
+      'form-name': FORM_NAME,
+      email: email.value,
+      clinica: clinic.value,
+      consentimiento: 'si',
+    })
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    })
+    if (!res.ok) throw new Error(String(res.status))
+    status.value = 'ok'
+  }
+  catch {
+    status.value = 'error'
+  }
+}
 
 useHead(() => ({
   htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
@@ -210,7 +245,85 @@ useHead(() => ({
       </div>
     </section>
 
-    <section class="py-24">
+    <section class="py-20">
+      <div class="mx-auto max-w-[640px] px-8">
+        <div class="rounded-card border border-line bg-white p-8 shadow-card">
+          <h2 class="text-[24px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.capture.title') }}</h2>
+          <p class="mt-2 text-[14.5px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.capture.description') }}</p>
+
+          <p v-if="status === 'ok'" class="mt-5 rounded-ctl bg-success-bg px-4 py-3 text-[14.5px] font-semibold text-success-text">
+            {{ t('fisioterapia.capture.success') }}
+          </p>
+
+          <form
+            v-else
+            :name="FORM_NAME"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="mt-5 flex flex-col gap-3"
+            @submit.prevent="submitCapture"
+          >
+            <input type="hidden" name="form-name" :value="FORM_NAME" />
+            <p class="hidden">
+              <label>No rellenar: <input name="bot-field" /></label>
+            </p>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="text-[13px] font-semibold text-ink-700">{{ t('fisioterapia.capture.emailLabel') }}</span>
+              <input
+                v-model="email"
+                type="email"
+                name="email"
+                required
+                placeholder="hola@tuclinica.com"
+                class="rounded-ctl border border-line-control px-3.5 py-2.5 text-[14.5px] text-ink-900 outline-none focus:border-brand"
+              />
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="text-[13px] font-semibold text-ink-700">{{ t('fisioterapia.capture.clinicLabel') }}</span>
+              <input
+                v-model="clinic"
+                type="text"
+                name="clinica"
+                class="rounded-ctl border border-line-control px-3.5 py-2.5 text-[14.5px] text-ink-900 outline-none focus:border-brand"
+              />
+            </label>
+
+            <label class="mt-1 flex items-start gap-2.5 text-[13px] leading-[1.5] text-ink-muted">
+              <input
+                v-model="consent"
+                type="checkbox"
+                name="consentimiento"
+                required
+                class="mt-0.5 h-4 w-4 shrink-0 accent-brand"
+              />
+              <span>
+                {{ t('fisioterapia.capture.consentBefore') }}
+                <NuxtLink :to="localePath('politica-de-privacidad')" class="text-brand underline">
+                  {{ t('fisioterapia.capture.consentLink') }}
+                </NuxtLink>.
+              </span>
+            </label>
+
+            <button
+              type="submit"
+              :disabled="status === 'sending'"
+              class="mt-1 inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover disabled:opacity-60"
+            >
+              {{ status === 'sending' ? t('fisioterapia.capture.sending') : t('fisioterapia.capture.button') }}
+            </button>
+
+            <p v-if="status === 'error'" class="text-[13.5px] text-danger-text">
+              {{ t('fisioterapia.capture.error') }}
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line py-24">
       <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 px-8 text-center">
         <h2 class="text-[30px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.cta.title') }}</h2>
         <p class="text-[15.5px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.cta.description') }}</p>

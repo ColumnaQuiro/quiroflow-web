@@ -252,6 +252,18 @@ export const fr: Messages = {
         },
       ],
     },
+    capture: {
+      title: 'Pas encore prêt pour une démo ?',
+      description: "Nous vous envoyons les tarifs et un résumé des fonctionnalités par e-mail, à consulter tranquillement. Sans appel et sans engagement.",
+      emailLabel: 'Votre e-mail',
+      clinicLabel: 'Nom de votre cabinet (facultatif)',
+      consentBefore: "J'ai lu et j'accepte la",
+      consentLink: 'politique de confidentialité',
+      button: 'Envoyer',
+      sending: 'Envoi...',
+      success: 'Bien reçu. Nous vous répondons sous 24 heures.',
+      error: "L'envoi a échoué. Réessayez, ou écrivez-nous directement.",
+    },
     cta: {
       title: 'Voyez QuiroFlow avec les données de votre cabinet',
       description: "Dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de kinésithérapie — sans engagement.",

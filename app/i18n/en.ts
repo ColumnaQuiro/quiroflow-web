@@ -252,6 +252,18 @@ export const en: Messages = {
         },
       ],
     },
+    capture: {
+      title: 'Not ready for a demo yet?',
+      description: 'We will email you pricing and a summary of what QuiroFlow does, so you can look at it in your own time. No calls, no strings attached.',
+      emailLabel: 'Your email',
+      clinicLabel: 'Your clinic name (optional)',
+      consentBefore: 'I have read and accept the',
+      consentLink: 'privacy policy',
+      button: 'Send',
+      sending: 'Sending...',
+      success: 'Got it. We will be in touch within 24 hours.',
+      error: 'That did not go through. Try again, or email us directly.',
+    },
     cta: {
       title: 'See QuiroFlow with your own clinic\'s data',
       description: 'Tell us how you work and we will show you how it fits your physiotherapy practice — no strings attached.',
