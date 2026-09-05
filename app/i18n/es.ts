@@ -183,10 +183,85 @@ export const es = {
     cta: 'Reservar una demo',
   },
 
+  fisioterapia: {
+    badge: 'Fisioterapia',
+    title: 'Software de gestión para clínicas de fisioterapia',
+    description: 'Agenda con asignación automática de camilla o box, bonos de sesiones que se descuentan solos, historia clínica digital y recordatorios por WhatsApp. Todo en una sola plataforma, para consultas de un fisioterapeuta y para centros de varias sedes.',
+    ctaPrimary: 'Reservar una demo',
+    ctaSecondary: 'Ver cómo funciona',
+    features: {
+      agenda: {
+        eyebrow: 'Agenda y ocupación',
+        title: 'Cada sesión, con su box y su camilla asignados',
+        description: 'QuiroFlow asigna automáticamente el box o la camilla libre en cada franja, así que nunca acabas con dos pacientes citados en el mismo espacio. Vista por día, semana laboral o semana completa, y varias sedes desde la misma cuenta.',
+      },
+      bonos: {
+        eyebrow: 'Bonos y facturación',
+        title: 'Bonos de sesiones que se descuentan solos',
+        description: 'Vende bonos de 5, 10 o 20 sesiones y deja que QuiroFlow descuente una cada vez que el paciente acude. Cobro recurrente automatizado con Stripe para tarifas planas, y facturación legal automática — sin perseguir pagos a final de mes.',
+      },
+      whatsapp: {
+        eyebrow: 'Recordatorios por WhatsApp',
+        title: 'Menos huecos perdidos por un olvido',
+        description: 'Recordatorios automáticos con botones para confirmar o cambiar la cita en un toque. Y si alguien cancela, el hueco se ofrece solo al primer paciente de la lista de espera, con un enlace para reservarlo al momento.',
+      },
+      historia: {
+        eyebrow: 'Historia clínica y consentimientos',
+        title: 'Valoración, evolución y consentimiento sin papel',
+        description: 'Historia clínica digital con la valoración inicial, la evolución sesión a sesión y las pruebas que quieras adjuntar. Los formularios de anamnesis y el consentimiento informado los rellena el paciente desde el móvil antes de llegar.',
+      },
+      reserva: {
+        eyebrow: 'Reserva online',
+        title: 'Una página de reservas con tu marca',
+        description: 'Tu clínica recibe su propia página pública de reservas en tu subdominio, con tus horarios reales y cada fisioterapeuta con su disponibilidad. El paciente reserva sin llamar y la cita entra directa en la agenda.',
+      },
+      informes: {
+        eyebrow: 'Informes',
+        title: 'Ocupación, retención y valor por sesión',
+        description: 'Ocupación por fisioterapeuta y por sala, ingresos, precio medio por visita, retención y cuántas primeras visitas acaban convirtiéndose en un plan completo. Al minuto y comparado con el periodo anterior.',
+      },
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Sirve QuiroFlow si soy un solo fisioterapeuta?',
+          a: 'Sí. Funciona igual para una consulta individual que para un centro con varias salas y profesionales. El precio se ajusta al número de sedes y de fisioterapeutas, así que una consulta pequeña no paga por lo que no usa.',
+        },
+        {
+          q: '¿Puedo gestionar bonos de sesiones?',
+          a: 'Sí. Puedes crear bonos del número de sesiones que quieras y cada visita descuenta una automáticamente, sin llevar la cuenta a mano. También puedes activar el cobro recurrente para tarifas planas o membresías mensuales.',
+        },
+        {
+          q: '¿Cómo se asignan las camillas o los boxes?',
+          a: 'QuiroFlow asigna el espacio libre automáticamente al crear la cita, según la duración y el tipo de sesión. Puedes cambiarlo a mano siempre que lo necesites.',
+        },
+        {
+          q: '¿Los pacientes pueden reservar cita online?',
+          a: 'Sí. Cada clínica tiene su propia página de reservas en su subdominio, con disponibilidad real por fisioterapeuta. La cita entra directamente en tu agenda, sin llamadas ni confirmaciones manuales.',
+        },
+        {
+          q: '¿Puedo migrar desde el software que uso ahora?',
+          a: 'Sí. Importamos pacientes y citas desde tu propio export, y desde cualquier otro sistema puedes importar por CSV mapeando tus columnas, sin depender de un formato fijo.',
+        },
+        {
+          q: '¿Cómo se tratan los datos de los pacientes?',
+          a: 'Conforme al RGPD y a la LOPDGDD. QuiroFlow actúa como encargado del tratamiento y firma el contrato correspondiente con cada clínica, que sigue siendo la responsable de los datos de sus pacientes.',
+        },
+      ],
+    },
+    cta: {
+      title: 'Ve QuiroFlow con los datos de tu clínica',
+      description: 'Cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de fisioterapia — sin compromiso.',
+      button: 'Reservar una demo',
+    },
+  },
+
   footer: {
     features: 'Funcionalidades',
     pricing: 'Precios',
     migrate: 'Cambiar desde PracticeHub',
+    physio: 'Fisioterapia',
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
     privacy: 'Política de privacidad',
     terms: 'Aviso legal',

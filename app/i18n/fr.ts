@@ -185,10 +185,85 @@ export const fr: Messages = {
     cta: 'Réserver une démo',
   },
 
+  fisioterapia: {
+    badge: 'Kinésithérapie',
+    title: 'Logiciel de gestion pour cabinets de kinésithérapie',
+    description: "Un agenda qui attribue seul la table ou le box disponible, des forfaits de séances qui se décomptent automatiquement, un dossier patient numérique et des rappels WhatsApp. Une seule plateforme, que vous exerciez seul ou sur plusieurs sites.",
+    ctaPrimary: 'Réserver une démo',
+    ctaSecondary: 'Voir comment ça marche',
+    features: {
+      agenda: {
+        eyebrow: 'Agenda et occupation',
+        title: 'Chaque séance avec sa table et son box déjà attribués',
+        description: "QuiroFlow attribue automatiquement le box ou la table libre sur chaque créneau : vous ne vous retrouvez jamais avec deux patients placés au même endroit. Vue par jour, semaine de travail ou semaine complète, et plusieurs sites depuis un même compte.",
+      },
+      bonos: {
+        eyebrow: 'Forfaits et facturation',
+        title: 'Des forfaits de séances qui se décomptent seuls',
+        description: "Vendez des forfaits de 5, 10 ou 20 séances et laissez QuiroFlow en déduire une à chaque venue du patient. Prélèvement récurrent automatisé via Stripe pour les formules illimitées, et facturation légale automatique — sans relancer les paiements en fin de mois.",
+      },
+      whatsapp: {
+        eyebrow: 'Rappels WhatsApp',
+        title: 'Moins de créneaux perdus pour un oubli',
+        description: "Rappels automatiques avec des boutons pour confirmer ou reporter en un geste. Et lorsqu'un patient annule, le créneau est proposé directement au premier de la liste d'attente, avec un lien pour le réserver immédiatement.",
+      },
+      historia: {
+        eyebrow: 'Dossier patient et consentement',
+        title: 'Bilan, évolution et consentement sans papier',
+        description: "Dossier patient numérique regroupant le bilan initial, l'évolution séance après séance et les examens que vous y joignez. Les questionnaires d'anamnèse et le consentement éclairé sont remplis par le patient depuis son téléphone avant d'arriver.",
+      },
+      reserva: {
+        eyebrow: 'Réservation en ligne',
+        title: 'Une page de réservation à vos couleurs',
+        description: "Votre cabinet dispose de sa propre page publique de réservation sur votre sous-domaine, avec vos horaires réels et les disponibilités de chaque kinésithérapeute. Le patient réserve sans appeler et le rendez-vous arrive directement dans votre agenda.",
+      },
+      informes: {
+        eyebrow: 'Rapports',
+        title: 'Occupation, rétention et valeur par séance',
+        description: "Occupation par kinésithérapeute et par salle, chiffre d'affaires, valeur moyenne par visite, rétention et nombre de premières consultations qui débouchent sur un traitement complet. Mis à jour à la minute et comparé à la période précédente.",
+      },
+    },
+    faq: {
+      title: 'Questions fréquentes',
+      items: [
+        {
+          q: 'QuiroFlow convient-il si je suis seul kinésithérapeute ?',
+          a: "Oui. Le fonctionnement est le même pour un cabinet individuel que pour un centre avec plusieurs salles et praticiens. Le tarif suit le nombre de sites et de kinésithérapeutes : un petit cabinet ne paie pas pour ce qu'il n'utilise pas.",
+        },
+        {
+          q: 'Puis-je gérer des forfaits de séances ?',
+          a: "Oui. Créez des forfaits du nombre de séances que vous voulez : chaque venue en décompte une automatiquement, sans comptage manuel. Vous pouvez aussi activer le prélèvement récurrent pour des formules mensuelles.",
+        },
+        {
+          q: 'Comment les tables et les box sont-ils attribués ?',
+          a: "QuiroFlow attribue automatiquement l'espace libre à la création du rendez-vous, selon sa durée et le type de séance. Vous pouvez toujours le modifier manuellement.",
+        },
+        {
+          q: 'Les patients peuvent-ils réserver en ligne ?',
+          a: "Oui. Chaque cabinet dispose de sa page de réservation sur son sous-domaine, avec les disponibilités réelles de chaque kinésithérapeute. Le rendez-vous arrive directement dans votre agenda, sans appel ni confirmation manuelle.",
+        },
+        {
+          q: 'Puis-je migrer depuis mon logiciel actuel ?',
+          a: "Oui. Nous importons patients et rendez-vous depuis votre propre export, et depuis tout autre système vous pouvez importer par CSV en mappant vos colonnes, sans format imposé.",
+        },
+        {
+          q: 'Comment les données des patients sont-elles traitées ?',
+          a: "Conformément au RGPD et à la LOPDGDD espagnole. QuiroFlow agit en tant que sous-traitant et signe le contrat correspondant avec chaque cabinet, qui reste responsable des données de ses patients.",
+        },
+      ],
+    },
+    cta: {
+      title: 'Voyez QuiroFlow avec les données de votre cabinet',
+      description: "Dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de kinésithérapie — sans engagement.",
+      button: 'Réserver une démo',
+    },
+  },
+
   footer: {
     features: 'Fonctionnalités',
     pricing: 'Tarifs',
     migrate: 'Migrer depuis PracticeHub',
+    physio: 'Kinésithérapie',
     copyright: '© 2026 QuiroFlow. Tous droits réservés.',
     privacy: 'Politique de confidentialité',
     terms: 'Mentions légales',

@@ -25,6 +25,7 @@ const CONTACT_EMAIL = 'hola@quiroflow.com'
           <a :href="homeAnchor('funcionalidades')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.features') }}</a>
           <a :href="homeAnchor('precios')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.pricing') }}</a>
           <a :href="homeAnchor('practicehub')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.migrate') }}</a>
+          <NuxtLink :to="localePath('software-fisioterapia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.physio') }}</NuxtLink>
           <a :href="`mailto:${CONTACT_EMAIL}`" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ CONTACT_EMAIL }}</a>
         </nav>
       </div>

@@ -185,10 +185,85 @@ export const en: Messages = {
     cta: 'Book a demo',
   },
 
+  fisioterapia: {
+    badge: 'Physiotherapy',
+    title: 'Practice management software for physiotherapy clinics',
+    description: 'A calendar that assigns the free treatment room or table on its own, session packages that count themselves down, digital clinical records, and WhatsApp reminders. One platform, whether you practise alone or run several locations.',
+    ctaPrimary: 'Book a demo',
+    ctaSecondary: 'See how it works',
+    features: {
+      agenda: {
+        eyebrow: 'Calendar and occupancy',
+        title: 'Every session with its room and table already assigned',
+        description: 'QuiroFlow assigns the free room or treatment table for each slot automatically, so you never end up with two patients booked into the same space. Day, working-week or full-week view, and several locations from one account.',
+      },
+      bonos: {
+        eyebrow: 'Packages and billing',
+        title: 'Session packages that count themselves down',
+        description: 'Sell packages of 5, 10 or 20 sessions and let QuiroFlow deduct one every time the patient attends. Automated recurring billing through Stripe for flat-rate plans, plus automatic legal invoicing — no chasing payments at month end.',
+      },
+      whatsapp: {
+        eyebrow: 'WhatsApp reminders',
+        title: 'Fewer slots lost to a forgotten appointment',
+        description: 'Automatic reminders with buttons to confirm or reschedule in one tap. And when someone cancels, the slot is offered straight to the first patient on the waitlist, with a link to book it on the spot.',
+      },
+      historia: {
+        eyebrow: 'Clinical records and consent',
+        title: 'Assessment, progress and consent without paper',
+        description: 'Digital clinical records holding the initial assessment, session-by-session progress, and any scans or reports you attach. Patients fill in intake forms and informed consent from their phone before they arrive.',
+      },
+      reserva: {
+        eyebrow: 'Online booking',
+        title: 'A booking page with your own branding',
+        description: 'Your clinic gets its own public booking page on your subdomain, with your real opening hours and each physiotherapist\'s availability. Patients book without calling and the appointment lands straight in your calendar.',
+      },
+      informes: {
+        eyebrow: 'Reports',
+        title: 'Occupancy, retention and value per session',
+        description: 'Occupancy per physiotherapist and per room, revenue, average value per visit, retention, and how many first visits turn into a full course of treatment. Updated by the minute and compared against the previous period.',
+      },
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      items: [
+        {
+          q: 'Does QuiroFlow work if I am a single physiotherapist?',
+          a: 'Yes. It works the same for a solo practice as for a centre with several rooms and practitioners. Pricing follows the number of locations and physiotherapists, so a small practice does not pay for what it does not use.',
+        },
+        {
+          q: 'Can I manage session packages?',
+          a: 'Yes. Create packages with any number of sessions and each visit deducts one automatically, with no manual tally. You can also switch on recurring billing for flat-rate plans or monthly memberships.',
+        },
+        {
+          q: 'How are treatment rooms and tables assigned?',
+          a: 'QuiroFlow assigns the free space automatically when the appointment is created, based on its length and session type. You can always override it by hand.',
+        },
+        {
+          q: 'Can patients book online?',
+          a: 'Yes. Every clinic gets its own booking page on its subdomain, showing real availability per physiotherapist. The appointment goes straight into your calendar, with no calls or manual confirmation.',
+        },
+        {
+          q: 'Can I migrate from the software I use now?',
+          a: 'Yes. We import patients and appointments from your own export, and from any other system you can import by CSV mapping your own columns, with no fixed format required.',
+        },
+        {
+          q: 'How is patient data handled?',
+          a: 'In line with the GDPR and the Spanish LOPDGDD. QuiroFlow acts as data processor and signs the corresponding agreement with each clinic, which remains the controller of its own patients\' data.',
+        },
+      ],
+    },
+    cta: {
+      title: 'See QuiroFlow with your own clinic\'s data',
+      description: 'Tell us how you work and we will show you how it fits your physiotherapy practice — no strings attached.',
+      button: 'Book a demo',
+    },
+  },
+
   footer: {
     features: 'Features',
     pricing: 'Pricing',
     migrate: 'Switch from PracticeHub',
+    physio: 'Physiotherapy',
     copyright: '© 2026 QuiroFlow. All rights reserved.',
     privacy: 'Privacy policy',
     terms: 'Legal notice',
