@@ -4,30 +4,37 @@ type Cell = boolean
 interface RowFlags {
   quiroflow: Cell
   practicehub: Cell
-  praxxos: Cell
+  quirohiro: Cell
   doctoralia: Cell
   quirocitas: Cell
 }
 
 const competitors = [
   { key: 'practicehub', name: 'PracticeHub' },
-  { key: 'praxxos', name: 'Praxxos' },
+  { key: 'quirohiro', name: 'QuiroHiro' },
   { key: 'doctoralia', name: 'Doctoralia' },
   { key: 'quirocitas', name: 'Quirocitas' },
 ] as const
 
+// QuiroHiro's flags are set from what quirohiro.io publicly advertises on its
+// own site (checked September 2026): automatic WhatsApp appointment reminders
+// and automated Google review requests are stated outright; the rest are not
+// shown publicly, which is exactly what the "—" and the footnote below mean.
+// It does advertise generic automated campaigns and real-time financial
+// reports, but neither is the same claim as a referral-specific thank-you
+// campaign or retention/conversion/value-per-visit stats, so those stay "—".
 const rowFlags: RowFlags[] = [
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: true, praxxos: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: true },
-  { quiroflow: true, practicehub: true, praxxos: true, doctoralia: true, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: true, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, praxxos: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: true, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: true, quirocitas: true },
+  { quiroflow: true, practicehub: true, quirohiro: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: true, doctoralia: true, quirocitas: false },
 ]
 
 const t = useT()
