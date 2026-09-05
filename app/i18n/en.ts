@@ -11,7 +11,7 @@ export const en: Messages = {
   },
 
   hero: {
-    badge: 'Practice management software for chiropractic clinics',
+    badge: 'Software for chiropractors',
     titleLine1: 'Less time on admin.',
     titleLine2: 'More time adjusting.',
     description: 'A calendar that tracks your practice flow, clinical records, billing, packages, and WhatsApp reminders — all in one platform built for chiropractic clinics with one location or several.',

@@ -13,20 +13,26 @@ const route = useRoute()
 const i18nHead = useLocaleHead({ seo: true })
 const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
 
+// "software para quiroprácticos" leads the Spanish title on purpose: it is the
+// only chiropractic-software phrase Google's own suggestion index will admit
+// has real search volume (~20/mo), while the far more natural-sounding
+// "software de gestión para clínicas quiroprácticas" -- which every competitor
+// writes in their title tag -- returns no suggestions at all. Same reasoning
+// for the EN/FR equivalents, matching each market's actual head term.
 const titles: Record<Locale, string> = {
-  es: 'QuiroFlow — Software de gestión para clínicas quiroprácticas',
-  en: 'QuiroFlow — Practice management software for chiropractic clinics',
-  fr: 'QuiroFlow — Logiciel de gestion pour cabinets de chiropraxie',
+  es: 'QuiroFlow — Software para quiroprácticos y clínicas',
+  en: 'QuiroFlow — Software for chiropractors and clinics',
+  fr: 'QuiroFlow — Logiciel pour chiropracteurs et cabinets',
 }
 const descriptions: Record<Locale, string> = {
-  es: 'Agenda con asignación automática de salas, facturación y recordatorios por WhatsApp, todo en una plataforma para tu clínica. Migra desde PracticeHub en un fin de semana.',
-  en: 'A calendar with automatic room assignment, billing, and WhatsApp reminders, all in one platform for your clinic. Migrate from PracticeHub in a weekend.',
-  fr: "Un agenda avec attribution automatique des salles, facturation et rappels WhatsApp, le tout sur une seule plateforme pour votre cabinet. Migrez depuis PracticeHub en un week-end.",
+  es: 'Software para quiroprácticos: agenda con asignación automática de salas, facturación y recordatorios por WhatsApp. Migra desde PracticeHub en un fin de semana.',
+  en: 'Software for chiropractors: a calendar with automatic room assignment, billing, and WhatsApp reminders. Migrate from PracticeHub in a weekend.',
+  fr: "Logiciel pour chiropracteurs : agenda avec attribution automatique des salles, facturation et rappels WhatsApp. Migrez depuis PracticeHub en un week-end.",
 }
 const jsonLdDescriptions: Record<Locale, string> = {
-  es: 'Software de gestión para clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
-  en: 'Practice management software for chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
-  fr: "Logiciel de gestion pour cabinets de chiropraxie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
+  es: 'Software para quiroprácticos y clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
+  en: 'Software for chiropractors and chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
+  fr: "Logiciel pour chiropracteurs et cabinets de chiropraxie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
 }
 const title = computed(() => titles[locale.value])
 const description = computed(() => descriptions[locale.value])

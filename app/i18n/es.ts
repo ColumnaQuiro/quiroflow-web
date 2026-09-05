@@ -9,7 +9,7 @@ export const es = {
   },
 
   hero: {
-    badge: 'Software de gestión para clínicas quiroprácticas',
+    badge: 'Software para quiroprácticos',
     titleLine1: 'Menos tiempo administrando.',
     titleLine2: 'Más tiempo ajustando.',
     description: 'Agenda con seguimiento del flujo de tu consulta, historiales clínicos, facturación, bonos y recordatorios por WhatsApp — todo en una sola plataforma pensada para clínicas quiroprácticas de una o varias sedes.',

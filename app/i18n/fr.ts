@@ -11,7 +11,7 @@ export const fr: Messages = {
   },
 
   hero: {
-    badge: 'Logiciel de gestion pour cabinets de chiropraxie',
+    badge: 'Logiciel pour chiropracteurs',
     titleLine1: "Moins de temps sur l'administratif.",
     titleLine2: 'Plus de temps pour ajuster.',
     description: "Un agenda qui suit le flux de votre cabinet, les dossiers cliniques, la facturation, les forfaits et les rappels WhatsApp — le tout sur une seule plateforme conçue pour les cabinets de chiropraxie, mono ou multi-sites.",
