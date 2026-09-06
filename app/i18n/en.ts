@@ -230,6 +230,31 @@ export const en: Messages = {
         description: 'Occupancy per physiotherapist and per room, revenue, average value per visit, retention, and how many first visits turn into a full course of treatment. Updated by the minute and compared against the previous period.',
       },
     },
+    edge: {
+      title: 'Two things that matter over a long course of treatment',
+      description: 'Physiotherapy is rarely decided in a single session. It is decided by whether the patient finishes the plan, and whether they come back next year.',
+      items: [
+        {
+          title: 'It warns you before a patient quietly stops coming',
+          body: 'A course of treatment is lost in the gap between sessions, not in the treatment room. If a patient on an active plan falls behind their own cadence, QuiroFlow tells you while you can still get them back, instead of you noticing two months later.',
+        },
+        {
+          title: 'Google reviews ask for themselves',
+          body: 'After the visit, QuiroFlow can request the review automatically. For a clinic competing in local search, that consistency ends up worth more than any one-off campaign.',
+        },
+      ],
+    },
+    migration: {
+      badge: 'Migration',
+      title: 'Switch systems over a weekend',
+      description: 'What stops most physiotherapy clinics moving is not price, it is the fear of losing records and running blind for a fortnight. QuiroFlow ships an importer so switching is not a months-long project.',
+      bullets: [
+        'Patients and appointments import straight from your current system\'s export.',
+        'Where your system allows it, clinical notes, treatment plans, payments and forms sync via API, without touching a CSV.',
+        'Re-run the import as often as you need: anything already migrated is never duplicated.',
+        'Coming from a spreadsheet, or software with no standard export? Import by CSV mapping your own columns, with no fixed format required.',
+      ],
+    },
     faq: {
       title: 'Frequently asked questions',
       items: [

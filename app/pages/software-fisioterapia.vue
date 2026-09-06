@@ -28,6 +28,15 @@ const faqItems = computed(() =>
   })),
 )
 
+// Same rt() treatment as the FAQ -- tm() alone hands back compiled messages
+// for nested objects, which render as [object Object].
+const edgeItems = computed(() =>
+  (tm('fisioterapia.edge.items') as { title: string; body: string }[]).map(item => ({
+    title: rt(item.title),
+    body: rt(item.body),
+  })),
+)
+
 // Deliberately not the same string as the H1: the title tag leads with the
 // exact phrase the page targets ("software para clínicas de fisioterapia"),
 // while the H1 reads as a sentence for the person actually landing here.
@@ -226,6 +235,50 @@ useHead(() => ({
         <MockupsReportsMockup />
       </template>
     </FeatureSection>
+
+    <section class="border-y border-line bg-surface-page py-20">
+      <div class="mx-auto flex max-w-[1120px] flex-col gap-10 px-8">
+        <div class="mx-auto flex max-w-[640px] flex-col gap-3 text-center">
+          <h2 class="text-[30px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.edge.title') }}</h2>
+          <p class="text-[15.5px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.edge.description') }}</p>
+        </div>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div
+            v-for="item in edgeItems"
+            :key="item.title"
+            class="flex flex-col gap-2.5 rounded-card border border-line bg-white p-7"
+          >
+            <h3 class="text-[17px] font-semibold tracking-tightTitle text-ink-900">{{ item.title }}</h3>
+            <p class="text-[14.5px] leading-[1.7] text-ink-muted">{{ item.body }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-12 px-8 md:grid-cols-2">
+        <div class="flex flex-col gap-3.5">
+          <span class="w-fit rounded-full border border-brand-tintBorder bg-brand-tint px-3 py-[5px] text-[13px] font-semibold text-brand-text">
+            {{ t('fisioterapia.migration.badge') }}
+          </span>
+          <h2 class="text-[28px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.migration.title') }}</h2>
+          <p class="text-[15px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.migration.description') }}</p>
+        </div>
+        <ul class="flex flex-col gap-3.5">
+          <li
+            v-for="bullet in tm('fisioterapia.migration.bullets')"
+            :key="bullet"
+            class="flex items-start gap-3 text-[14.5px] leading-[1.6] text-ink-700"
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mt-0.5 shrink-0">
+              <circle cx="9" cy="9" r="9" fill="#E9F6EF" />
+              <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#157F52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+            <span>{{ bullet }}</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <section class="border-y border-line bg-surface-page py-20">
       <div class="mx-auto flex max-w-[760px] flex-col gap-8 px-8">

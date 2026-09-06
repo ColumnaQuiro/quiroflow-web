@@ -230,6 +230,31 @@ export const fr: Messages = {
         description: "Occupation par kinésithérapeute et par salle, chiffre d'affaires, valeur moyenne par visite, rétention et nombre de premières consultations qui débouchent sur un traitement complet. Mis à jour à la minute et comparé à la période précédente.",
       },
     },
+    edge: {
+      title: 'Deux détails qui comptent sur un traitement long',
+      description: "La kinésithérapie se joue rarement sur une seule séance. Elle se joue sur le fait que le patient termine son plan, et qu'il revienne l'année suivante.",
+      items: [
+        {
+          title: "Vous êtes prévenu avant qu'un patient ne cesse de venir",
+          body: "Un traitement se perd dans l'intervalle entre deux séances, pas au cabinet. Si un patient suivant un plan actif prend du retard sur son propre rythme, QuiroFlow vous prévient pendant qu'il est encore temps de le récupérer, plutôt que vous ne le constatiez deux mois plus tard.",
+        },
+        {
+          title: 'Les avis Google se demandent tout seuls',
+          body: "Après la visite, QuiroFlow peut demander l'avis automatiquement. Pour un cabinet qui se bat sur la recherche locale, cette régularité finit par valoir plus que n'importe quelle campagne ponctuelle.",
+        },
+      ],
+    },
+    migration: {
+      badge: 'Migration',
+      title: 'Changez de logiciel en un week-end',
+      description: "Ce qui freine la plupart des cabinets de kinésithérapie n'est pas le prix, c'est la crainte de perdre les dossiers et de naviguer à l'aveugle pendant quinze jours. QuiroFlow propose un outil d'import pour que changer ne soit pas un chantier de plusieurs mois.",
+      bullets: [
+        "Patients et rendez-vous sont importés directement depuis l'export de votre logiciel actuel.",
+        "Lorsque votre système le permet, notes cliniques, plans de traitement, paiements et formulaires se synchronisent par API, sans toucher à un CSV.",
+        "Relancez l'import autant de fois que nécessaire : ce qui a déjà été migré n'est jamais dupliqué.",
+        "Vous venez d'un tableur ou d'un logiciel sans export standard ? Importez par CSV en mappant vos propres colonnes, sans format imposé.",
+      ],
+    },
     faq: {
       title: 'Questions fréquentes',
       items: [

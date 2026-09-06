@@ -228,6 +228,31 @@ export const es = {
         description: 'Ocupación por fisioterapeuta y por sala, ingresos, precio medio por visita, retención y cuántas primeras visitas acaban convirtiéndose en un plan completo. Al minuto y comparado con el periodo anterior.',
       },
     },
+    edge: {
+      title: 'Dos detalles que pesan en tratamientos largos',
+      description: 'La fisioterapia rara vez se juega en una sola sesión. Se juega en si el paciente completa el plan y en si vuelve el año que viene.',
+      items: [
+        {
+          title: 'Te avisa antes de que un paciente deje de venir',
+          body: 'Un tratamiento se pierde en el hueco entre sesiones, no en la consulta. Si un paciente con un plan activo se retrasa respecto a su propia cadencia, QuiroFlow te avisa mientras todavía estás a tiempo de recuperarlo, en vez de que lo descubras al revisar la agenda dos meses después.',
+        },
+        {
+          title: 'Las reseñas de Google se piden solas',
+          body: 'Tras la visita, QuiroFlow puede pedir la reseña automáticamente. Para una clínica que compite en búsquedas locales, esa constancia acaba valiendo más que cualquier campaña puntual.',
+        },
+      ],
+    },
+    migration: {
+      badge: 'Migración',
+      title: 'Cambia de programa en un fin de semana',
+      description: 'Lo que más frena a una clínica de fisioterapia no es el precio, es el miedo a perder historiales y a quedarse sin agenda durante la mudanza. QuiroFlow trae un importador para que cambiar no sea un proyecto de meses.',
+      bullets: [
+        'Pacientes y citas se importan directamente desde el export de tu programa actual.',
+        'Cuando tu sistema lo permite, notas clínicas, planes de tratamiento, pagos y formularios se sincronizan por API, sin tocar un CSV.',
+        'Puedes repetir la importación las veces que haga falta: lo que ya se migró nunca se duplica.',
+        '¿Vienes de un Excel o de un programa sin exportación estándar? Importa por CSV mapeando tus propias columnas, sin depender de un formato fijo.',
+      ],
+    },
     faq: {
       title: 'Preguntas frecuentes',
       items: [
