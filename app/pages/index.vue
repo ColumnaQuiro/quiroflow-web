@@ -4,6 +4,7 @@ import type { Locale } from '~/composables/useLocale'
 const t = useT()
 const { tm } = useI18n()
 const { locale } = useLocale()
+const localePath = useLocalePath()
 const route = useRoute()
 
 // useLocaleHead supplies htmlAttrs.lang/dir, the hreflang alternate links,
@@ -229,6 +230,27 @@ useHead(() => ({
         <MockupsReportsMockup />
       </template>
     </FeatureSection>
+
+    <!-- Contextual link to the sector page: a footer link is enough for
+         crawling, but an in-content link from the homepage is what actually
+         passes authority to it -- and a fisio visitor landing here should not
+         have to work out whether this applies to them. -->
+    <section class="py-10">
+      <div class="mx-auto max-w-[1120px] px-8">
+        <div class="flex flex-col gap-3 rounded-card border border-brand-tintBorder bg-brand-tint px-7 py-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex flex-col gap-1">
+            <p class="text-[16px] font-semibold text-ink-900">{{ t('sectors.physioQuestion') }}</p>
+            <p class="max-w-[620px] text-[14.5px] leading-[1.6] text-ink-muted">{{ t('sectors.physioBody') }}</p>
+          </div>
+          <NuxtLink
+            :to="localePath('software-fisioterapia')"
+            class="w-fit shrink-0 whitespace-nowrap rounded-ctl border border-brand-tintBorder bg-white px-5 py-2.5 text-[14px] font-semibold text-brand-text hover:border-brand"
+          >
+            {{ t('sectors.physioLink') }}
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
 
     <TestimonialSection />
 

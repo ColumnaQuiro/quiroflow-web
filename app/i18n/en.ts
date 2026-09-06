@@ -5,6 +5,7 @@ export const en: Messages = {
     features: 'Features',
     pricing: 'Pricing',
     comparison: 'Comparison',
+    physio: 'Physiotherapy',
     migrate: 'Switch from PracticeHub',
     contact: 'Contact',
     bookDemo: 'Book a demo',
@@ -38,6 +39,12 @@ export const en: Messages = {
   funcionalidades: {
     badge: 'Features',
     title: 'Everything your clinic needs, in one place',
+  },
+
+  sectors: {
+    physioQuestion: 'Run a physiotherapy clinic?',
+    physioBody: 'The calendar with automatic table assignment, the session packages and the WhatsApp reminders all work exactly the same in a physiotherapy practice.',
+    physioLink: 'See the software for physiotherapy clinics',
   },
 
   platform: {

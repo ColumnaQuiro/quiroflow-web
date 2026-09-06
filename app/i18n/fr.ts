@@ -5,6 +5,7 @@ export const fr: Messages = {
     features: 'Fonctionnalités',
     pricing: 'Tarifs',
     comparison: 'Comparatif',
+    physio: 'Kinésithérapie',
     migrate: 'Migrer depuis PracticeHub',
     contact: 'Contact',
     bookDemo: 'Réserver une démo',
@@ -38,6 +39,12 @@ export const fr: Messages = {
   funcionalidades: {
     badge: 'Fonctionnalités',
     title: 'Tout ce dont votre cabinet a besoin, au même endroit',
+  },
+
+  sectors: {
+    physioQuestion: 'Vous dirigez un cabinet de kinésithérapie ?',
+    physioBody: "L'agenda avec attribution automatique des tables, les forfaits de séances et les rappels WhatsApp fonctionnent exactement de la même façon dans un cabinet de kinésithérapie.",
+    physioLink: 'Voir le logiciel pour cabinets de kinésithérapie',
   },
 
   platform: {

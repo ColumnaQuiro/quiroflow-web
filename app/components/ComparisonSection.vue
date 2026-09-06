@@ -5,6 +5,7 @@ interface RowFlags {
   quiroflow: Cell
   practicehub: Cell
   quirohiro: Cell
+  cliniccloud: Cell
   doctoralia: Cell
   quirocitas: Cell
 }
@@ -12,6 +13,7 @@ interface RowFlags {
 const competitors = [
   { key: 'practicehub', name: 'PracticeHub' },
   { key: 'quirohiro', name: 'QuiroHiro' },
+  { key: 'cliniccloud', name: 'Clinic Cloud' },
   { key: 'doctoralia', name: 'Doctoralia' },
   { key: 'quirocitas', name: 'Quirocitas' },
 ] as const
@@ -23,18 +25,26 @@ const competitors = [
 // It does advertise generic automated campaigns and real-time financial
 // reports, but neither is the same claim as a referral-specific thank-you
 // campaign or retention/conversion/value-per-visit stats, so those stay "—".
+// Clinic Cloud is included because it targets chiropractic explicitly in its
+// own title tag ("software clínica de fisioterapia, osteopatía o
+// quiropráctica") and is the incumbent a clinic shopping around will actually
+// find. Its flags come from what its own terapias-físicas page advertises
+// (checked September 2026): automatic WhatsApp reminders and digital consent
+// signature are stated outright; the rest is not shown publicly. It does list
+// invoicing and bonos, but not automatic legal invoicing for memberships
+// specifically, so that row stays "—" like the others.
 const rowFlags: RowFlags[] = [
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: true, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: true, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: true, quirocitas: true },
-  { quiroflow: true, practicehub: true, quirohiro: false, doctoralia: true, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: true, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: false, doctoralia: false, quirocitas: false },
-  { quiroflow: true, practicehub: false, quirohiro: true, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: true, cliniccloud: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: true, quirohiro: false, cliniccloud: true, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: true, quirocitas: true },
+  { quiroflow: true, practicehub: true, quirohiro: false, cliniccloud: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: true, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
+  { quiroflow: true, practicehub: false, quirohiro: true, cliniccloud: false, doctoralia: true, quirocitas: false },
 ]
 
 const t = useT()

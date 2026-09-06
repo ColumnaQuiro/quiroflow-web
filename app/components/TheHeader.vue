@@ -19,8 +19,11 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
         <LogoMark :size="26" />
         <span class="text-[17px] font-bold tracking-tightTitle text-ink-900">QuiroFlow</span>
       </NuxtLink>
-      <nav class="hidden items-center gap-8 md:flex">
+      <!-- gap-6 rather than gap-8: the sector link makes six items, and at
+           gap-8 the row collides with the locale toggle and CTA at 1120px. -->
+      <nav class="hidden items-center gap-6 lg:flex">
         <a :href="homeAnchor('funcionalidades')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
+        <NuxtLink :to="localePath('software-fisioterapia')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.physio') }}</NuxtLink>
         <a :href="homeAnchor('precios')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
         <a :href="homeAnchor('comparativa')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
         <a :href="homeAnchor('practicehub')" class="text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>

@@ -3,6 +3,7 @@ export const es = {
     features: 'Funcionalidades',
     pricing: 'Precios',
     comparison: 'Comparativa',
+    physio: 'Fisioterapia',
     migrate: 'Cambiar desde PracticeHub',
     contact: 'Contacto',
     bookDemo: 'Reservar demo',
@@ -36,6 +37,12 @@ export const es = {
   funcionalidades: {
     badge: 'Funcionalidades',
     title: 'Todo lo que necesita tu clínica, en un solo lugar',
+  },
+
+  sectors: {
+    physioQuestion: '¿Tienes una clínica de fisioterapia?',
+    physioBody: 'La agenda con asignación automática de camilla, los bonos de sesiones y los recordatorios por WhatsApp funcionan igual en un centro de fisioterapia.',
+    physioLink: 'Ver el software para clínicas de fisioterapia',
   },
 
   platform: {
