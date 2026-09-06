@@ -181,9 +181,53 @@ export const fr: Messages = {
 
   pricing: {
     badge: 'Tarifs',
-    title: 'Une offre adaptée à votre cabinet',
-    description: 'Le tarif dépend du nombre de sites et de praticiens. Parlez-nous de votre cabinet et nous vous préparons une proposition — migration depuis votre système actuel incluse.',
-    cta: 'Nous contacter',
+    title: 'Un tarif par praticien, pas par patient',
+    description: 'Patients illimités sur toutes les offres. Vous ne payez que pour les praticiens qui consultent — l\'accueil et l\'administration sont gratuits et illimités.',
+    monthly: 'Mensuel',
+    annual: 'Annuel',
+    annualSave: 'Économisez ~15%',
+    perMonth: '/mois',
+    billedAnnually: 'facturé annuellement',
+    mostChosen: 'Le plus choisi',
+    extraPro: 'Praticien supplémentaire : 29 €/mois',
+    cta: 'Démarrer l\'essai de 30 jours',
+    ctaNote: '30 jours d\'essai. Sans carte bancaire. Migration depuis PracticeHub incluse.',
+    tiers: {
+      solo: {
+        name: 'Solo',
+        for: '1 praticien, 1 site',
+        features: [
+          'Patients illimités',
+          'Utilisateurs administratifs gratuits et illimités',
+          'Agenda avec attribution automatique des salles',
+          'Réservation en ligne sur votre propre page',
+          'WhatsApp : boîte de réception, rappels et modèles',
+          'Relances et campagnes automatiques',
+          'Liste d\'attente et alertes de suivi',
+          'Facturation, paiements et forfaits',
+        ],
+      },
+      practice: {
+        name: 'Practice',
+        for: 'Jusqu\'à 3 praticiens, 1 site',
+        features: [
+          'Tout ce que comprend Solo',
+          'Rôles et permissions personnalisés',
+          'Rapports avancés : PVA, rétention, conversion',
+          'Praticiens supplémentaires à 29 €/mois',
+        ],
+      },
+      clinic: {
+        name: 'Clinic',
+        for: 'Jusqu\'à 6 praticiens, sites illimités',
+        features: [
+          'Tout ce que comprend Practice',
+          'Multi-site',
+          'API et webhooks',
+          'Migration assistée et support prioritaire',
+        ],
+      },
+    },
   },
 
   finalCta: {

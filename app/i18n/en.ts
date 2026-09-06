@@ -181,9 +181,53 @@ export const en: Messages = {
 
   pricing: {
     badge: 'Pricing',
-    title: 'A plan sized to your clinic',
-    description: 'Pricing depends on the number of locations and practitioners. Tell us about your clinic and we\'ll put together a proposal — migration from your current system included.',
-    cta: 'Talk to us',
+    title: 'Priced per practitioner, not per patient',
+    description: 'Unlimited patients on every plan. You only pay for the practitioners seeing patients — front desk and admin users are free and unlimited.',
+    monthly: 'Monthly',
+    annual: 'Annual',
+    annualSave: 'Save ~15%',
+    perMonth: '/mo',
+    billedAnnually: 'billed annually',
+    mostChosen: 'Most chosen',
+    extraPro: 'Extra practitioner: €29/mo',
+    cta: 'Start 30-day trial',
+    ctaNote: '30-day trial. No card required. Migration from PracticeHub included.',
+    tiers: {
+      solo: {
+        name: 'Solo',
+        for: '1 practitioner, 1 site',
+        features: [
+          'Unlimited patients',
+          'Free, unlimited admin users',
+          'Calendar with automatic room assignment',
+          'Online booking on your own page',
+          'WhatsApp inbox, reminders and templates',
+          'Recalls and automated campaigns',
+          'Waitlist and care-plan continuity alerts',
+          'Invoicing, payments and packages',
+        ],
+      },
+      practice: {
+        name: 'Practice',
+        for: 'Up to 3 practitioners, 1 site',
+        features: [
+          'Everything in Solo',
+          'Custom roles and permissions',
+          'Advanced reporting: PVA, retention, conversion',
+          'Extra practitioners at €29/mo',
+        ],
+      },
+      clinic: {
+        name: 'Clinic',
+        for: 'Up to 6 practitioners, unlimited sites',
+        features: [
+          'Everything in Practice',
+          'Multi-site',
+          'API access and webhooks',
+          'Assisted migration and priority support',
+        ],
+      },
+    },
   },
 
   finalCta: {
