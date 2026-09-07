@@ -179,9 +179,55 @@ export const es = {
 
   pricing: {
     badge: 'Precios',
-    title: 'Un plan ajustado a tu clínica',
-    description: 'El precio depende del número de sedes y profesionales. Cuéntanos sobre tu clínica y te preparamos una propuesta — incluida la migración desde tu sistema actual.',
-    cta: 'Hablar con nosotros',
+    title: 'Precio por profesional, no por paciente',
+    description: 'Pacientes ilimitados en todos los planes. Solo pagas por los profesionales que pasan consulta — recepción y administración son gratis e ilimitados.',
+    monthly: 'Mensual',
+    annual: 'Anual',
+    annualSave: 'Ahorra ~15%',
+    perMonth: '/mes',
+    billedAnnually: 'facturado anualmente',
+    mostChosen: 'Más elegido',
+    extraPro: 'Profesional adicional: 29 €/mes',
+    cta: 'Empezar prueba de 30 días',
+    exVat: 'sin IVA',
+    vatNote: 'Precios sin IVA. Se añade un 21% en la factura.',
+    ctaNote: '30 días de prueba. Sin tarjeta. Migración desde PracticeHub incluida.',
+    tiers: {
+      solo: {
+        name: 'Solo',
+        for: '1 profesional, 1 sede',
+        features: [
+          'Pacientes ilimitados',
+          'Usuarios de administración gratis e ilimitados',
+          'Agenda con asignación automática de sala',
+          'Reserva online en tu propia página',
+          'WhatsApp: bandeja, recordatorios y plantillas',
+          'Recordatorios de revisión y campañas automáticas',
+          'Lista de espera y alertas de continuidad',
+          'Facturación, pagos y bonos',
+        ],
+      },
+      practice: {
+        name: 'Practice',
+        for: 'Hasta 3 profesionales, 1 sede',
+        features: [
+          'Todo lo de Solo',
+          'Roles y permisos personalizados',
+          'Informes avanzados: PVA, retención y conversión',
+          'Profesionales adicionales a 29 €/mes',
+        ],
+      },
+      clinic: {
+        name: 'Clinic',
+        for: 'Hasta 6 profesionales, sedes ilimitadas',
+        features: [
+          'Todo lo de Practice',
+          'Multi-sede',
+          'API y webhooks',
+          'Migración asistida y soporte prioritario',
+        ],
+      },
+    },
   },
 
   finalCta: {
