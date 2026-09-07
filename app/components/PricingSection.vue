@@ -86,8 +86,11 @@ function price(tier: (typeof TIERS)[number]) {
               <span class="text-[38px] font-semibold leading-none tracking-tightTitle text-ink-900 tabular-nums">{{ price(tier) }}&nbsp;€</span>
               <span class="text-[14px] text-ink-muted">{{ t('pricing.perMonth') }}</span>
             </p>
+            <!-- The ex-VAT marker stays in both states: on annual it would
+                 otherwise be pushed out by "billed annually", which is exactly
+                 where the number is largest and the surprise worst. -->
             <p class="h-[18px] text-[12.5px] text-ink-faint2">
-              <span v-if="annual">{{ t('pricing.billedAnnually') }}</span>
+              <span v-if="annual">{{ t('pricing.billedAnnually') }} &middot; </span>{{ t('pricing.exVat') }}
             </p>
           </div>
 
@@ -120,7 +123,9 @@ function price(tier: (typeof TIERS)[number]) {
         </div>
       </div>
 
-      <p class="mt-4 max-w-[640px] text-center text-[13.5px] text-ink-muted">{{ t('pricing.ctaNote') }}</p>
+      <p class="mt-4 max-w-[640px] text-center text-[13.5px] text-ink-muted">
+        {{ t('pricing.vatNote') }} {{ t('pricing.ctaNote') }}
+      </p>
     </div>
   </section>
 </template>

@@ -189,6 +189,8 @@ export const es = {
     mostChosen: 'Más elegido',
     extraPro: 'Profesional adicional: 29 €/mes',
     cta: 'Empezar prueba de 30 días',
+    exVat: 'sin IVA',
+    vatNote: 'Precios sin IVA. Se añade un 21% en la factura.',
     ctaNote: '30 días de prueba. Sin tarjeta. Migración desde PracticeHub incluida.',
     tiers: {
       solo: {

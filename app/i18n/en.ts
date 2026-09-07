@@ -191,6 +191,8 @@ export const en: Messages = {
     mostChosen: 'Most chosen',
     extraPro: 'Extra practitioner: €29/mo',
     cta: 'Start 30-day trial',
+    exVat: 'ex. VAT',
+    vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
     ctaNote: '30-day trial. No card required. Migration from PracticeHub included.',
     tiers: {
       solo: {

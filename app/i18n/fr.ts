@@ -191,6 +191,8 @@ export const fr: Messages = {
     mostChosen: 'Le plus choisi',
     extraPro: 'Praticien supplémentaire : 29 €/mois',
     cta: 'Démarrer l\'essai de 30 jours',
+    exVat: 'hors TVA',
+    vatNote: 'Prix hors TVA. 21 % ajoutés sur la facture.',
     ctaNote: '30 jours d\'essai. Sans carte bancaire. Migration depuis PracticeHub incluse.',
     tiers: {
       solo: {
