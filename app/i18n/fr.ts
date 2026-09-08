@@ -6,9 +6,10 @@ export const fr: Messages = {
     pricing: 'Tarifs',
     comparison: 'Comparatif',
     physio: 'Kinésithérapie',
-    migrate: 'Migrer depuis PracticeHub',
+    migrate: 'Migration',
     contact: 'Contact',
     bookDemo: 'Réserver une démo',
+    bookDemoShort: 'Démo',
   },
 
   hero: {

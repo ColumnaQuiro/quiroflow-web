@@ -4,9 +4,16 @@ export const es = {
     pricing: 'Precios',
     comparison: 'Comparativa',
     physio: 'Fisioterapia',
-    migrate: 'Cambiar desde PracticeHub',
+    // Short form on purpose: the header is a six-item row and the full
+    // "Cambiar desde PracticeHub" wording forces the whole nav to wrap.
+    // The section itself still carries the full message.
+    migrate: 'Migración',
     contact: 'Contacto',
     bookDemo: 'Reservar demo',
+    // Shown instead of bookDemo below 640px: the logo, the ES/EN/FR toggle and
+    // a full-length CTA cannot all fit on a 375px header without one of them
+    // being squeezed until its text wraps.
+    bookDemoShort: 'Demo',
   },
 
   hero: {

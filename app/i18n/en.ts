@@ -6,9 +6,10 @@ export const en: Messages = {
     pricing: 'Pricing',
     comparison: 'Comparison',
     physio: 'Physiotherapy',
-    migrate: 'Switch from PracticeHub',
+    migrate: 'Migration',
     contact: 'Contact',
     bookDemo: 'Book a demo',
+    bookDemoShort: 'Demo',
   },
 
   hero: {

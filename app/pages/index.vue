@@ -244,7 +244,7 @@ useHead(() => ({
           </div>
           <NuxtLink
             :to="localePath('software-fisioterapia')"
-            class="w-fit shrink-0 whitespace-nowrap rounded-ctl border border-brand-tintBorder bg-white px-5 py-2.5 text-[14px] font-semibold text-brand-text hover:border-brand"
+            class="w-fit rounded-ctl border border-brand-tintBorder bg-white px-5 py-2.5 text-[14px] font-semibold text-brand-text hover:border-brand md:shrink-0 md:whitespace-nowrap"
           >
             {{ t('sectors.physioLink') }}
           </NuxtLink>
