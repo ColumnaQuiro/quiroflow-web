@@ -39,13 +39,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # pnpm before setup-node, so setup-node's own cache: pnpm can find it.
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8.8.0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
-      # No local install step -- --build hands the whole build to Netlify's
-      # own build system, which does its own dependency install (detecting
-      # npm/pnpm/yarn from this repo's lockfile) as part of that process.
+      # --build does NOT install dependencies itself when run this way --
+      # that only happens automatically inside Netlify's own hosted build
+      # environment. Running plain `--build` here (no install) is exactly
+      # what failed the first time this workflow ran: "pnpm: command not
+      # found", since pnpm wasn't even present, let alone node_modules.
+      - run: pnpm install --frozen-lockfile
+
       - name: Build and deploy to Netlify
         run: |
           if [ "${{ github.event_name }}" = "push" ] || [ "${{ inputs.prod }}" = "true" ]; then
