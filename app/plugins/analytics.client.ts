@@ -11,7 +11,6 @@ interface GtagWindow extends Window {
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { consent, granted, hydrate } = useConsent()
-  const cfg = useRuntimeConfig().public.googleAds
   const w = window as GtagWindow
 
   // Deferred to app:mounted rather than run here. Plugins execute before Vue
@@ -35,7 +34,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   let scriptLoaded = false
 
   function loadGtag() {
-    if (scriptLoaded || !cfg.id) return
+    // trackingEnabled() also covers the hostname check, so no Google request
+    // is ever made from a deploy preview, a branch build or localhost.
+    if (scriptLoaded || !trackingEnabled()) return
     scriptLoaded = true
 
     ensureGtagShim()
@@ -50,11 +51,11 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     const s = document.createElement('script')
     s.async = true
-    s.src = `https://www.googletagmanager.com/gtag/js?id=${cfg.id}`
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS.id}`
     document.head.appendChild(s)
 
     w.gtag!('js', new Date())
-    w.gtag!('config', cfg.id)
+    w.gtag!('config', GOOGLE_ADS.id)
   }
 
   function sync() {
