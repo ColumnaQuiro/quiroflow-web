@@ -69,6 +69,7 @@ export const es = {
   funcionalidades: {
     badge: 'Funcionalidades',
     title: 'Lo que no hace ningún otro programa de tu lista',
+    sectorTitle: 'Todo lo que necesita tu clínica, en un solo lugar',
     subtitle: 'Agenda, facturación y formularios los tiene todo el mundo. Estas tres son la razón por la que una clínica cambia.',
     moreTitle: 'Y todo lo demás que esperas de un programa de gestión',
   },

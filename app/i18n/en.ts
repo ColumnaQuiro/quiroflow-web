@@ -57,6 +57,7 @@ export const en: Messages = {
   funcionalidades: {
     badge: 'Features',
     title: 'What no other system on your shortlist does',
+    sectorTitle: 'Everything your clinic needs, in one place',
     subtitle: 'Everyone has a calendar, invoicing and forms. These three are the reason a clinic actually switches.',
     moreTitle: 'And everything else you expect from a practice management system',
   },
