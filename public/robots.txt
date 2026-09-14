@@ -1,4 +1,9 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://quiroflow.com/sitemap.xml
+# sitemap_index.xml, not sitemap.xml: with three locales @nuxtjs/sitemap
+# emits one sitemap each plus an index, and the index is what lists them.
+# /sitemap.xml is only a redirect to it, and on a prerendered export that
+# redirect is an HTML meta-refresh page rather than a real one -- which a
+# crawler expecting XML will not follow. netlify.toml 301s it properly too.
+Sitemap: https://quiroflow.com/sitemap_index.xml

@@ -28,3 +28,15 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# /sitemap.xml is the path everyone assumes exists, and it may already be
+# submitted in Search Console -- but the prerendered file sitting there is an
+# HTML meta-refresh stub, not XML (see public/robots.txt for why). A real 301
+# to the actual index is what a crawler can follow. force = true because
+# Netlify serves a matching static file before applying redirects, and that
+# stub would otherwise win.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap_index.xml"
+  status = 301
+  force = true
