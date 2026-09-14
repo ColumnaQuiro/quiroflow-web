@@ -19,6 +19,28 @@ npm run dev
 (`Cannot read properties of null (reading 'edgesOut')`) triggered by
 Nuxt 4's newer peer-dependency graph — not specific to this project.
 
+### If `nuxt build` dies in Nitro with `ENOENT ... unstorage/drivers/fs-lite.mjs`
+
+Not a problem with this repo — check `~/.nuxtrc`. Nuxt merges that file into
+every project's config, and the old `nuxi devtools enable` (DevTools 0.x,
+2023) wrote a line into it pointing at a globally installed module:
+
+```
+modules.0=/usr/local/lib/node_modules/@nuxt/devtools/module.cjs
+```
+
+That module is injected into *every* Nuxt project on the machine, and its
+bundled `unstorage` predates the `fs-lite` driver that current Nitro
+requires, so the build fails while writing the server bundle. The client and
+server bundles compile fine first, which makes it look like a code error
+when it is not. Deleting that line (and the `devtoolsGlobal.*` line beside
+it) from `~/.nuxtrc` fixes it; the `telemetry.*` lines are unrelated and
+should stay. The stale global package itself can then be removed with
+`npm uninstall -g @nuxt/devtools`.
+
+Netlify never hits this — it builds from a clean checkout with no
+`~/.nuxtrc`.
+
 ## Structure
 
 The root URL is deliberately **neutral** -- it sells the job the product does
