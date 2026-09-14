@@ -16,12 +16,12 @@
  * send_to: 'AW-XXXXXXXXX/<label>'.
  */
 export const GOOGLE_ADS = {
-  /** e.g. 'AW-123456789' */
-  id: '',
-  /** Label for the fisioterapia email capture (primary conversion). */
-  emailLabel: '',
-  /** Label for the demo booking click-out (secondary conversion). */
-  demoLabel: '',
+  /** Google tag for Ads account 257-649-3349 (QuiroFlow). */
+  id: 'AW-18450337095',
+  /** "Captura de email - fisioterapia" — primary conversion. */
+  emailLabel: '20gcCP7ErvccEMea591E',
+  /** "Clic reservar demo" — the booking click-out. */
+  demoLabel: '5UrYCPu3svccEMea591E',
 }
 
 // Deploy previews, branch builds and localhost share this code, and without a
