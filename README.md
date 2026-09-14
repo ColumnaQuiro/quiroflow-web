@@ -103,6 +103,19 @@ built from this repo.
 
 ## Deployment status
 
-Continuous deployment from `main` is connected — every push to `main` auto-deploys to production.
+Continuous deployment from `main` is connected: Netlify builds every push and
+publishes to quiroflow.com. Deploy previews are built for pull requests too.
 
-Continuous deployment verified end-to-end: push to `main` -> Netlify build -> live on quiroflow.com.
+There is no GitHub Actions workflow and there should not be one -- an earlier
+workflow deployed via the Netlify CLI, which duplicated what the git
+integration already does. It was removed in `be5c474`.
+
+### The publish directory is `dist`, not `.output/public`
+
+`nuxt generate` writes to different places depending on the environment, and
+this has already broken production once. See the comment at the top of
+`netlify.toml` before changing it: locally Nitro uses the `static` preset and
+writes `.output/public`, but inside a Netlify build it detects Netlify,
+switches to `netlify-static`, and writes `dist`. Checking where a local build
+puts its files tells you nothing about the right value here -- run
+`netlify build` instead, which runs the same orchestrator Netlify does.
