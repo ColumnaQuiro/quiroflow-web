@@ -85,7 +85,7 @@ usePageSeo({
     <section id="funcionalidades" class="pt-20">
       <div class="mx-auto max-w-[1120px] px-8 text-center">
         <h2 class="text-[32px] tracking-tightTitle text-ink-900">
-          {{ t('funcionalidades.title') }}
+          {{ t('funcionalidades.sectorTitle') }}
         </h2>
       </div>
     </section>

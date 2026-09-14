@@ -57,6 +57,7 @@ export const fr: Messages = {
   funcionalidades: {
     badge: 'Fonctionnalités',
     title: "Ce qu'aucun autre logiciel de votre liste ne fait",
+    sectorTitle: 'Tout ce dont votre cabinet a besoin, au même endroit',
     subtitle: "Agenda, facturation et formulaires, tout le monde les a. Ces trois-là sont la raison pour laquelle un cabinet change vraiment.",
     moreTitle: "Et tout le reste que vous attendez d'un logiciel de gestion",
   },
