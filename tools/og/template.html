@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    background: #fff;
+  }
+  .card {
+    width: 1200px; height: 630px; position: relative;
+    background: linear-gradient(157deg, #F7F8FF 0%, #FFFFFF 52%, #F4F5FE 100%);
+    padding: 72px 76px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  /* Brand bar down the left edge -- the one element that is identical on
+     every card, so the set reads as one family at thumbnail size. */
+  .card::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: #4F46E5;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand svg { width: 44px; height: 44px; }
+  .brand span { font-size: 32px; font-weight: 700; letter-spacing: -.012em; color: #15171E; }
+  .eyebrow {
+    display: inline-block; align-self: flex-start; margin-top: 40px;
+    background: #EEF0FE; border: 1px solid #D8DCFB; border-radius: 999px;
+    padding: 9px 20px; font-size: 21px; font-weight: 600; color: #3B32C9;
+  }
+  h1 {
+    margin-top: 26px; font-size: 62px; line-height: 1.1; letter-spacing: -.02em;
+    font-weight: 700; color: #15171E; max-width: 930px;
+  }
+  h1 em { font-style: normal; color: #4F46E5; }
+  p.sub { margin-top: 22px; font-size: 26px; line-height: 1.45; color: #4A4F60; max-width: 880px; }
+  .proof { display: flex; gap: 30px; align-items: center; }
+  .proof div { display: flex; align-items: center; gap: 11px; font-size: 22px; font-weight: 600; color: #2B3040; }
+  .dot { width: 26px; height: 26px; border-radius: 999px; background: #E9F6EF; display: flex; align-items: center; justify-content: center; }
+  .dot svg { width: 16px; height: 16px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <div class="brand">
+        <svg viewBox="0 0 100 100" fill="none">
+          <rect x="29" y="8" width="42" height="18" rx="9" fill="#4F46E5"/>
+          <rect x="44.6" y="32" width="42" height="18" rx="9" fill="#4F46E5"/>
+          <rect x="13.4" y="56" width="42" height="18" rx="9" fill="#4F46E5"/>
+          <rect x="29" y="80" width="42" height="18" rx="9" fill="#4F46E5"/>
+        </svg>
+        <span>QuiroFlow</span>
+      </div>
+      <span class="eyebrow">__EYEBROW__</span>
+      <h1>__TITLE__</h1>
+      <p class="sub">__SUB__</p>
+    </div>
+    <div class="proof">__PROOF__</div>
+  </div>
+</body>
+</html>

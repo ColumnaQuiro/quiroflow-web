@@ -34,6 +34,13 @@ const competitors = [
 // invoicing and bonos, but not automatic legal invoicing for memberships
 // specifically, so that row stays "—" like the others.
 const rowFlags: RowFlags[] = [
+  // Full data export, row 0. Checked September 2026: none of the five
+  // advertises an export/portability feature anywhere on its own site --
+  // practicehub.io talks only about importing *into* it ("How to Switch"),
+  // and quirohiro.io does not mention export at all. Per the footnote, "—"
+  // means not shown publicly rather than absent, which is exactly the point
+  // of the row: a clinic cannot find out before signing.
+  { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
   { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
   { quiroflow: true, practicehub: false, quirohiro: true, cliniccloud: true, doctoralia: false, quirocitas: false },
   { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
@@ -45,6 +52,14 @@ const rowFlags: RowFlags[] = [
   { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
   { quiroflow: true, practicehub: false, quirohiro: false, cliniccloud: false, doctoralia: false, quirocitas: false },
   { quiroflow: true, practicehub: false, quirohiro: true, cliniccloud: false, doctoralia: true, quirocitas: false },
+  // Published entry price, last row. Checked September 2026 and it is NOT a
+  // differentiator: practicehub.io/pricing shows £100/mo, quirohiro.io shows
+  // 67 €/mo, clinic-cloud.com and pro.doctoralia.es both have public tariff
+  // pages. Only quirocitas.com is "—", and only because the domain no longer
+  // resolves at all. Kept because a buyer does want to know, but it is four
+  // ticks in a row -- drop this row and its label in the three dictionaries
+  // if the table should only carry things QuiroFlow wins.
+  { quiroflow: true, practicehub: true, quirohiro: true, cliniccloud: true, doctoralia: true, quirocitas: false },
 ]
 
 const t = useT()

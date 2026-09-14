@@ -1,178 +1,121 @@
 <script setup lang="ts">
-import type { Locale } from '~/composables/useLocale'
+import type { LocalisedText } from '~/composables/usePageSeo'
 
 const t = useT()
-const { tm } = useI18n()
-const { locale } = useLocale()
-const localePath = useLocalePath()
-const route = useRoute()
+const { tm, rt } = useI18n()
 
-// useLocaleHead supplies htmlAttrs.lang/dir, the hreflang alternate links,
-// the canonical link, and og:locale/og:locale:alternate -- all correctly
-// per-locale from the current route, which a hand-written version of this
-// page's old useHead() could only ever get right for one language at a time.
-const i18nHead = useLocaleHead({ seo: true })
-const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
+// The homepage no longer claims the chiropractic head term -- that moved to
+// /software-quiropractica, which can rank for it without telling every fisio,
+// osteópata and podólogo who lands here from an ad that the page is not for
+// them. What the root URL targets now is the category itself: the job the
+// product does, for whoever runs the clinic.
+const titles: LocalisedText = {
+  es: 'QuiroFlow — Software de gestión para clínicas',
+  en: 'QuiroFlow — Practice management software for clinics',
+  fr: 'QuiroFlow — Logiciel de gestion pour cabinets',
+}
+const descriptions: LocalisedText = {
+  es: 'Agenda con sala asignada automáticamente, bonos con cobro recurrente, WhatsApp y aviso de paciente retrasado. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología. 30 días de prueba, sin tarjeta.',
+  en: 'A calendar with automatic room assignment, packages with recurring billing, WhatsApp, and behind-schedule patient alerts. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 30-day trial, no card.',
+  fr: "Un agenda avec attribution automatique des salles, des forfaits à prélèvement récurrent, WhatsApp et une alerte de patient en retard. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie. 30 jours d'essai, sans carte.",
+}
+const imageAlts: LocalisedText = {
+  es: 'QuiroFlow — software de gestión para clínicas de terapia manual',
+  en: 'QuiroFlow — practice management software for manual therapy clinics',
+  fr: 'QuiroFlow — logiciel de gestion pour cabinets de thérapie manuelle',
+}
+const jsonLdDescriptions: LocalisedText = {
+  es: 'Software de gestión para clínicas de quiropráctica, fisioterapia, osteopatía y podología: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
+  en: 'Practice management software for chiropractic, physiotherapy, osteopathy and podiatry clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
+  fr: "Logiciel de gestion pour cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
+}
 
-// "software para quiroprácticos" leads the Spanish title on purpose: it is the
-// only chiropractic-software phrase Google's own suggestion index will admit
-// has real search volume (~20/mo), while the far more natural-sounding
-// "software de gestión para clínicas quiroprácticas" -- which every competitor
-// writes in their title tag -- returns no suggestions at all. Same reasoning
-// for the EN/FR equivalents, matching each market's actual head term.
-const titles: Record<Locale, string> = {
-  es: 'QuiroFlow — Software para quiroprácticos y clínicas',
-  en: 'QuiroFlow — Software for chiropractors and clinics',
-  fr: 'QuiroFlow — Logiciel pour chiropracteurs et cabinets',
-}
-const descriptions: Record<Locale, string> = {
-  es: 'Software para quiroprácticos: agenda con asignación automática de salas, facturación y recordatorios por WhatsApp. Migra desde PracticeHub en un fin de semana.',
-  en: 'Software for chiropractors: a calendar with automatic room assignment, billing, and WhatsApp reminders. Migrate from PracticeHub in a weekend.',
-  fr: "Logiciel pour chiropracteurs : agenda avec attribution automatique des salles, facturation et rappels WhatsApp. Migrez depuis PracticeHub en un week-end.",
-}
-const jsonLdDescriptions: Record<Locale, string> = {
-  es: 'Software para quiroprácticos y clínicas quiroprácticas: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
-  en: 'Software for chiropractors and chiropractic clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
-  fr: "Logiciel pour chiropracteurs et cabinets de chiropraxie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
-}
-const title = computed(() => titles[locale.value])
-const description = computed(() => descriptions[locale.value])
+const faqItems = useFaqItems('faq.items')
 
-useHead(() => ({
-  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
-  title: title.value,
-  link: [...(i18nHead.value.link ?? [])],
-  meta: [
-    ...(i18nHead.value.meta ?? []),
-    { name: 'description', content: description.value },
-    { property: 'og:title', content: title.value },
-    { property: 'og:description', content: description.value },
-    { property: 'og:url', content: pageUrl.value },
-    { name: 'twitter:title', content: title.value },
-    { name: 'twitter:description', content: description.value },
-  ],
-  // SoftwareApplication + Organization JSON-LD -- the two schema types that
-  // actually match what this page is (a SaaS product's marketing site),
-  // rather than reaching for FAQPage/BreadcrumbList schema the site has no
-  // real content to back honestly.
-  script: [
-    {
-      // Without a stable key, useHead treats each locale switch's
-      // recomputed innerHTML as a brand new tag and appends it rather than
-      // replacing the previous one -- caught by inspecting the rendered
-      // head after toggling locale, which showed two duplicate <script>
-      // blocks (one per language) instead of one.
-      key: 'ld-json-software-application',
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'Organization',
-            '@id': 'https://quiroflow.com/#organization',
-            name: 'QuiroFlow',
-            url: 'https://quiroflow.com/',
-            logo: 'https://quiroflow.com/icon-512.png',
-          },
-          {
-            '@type': 'SoftwareApplication',
-            name: 'QuiroFlow',
-            url: pageUrl.value,
-            applicationCategory: 'BusinessApplication',
-            operatingSystem: 'Web',
-            description: jsonLdDescriptions[locale.value],
-            publisher: { '@id': 'https://quiroflow.com/#organization' },
-          },
-        ],
-      }),
-    },
-  ],
-}))
+// The table-stakes blocks that used to get a full-width FeatureSection each.
+// Seven equal-weight sections meant nothing stood out; these are answered in
+// a compact grid so the three differentiators above can. Deliberately without
+// `agenda`, which keeps its own full section above -- room assignment is part
+// of what makes the calendar different rather than a generic calendar.
+const gridItems = computed(() =>
+  (['whatsapp', 'booking', 'forms', 'reports', 'platform'] as const).map(key => ({
+    eyebrow: t(`${key}.eyebrow`),
+    title: t(`${key}.title`),
+    body: t(`${key}.short`),
+  })),
+)
+
+usePageSeo({
+  titles,
+  descriptions,
+  image: '/og-image.png',
+  imageAlts,
+  jsonLdKey: 'ld-json-home',
+  // SoftwareApplication + Organization + FAQPage. The FAQ schema is honest
+  // here for the first time: every question below is really on the page as
+  // visible text, which is what Google requires for the rich result.
+  jsonLd: ({ url, locale }) => ({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://quiroflow.com/#organization',
+        name: 'QuiroFlow',
+        legalName: 'COLUMNAQUIRO S.L.',
+        url: 'https://quiroflow.com/',
+        logo: 'https://quiroflow.com/icon-512.png',
+        email: 'hola@quiroflow.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Calle dels Vivons, 29',
+          postalCode: '46006',
+          addressLocality: 'Valencia',
+          addressCountry: 'ES',
+        },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: 'QuiroFlow',
+        url,
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web',
+        description: jsonLdDescriptions[locale],
+        publisher: { '@id': 'https://quiroflow.com/#organization' },
+        offers: {
+          '@type': 'Offer',
+          price: '59',
+          priceCurrency: 'EUR',
+          url: 'https://quiroflow.com/#precios',
+        },
+      },
+      faqJsonLd(faqItems.value),
+    ],
+  }),
+})
 </script>
 
 <template>
   <div>
     <HeroSection />
 
-    <PracticeHubSection />
+    <VideoSection />
 
+    <SectorsSection />
+
+    <!-- Reordered by what differentiates, not by category. The waitlist
+         re-offer, the behind-schedule alert and recurring-billing packages
+         are the three things not one competitor in the table below
+         advertises; they used to sit at positions five and six behind the
+         calendar and the invoicing every system already has. -->
     <section id="funcionalidades" class="pt-24">
-      <div class="mx-auto max-w-[1120px] px-8 text-center">
+      <div class="mx-auto flex max-w-[1120px] flex-col items-center gap-4 px-8 text-center">
         <span class="w-fit rounded-full border border-brand-tintBorder bg-brand-tint px-3 py-[5px] text-[13px] font-semibold text-brand-text">
           {{ t('funcionalidades.badge') }}
         </span>
-        <h2 class="mt-4 text-[34px] tracking-tightTitle text-ink-900">{{ t('funcionalidades.title') }}</h2>
+        <h2 class="max-w-[720px] text-[34px] leading-[1.15] tracking-tightTitle text-ink-900">{{ t('funcionalidades.title') }}</h2>
+        <p class="max-w-[620px] text-[15.5px] leading-[1.6] text-ink-muted">{{ t('funcionalidades.subtitle') }}</p>
       </div>
     </section>
-
-    <FeatureSection
-      :eyebrow="t('platform.eyebrow')"
-      :title="t('platform.title')"
-      :description="t('platform.description')"
-    >
-      <template #visual>
-        <div class="rounded-card border border-line bg-white p-[22px]">
-          <div class="flex flex-col gap-2.5">
-            <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
-              <span class="text-[13px] font-semibold text-ink-600">{{ t('platform.visual.inboxLabel') }}</span>
-              <span class="rounded-full bg-brand px-2 py-[3px] text-[11px] font-semibold text-white">{{ t('platform.visual.inboxBadge') }}</span>
-            </div>
-            <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
-              <span class="text-[13px] font-semibold text-ink-600">{{ t('platform.visual.templateLabel') }}</span>
-              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">{{ t('platform.visual.active') }}</span>
-            </div>
-            <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
-              <span class="text-[13px] font-semibold text-ink-600">{{ t('platform.visual.campaignLabel') }}</span>
-              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">{{ t('platform.visual.active') }}</span>
-            </div>
-            <div class="flex items-center justify-between rounded-[8px] bg-surface-page px-3.5 py-3">
-              <span class="text-[13px] font-semibold text-ink-600">{{ t('platform.visual.occupancyLabel') }}</span>
-              <span class="text-[13px] font-bold text-ink-900">82%</span>
-            </div>
-          </div>
-        </div>
-      </template>
-    </FeatureSection>
-
-    <FeatureSection
-      reverse
-      :eyebrow="t('agenda.eyebrow')"
-      :title="t('agenda.title')"
-      :description="t('agenda.description')"
-    >
-      <template #visual>
-        <div class="rounded-card border border-line bg-white p-[22px]">
-          <p class="mb-3 text-xs font-semibold text-ink-faint">{{ t('agenda.visual.header') }}</p>
-          <div class="flex flex-col gap-1.5">
-            <div v-for="row in tm('agenda.visual.rows')" :key="row.label" class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
-              <span class="text-[12.5px] font-semibold text-ink-600">{{ row.label }}</span>
-              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">{{ row.status }}</span>
-            </div>
-          </div>
-        </div>
-      </template>
-    </FeatureSection>
-
-    <FeatureSection
-      :eyebrow="t('whatsapp.eyebrow')"
-      :title="t('whatsapp.title')"
-      :description="t('whatsapp.description')"
-    >
-      <template #visual>
-        <MockupsWhatsappMockup />
-      </template>
-    </FeatureSection>
-
-    <FeatureSection
-      reverse
-      :eyebrow="t('booking.eyebrow')"
-      :title="t('booking.title')"
-      :description="t('booking.description')"
-    >
-      <template #visual>
-        <MockupsBookingWidgetMockup />
-      </template>
-    </FeatureSection>
 
     <FeatureSection
       :eyebrow="t('waitlist.eyebrow')"
@@ -211,52 +154,43 @@ useHead(() => ({
     </FeatureSection>
 
     <FeatureSection
-      :eyebrow="t('forms.eyebrow')"
-      :title="t('forms.title')"
-      :description="t('forms.description')"
+      :eyebrow="t('agenda.eyebrow')"
+      :title="t('agenda.title')"
+      :description="t('agenda.description')"
     >
       <template #visual>
-        <MockupsFormBuilderMockup />
-      </template>
-    </FeatureSection>
-
-    <FeatureSection
-      reverse
-      :eyebrow="t('reports.eyebrow')"
-      :title="t('reports.title')"
-      :description="t('reports.description')"
-    >
-      <template #visual>
-        <MockupsReportsMockup />
-      </template>
-    </FeatureSection>
-
-    <!-- Contextual link to the sector page: a footer link is enough for
-         crawling, but an in-content link from the homepage is what actually
-         passes authority to it -- and a fisio visitor landing here should not
-         have to work out whether this applies to them. -->
-    <section class="py-10">
-      <div class="mx-auto max-w-[1120px] px-8">
-        <div class="flex flex-col gap-3 rounded-card border border-brand-tintBorder bg-brand-tint px-7 py-6 md:flex-row md:items-center md:justify-between">
-          <div class="flex flex-col gap-1">
-            <p class="text-[16px] font-semibold text-ink-900">{{ t('sectors.physioQuestion') }}</p>
-            <p class="max-w-[620px] text-[14.5px] leading-[1.6] text-ink-muted">{{ t('sectors.physioBody') }}</p>
+        <div class="rounded-card border border-line bg-white p-[22px]">
+          <p class="mb-3 text-xs font-semibold text-ink-faint">{{ t('agenda.visual.header') }}</p>
+          <div class="flex flex-col gap-1.5">
+            <div v-for="row in tm('agenda.visual.rows')" :key="rt(row.label)" class="flex items-center justify-between rounded-ctl border border-line-control/60 px-2.5 py-2">
+              <span class="text-[12.5px] font-semibold text-ink-600">{{ rt(row.label) }}</span>
+              <span class="rounded-full bg-success-bg px-2 py-[3px] text-[11px] font-semibold text-success-text">{{ rt(row.status) }}</span>
+            </div>
           </div>
-          <NuxtLink
-            :to="localePath('software-fisioterapia')"
-            class="w-fit rounded-ctl border border-brand-tintBorder bg-white px-5 py-2.5 text-[14px] font-semibold text-brand-text hover:border-brand md:shrink-0 md:whitespace-nowrap"
-          >
-            {{ t('sectors.physioLink') }}
-          </NuxtLink>
         </div>
+      </template>
+    </FeatureSection>
+
+    <section class="py-14">
+      <div class="mx-auto flex max-w-[1120px] flex-col gap-8 px-8">
+        <h2 class="max-w-[640px] text-[25px] tracking-tightTitle text-ink-900">{{ t('funcionalidades.moreTitle') }}</h2>
+        <FeatureGrid :items="gridItems" />
       </div>
     </section>
+
+    <MigrationSection />
+
+    <DataSection />
 
     <TestimonialSection />
 
     <ComparisonSection />
 
     <PricingSection />
+
+    <FaqSection :title="t('faq.title')" :description="t('faq.description')" :items="faqItems" />
+
+    <EmailCapture form-name="info-general" />
 
     <FinalCta />
   </div>
