@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BOOKING_URL } from '~/utils/links'
+import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
 
 const t = useT()
 // tm(), not t() -- the feature lists resolve to arrays of strings, and t()
@@ -94,15 +94,31 @@ function price(tier: (typeof TIERS)[number]) {
             </p>
           </div>
 
-          <a
-            :href="BOOKING_URL"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center rounded-ctl px-[22px] py-[11px] text-[14.5px] font-semibold transition-colors"
-            :class="tier.featured ? 'bg-brand text-white hover:bg-brand-hover' : 'border border-line-control bg-surface text-ink-700 hover:border-line-controlHover'"
-          >
-            {{ t('pricing.cta') }}
-          </a>
+          <!-- Two buttons, two destinations. All three cards used to say
+               "Empezar prueba de 30 días" and open the demo calendar, so the
+               visitor who clicked in self-serve mode got a sales call
+               instead -- the one promise on the page that the destination
+               did not keep. The trial button now opens the real sign-up;
+               anyone who wants the conversation has their own link for it. -->
+          <div class="flex flex-col gap-2">
+            <a
+              :href="SIGNUP_URL"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center rounded-ctl px-[22px] py-[11px] text-[14.5px] font-semibold transition-colors"
+              :class="tier.featured ? 'bg-brand text-white hover:bg-brand-hover' : 'border border-line-control bg-surface text-ink-700 hover:border-line-controlHover'"
+            >
+              {{ t('pricing.cta') }}
+            </a>
+            <a
+              :href="BOOKING_URL"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center py-1 text-[13.5px] font-semibold text-ink-muted underline-offset-4 hover:text-brand-text hover:underline"
+            >
+              {{ t('pricing.ctaSecondary') }}
+            </a>
+          </div>
 
           <ul class="flex flex-col gap-2.5 border-t border-line pt-5">
             <li
@@ -121,6 +137,16 @@ function price(tier: (typeof TIERS)[number]) {
             </li>
           </ul>
         </div>
+      </div>
+
+      <!-- Anchors the number against the cost of the problem instead of
+           against a competitor's price list. 119 € next to "another system
+           charges 99 €" is a losing frame; 119 € next to "the hole you are
+           already paying for is 180 €" is the one that matches what the
+           product actually does. -->
+      <div class="mt-8 w-full max-w-[720px] rounded-card border border-brand-tintBorder bg-brand-tint px-7 py-6 text-center">
+        <p class="text-[16px] font-semibold text-ink-900">{{ t('pricing.anchor.title') }}</p>
+        <p class="mt-2 text-[14.5px] leading-[1.65] text-ink-muted">{{ t('pricing.anchor.body') }}</p>
       </div>
 
       <p class="mt-4 max-w-[640px] text-center text-[13.5px] text-ink-muted">

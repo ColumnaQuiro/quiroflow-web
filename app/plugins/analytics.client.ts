@@ -1,4 +1,4 @@
-import { BOOKING_URL } from '~/utils/links'
+import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
 
 // Loads Google's tag, but only once the visitor has opted in, and keeps
 // Consent Mode v2 signals in sync with the banner. See useConsent.ts for why
@@ -75,18 +75,19 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   watch(consent, sync, { immediate: true })
 
-  // A demo booking finishes on calendar.app.google, off our domain, so the
-  // click-out is the only thing we can observe. Delegated on document rather
-  // than wired into each of the components that render a booking link, so a
-  // new booking button anywhere is tracked without remembering to add it.
+  // A demo booking finishes on calendar.app.google and a trial sign-up
+  // finishes on app.quiroflow.com -- both off this domain, so the click-out
+  // is the only thing we can observe. Delegated on document rather than wired
+  // into each of the components that render one of these links, so a new
+  // button anywhere is tracked without remembering to add it.
   document.addEventListener(
     'click',
     (e) => {
       const target = e.target as HTMLElement | null
       const link = target?.closest?.('a[href]') as HTMLAnchorElement | null
       if (!link) return
-      if (!link.href.startsWith(BOOKING_URL)) return
-      trackConversion('demo')
+      if (link.href.startsWith(BOOKING_URL)) trackConversion('demo')
+      else if (link.href.startsWith(SIGNUP_URL)) trackConversion('signup')
     },
     { capture: true },
   )

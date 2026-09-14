@@ -21,10 +21,20 @@ const dotClasses: Record<ApptType, string> = {
 }
 const types: ApptType[] = ['ajuste', 'primeraVisita', 'revision', 'cancelada']
 
+// Same reasoning as InvoiceMockup's serviceLabel: "Ajuste" is chiropractic
+// wording, and it was still labelling the appointments on the physio page.
+// Only the primary appointment type varies by vertical -- first visit,
+// check-up and cancelled read the same everywhere.
+const props = defineProps<{ treatmentLabel?: string }>()
 const t = useT()
 // tm(), not t() -- resolves to an array of day labels, and t() would
 // stringify it instead of returning the raw array to v-for.
 const { tm } = useI18n()
+
+function typeLabel(type: ApptType) {
+  if (type === 'ajuste' && props.treatmentLabel) return props.treatmentLabel
+  return t(`mockups.calendar.types.${type}`)
+}
 </script>
 
 <template>
@@ -51,7 +61,7 @@ const { tm } = useI18n()
             class="rounded-[5px] border-l-[3px] px-1.5 py-1 text-[11px] font-semibold"
             :class="toneClasses[row.appts[col - 1]!.type]"
           >
-            {{ row.appts[col - 1]!.name }} · {{ t(`mockups.calendar.types.${row.appts[col - 1]!.type}`) }}
+            {{ row.appts[col - 1]!.name }} · {{ typeLabel(row.appts[col - 1]!.type) }}
           </div>
         </div>
       </template>
@@ -59,7 +69,7 @@ const { tm } = useI18n()
     <div class="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 border-t border-line-control/60 pt-2.5">
       <div v-for="type in types" :key="type" class="flex items-center gap-1.5">
         <span class="h-[7px] w-[7px] rounded-full" :class="dotClasses[type]" />
-        <span class="text-[10px] text-ink-faint">{{ t(`mockups.calendar.types.${type}`) }}</span>
+        <span class="text-[10px] text-ink-faint">{{ typeLabel(type) }}</span>
       </div>
     </div>
   </div>

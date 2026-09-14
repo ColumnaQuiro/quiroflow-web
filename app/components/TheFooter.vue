@@ -16,20 +16,42 @@ const CONTACT_EMAIL = 'hola@quiroflow.com'
 
 <template>
   <footer id="contacto" class="border-t border-line py-14">
-    <div class="mx-auto flex max-w-[1120px] flex-col gap-8 px-8">
-      <div class="flex flex-wrap items-center justify-between gap-8">
-        <div class="flex items-center gap-2.5">
-          <LogoMark :size="22" />
-          <span class="text-[15px] font-bold text-ink-900">QuiroFlow</span>
-        </div>
-        <nav class="flex flex-wrap gap-7">
-          <a :href="homeAnchor('funcionalidades')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.features') }}</a>
-          <a :href="homeAnchor('precios')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.pricing') }}</a>
-          <a :href="homeAnchor('practicehub')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.migrate') }}</a>
-          <NuxtLink :to="localePath('software-fisioterapia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.physio') }}</NuxtLink>
+    <div class="mx-auto flex max-w-[1120px] flex-col gap-10 px-8">
+      <!-- Three columns rather than one flat row. The site grew from two
+           pages to six, and the vertical pages in particular need a
+           permanent home here now that they are out of the header nav. -->
+      <div class="flex flex-col gap-10 md:flex-row md:justify-between">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-2.5">
+            <LogoMark :size="22" />
+            <span class="text-[15px] font-bold text-ink-900">QuiroFlow</span>
+          </div>
           <a :href="`mailto:${CONTACT_EMAIL}`" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ CONTACT_EMAIL }}</a>
-        </nav>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
+          <nav class="flex flex-col gap-2.5">
+            <p class="text-[12.5px] font-semibold uppercase tracking-wide text-ink-faint">{{ t('footer.productTitle') }}</p>
+            <a :href="homeAnchor('funcionalidades')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.features') }}</a>
+            <a :href="homeAnchor('precios')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.pricing') }}</a>
+            <a :href="homeAnchor('comparativa')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.comparison') }}</a>
+            <a :href="homeAnchor('migracion')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.migrate') }}</a>
+          </nav>
+
+          <nav class="flex flex-col gap-2.5">
+            <p class="text-[12.5px] font-semibold uppercase tracking-wide text-ink-faint">{{ t('footer.sectorsTitle') }}</p>
+            <NuxtLink :to="localePath('software-quiropractica')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.chiro') }}</NuxtLink>
+            <NuxtLink :to="localePath('software-fisioterapia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.physio') }}</NuxtLink>
+          </nav>
+
+          <nav class="flex flex-col gap-2.5">
+            <p class="text-[12.5px] font-semibold uppercase tracking-wide text-ink-faint">{{ t('footer.companyTitle') }}</p>
+            <NuxtLink :to="localePath('quienes-somos')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.about') }}</NuxtLink>
+            <NuxtLink :to="localePath('recursos')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.resources') }}</NuxtLink>
+          </nav>
+        </div>
       </div>
+
       <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line-control/60 pt-6">
         <p class="text-[12.5px] text-ink-faint">{{ t('footer.copyright') }}</p>
         <div class="flex gap-[18px]">

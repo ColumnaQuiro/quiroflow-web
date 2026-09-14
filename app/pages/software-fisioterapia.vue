@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { BOOKING_URL } from '~/utils/links'
-import type { Locale } from '~/composables/useLocale'
+import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
+import type { LocalisedText } from '~/composables/usePageSeo'
 
 // Localised slugs rather than /en/software-fisioterapia -- same reasoning as
 // the legal pages, and it matters more here: this page exists to rank, and the
@@ -10,23 +10,30 @@ definePageMeta({
 })
 
 const t = useT()
-// rt() resolves vue-i18n's compiled message objects back to plain strings --
-// tm() alone is fine inside a template, but the FAQ also feeds the JSON-LD
-// below, where a compiled message would serialise as an empty object.
 const { tm, rt } = useI18n()
-const { locale } = useLocale()
-const localePath = useLocalePath()
-const route = useRoute()
 
-const i18nHead = useLocaleHead({ seo: true })
-const pageUrl = computed(() => `https://quiroflow.com${route.path}`)
+// Deliberately not the same string as the H1: the title tag leads with the
+// exact phrase the page targets ("software para clínicas de fisioterapia"),
+// while the H1 reads as a sentence for the person actually landing here.
+const titles: LocalisedText = {
+  es: 'Software para clínicas de fisioterapia | QuiroFlow',
+  en: 'Practice management software for physiotherapy clinics | QuiroFlow',
+  fr: 'Logiciel de gestion pour cabinets de kinésithérapie | QuiroFlow',
+}
+const descriptions: LocalisedText = {
+  es: 'Software de gestión para clínicas de fisioterapia: agenda con asignación automática de camilla o box, bonos de sesiones, historia clínica digital y recordatorios por WhatsApp.',
+  en: 'Practice management software for physiotherapy clinics: automatic room and table assignment, session packages, digital clinical records and WhatsApp reminders.',
+  fr: 'Logiciel de gestion pour cabinets de kinésithérapie : attribution automatique des tables, forfaits de séances, dossier patient numérique et rappels WhatsApp.',
+}
+// Was inheriting the site-wide default, which said "clínicas quiroprácticas"
+// on the page whose whole job is to convince a physiotherapist it is for them.
+const imageAlts: LocalisedText = {
+  es: 'QuiroFlow — software de gestión para clínicas de fisioterapia',
+  en: 'QuiroFlow — practice management software for physiotherapy clinics',
+  fr: 'QuiroFlow — logiciel de gestion pour cabinets de kinésithérapie',
+}
 
-const faqItems = computed(() =>
-  (tm('fisioterapia.faq.items') as { q: string; a: string }[]).map(item => ({
-    q: rt(item.q),
-    a: rt(item.a),
-  })),
-)
+const faqItems = useFaqItems('fisioterapia.faq.items')
 
 // Same rt() treatment as the FAQ -- tm() alone hands back compiled messages
 // for nested objects, which render as [object Object].
@@ -37,137 +44,43 @@ const edgeItems = computed(() =>
   })),
 )
 
-// Deliberately not the same string as the H1: the title tag leads with the
-// exact phrase the page targets ("software para clínicas de fisioterapia"),
-// while the H1 reads as a sentence for the person actually landing here.
-const titles: Record<Locale, string> = {
-  es: 'Software para clínicas de fisioterapia | QuiroFlow',
-  en: 'Practice management software for physiotherapy clinics | QuiroFlow',
-  fr: 'Logiciel de gestion pour cabinets de kinésithérapie | QuiroFlow',
-}
-const descriptions: Record<Locale, string> = {
-  es: 'Software de gestión para clínicas de fisioterapia: agenda con asignación automática de camilla o box, bonos de sesiones, historia clínica digital y recordatorios por WhatsApp.',
-  en: 'Practice management software for physiotherapy clinics: automatic room and table assignment, session packages, digital clinical records and WhatsApp reminders.',
-  fr: 'Logiciel de gestion pour cabinets de kinésithérapie : attribution automatique des tables, forfaits de séances, dossier patient numérique et rappels WhatsApp.',
-}
-const title = computed(() => titles[locale.value])
-const description = computed(() => descriptions[locale.value])
-
-// Netlify Forms: the form is submitted with fetch so the visitor gets an inline
-// confirmation instead of Netlify's generic success page, but the real <form>
-// with data-netlify stays in the prerendered HTML because that markup is what
-// Netlify's build step scans to register the form at all. Without JS the native
-// POST still works, so this degrades rather than breaks.
-const FORM_NAME = 'fisioterapia-info'
-const email = ref('')
-const clinic = ref('')
-const consent = ref(false)
-const status = ref<'idle' | 'sending' | 'ok' | 'error'>('idle')
-
-async function submitCapture() {
-  if (status.value === 'sending' || !email.value || !consent.value) return
-  status.value = 'sending'
-  try {
-    const body = new URLSearchParams({
-      'form-name': FORM_NAME,
-      email: email.value,
-      clinica: clinic.value,
-      consentimiento: 'si',
-    })
-    const res = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body.toString(),
-    })
-    if (!res.ok) throw new Error(String(res.status))
-    status.value = 'ok'
-    // Primary conversion: unlike the demo button this one completes on-site,
-    // so it is the only signal Google Ads can attribute with confidence.
-    // No-ops unless the visitor accepted ads cookies and the labels are set.
-    trackConversion('emailCapture')
-  }
-  catch {
-    status.value = 'error'
-  }
-}
-
-useHead(() => ({
-  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
-  title: title.value,
-  link: [...(i18nHead.value.link ?? [])],
-  meta: [
-    ...(i18nHead.value.meta ?? []),
-    { name: 'description', content: description.value },
-    { property: 'og:title', content: title.value },
-    { property: 'og:description', content: description.value },
-    { property: 'og:url', content: pageUrl.value },
-    { name: 'twitter:title', content: title.value },
-    { name: 'twitter:description', content: description.value },
-  ],
-  script: [
-    {
-      // FAQPage schema is honest here -- every question below is really on the
-      // page as visible text, which is what Google requires for the rich result.
-      key: 'ld-json-fisioterapia',
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'SoftwareApplication',
-            name: 'QuiroFlow',
-            url: pageUrl.value,
-            applicationCategory: 'BusinessApplication',
-            operatingSystem: 'Web',
-            description: description.value,
-            publisher: { '@id': 'https://quiroflow.com/#organization' },
-          },
-          {
-            '@type': 'FAQPage',
-            mainEntity: faqItems.value.map(item => ({
-              '@type': 'Question',
-              name: item.q,
-              acceptedAnswer: { '@type': 'Answer', text: item.a },
-            })),
-          },
-        ],
-      }),
-    },
-  ],
-}))
+usePageSeo({
+  titles,
+  descriptions,
+  image: '/og-fisioterapia.png',
+  imageAlts,
+  jsonLdKey: 'ld-json-fisioterapia',
+  jsonLd: ({ url, description }) => ({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'SoftwareApplication',
+        name: 'QuiroFlow',
+        url,
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web',
+        description,
+        publisher: { '@id': 'https://quiroflow.com/#organization' },
+      },
+      // FAQPage schema is honest here -- every question below is really on
+      // the page as visible text, which is what Google requires for the rich
+      // result.
+      faqJsonLd(faqItems.value),
+    ],
+  }),
+})
 </script>
 
 <template>
   <div>
-    <section class="border-b border-line bg-surface-page py-20">
-      <div class="mx-auto flex max-w-[1120px] flex-col items-center gap-5 px-8 text-center">
-        <span class="w-fit rounded-full border border-brand-tintBorder bg-brand-tint px-3 py-[5px] text-[13px] font-semibold text-brand-text">
-          {{ t('fisioterapia.badge') }}
-        </span>
-        <h1 class="max-w-[760px] text-[38px] leading-[1.12] tracking-tightTitle text-ink-900 md:text-[46px]">
-          {{ t('fisioterapia.title') }}
-        </h1>
-        <p class="max-w-[640px] text-[16.5px] leading-[1.6] text-ink-muted">
-          {{ t('fisioterapia.description') }}
-        </p>
-        <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
-          <a
-            :href="BOOKING_URL"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover"
-          >
-            {{ t('fisioterapia.ctaPrimary') }}
-          </a>
-          <a
-            href="#funcionalidades"
-            class="inline-flex items-center justify-center rounded-ctl border border-line-control bg-white px-[22px] py-3 text-[14.5px] font-semibold text-ink-700 hover:border-ink-faint"
-          >
-            {{ t('fisioterapia.ctaSecondary') }}
-          </a>
-        </div>
-      </div>
-    </section>
+    <VerticalHero
+      :badge="t('fisioterapia.badge')"
+      :title="t('fisioterapia.title')"
+      :description="t('fisioterapia.description')"
+      :cta-primary="t('fisioterapia.ctaPrimary')"
+      :cta-secondary="t('fisioterapia.ctaSecondary')"
+      :see-features="t('fisioterapia.seeFeatures')"
+    />
 
     <section id="funcionalidades" class="pt-20">
       <div class="mx-auto max-w-[1120px] px-8 text-center">
@@ -183,7 +96,9 @@ useHead(() => ({
       :description="t('fisioterapia.features.agenda.description')"
     >
       <template #visual>
-        <MockupsCalendarMockup />
+        <!-- Was labelling every appointment "Ajuste" on the physiotherapy
+             page, which is the one word a fisio does not use. -->
+        <MockupsCalendarMockup :treatment-label="t('fisioterapia.mockups.calendarType')" />
       </template>
     </FeatureSection>
 
@@ -194,7 +109,9 @@ useHead(() => ({
       :description="t('fisioterapia.features.bonos.description')"
     >
       <template #visual>
-        <MockupsInvoiceMockup />
+        <!-- Same problem on the invoice: the sample line read "Ajuste
+             quiropráctico" on a page selling to physiotherapists. -->
+        <MockupsInvoiceMockup :service-label="t('fisioterapia.mockups.invoiceItem')" />
       </template>
     </FeatureSection>
 
@@ -259,139 +176,36 @@ useHead(() => ({
       </div>
     </section>
 
-    <section class="py-20">
-      <div class="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-12 px-8 md:grid-cols-2">
-        <div class="flex flex-col gap-3.5">
-          <span class="w-fit rounded-full border border-brand-tintBorder bg-brand-tint px-3 py-[5px] text-[13px] font-semibold text-brand-text">
-            {{ t('fisioterapia.migration.badge') }}
-          </span>
-          <h2 class="text-[28px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.migration.title') }}</h2>
-          <p class="text-[15px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.migration.description') }}</p>
-        </div>
-        <ul class="flex flex-col gap-3.5">
-          <li
-            v-for="bullet in tm('fisioterapia.migration.bullets')"
-            :key="bullet"
-            class="flex items-start gap-3 text-[14.5px] leading-[1.6] text-ink-700"
-          >
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mt-0.5 shrink-0">
-              <circle cx="9" cy="9" r="9" fill="#E9F6EF" />
-              <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#157F52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-            </svg>
-            <span>{{ bullet }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <MigrationSection />
 
-    <section class="border-y border-line bg-surface-page py-20">
-      <div class="mx-auto flex max-w-[760px] flex-col gap-8 px-8">
-        <h2 class="text-center text-[30px] tracking-tightTitle text-ink-900">
-          {{ t('fisioterapia.faq.title') }}
-        </h2>
-        <div class="flex flex-col gap-5">
-          <div
-            v-for="item in faqItems"
-            :key="item.q"
-            class="rounded-card border border-line bg-white p-6"
-          >
-            <h3 class="text-[16px] font-semibold tracking-tightTitle text-ink-900">{{ item.q }}</h3>
-            <p class="mt-2 text-[14.5px] leading-[1.7] text-ink-muted">{{ item.a }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <DataSection />
 
-    <section class="py-20">
-      <div class="mx-auto max-w-[640px] px-8">
-        <div class="rounded-card border border-line bg-white p-8 shadow-card">
-          <h2 class="text-[24px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.capture.title') }}</h2>
-          <p class="mt-2 text-[14.5px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.capture.description') }}</p>
+    <FaqSection :title="t('fisioterapia.faq.title')" :items="faqItems" />
 
-          <p v-if="status === 'ok'" class="mt-5 rounded-ctl bg-success-bg px-4 py-3 text-[14.5px] font-semibold text-success-text">
-            {{ t('fisioterapia.capture.success') }}
-          </p>
-
-          <form
-            v-else
-            :name="FORM_NAME"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="mt-5 flex flex-col gap-3"
-            @submit.prevent="submitCapture"
-          >
-            <input type="hidden" name="form-name" :value="FORM_NAME" />
-            <p class="hidden">
-              <label>No rellenar: <input name="bot-field" /></label>
-            </p>
-
-            <label class="flex flex-col gap-1.5">
-              <span class="text-[13px] font-semibold text-ink-700">{{ t('fisioterapia.capture.emailLabel') }}</span>
-              <input
-                v-model="email"
-                type="email"
-                name="email"
-                required
-                placeholder="hola@tuclinica.com"
-                class="rounded-ctl border border-line-control px-3.5 py-2.5 text-[14.5px] text-ink-900 outline-none focus:border-brand"
-              />
-            </label>
-
-            <label class="flex flex-col gap-1.5">
-              <span class="text-[13px] font-semibold text-ink-700">{{ t('fisioterapia.capture.clinicLabel') }}</span>
-              <input
-                v-model="clinic"
-                type="text"
-                name="clinica"
-                class="rounded-ctl border border-line-control px-3.5 py-2.5 text-[14.5px] text-ink-900 outline-none focus:border-brand"
-              />
-            </label>
-
-            <label class="mt-1 flex items-start gap-2.5 text-[13px] leading-[1.5] text-ink-muted">
-              <input
-                v-model="consent"
-                type="checkbox"
-                name="consentimiento"
-                required
-                class="mt-0.5 h-4 w-4 shrink-0 accent-brand"
-              />
-              <span>
-                {{ t('fisioterapia.capture.consentBefore') }}
-                <NuxtLink :to="localePath('politica-de-privacidad')" class="text-brand underline">
-                  {{ t('fisioterapia.capture.consentLink') }}
-                </NuxtLink>.
-              </span>
-            </label>
-
-            <button
-              type="submit"
-              :disabled="status === 'sending'"
-              class="mt-1 inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover disabled:opacity-60"
-            >
-              {{ status === 'sending' ? t('fisioterapia.capture.sending') : t('fisioterapia.capture.button') }}
-            </button>
-
-            <p v-if="status === 'error'" class="text-[13.5px] text-danger-text">
-              {{ t('fisioterapia.capture.error') }}
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
+    <EmailCapture form-name="fisioterapia-info" />
 
     <section class="border-t border-line py-24">
       <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 px-8 text-center">
         <h2 class="text-[30px] tracking-tightTitle text-ink-900">{{ t('fisioterapia.cta.title') }}</h2>
         <p class="text-[15.5px] leading-[1.6] text-ink-muted">{{ t('fisioterapia.cta.description') }}</p>
-        <a
-          :href="BOOKING_URL"
-          target="_blank"
-          rel="noopener"
-          class="mt-2 inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover"
-        >
-          {{ t('fisioterapia.cta.button') }}
-        </a>
+        <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
+          <a
+            :href="SIGNUP_URL"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center rounded-ctl bg-brand px-[22px] py-3 text-[14.5px] font-semibold text-white hover:bg-brand-hover"
+          >
+            {{ t('fisioterapia.cta.button') }}
+          </a>
+          <a
+            :href="BOOKING_URL"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center rounded-ctl border border-line-control bg-white px-[22px] py-3 text-[14.5px] font-semibold text-ink-700 hover:border-ink-faint"
+          >
+            {{ t('fisioterapia.cta.buttonSecondary') }}
+          </a>
+        </div>
       </div>
     </section>
   </div>

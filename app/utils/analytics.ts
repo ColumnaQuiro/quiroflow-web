@@ -22,6 +22,15 @@ export const GOOGLE_ADS = {
   emailLabel: '20gcCP7ErvccEMea591E',
   /** "Clic reservar demo" — the booking click-out. */
   demoLabel: '5UrYCPu3svccEMea591E',
+  /**
+   * "Clic empezar prueba" — the click-out to app.quiroflow.com/signup.
+   * Empty until the conversion action exists in Google Ads, which disables
+   * it the same way an empty id disables everything else here. Worth its own
+   * action rather than folding into demoLabel: a self-serve trial and a sales
+   * call are different outcomes with very different values, and bidding
+   * against one average of the two optimises for neither.
+   */
+  signupLabel: '',
 }
 
 // Deploy previews, branch builds and localhost share this code, and without a
@@ -37,7 +46,7 @@ export function trackingEnabled() {
   return TRACKING_HOSTS.includes(window.location.hostname)
 }
 
-export type ConversionName = 'emailCapture' | 'demo'
+export type ConversionName = 'emailCapture' | 'demo' | 'signup'
 
 interface GtagWindow extends Window {
   gtag?: (...args: unknown[]) => void
@@ -51,7 +60,12 @@ export function trackConversion(name: ConversionName) {
   // consent. No consent, no call -- not even a queued one.
   if (typeof w.gtag !== 'function') return
 
-  const label = name === 'emailCapture' ? GOOGLE_ADS.emailLabel : GOOGLE_ADS.demoLabel
+  const labels: Record<ConversionName, string> = {
+    emailCapture: GOOGLE_ADS.emailLabel,
+    demo: GOOGLE_ADS.demoLabel,
+    signup: GOOGLE_ADS.signupLabel,
+  }
+  const label = labels[name]
   if (!label) return
 
   w.gtag('event', 'conversion', { send_to: `${GOOGLE_ADS.id}/${label}` })

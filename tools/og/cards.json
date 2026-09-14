@@ -1,0 +1,26 @@
+{
+  "og-image": {
+    "eyebrow": "Software de gestión para clínicas",
+    "title": "Menos tiempo en la agenda.<br><em>Más tiempo en la camilla.</em>",
+    "sub": "Quiropráctica, fisioterapia, osteopatía y podología. Agenda con sala asignada, bonos y WhatsApp.",
+    "proof": ["30 días de prueba", "Sin tarjeta", "Migración incluida"]
+  },
+  "og-quiropractica": {
+    "eyebrow": "Quiropráctica",
+    "title": "Software de gestión para <em>clínicas de quiropráctica</em>",
+    "sub": "Flujo de consulta con sala asignada, planes de cuidado con aviso de paciente retrasado y bonos que se cobran solos.",
+    "proof": ["30 días de prueba", "Sin tarjeta", "Migración incluida"]
+  },
+  "og-fisioterapia": {
+    "eyebrow": "Fisioterapia",
+    "title": "Software de gestión para <em>clínicas de fisioterapia</em>",
+    "sub": "Camilla o box asignado en cada franja, bonos de sesiones que se descuentan solos e historia clínica digital.",
+    "proof": ["30 días de prueba", "Sin tarjeta", "Migración incluida"]
+  },
+  "og-quienes-somos": {
+    "eyebrow": "Quiénes somos",
+    "title": "Lo mantiene <em>la clínica que lo necesitaba</em>",
+    "sub": "COLUMNAQUIRO S.L. — la sociedad detrás de Columna Quiro, una clínica quiropráctica de Valencia.",
+    "proof": ["Valencia, España", "Soporte ES · EN · FR", "Datos en la UE"]
+  }
+}

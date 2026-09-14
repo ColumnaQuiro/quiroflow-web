@@ -58,14 +58,25 @@ export default defineNuxtConfig({
       '/en/privacy-policy',
       '/fr/mentions-legales',
       '/fr/politique-de-confidentialite',
+      // The Resources index has no posts yet, so it is a thin page that also
+      // sets its own robots noindex (see app/pages/recursos/index.vue).
+      // Delete these three lines together with that noindex when the first
+      // post ships -- a listed-but-noindexed URL is the inconsistency the
+      // legal-page exclusions above exist to avoid.
+      '/recursos',
+      '/en/resources',
+      '/fr/ressources',
     ],
   },
   app: {
     head: {
       htmlAttrs: { lang: 'es' },
-      title: 'QuiroFlow — Software de gestión para clínicas quiroprácticas',
+      // Neutral, like the homepage it backs: these are the fallbacks every
+      // page inherits, and a chiropractic-specific default was leaking onto
+      // the physiotherapy page's social card.
+      title: 'QuiroFlow — Software de gestión para clínicas',
       meta: [
-        { name: 'description', content: 'Agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp — todo en una sola plataforma. Migra desde PracticeHub en un fin de semana.' },
+        { name: 'description', content: 'Agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp — todo en una sola plataforma para clínicas de quiropráctica, fisioterapia, osteopatía y podología.' },
         // Site-wide OG/Twitter defaults -- constant across every page, so
         // they live here rather than being repeated in each page's useHead.
         // Per-page og:title/og:description/og:url still override these
@@ -79,7 +90,9 @@ export default defineNuxtConfig({
         { property: 'og:image', content: 'https://quiroflow.com/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'QuiroFlow — software de gestión para clínicas quiroprácticas' },
+        // Per-page overrides come from usePageSeo(); this is only the
+        // fallback for a page that does not set its own.
+        { property: 'og:image:alt', content: 'QuiroFlow — software de gestión para clínicas' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:image', content: 'https://quiroflow.com/og-image.png' },
         { name: 'theme-color', content: '#4F46E5' },

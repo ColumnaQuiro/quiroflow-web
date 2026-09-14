@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BOOKING_URL } from '~/utils/links'
+import { SIGNUP_URL } from '~/utils/links'
 
 const { locale } = useLocale()
 const t = useT()
@@ -27,13 +27,18 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
       <!-- Tighter between nav items at lg (six of them only just fit at
            1024px), roomier from xl. The gap-8 separating the three groups
            stays put at every size. -->
+      <!-- Five items, not six. The two vertical pages moved out of the nav
+           and into the Sectors block on the homepage and the footer: an
+           in-content link from the homepage passes more authority than a
+           nav link anyway, and "Cambiar de programa" needs the room that
+           "Fisioterapia" was taking. "Contacto" went with them -- the
+           Quiénes somos page carries the contact route now. -->
       <nav class="hidden items-center gap-4 lg:flex xl:gap-6">
         <a :href="homeAnchor('funcionalidades')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.features') }}</a>
-        <NuxtLink :to="localePath('software-fisioterapia')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.physio') }}</NuxtLink>
         <a :href="homeAnchor('precios')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
         <a :href="homeAnchor('comparativa')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
-        <a :href="homeAnchor('practicehub')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
-        <a :href="homeAnchor('contacto')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.contact') }}</a>
+        <a :href="homeAnchor('migracion')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
+        <NuxtLink :to="localePath('quienes-somos')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.about') }}</NuxtLink>
       </nav>
       <div class="flex shrink-0 items-center gap-2.5 md:gap-4">
         <div class="flex items-center rounded-full border border-line-control bg-surface-page p-0.5 text-[12px] font-semibold md:text-[12.5px]">
@@ -65,14 +70,18 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
             FR
           </NuxtLink>
         </div>
+        <!-- The header CTA is the trial, not the demo: it is the cheaper
+             conversion and the one the rest of the page now promises. The
+             demo keeps its own buttons in the hero, the pricing cards and
+             the closing section. -->
         <a
-          :href="BOOKING_URL"
+          :href="SIGNUP_URL"
           target="_blank"
           rel="noopener"
           class="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-ctl bg-brand px-3.5 py-2.5 text-[13.5px] font-semibold text-white hover:bg-brand-hover sm:px-[22px] sm:py-3 sm:text-[14.5px]"
         >
-          <span class="sm:hidden">{{ t('nav.bookDemoShort') }}</span>
-          <span class="hidden sm:inline">{{ t('nav.bookDemo') }}</span>
+          <span class="sm:hidden">{{ t('nav.startTrialShort') }}</span>
+          <span class="hidden sm:inline">{{ t('nav.startTrial') }}</span>
         </a>
       </div>
     </div>
