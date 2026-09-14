@@ -50,6 +50,20 @@ export default defineNuxtConfig({
   // Keeps the two noindex'd legal pages (see their own robots meta) out of
   // the generated sitemap too, in both locales -- a URL that's both listed
   // and noindexed is a common inconsistency flagged by SEO audits.
+  // /sitemap.xml is a redirect to sitemap_index.xml, and prerendering turns
+  // a redirect into an HTML file containing <meta http-equiv="refresh">. That
+  // file then wins over every redirect rule -- Netlify serves a matching
+  // static asset first, and its pretty_urls processing sends /sitemap.xml to
+  // /sitemap.xml/ before a netlify.toml rule can fire, so even force = true
+  // never gets a turn. Not prerendering it leaves the path free for the real
+  // 301 in netlify.toml. The index itself and the per-locale sitemaps are
+  // unaffected; robots.txt points at the index directly either way.
+  nitro: {
+    prerender: {
+      ignore: ['/sitemap.xml'],
+    },
+  },
+
   sitemap: {
     exclude: [
       '/aviso-legal',
