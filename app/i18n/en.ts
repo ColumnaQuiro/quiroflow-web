@@ -66,14 +66,6 @@ export const en: Messages = {
     title: 'A single platform to run your practice',
     description: 'Your patients\' messages land here, you can turn new leads into patients with automated message templates (welcome, follow-up, booking reminder), launch recall campaigns, and see clear stats for your practice — without jumping between different apps.',
     short: 'One inbox, automated templates for new leads and recall campaigns, without jumping between apps.',
-    visual: {
-      inboxLabel: 'Message inbox',
-      inboxBadge: '3 new',
-      templateLabel: 'Template: new lead → follow-up',
-      active: 'Active',
-      campaignLabel: 'Campaign: inactive patient recall',
-      occupancyLabel: 'Practice occupancy',
-    },
   },
 
   agenda: {

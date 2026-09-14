@@ -78,14 +78,6 @@ export const es = {
     title: 'Una sola plataforma para gestionar tu consulta',
     description: 'Los mensajes de tus pacientes te llegan aquí, puedes convertir leads nuevos en pacientes con plantillas de mensajes automáticas (bienvenida, seguimiento, recordatorio de reserva), lanzar campañas de recall y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas.',
     short: 'Bandeja única, plantillas automáticas para leads nuevos y campañas de recall, sin saltar entre aplicaciones.',
-    visual: {
-      inboxLabel: 'Bandeja de mensajes',
-      inboxBadge: '3 nuevos',
-      templateLabel: 'Plantilla: lead nuevo → seguimiento',
-      active: 'Activa',
-      campaignLabel: 'Campaña: recall pacientes inactivos',
-      occupancyLabel: 'Ocupación de la consulta',
-    },
   },
 
   agenda: {

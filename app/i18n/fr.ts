@@ -66,14 +66,6 @@ export const fr: Messages = {
     title: 'Une seule plateforme pour gérer votre cabinet',
     description: "Les messages de vos patients arrivent ici, vous pouvez convertir de nouveaux leads en patients grâce à des modèles de messages automatiques (bienvenue, relance, rappel de réservation), lancer des campagnes de réactivation et consulter des statistiques claires sur votre cabinet — sans jongler entre plusieurs applications.",
     short: "Une seule boîte de réception, des modèles automatiques pour les nouveaux leads et des campagnes de réactivation, sans changer d'application.",
-    visual: {
-      inboxLabel: 'Boîte de réception',
-      inboxBadge: '3 nouveaux',
-      templateLabel: 'Modèle : nouveau lead → relance',
-      active: 'Active',
-      campaignLabel: 'Campagne : réactivation patients inactifs',
-      occupancyLabel: 'Taux de remplissage',
-    },
   },
 
   agenda: {
