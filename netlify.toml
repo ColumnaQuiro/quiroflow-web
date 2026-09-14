@@ -1,9 +1,25 @@
-# publish was "dist" here, which `nuxt generate` (Nuxt 4) has never
-# written to -- it emits .output/public. Netlify's dashboard had the
-# correct value set, and a dashboard setting overrides netlify.toml on
-# Netlify's own builds, so the wrong value here never surfaced. The CLI
-# reads this file directly, so a CLI deploy published a directory that
-# does not exist and served 404s. Both now agree.
+# This file is the single source of truth for the build. The Netlify
+# dashboard's build settings were set to `npm run generate` while this said
+# `pnpm run generate`, and every Netlify build has failed since 2026-09-12
+# without it being obvious which of the two was actually in effect: Netlify
+# documents netlify.toml as taking precedence over the UI, but this site
+# behaved as though the dashboard won (a build with `publish = "dist"` here
+# deployed successfully, which is only possible if the dashboard's
+# `.output/public` was the value used).
+#
+# Rather than keep betting on the precedence rule, both are now set to the
+# same pair of values, so the outcome is identical whichever one wins. If you
+# change the command or the publish directory, change it in BOTH places, or
+# set it here and clear it in the dashboard.
+#
+# `publish` is .output/public because that is where `nuxt generate` (Nuxt 4)
+# writes -- never `dist`, which is what this said until 2026-09-12 and which
+# made CLI deploys publish a directory that does not exist and serve 404s.
+#
+# `pnpm`, not `npm`: the repo ships pnpm-lock.yaml and package.json pins
+# `packageManager: pnpm@8.8.0`, so pnpm is what installs the dependencies.
+# Building with npm on top of a pnpm-installed tree is the kind of mismatch
+# that works until it quietly does not.
 [build]
   command = "pnpm run generate"
   publish = ".output/public"
