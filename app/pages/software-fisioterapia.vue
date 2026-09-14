@@ -81,6 +81,10 @@ async function submitCapture() {
     })
     if (!res.ok) throw new Error(String(res.status))
     status.value = 'ok'
+    // Primary conversion: unlike the demo button this one completes on-site,
+    // so it is the only signal Google Ads can attribute with confidence.
+    // No-ops unless the visitor accepted ads cookies and the labels are set.
+    trackConversion('emailCapture')
   }
   catch {
     status.value = 'error'

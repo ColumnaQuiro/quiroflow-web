@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const t = useT()
 const localePath = useLocalePath()
+const { reopen } = useConsent()
 
 // Same reasoning as TheHeader.vue -- these have to resolve through the
 // current locale or an /en/* visitor gets bounced back to Spanish content.
@@ -34,6 +35,11 @@ const CONTACT_EMAIL = 'hola@quiroflow.com'
         <div class="flex gap-[18px]">
           <NuxtLink :to="localePath('politica-de-privacidad')" class="text-[12.5px] text-ink-faint hover:text-ink-600">{{ t('footer.privacy') }}</NuxtLink>
           <NuxtLink :to="localePath('aviso-legal')" class="text-[12.5px] text-ink-faint hover:text-ink-600">{{ t('footer.terms') }}</NuxtLink>
+          <!-- Consent has to be as easy to withdraw as it was to give, so the
+               banner stays reachable after the first choice. -->
+          <button type="button" class="text-[12.5px] text-ink-faint hover:text-ink-600" @click="reopen">
+            {{ t('footer.cookies') }}
+          </button>
         </div>
       </div>
     </div>

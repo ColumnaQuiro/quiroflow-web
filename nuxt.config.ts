@@ -22,6 +22,21 @@ export default defineNuxtConfig({
   site: {
     url: 'https://quiroflow.com',
   },
+  // Google Ads conversion tracking. Left empty on purpose: with no id and no
+  // labels the tag never loads and trackConversion() no-ops, so this ships
+  // safely before the conversion actions exist in the Ads account. Fill them
+  // in through Netlify environment variables rather than committing them --
+  // NUXT_PUBLIC_GOOGLE_ADS_ID (AW-XXXXXXXXX),
+  // NUXT_PUBLIC_GOOGLE_ADS_EMAIL_LABEL, NUXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL.
+  runtimeConfig: {
+    public: {
+      googleAds: {
+        id: '',
+        emailLabel: '',
+        demoLabel: '',
+      },
+    },
+  },
   // Real per-locale routes for proper bilingual SEO -- the ES/EN toggle
   // used to just flip client state at the same URL, which meant Google
   // could only ever index the Spanish version of every page. Spanish stays

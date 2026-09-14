@@ -362,6 +362,23 @@ export const es = {
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
     privacy: 'Política de privacidad',
     terms: 'Aviso legal',
+    cookies: 'Preferencias de cookies',
+  },
+
+  consent: {
+    title: 'Cookies',
+    body: 'Usamos cookies necesarias para que la web funcione y, solo si nos das permiso, cookies de Google para medir si nuestros anuncios acaban en una demo. Rechazarlas no limita nada de la web.',
+    accept: 'Aceptar',
+    reject: 'Rechazar',
+    settings: 'Configurar',
+    save: 'Guardar preferencias',
+    always: 'Siempre activas',
+    necessaryTitle: 'Necesarias',
+    necessaryBody: 'Imprescindibles para que la web funcione y recuerde tu elección de idioma y de cookies.',
+    adsTitle: 'Publicidad',
+    adsBody: 'Google Ads. Nos permite saber qué anuncios terminan en una demo o en una solicitud de precios.',
+    analyticsTitle: 'Analítica',
+    analyticsBody: 'Medición agregada del uso de la web para saber qué páginas funcionan y cuáles no.',
   },
 
   mockups: {
