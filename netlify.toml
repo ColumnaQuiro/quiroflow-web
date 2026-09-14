@@ -1,28 +1,30 @@
-# This file is the single source of truth for the build. The Netlify
-# dashboard's build settings were set to `npm run generate` while this said
-# `pnpm run generate`, and every Netlify build has failed since 2026-09-12
-# without it being obvious which of the two was actually in effect: Netlify
-# documents netlify.toml as taking precedence over the UI, but this site
-# behaved as though the dashboard won (a build with `publish = "dist"` here
-# deployed successfully, which is only possible if the dashboard's
-# `.output/public` was the value used).
+# publish is "dist" -- do NOT "fix" this to .output/public.
 #
-# Rather than keep betting on the precedence rule, both are now set to the
-# same pair of values, so the outcome is identical whichever one wins. If you
-# change the command or the publish directory, change it in BOTH places, or
-# set it here and clear it in the dashboard.
+# `nuxt generate` does not always write to the same place. Nitro picks its
+# preset from the environment: run locally it uses `static` and writes
+# .output/public, but Netlify's build sets NETLIFY in the environment, Nuxt
+# auto-detects it and switches to the `netlify-static` preset, which writes
+# to dist instead. Verified by running Netlify's own build orchestrator
+# (`netlify build`), which logs "Nitro preset: netlify-static" and produces
+# dist/ while .output/public is never created.
 #
-# `publish` is .output/public because that is where `nuxt generate` (Nuxt 4)
-# writes -- never `dist`, which is what this said until 2026-09-12 and which
-# made CLI deploys publish a directory that does not exist and serve 404s.
+# This is exactly how the site broke on 2026-09-12. publish was "dist" and
+# correct; commit cd52fc6 changed it to .output/public after checking where a
+# LOCAL `nuxt generate` writes, and every Netlify build failed from that
+# moment until 2026-09-14 -- 20 in a row, including the production build of
+# the merge of PR #6. Nobody noticed because the site kept serving the last
+# good deploy, and because the deploys that still looked green were CLI
+# uploads from a GitHub Action rather than Netlify builds.
 #
-# `pnpm`, not `npm`: the repo ships pnpm-lock.yaml and package.json pins
-# `packageManager: pnpm@8.8.0`, so pnpm is what installs the dependencies.
-# Building with npm on top of a pnpm-installed tree is the kind of mismatch
-# that works until it quietly does not.
+# So: a local build writing .output/public proves nothing about this value.
+# If you need to check it, run `netlify build` (not `nuxt generate`) and look
+# at which directory appears.
+#
+# The Netlify dashboard's build settings are kept identical to these on
+# purpose -- when the two disagree it is not obvious which wins. Change both.
 [build]
   command = "pnpm run generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
