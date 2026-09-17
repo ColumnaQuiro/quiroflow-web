@@ -266,13 +266,14 @@ export const es = {
     description: 'Pacientes ilimitados en todos los planes. Solo pagas por los profesionales que pasan consulta — recepción y administración son gratis e ilimitados.',
     monthly: 'Mensual',
     annual: 'Anual',
-    annualSave: 'Ahorra ~15%',
+    annualSave: 'Ahorra un 10%',
     perMonth: '/mes',
     billedAnnually: 'facturado anualmente',
     // Was "Más elegido", which asserts a fact about customer distribution we
     // cannot yet back. "Recomendado" carries the same signal honestly.
     mostChosen: 'Recomendado',
-    extraPro: 'Profesional adicional: 29 €/mes',
+    extraPro: 'Profesional adicional: 19 €/mes',
+    growthAddOn: 'Growth (captación, recepcionista con IA y reputación): +39 €/mes',
     // The trial button now opens the real sign-up at app.quiroflow.com, and
     // the call has its own separate button. Before, both promises were on one
     // button that only ever led to a calendar.
@@ -283,7 +284,7 @@ export const es = {
     ctaNote: '30 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
-      body: 'Una cancelación que no se vuelve a llenar, a 45 € la sesión, son unos 180 € al mes. El plan Practice cuesta 119 €. La reoferta automática del hueco y el aviso de paciente retrasado existen justamente para tapar ese agujero.',
+      body: 'Una cancelación que no se vuelve a llenar, a 45 € la sesión, son unos 180 € al mes. El plan Practice cuesta 99 €. La reoferta automática del hueco y el aviso de paciente retrasado existen justamente para tapar ese agujero.',
     },
     tiers: {
       solo: {
@@ -302,22 +303,23 @@ export const es = {
       },
       practice: {
         name: 'Practice',
-        for: 'Hasta 3 profesionales, 1 sede',
+        for: 'Hasta 4 profesionales, 1 sede',
         features: [
           'Todo lo de Solo',
           'Roles y permisos personalizados',
           'Informes avanzados: PVA, retención y conversión',
-          'Profesionales adicionales a 29 €/mes',
+          'Profesionales adicionales a 19 €/mes',
         ],
       },
       clinic: {
         name: 'Clinic',
-        for: 'Hasta 6 profesionales, sedes ilimitadas',
+        for: 'Profesionales ilimitados, sedes ilimitadas',
         features: [
           'Todo lo de Practice',
           'Multi-sede',
           'API y webhooks',
           'Migración asistida y soporte prioritario',
+          'Growth incluido: captación, recepcionista con IA y reputación',
         ],
       },
     },

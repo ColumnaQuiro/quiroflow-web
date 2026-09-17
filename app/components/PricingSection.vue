@@ -11,10 +11,18 @@ const annual = ref(false)
 
 // Amounts live here rather than in the translations: they are identical in
 // every language, and duplicating them across es/en/fr is how they drift.
+// Repriced 2026-09-17 against the vertical these clinics actually shop in --
+// PracticeHub ~115 EUR for one practitioner, QuiroHiro 67, Doctoralia 89 per
+// professional -- not against the generalist tools at 29-45 that do not know
+// what a chiropractor is. Annual is the per-month figure, 10% off.
+//
+// These must match `plans` in the app's database, which is what Stripe
+// actually charges from. A number changed here and not there advertises a
+// price nobody is billed.
 const TIERS = [
-  { key: 'solo', monthly: 59, annual: 50, featured: false },
-  { key: 'practice', monthly: 119, annual: 99, featured: true },
-  { key: 'clinic', monthly: 199, annual: 169, featured: false },
+  { key: 'solo', monthly: 49, annual: 44, featured: false },
+  { key: 'practice', monthly: 99, annual: 89, featured: true },
+  { key: 'clinic', monthly: 149, annual: 134, featured: false },
 ] as const
 
 function price(tier: (typeof TIERS)[number]) {
@@ -134,6 +142,12 @@ function price(tier: (typeof TIERS)[number]) {
             </li>
             <li v-if="tier.key !== 'solo'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.extraPro') }}
+            </li>
+            <!-- Clinic's feature list says Growth is included; without this
+                 line the other two tiers leave the reader wondering what that
+                 is and whether they have it. -->
+            <li v-if="tier.key !== 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
+              {{ t('pricing.growthAddOn') }}
             </li>
           </ul>
         </div>
