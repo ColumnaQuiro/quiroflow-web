@@ -243,11 +243,12 @@ export const en: Messages = {
     description: 'Unlimited patients on every plan. You only pay for the practitioners seeing patients — front desk and admin users are free and unlimited.',
     monthly: 'Monthly',
     annual: 'Annual',
-    annualSave: 'Save ~15%',
+    annualSave: 'Save 10%',
     perMonth: '/mo',
     billedAnnually: 'billed annually',
     mostChosen: 'Recommended',
-    extraPro: 'Extra practitioner: €29/mo',
+    extraPro: 'Extra practitioner: €19/mo',
+    growthAddOn: 'Growth (lead capture, AI receptionist and reputation): +€39/mo',
     cta: 'Start 30-day trial',
     ctaSecondary: 'Talk to the team',
     exVat: 'ex. VAT',
@@ -255,7 +256,7 @@ export const en: Messages = {
     ctaNote: '30-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
-      body: 'A cancellation that never gets refilled, at €45 a session, is roughly €180 a month. The Practice plan is €119. The automatic slot re-offer and the behind-schedule alert exist precisely to close that gap.',
+      body: 'A cancellation that never gets refilled, at €45 a session, is roughly €180 a month. The Practice plan is €99. The automatic slot re-offer and the behind-schedule alert exist precisely to close that gap.',
     },
     tiers: {
       solo: {
@@ -274,22 +275,23 @@ export const en: Messages = {
       },
       practice: {
         name: 'Practice',
-        for: 'Up to 3 practitioners, 1 site',
+        for: 'Up to 4 practitioners, 1 site',
         features: [
           'Everything in Solo',
           'Custom roles and permissions',
           'Advanced reporting: PVA, retention, conversion',
-          'Extra practitioners at €29/mo',
+          'Extra practitioners at €19/mo',
         ],
       },
       clinic: {
         name: 'Clinic',
-        for: 'Up to 6 practitioners, unlimited sites',
+        for: 'Unlimited practitioners, unlimited sites',
         features: [
           'Everything in Practice',
           'Multi-site',
           'API access and webhooks',
           'Assisted migration and priority support',
+          'Growth included: lead capture, AI receptionist and reputation',
         ],
       },
     },

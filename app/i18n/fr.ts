@@ -243,11 +243,12 @@ export const fr: Messages = {
     description: "Patients illimités sur tous les forfaits. Vous ne payez que pour les praticiens qui consultent — accueil et administration sont gratuits et illimités.",
     monthly: 'Mensuel',
     annual: 'Annuel',
-    annualSave: 'Économisez ~15 %',
+    annualSave: 'Économisez 10 %',
     perMonth: '/mois',
     billedAnnually: 'facturé annuellement',
     mostChosen: 'Recommandé',
-    extraPro: 'Praticien supplémentaire : 29 €/mois',
+    extraPro: 'Praticien supplémentaire : 19 €/mois',
+    growthAddOn: 'Growth (acquisition, réceptionniste IA et réputation) : +39 €/mois',
     cta: "Démarrer l'essai de 30 jours",
     ctaSecondary: "Parler à l'équipe",
     exVat: 'HT',
@@ -255,7 +256,7 @@ export const fr: Messages = {
     ctaNote: "30 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
-      body: "Une annulation qui n'est jamais recomblée, à 45 € la séance, représente environ 180 € par mois. Le forfait Practice coûte 119 €. La nouvelle proposition automatique du créneau et l'alerte de retard existent précisément pour combler ce trou.",
+      body: "Une annulation qui n'est jamais recomblée, à 45 € la séance, représente environ 180 € par mois. Le forfait Practice coûte 99 €. La nouvelle proposition automatique du créneau et l'alerte de retard existent précisément pour combler ce trou.",
     },
     tiers: {
       solo: {
@@ -274,22 +275,23 @@ export const fr: Messages = {
       },
       practice: {
         name: 'Practice',
-        for: "Jusqu'à 3 praticiens, 1 site",
+        for: "Jusqu'à 4 praticiens, 1 site",
         features: [
           'Tout ce que contient Solo',
           'Rôles et permissions personnalisés',
           'Rapports avancés : valeur par visite, fidélisation, conversion',
-          'Praticiens supplémentaires à 29 €/mois',
+          'Praticiens supplémentaires à 19 €/mois',
         ],
       },
       clinic: {
         name: 'Clinic',
-        for: "Jusqu'à 6 praticiens, sites illimités",
+        for: "Praticiens illimités, sites illimités",
         features: [
           'Tout ce que contient Practice',
           'Multi-sites',
           'API et webhooks',
           'Migration assistée et support prioritaire',
+          'Growth inclus : acquisition, réceptionniste IA et réputation',
         ],
       },
     },
