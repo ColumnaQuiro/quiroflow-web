@@ -21,7 +21,7 @@ export const en: Messages = {
     badge: 'Practice management software for clinics',
     titleLine1: 'Less time on the calendar.',
     titleLine2: 'More time on the table.',
-    description: 'A calendar that assigns the free room or table on its own, session packages that count themselves down, WhatsApp reminders, and an alert when a patient falls behind their treatment plan. One platform for chiropractic, physiotherapy, osteopathy and podiatry clinics.',
+    description: 'A calendar that assigns the free room or table on its own, session packages that count themselves down, WhatsApp reminders, VeriFactu-ready invoicing, and an alert when a patient falls behind their treatment plan. On the computer and in the app for iPhone, iPad and Android, for chiropractic, physiotherapy, osteopathy and podiatry clinics.',
     ctaPrimary: 'Start 30-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See features',
@@ -59,14 +59,69 @@ export const en: Messages = {
     title: 'What no other system on your shortlist does',
     sectorTitle: 'Everything your clinic needs, in one place',
     subtitle: 'Everyone has a calendar, invoicing and forms. These three are the reason a clinic actually switches.',
+    essentialsTitle: 'What the tax office and your patients ask of you',
     moreTitle: 'And everything else you expect from a practice management system',
   },
 
+  verifactu: {
+    eyebrow: 'VeriFactu',
+    title: 'Invoices ready for VeriFactu, with no change of software in 2027',
+    description: "VeriFactu is Spain's new invoicing rule. Every invoice carries its QR code, is chained to the one before, and is sent to the Spanish tax agency (AEAT) by itself within a minute of being issued. Refunding a payment issues the corrective invoice, and each location keeps its own series. Send with your clinic's own certificate, or let QuiroFlow send on your behalf under a power of representation. Try it in test mode today; real sending starts by itself on 1 January 2027.",
+    short: 'A QR on every invoice, chained records and automatic sending to the AEAT, with your certificate or ours.',
+    visual: {
+      header: 'INVOICE F2027-0142',
+      item: 'Treatment session x1',
+      itemPrice: '€45.00',
+      total: 'Total',
+      totalPrice: '€45.00',
+      qrLabel: 'Tax QR · VERI*FACTU',
+      chained: 'Chained to F2027-0141',
+      sent: 'Accepted by the AEAT',
+    },
+  },
+
+  app: {
+    eyebrow: 'App for iPhone, iPad and Android',
+    title: 'The clinic in your pocket, for your team and your patients',
+    description: 'Your team carries the calendar, patient records, visit notes, payments and the inbox on their phone, signs in with Face ID, and gets a notification when an online booking or a message comes in. On the front-desk iPad, patients sign their forms as they arrive. And your patients use the same app to confirm or change their appointment, pay an outstanding invoice by card, join the waitlist and do the exercises you set them.',
+    short: "Calendar, records, payments and inbox on your team's phones; confirming, paying and exercises on your patients'.",
+    visual: {
+      staffHeader: 'YOUR TEAM',
+      staff: ['Day, 3-day or week calendar', 'Record, S/O/A/P notes and payments', "Today's till and the clinic's figures", 'Front-desk mode: sign on the iPad'],
+      patientHeader: 'YOUR PATIENTS',
+      patient: ['Confirm or change the appointment', 'Pay an invoice by card', 'Home exercises, with video', 'Join the waitlist'],
+    },
+  },
+
   platform: {
-    eyebrow: 'All in one place',
-    title: 'A single platform to run your practice',
-    description: 'Your patients\' messages land here, you can turn new leads into patients with automated message templates (welcome, follow-up, booking reminder), launch recall campaigns, and see clear stats for your practice — without jumping between different apps.',
-    short: 'One inbox, automated templates for new leads and recall campaigns, without jumping between apps.',
+    eyebrow: 'One inbox',
+    title: 'WhatsApp and Instagram in one inbox',
+    description: 'WhatsApp and Instagram messages land in the same inbox, and an unknown number that writes to you becomes a lead. Assign each conversation to someone, leave internal notes that mention a colleague, snooze it until later and, without leaving the chat, book the appointment or send a payment link.',
+    short: 'WhatsApp and Instagram together: assign, leave internal notes for the team, snooze a conversation, and book or charge from the chat.',
+  },
+
+  automations: {
+    eyebrow: 'Automations',
+    title: 'Flows you build by dragging',
+    short: 'A visual editor for chaining messages, waits and conditions: wait for the patient to fill in a form, take one path or another depending on their answers, and write to them in their language.',
+  },
+
+  exercises: {
+    eyebrow: 'Home exercises',
+    title: 'What happens between sessions',
+    short: 'Assign an exercise programme with a video or photo from the patient record. The patient follows it in the app with a daily reminder, and you are told if they stop.',
+  },
+
+  payments: {
+    eyebrow: 'Payments',
+    title: 'Take payments online and balance the till',
+    short: "Payment links from the chat, outstanding invoices patients pay by card in the app, and today's till with every payment and what it was for.",
+  },
+
+  growth: {
+    eyebrow: 'Growth',
+    title: 'Bringing in new patients',
+    short: 'Leads from your ads land on a board by stage on their own, an AI receptionist drafts the WhatsApp replies, and the Google review is requested after the visit.',
   },
 
   agenda: {
@@ -86,9 +141,9 @@ export const en: Messages = {
 
   whatsapp: {
     eyebrow: 'WhatsApp built in',
-    title: 'All your WhatsApp, inside QuiroFlow',
+    title: 'Reminders confirmed in one tap',
     description: 'Automatic reminders with buttons to confirm or reschedule an appointment in one tap, recalls for inactive patients, and the messages your patients send you land directly in your QuiroFlow inbox — no switching apps, no relying on them opening an email.',
-    short: 'Reminders with a button to confirm or reschedule, and your patients\' messages in your inbox, without switching apps.',
+    short: 'WhatsApp reminders with a button to confirm or reschedule, and automatic recalls for patients you have not seen in a while.',
   },
 
   booking: {
@@ -101,7 +156,7 @@ export const en: Messages = {
   waitlist: {
     eyebrow: 'Waitlist & continuity',
     title: 'No empty slots, no patients lost mid-treatment',
-    description: 'When an appointment is cancelled, QuiroFlow automatically offers that slot to the first patient on the waitlist, with a link to book it instantly. And if a patient on an active treatment plan falls behind their own cadence, you\'re alerted before they stop coming in.',
+    description: "When an appointment is cancelled, QuiroFlow automatically offers that slot to the first patient on the waitlist, with a link to book it instantly. And if a patient on an active treatment plan falls behind their own cadence, you're alerted before they stop coming in. Plans are set as N visits every M weeks, booked in full in one go, and show week by week whether the patient is on track.",
     short: 'The cancelled slot re-offers itself, and you get told when a patient falls behind their plan.',
     visual: {
       canceledHeader: 'CANCELLED APPOINTMENT → RE-OFFERED',
@@ -118,7 +173,7 @@ export const en: Messages = {
   billing: {
     eyebrow: 'Billing & packages',
     title: 'Packages and memberships with automatic charging',
-    description: 'Instant invoices, session packages, and memberships with automated recurring billing via Stripe. If you need it, turn on automatic legal invoicing for your memberships — no chasing payments by hand every month.',
+    description: 'Instant invoices, session packages the whole family can use, and memberships with automated recurring billing via Stripe. Each treatment plan says how it is paid — per visit, with a package or with a membership — and legal invoicing for your memberships can run automatically, with no chasing payments every month.',
     short: 'Packages that count themselves down, recurring billing through Stripe, and automatic legal invoicing.',
     visual: {
       header: 'INVOICE #0142',
@@ -136,8 +191,8 @@ export const en: Messages = {
   forms: {
     eyebrow: 'Docs',
     title: 'Paperless forms',
-    description: 'Build your own intake and consent forms with a simple drag-and-drop builder. Patients fill them out before their appointment, from their phone.',
-    short: 'Intake and consent with a drag-and-drop builder. Patients fill them in from their phone before they arrive.',
+    description: 'Build your own intake and consent forms with a simple drag-and-drop builder, with signatures and body diagrams where the patient marks where it hurts. Patients fill them in, in their own language, from their phone before the appointment, or on the front-desk iPad when they arrive.',
+    short: 'Intake and consent with signature and body diagram. Patients fill them in from their phone before they arrive, or on the front-desk iPad.',
     visual: {
       header: 'FIRST-VISIT FORM',
       fields: [
@@ -151,8 +206,8 @@ export const en: Messages = {
   reports: {
     eyebrow: 'Reports',
     title: 'Your clinic, in clear numbers',
-    description: 'Occupancy, revenue, PVA (average value per visit), retention, conversion, number of first visits, and per-practitioner stats, updated by the minute and compared against the previous period — not just how many visits you had, but how your business is trending day to day. No exporting anything to a spreadsheet.',
-    short: 'Occupancy, value per visit, retention, conversion and first visits, by the minute and compared with the previous period.',
+    description: 'Occupancy, revenue, PVA (average value per visit), retention, conversion, number of first visits, and per-practitioner stats, updated by the minute and compared against the previous period — not just how many visits you had, but how your business is trending day to day. Plus how long patients wait and how long sessions run, every message sent on any channel, and your own dashboards you can download as a PDF.',
+    short: 'Occupancy, value per visit, retention and conversion against the previous period, waiting times, and your own dashboards you can download as a PDF.',
     visual: {
       header: 'STATS',
       compareLabel: 'vs. last month',
@@ -204,6 +259,14 @@ export const en: Messages = {
         title: 'Data processor, in writing',
         body: 'Your clinic remains the controller of its patients\' data. QuiroFlow acts as data processor and signs the corresponding agreement, in line with the GDPR and the Spanish LOPDGDD.',
       },
+      {
+        title: 'Two-factor sign-in',
+        body: 'Each person can protect their access with a code from an authenticator app, and your clinic can require it for the whole team. A stolen password on its own opens no patient record.',
+      },
+      {
+        title: 'Activity log',
+        body: "Who opened or changed each record, and who signed in and when, is logged and you can check it from Settings. And if you send a report over WhatsApp, it goes as a PDF that only opens with the patient's ID number.",
+      },
     ],
     note: 'Need the technical detail or the processor agreement before you decide? Write to us and we will send it without putting you through a demo.',
   },
@@ -253,6 +316,7 @@ export const en: Messages = {
     ctaSecondary: 'Talk to the team',
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
+    verifactuNote: 'VeriFactu: €7.50/mo per location, only from the day you start sending to the AEAT.',
     ctaNote: '30-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
@@ -271,6 +335,7 @@ export const en: Messages = {
           'Recalls and automated campaigns',
           'Waitlist and care-plan continuity alerts',
           'Invoicing, payments and packages',
+          'App for your team and your patients',
         ],
       },
       practice: {
@@ -312,6 +377,14 @@ export const en: Messages = {
       {
         q: 'And if I want to leave one day — can I take my data with me?',
         a: 'Yes, and without asking permission. Patients, appointments, clinical notes, forms and billing export as CSV and PDF from your own account, whenever you want, at no charge. We would rather say it before you ask.',
+      },
+      {
+        q: 'Is QuiroFlow ready for VeriFactu?',
+        a: "Yes. Every invoice carries its QR code, is chained to the previous one and is sent to the AEAT automatically. You can send with your clinic's own certificate or authorise QuiroFlow to send on your behalf. Until 1 January 2027 it runs in test mode at no charge; from that day, real sending costs €7.50 a month per location.",
+      },
+      {
+        q: 'Is there a mobile app?',
+        a: 'Yes, for iPhone, iPad and Android. Your team has the calendar, records, payments and inbox on their phone, and your patients use the same app to confirm their appointments, pay and do their exercises. It is included in every plan.',
       },
       {
         q: 'Does it work if I am not a chiropractor?',
@@ -424,7 +497,7 @@ export const en: Messages = {
       planes: {
         eyebrow: 'Care plans',
         title: 'The patient falling off the plan, before they fall off',
-        description: 'A chiropractic care plan lives on cadence: twice a week, then once, then maintenance. QuiroFlow knows each patient\'s cadence and tells you when someone drifts behind theirs, while you can still get them back — instead of you finding out two months later going through the calendar.',
+        description: "A chiropractic care plan lives on cadence: twice a week, then once, then maintenance. QuiroFlow knows each patient's cadence, books the whole plan in one go, shows you week by week whether they are on track, and tells you when someone drifts behind, while you can still get them back — instead of you finding out two months later going through the calendar.",
       },
       bonos: {
         eyebrow: 'Packages and memberships',
@@ -439,7 +512,7 @@ export const en: Messages = {
       historia: {
         eyebrow: 'Clinical records and consent',
         title: 'Assessment, adjustments and consent without paper',
-        description: 'Digital clinical records holding the initial assessment, a log of every adjustment, and any scans or reports you attach. Patients fill in first-visit forms and informed consent from their phone before they arrive.',
+        description: "Digital clinical records holding the initial assessment, S/O/A/P notes for every adjustment and the spinal listings beside them, marked per segment left or right, with one tap to repeat the last visit's. Patients fill in first-visit forms and informed consent from their phone before they arrive.",
       },
       informes: {
         eyebrow: 'Reports',
@@ -470,7 +543,7 @@ export const en: Messages = {
         },
         {
           q: 'Can I manage care plans with different cadences?',
-          a: 'Yes. You define each plan\'s cadence (say two visits a week for a month, then one) and QuiroFlow follows it patient by patient, alerting you when someone falls behind their own.',
+          a: 'Yes. Each plan is set as N visits every M weeks (say two a week for a month, then one every two weeks), is booked in full in one go, and QuiroFlow follows it patient by patient, alerting you when someone falls behind their cadence.',
         },
         {
           q: 'How are rooms assigned?',
@@ -528,7 +601,7 @@ export const en: Messages = {
       historia: {
         eyebrow: 'Clinical records and consent',
         title: 'Assessment, progress and consent without paper',
-        description: 'Digital clinical records holding the initial assessment, session-by-session progress, and any scans or reports you attach. Patients fill in intake forms and informed consent from their phone before they arrive.',
+        description: 'Digital clinical records holding the initial assessment, session-by-session progress in S/O/A/P notes, and any scans or reports you attach. Patients fill in intake forms and informed consent from their phone before they arrive, and can mark on a body diagram where it hurts.',
       },
       reserva: {
         eyebrow: 'Online booking',
@@ -543,15 +616,15 @@ export const en: Messages = {
     },
     edge: {
       title: 'Two things that matter over a long course of treatment',
-      description: 'Physiotherapy is rarely decided in a single session. It is decided by whether the patient finishes the plan, and whether they come back next year.',
+      description: 'Physiotherapy is rarely decided in a single session. It is decided by whether the patient finishes the plan, and by what they do between sessions.',
       items: [
         {
           title: 'It warns you before a patient quietly stops coming',
           body: 'A course of treatment is lost in the gap between sessions, not in the treatment room. If a patient on an active plan falls behind their own cadence, QuiroFlow tells you while you can still get them back, instead of you noticing two months later.',
         },
         {
-          title: 'Google reviews ask for themselves',
-          body: 'After the visit, QuiroFlow can request the review automatically. For a clinic competing in local search, that consistency ends up worth more than any one-off campaign.',
+          title: 'Home exercises, and a warning if they stop',
+          body: 'Assign an exercise programme with a video or photo from the patient record. The patient follows it in the app with a daily reminder, and if they stop it shows up beside the plans falling behind, while you can still do something about it.',
         },
       ],
     },
@@ -565,6 +638,10 @@ export const en: Messages = {
         {
           q: 'Can I manage session packages?',
           a: 'Yes. Create packages with any number of sessions and each visit deducts one automatically, with no manual tally. You can also switch on recurring billing for flat-rate plans or monthly memberships.',
+        },
+        {
+          q: 'Can I set exercises for home?',
+          a: 'Yes. From the patient record you assign single exercises or a whole programme, with your own video or photo. The patient sees them in the app with a daily reminder, ticks off the ones they do, and QuiroFlow tells you when they stop.',
         },
         {
           q: 'How are treatment rooms and tables assigned?',
