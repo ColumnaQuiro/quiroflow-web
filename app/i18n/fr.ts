@@ -21,7 +21,7 @@ export const fr: Messages = {
     badge: 'Logiciel de gestion pour cabinets',
     titleLine1: "Moins de temps sur l'agenda.",
     titleLine2: 'Plus de temps sur la table.',
-    description: "Un agenda qui attribue tout seul la salle ou la table libre, des forfaits de séances qui se décomptent seuls, des rappels WhatsApp et une alerte quand un patient prend du retard sur son plan de traitement. Une seule plateforme pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie.",
+    description: "Un agenda qui attribue tout seul la salle ou la table libre, des forfaits de séances qui se décomptent seuls, des rappels WhatsApp, une facturation prête pour VeriFactu et une alerte quand un patient prend du retard sur son plan de traitement. Sur ordinateur et dans l'app pour iPhone, iPad et Android, pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie.",
     ctaPrimary: "Démarrer l'essai de 30 jours",
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir les fonctionnalités',
@@ -59,14 +59,69 @@ export const fr: Messages = {
     title: "Ce qu'aucun autre logiciel de votre liste ne fait",
     sectorTitle: 'Tout ce dont votre cabinet a besoin, au même endroit',
     subtitle: "Agenda, facturation et formulaires, tout le monde les a. Ces trois-là sont la raison pour laquelle un cabinet change vraiment.",
+    essentialsTitle: 'Ce que le fisc et vos patients attendent de vous',
     moreTitle: "Et tout le reste que vous attendez d'un logiciel de gestion",
   },
 
+  verifactu: {
+    eyebrow: 'VeriFactu',
+    title: 'Des factures prêtes pour VeriFactu, sans changer de logiciel en 2027',
+    description: "VeriFactu est la nouvelle règle de facturation en Espagne. Chaque facture porte son QR code, est chaînée à la précédente et part toute seule vers l'administration fiscale espagnole (AEAT) dans la minute qui suit son émission. Rembourser un paiement émet la facture rectificative, et chaque site a sa propre série. Envoyez avec le certificat de votre cabinet, ou laissez QuiroFlow envoyer pour vous grâce à une procuration. Essayez-le dès aujourd'hui en mode test ; l'envoi réel démarre tout seul le 1er janvier 2027.",
+    short: "Un QR sur chaque facture, des enregistrements chaînés et l'envoi automatique à l'AEAT, avec votre certificat ou le nôtre.",
+    visual: {
+      header: 'FACTURE F2027-0142',
+      item: 'Séance de traitement x1',
+      itemPrice: '45,00 €',
+      total: 'Total',
+      totalPrice: '45,00 €',
+      qrLabel: 'QR fiscal · VERI*FACTU',
+      chained: 'Chaînée à la F2027-0141',
+      sent: "Acceptée par l'AEAT",
+    },
+  },
+
+  app: {
+    eyebrow: 'App pour iPhone, iPad et Android',
+    title: 'Le cabinet dans la poche, pour votre équipe et vos patients',
+    description: "Votre équipe a l'agenda, les dossiers, les notes de séance, les encaissements et la messagerie sur son téléphone, se connecte avec Face ID et reçoit une notification à chaque réservation en ligne ou nouveau message. Sur l'iPad de l'accueil, le patient signe ses formulaires en arrivant. Et vos patients utilisent la même app pour confirmer ou déplacer leur rendez-vous, régler une facture en attente par carte, s'inscrire sur la liste d'attente et faire les exercices que vous leur donnez.",
+    short: "Agenda, dossiers, encaissements et messagerie sur le téléphone de l'équipe ; confirmer, payer et faire ses exercices sur celui des patients.",
+    visual: {
+      staffHeader: 'VOTRE ÉQUIPE',
+      staff: ['Agenda jour, 3 jours ou semaine', 'Dossier, notes S/O/A/P et encaissements', 'Caisse du jour et chiffres du cabinet', "Mode accueil : signature sur l'iPad"],
+      patientHeader: 'VOS PATIENTS',
+      patient: ['Confirmer ou déplacer le rendez-vous', 'Payer une facture par carte', 'Exercices à domicile, en vidéo', "S'inscrire sur la liste d'attente"],
+    },
+  },
+
   platform: {
-    eyebrow: 'Tout au même endroit',
-    title: 'Une seule plateforme pour gérer votre cabinet',
-    description: "Les messages de vos patients arrivent ici, vous pouvez convertir de nouveaux leads en patients grâce à des modèles de messages automatiques (bienvenue, relance, rappel de réservation), lancer des campagnes de réactivation et consulter des statistiques claires sur votre cabinet — sans jongler entre plusieurs applications.",
-    short: "Une seule boîte de réception, des modèles automatiques pour les nouveaux leads et des campagnes de réactivation, sans changer d'application.",
+    eyebrow: 'Messagerie unique',
+    title: 'WhatsApp et Instagram dans une seule messagerie',
+    description: "Les messages WhatsApp et Instagram arrivent dans la même messagerie, et un numéro inconnu qui vous écrit devient un prospect. Attribuez chaque conversation à quelqu'un, laissez des notes internes en mentionnant un collègue, reportez-la à plus tard et, sans quitter la conversation, réservez le rendez-vous ou envoyez un lien de paiement.",
+    short: "WhatsApp et Instagram ensemble : attribuez, laissez des notes internes à l'équipe, reportez une conversation, et réservez ou encaissez depuis le chat.",
+  },
+
+  automations: {
+    eyebrow: 'Automatisations',
+    title: 'Des scénarios construits par glisser-déposer',
+    short: 'Un éditeur visuel pour enchaîner messages, délais et conditions : attendre que le patient remplisse un formulaire, suivre un chemin ou un autre selon ses réponses, et lui écrire dans sa langue.',
+  },
+
+  exercises: {
+    eyebrow: 'Exercices à domicile',
+    title: 'Ce qui se passe entre deux séances',
+    short: "Attribuez un programme d'exercices avec vidéo ou photo depuis le dossier. Le patient le suit dans l'app avec un rappel quotidien, et vous êtes prévenu s'il arrête.",
+  },
+
+  payments: {
+    eyebrow: 'Encaissements',
+    title: 'Encaissez en ligne et bouclez la caisse',
+    short: "Des liens de paiement depuis le chat, des factures en attente que le patient règle par carte dans l'app, et la caisse du jour avec chaque encaissement et ce qu'il réglait.",
+  },
+
+  growth: {
+    eyebrow: 'Growth',
+    title: 'Attirer de nouveaux patients',
+    short: "Les prospects de vos publicités arrivent tout seuls sur un tableau par étapes, une réceptionniste IA prépare les réponses WhatsApp et l'avis Google est demandé après la séance.",
   },
 
   agenda: {
@@ -86,9 +141,9 @@ export const fr: Messages = {
 
   whatsapp: {
     eyebrow: 'WhatsApp intégré',
-    title: 'Tout votre WhatsApp, dans QuiroFlow',
+    title: 'Des rappels confirmés en un geste',
     description: "Des rappels automatiques avec des boutons pour confirmer ou déplacer le rendez-vous en un geste, des réactivations pour les patients inactifs, et les messages que vos patients vous envoient arrivent directement dans votre boîte QuiroFlow — sans changer d'application ni compter sur l'ouverture d'un e-mail.",
-    short: "Des rappels avec bouton pour confirmer ou déplacer le rendez-vous, et les messages de vos patients dans votre boîte, sans changer d'application.",
+    short: "Des rappels WhatsApp avec bouton pour confirmer ou déplacer le rendez-vous, et des relances automatiques pour les patients que vous n'avez pas vus depuis longtemps.",
   },
 
   booking: {
@@ -101,7 +156,7 @@ export const fr: Messages = {
   waitlist: {
     eyebrow: "Liste d'attente et continuité",
     title: 'Aucun créneau vide, aucun patient perdu en cours de traitement',
-    description: "Quand un rendez-vous est annulé, QuiroFlow propose automatiquement ce créneau au premier patient de la liste d'attente, avec un lien pour le réserver immédiatement. Et si un patient suivant un plan de traitement actif prend du retard sur sa propre cadence, vous êtes prévenu avant qu'il ne cesse de venir.",
+    description: "Quand un rendez-vous est annulé, QuiroFlow propose automatiquement ce créneau au premier patient de la liste d'attente, avec un lien pour le réserver immédiatement. Et si un patient suivant un plan de traitement actif prend du retard sur sa propre cadence, vous êtes prévenu avant qu'il ne cesse de venir. Les plans se définissent en N séances toutes les M semaines, se réservent en entier d'un coup et montrent semaine après semaine si le patient est à jour.",
     short: "Le créneau annulé se repropose tout seul, et vous êtes prévenu quand un patient prend du retard sur son plan.",
     visual: {
       canceledHeader: 'RENDEZ-VOUS ANNULÉ → REPROPOSÉ',
@@ -118,7 +173,7 @@ export const fr: Messages = {
   billing: {
     eyebrow: 'Facturation et forfaits',
     title: 'Forfaits et abonnements avec prélèvement automatique',
-    description: "Factures immédiates, forfaits de séances et abonnements avec prélèvement récurrent automatisé via Stripe. Si vous le souhaitez, activez la facturation légale automatique de vos abonnements — sans courir après les paiements chaque mois.",
+    description: 'Factures immédiates, forfaits de séances utilisables par toute la famille et abonnements à prélèvement récurrent automatisé via Stripe. Chaque plan de traitement indique comment il se règle — à la séance, par forfait ou par abonnement — et la facturation légale de vos abonnements peut tourner en automatique, sans relancer les paiements chaque mois.',
     short: 'Des forfaits qui se décomptent seuls, un prélèvement récurrent via Stripe et une facture légale automatique.',
     visual: {
       header: 'FACTURE #0142',
@@ -136,8 +191,8 @@ export const fr: Messages = {
   forms: {
     eyebrow: 'Documents',
     title: 'Des formulaires sans papier',
-    description: "Créez vos propres formulaires d'admission et de consentement avec un générateur simple en glisser-déposer. Le patient les remplit avant le rendez-vous, depuis son téléphone.",
-    short: "Admission et consentement avec un générateur en glisser-déposer. Le patient les remplit depuis son téléphone avant d'arriver.",
+    description: "Créez vos propres formulaires d'anamnèse et de consentement avec un éditeur simple par glisser-déposer, avec signature et schémas corporels sur lesquels le patient indique où il a mal. Il les remplit dans sa langue depuis son téléphone avant le rendez-vous, ou sur l'iPad de l'accueil en arrivant.",
+    short: "Anamnèse et consentement avec signature et schéma corporel. Le patient les remplit depuis son téléphone avant de venir, ou sur l'iPad de l'accueil.",
     visual: {
       header: 'FORMULAIRE DE PREMIÈRE VISITE',
       fields: [
@@ -151,8 +206,8 @@ export const fr: Messages = {
   reports: {
     eyebrow: 'Rapports',
     title: 'Votre cabinet, en chiffres clairs',
-    description: "Remplissage, chiffre d'affaires, valeur moyenne par visite, fidélisation, conversion, nombre de premières visites et statistiques par praticien, à la minute et comparés à la période précédente — pas seulement combien de visites vous avez eues, mais comment votre activité évolue au jour le jour. Sans rien exporter vers un tableur.",
-    short: "Remplissage, valeur par visite, fidélisation, conversion et premières visites, à la minute et comparés à la période précédente.",
+    description: "Remplissage, chiffre d'affaires, valeur moyenne par visite, fidélisation, conversion, nombre de premières visites et statistiques par praticien, à la minute et comparés à la période précédente — pas seulement combien de visites vous avez eues, mais comment votre activité évolue au jour le jour. En plus : combien de temps attendent vos patients et combien durent les séances, chaque message envoyé sur n'importe quel canal, et vos propres tableaux de bord à télécharger en PDF.",
+    short: "Remplissage, valeur par visite, fidélisation et conversion comparés à la période précédente, temps d'attente et vos propres tableaux de bord à télécharger en PDF.",
     visual: {
       header: 'STATISTIQUES',
       compareLabel: 'vs. mois précédent',
@@ -204,6 +259,14 @@ export const fr: Messages = {
         title: 'Sous-traitant, par contrat',
         body: "Votre cabinet reste responsable des données de ses patients. QuiroFlow agit en tant que sous-traitant et signe le contrat correspondant, conformément au RGPD et à la LOPDGDD espagnole.",
       },
+      {
+        title: 'Double authentification',
+        body: "Chaque personne peut protéger son accès avec un code d'une app d'authentification, et votre cabinet peut l'imposer à toute l'équipe. Un mot de passe volé, à lui seul, n'ouvre aucun dossier.",
+      },
+      {
+        title: "Journal d'activité",
+        body: "Qui a ouvert ou modifié chaque dossier, et qui s'est connecté et quand, est enregistré et consultable depuis les Réglages. Et si vous envoyez un compte rendu par WhatsApp, il part dans un PDF qui ne s'ouvre qu'avec le numéro d'identité du patient.",
+      },
     ],
     note: "Vous avez besoin du détail technique ou du contrat de sous-traitance avant de décider ? Écrivez-nous et nous vous l'envoyons sans passer par une démo.",
   },
@@ -253,6 +316,7 @@ export const fr: Messages = {
     ctaSecondary: "Parler à l'équipe",
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
+    verifactuNote: "VeriFactu : 7,50 €/mois par site, uniquement à partir du jour où vous commencez à envoyer à l'AEAT.",
     ctaNote: "30 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
@@ -271,6 +335,7 @@ export const fr: Messages = {
           'Rappels de contrôle et campagnes automatiques',
           "Liste d'attente et alertes de continuité",
           'Facturation, paiements et forfaits',
+          'App pour votre équipe et vos patients',
         ],
       },
       practice: {
@@ -312,6 +377,14 @@ export const fr: Messages = {
       {
         q: 'Et si un jour je veux partir ? Puis-je emporter mes données ?',
         a: "Oui, et sans demander la permission. Patients, rendez-vous, notes cliniques, formulaires et facturation s'exportent en CSV et PDF depuis votre propre compte, quand vous le souhaitez et sans frais. Nous préférons le dire avant que vous ne posiez la question.",
+      },
+      {
+        q: 'QuiroFlow est-il prêt pour VeriFactu ?',
+        a: "Oui. Chaque facture porte son QR code, est chaînée à la précédente et est envoyée automatiquement à l'AEAT. Vous pouvez envoyer avec le certificat de votre cabinet ou autoriser QuiroFlow à envoyer pour vous. Jusqu'au 1er janvier 2027, cela fonctionne en mode test, sans frais ; à partir de ce jour, l'envoi réel coûte 7,50 € par mois et par site.",
+      },
+      {
+        q: 'Y a-t-il une app mobile ?',
+        a: "Oui, pour iPhone, iPad et Android. Votre équipe a l'agenda, les dossiers, les encaissements et la messagerie sur son téléphone, et vos patients utilisent la même app pour confirmer leurs rendez-vous, payer et faire leurs exercices. Elle est incluse dans toutes les formules.",
       },
       {
         q: 'Est-ce utile si je ne suis pas chiropracteur ?',
@@ -424,7 +497,7 @@ export const fr: Messages = {
       planes: {
         eyebrow: 'Plans de soins',
         title: "Le patient qui décroche, avant qu'il ne décroche",
-        description: "Un plan de soins chiropratique tient à la cadence : deux fois par semaine, puis une, puis en entretien. QuiroFlow connaît la cadence de chaque patient et vous prévient quand quelqu'un prend du retard sur la sienne, tant que vous pouvez encore le rattraper — au lieu de le découvrir deux mois plus tard en relisant l'agenda.",
+        description: "Un plan de soins chiropratique tient à la cadence : deux fois par semaine, puis une, puis en entretien. QuiroFlow connaît la cadence de chaque patient, réserve le plan entier d'un coup, vous montre semaine après semaine s'il est à jour et vous prévient quand quelqu'un prend du retard, tant que vous pouvez encore le rattraper — au lieu de le découvrir deux mois plus tard en relisant l'agenda.",
       },
       bonos: {
         eyebrow: 'Forfaits et abonnements',
@@ -439,7 +512,7 @@ export const fr: Messages = {
       historia: {
         eyebrow: 'Dossier clinique et consentements',
         title: 'Bilan, ajustements et consentement sans papier',
-        description: "Dossier clinique numérique avec le bilan initial, le suivi de chaque ajustement et les examens que vous souhaitez joindre. Les formulaires de première visite et le consentement éclairé sont remplis par le patient depuis son téléphone avant d'arriver.",
+        description: 'Dossier clinique numérique avec le bilan initial, des notes S/O/A/P pour chaque ajustement et, juste à côté, les listings vertébraux marqués par segment à gauche ou à droite, avec un geste pour reprendre ceux de la dernière séance. Le patient remplit les formulaires de première visite et le consentement éclairé depuis son téléphone avant de venir.',
       },
       informes: {
         eyebrow: 'Rapports',
@@ -470,7 +543,7 @@ export const fr: Messages = {
         },
         {
           q: 'Puis-je gérer des plans de soins avec des cadences différentes ?',
-          a: "Oui. Vous définissez la cadence de chaque plan (par exemple deux visites par semaine pendant un mois, puis une) et QuiroFlow la suit patient par patient, en vous alertant quand quelqu'un prend du retard sur la sienne.",
+          a: "Oui. Chaque plan se définit en N séances toutes les M semaines (par exemple deux par semaine pendant un mois, puis une toutes les deux semaines), se réserve en entier d'un coup, et QuiroFlow le suit patient par patient en vous prévenant quand quelqu'un prend du retard sur sa cadence.",
         },
         {
           q: 'Comment les salles sont-elles attribuées ?',
@@ -528,7 +601,7 @@ export const fr: Messages = {
       historia: {
         eyebrow: 'Dossier clinique et consentements',
         title: 'Bilan, évolution et consentement sans papier',
-        description: "Dossier clinique numérique avec le bilan initial, l'évolution séance après séance et les examens que vous souhaitez joindre. Les formulaires d'anamnèse et le consentement éclairé sont remplis par le patient depuis son téléphone avant d'arriver.",
+        description: "Dossier clinique numérique avec le bilan initial, l'évolution séance après séance en notes S/O/A/P et les examens que vous souhaitez joindre. Le patient remplit l'anamnèse et le consentement éclairé depuis son téléphone avant de venir, et peut indiquer sur un schéma corporel où il a mal.",
       },
       reserva: {
         eyebrow: 'Réservation en ligne',
@@ -543,15 +616,15 @@ export const fr: Messages = {
     },
     edge: {
       title: 'Deux détails qui comptent sur les traitements longs',
-      description: "La kinésithérapie se joue rarement sur une seule séance. Elle se joue sur le fait que le patient termine son plan, et qu'il revienne l'année suivante.",
+      description: "La kinésithérapie se joue rarement en une seule séance. Elle se joue sur le fait que le patient termine son plan, et sur ce qu'il fait entre deux séances.",
       items: [
         {
           title: "Vous êtes prévenu avant qu'un patient cesse de venir",
           body: "Un traitement se perd dans l'intervalle entre les séances, pas en cabinet. Si un patient suivant un plan actif prend du retard sur sa propre cadence, QuiroFlow vous prévient tant que vous pouvez encore le rattraper, au lieu que vous le découvriez deux mois plus tard.",
         },
         {
-          title: "Les avis Google se demandent tout seuls",
-          body: "Après la visite, QuiroFlow peut demander l'avis automatiquement. Pour un cabinet qui se bat sur les recherches locales, cette régularité finit par valoir plus que n'importe quelle campagne ponctuelle.",
+          title: "Exercices à domicile, et une alerte s'il arrête",
+          body: "Attribuez un programme d'exercices avec vidéo ou photo depuis le dossier. Le patient le suit dans l'app avec un rappel quotidien, et s'il arrête, il apparaît à côté des plans en retard, tant que vous pouvez encore agir.",
         },
       ],
     },
@@ -565,6 +638,10 @@ export const fr: Messages = {
         {
           q: 'Puis-je gérer des forfaits de séances ?',
           a: "Oui. Créez des forfaits du nombre de séances que vous voulez : chaque visite en décompte une automatiquement, sans comptage manuel. Vous pouvez aussi activer le prélèvement récurrent pour les formules au forfait ou les abonnements mensuels.",
+        },
+        {
+          q: 'Puis-je donner des exercices à faire à domicile ?',
+          a: "Oui. Depuis le dossier, vous attribuez des exercices isolés ou un programme complet, avec votre propre vidéo ou photo. Le patient les voit dans l'app avec un rappel quotidien, coche ceux qu'il fait, et QuiroFlow vous prévient quand il arrête.",
         },
         {
           q: 'Comment les tables et les box sont-ils attribués ?',

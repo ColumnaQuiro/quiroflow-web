@@ -15,9 +15,9 @@ const titles: LocalisedText = {
   fr: 'QuiroFlow — Logiciel de gestion pour cabinets',
 }
 const descriptions: LocalisedText = {
-  es: 'Agenda con sala asignada automáticamente, bonos con cobro recurrente, WhatsApp y aviso de paciente retrasado. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología. 30 días de prueba, sin tarjeta.',
-  en: 'A calendar with automatic room assignment, packages with recurring billing, WhatsApp, and behind-schedule patient alerts. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 30-day trial, no card.',
-  fr: "Un agenda avec attribution automatique des salles, des forfaits à prélèvement récurrent, WhatsApp et une alerte de patient en retard. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie. 30 jours d'essai, sans carte.",
+  es: 'Agenda con sala asignada automáticamente, bonos con cobro recurrente, WhatsApp, facturación VeriFactu y app para iPhone y Android. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología. 30 días de prueba, sin tarjeta.',
+  en: 'A calendar with automatic room assignment, packages with recurring billing, WhatsApp, VeriFactu invoicing and an iPhone and Android app. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 30-day trial, no card.',
+  fr: "Un agenda avec attribution automatique des salles, des forfaits à prélèvement récurrent, WhatsApp, la facturation VeriFactu et une app iPhone et Android. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie. 30 jours d'essai, sans carte.",
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para clínicas de terapia manual',
@@ -38,7 +38,7 @@ const faqItems = useFaqItems('faq.items')
 // `agenda`, which keeps its own full section above -- room assignment is part
 // of what makes the calendar different rather than a generic calendar.
 const gridItems = computed(() =>
-  (['whatsapp', 'booking', 'forms', 'reports', 'platform'] as const).map(key => ({
+  (['whatsapp', 'platform', 'automations', 'booking', 'forms', 'exercises', 'payments', 'reports', 'growth'] as const).map(key => ({
     eyebrow: t(`${key}.eyebrow`),
     title: t(`${key}.title`),
     body: t(`${key}.short`),
@@ -78,12 +78,13 @@ usePageSeo({
         name: 'QuiroFlow',
         url,
         applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
+        operatingSystem: 'Web, iOS, Android',
         description: jsonLdDescriptions[locale],
         publisher: { '@id': 'https://quiroflow.com/#organization' },
         offers: {
           '@type': 'Offer',
-          price: '59',
+          // The Solo tier's monthly price -- keep in step with PricingSection's TIERS.
+          price: '49',
           priceCurrency: 'EUR',
           url: 'https://quiroflow.com/#precios',
         },
@@ -168,6 +169,37 @@ usePageSeo({
             </div>
           </div>
         </div>
+      </template>
+    </FeatureSection>
+
+    <!-- Not under the "no other program does this" heading above: VeriFactu
+         is an obligation every Spanish program has to meet, and the app is
+         expected rather than unique. They get full sections because they
+         answer the two questions a clinic now asks first. -->
+    <section class="pt-14">
+      <div class="mx-auto max-w-[1120px] px-8">
+        <h2 class="max-w-[640px] text-[25px] tracking-tightTitle text-ink-900">{{ t('funcionalidades.essentialsTitle') }}</h2>
+      </div>
+    </section>
+
+    <FeatureSection
+      reverse
+      :eyebrow="t('verifactu.eyebrow')"
+      :title="t('verifactu.title')"
+      :description="t('verifactu.description')"
+    >
+      <template #visual>
+        <MockupsVerifactuMockup />
+      </template>
+    </FeatureSection>
+
+    <FeatureSection
+      :eyebrow="t('app.eyebrow')"
+      :title="t('app.title')"
+      :description="t('app.description')"
+    >
+      <template #visual>
+        <MockupsAppMockup />
       </template>
     </FeatureSection>
 

@@ -31,7 +31,7 @@ export const es = {
     badge: 'Software de gestión para clínicas',
     titleLine1: 'Menos tiempo en la agenda.',
     titleLine2: 'Más tiempo en la camilla.',
-    description: 'Agenda con sala o camilla asignada automáticamente, bonos de sesiones que se descuentan solos, recordatorios por WhatsApp y aviso cuando un paciente se retrasa en su plan de tratamiento. Una sola plataforma para clínicas de quiropráctica, fisioterapia, osteopatía y podología.',
+    description: 'Agenda con sala o camilla asignada automáticamente, bonos de sesiones que se descuentan solos, recordatorios por WhatsApp, facturación lista para VeriFactu y aviso cuando un paciente se retrasa en su plan de tratamiento. En el ordenador y en la app para iPhone, iPad y Android, para clínicas de quiropráctica, fisioterapia, osteopatía y podología.',
     ctaPrimary: 'Empezar prueba de 30 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver funcionalidades',
@@ -71,14 +71,77 @@ export const es = {
     title: 'Lo que no hace ningún otro programa de tu lista',
     sectorTitle: 'Todo lo que necesita tu clínica, en un solo lugar',
     subtitle: 'Agenda, facturación y formularios los tiene todo el mundo. Estas tres son la razón por la que una clínica cambia.',
+    // Heads the VeriFactu and app sections. Neither belongs under the title
+    // above: other programs do VeriFactu too, and "no other program does
+    // this" would stop being true the moment either sat under it.
+    essentialsTitle: 'Lo que te piden Hacienda y tus pacientes',
     moreTitle: 'Y todo lo demás que esperas de un programa de gestión',
   },
 
+  verifactu: {
+    eyebrow: 'VeriFactu',
+    title: 'Facturas listas para VeriFactu, sin cambiar de programa en 2027',
+    // The real chain starts on 1 Jan 2027 by itself (the app's #443); before
+    // that a clinic can only run in test mode, which is why the copy says so
+    // instead of implying anything is being sent to the AEAT for real today.
+    description: 'Cada factura sale con su código QR, queda encadenada a la anterior y se envía sola a la AEAT al minuto de emitirla. Al devolver un pago se genera la rectificativa, y cada sede lleva su propia serie. Envía con el certificado de tu clínica o deja que QuiroFlow envíe por ti con un apoderamiento. Puedes probarlo hoy en modo de pruebas; el envío real empieza solo el 1 de enero de 2027.',
+    short: 'QR en cada factura, registros encadenados y envío automático a la AEAT, con tu certificado o el nuestro.',
+    visual: {
+      header: 'FACTURA F2027-0142',
+      item: 'Sesión de tratamiento x1',
+      itemPrice: '45,00 €',
+      total: 'Total',
+      totalPrice: '45,00 €',
+      qrLabel: 'QR tributario · VERI*FACTU',
+      chained: 'Encadenada a la F2027-0141',
+      sent: 'Aceptada por la AEAT',
+    },
+  },
+
+  app: {
+    eyebrow: 'App para iPhone, iPad y Android',
+    title: 'La clínica en el bolsillo, para tu equipo y para tus pacientes',
+    description: 'Tu equipo lleva la agenda, las fichas, las notas de la visita, los cobros y la bandeja en el móvil, entra con Face ID y recibe un aviso cuando llega una reserva online o un mensaje. En el iPad de recepción, el paciente firma sus formularios al llegar. Y tus pacientes usan la misma app para confirmar o cambiar su cita, pagar una factura pendiente con tarjeta, apuntarse a la lista de espera y hacer los ejercicios que les mandas.',
+    short: 'Agenda, fichas, cobros y bandeja en el móvil del equipo; confirmar, pagar y ejercicios en el de tus pacientes.',
+    visual: {
+      staffHeader: 'TU EQUIPO',
+      staff: ['Agenda de día, 3 días o semana', 'Ficha, notas S/O/A/P y cobros', 'Caja del día y números de la clínica', 'Modo recepción: firma en el iPad'],
+      patientHeader: 'TUS PACIENTES',
+      patient: ['Confirmar o cambiar la cita', 'Pagar una factura con tarjeta', 'Ejercicios para casa, con vídeo', 'Apuntarse a la lista de espera'],
+    },
+  },
+
   platform: {
-    eyebrow: 'Todo en un mismo sitio',
-    title: 'Una sola plataforma para gestionar tu consulta',
-    description: 'Los mensajes de tus pacientes te llegan aquí, puedes convertir leads nuevos en pacientes con plantillas de mensajes automáticas (bienvenida, seguimiento, recordatorio de reserva), lanzar campañas de recall y ver estadísticas claras de tu consulta — sin saltar entre varias aplicaciones distintas.',
-    short: 'Bandeja única, plantillas automáticas para leads nuevos y campañas de recall, sin saltar entre aplicaciones.',
+    eyebrow: 'Bandeja única',
+    title: 'WhatsApp e Instagram en una sola bandeja',
+    description: 'Los mensajes de WhatsApp e Instagram llegan a la misma bandeja, y un número desconocido que te escribe se convierte en un lead. Asigna cada conversación a una persona, deja notas internas mencionando a un compañero, posponla hasta más tarde y, sin salir del chat, reserva la cita o manda un enlace de pago.',
+    short: 'WhatsApp e Instagram juntos: asigna, deja notas internas para el equipo, pospón una conversación y reserva o cobra desde el chat.',
+  },
+
+  automations: {
+    eyebrow: 'Automatizaciones',
+    title: 'Flujos que montas arrastrando',
+    short: 'Un editor visual para encadenar mensajes, esperas y condiciones: espera a que el paciente rellene un formulario, sigue un camino u otro según sus respuestas y le escribe en su idioma.',
+  },
+
+  exercises: {
+    eyebrow: 'Ejercicios en casa',
+    title: 'Lo que hace entre sesión y sesión',
+    short: 'Asigna un programa de ejercicios con vídeo o foto desde la ficha. El paciente lo sigue en la app con un recordatorio diario, y te avisa si deja de hacerlos.',
+  },
+
+  payments: {
+    eyebrow: 'Cobros',
+    title: 'Cobra online y cuadra la caja',
+    short: 'Enlaces de pago desde el chat, facturas pendientes que el paciente paga con tarjeta desde la app, y la caja del día con cada cobro y a qué corresponde.',
+  },
+
+  // Sold as an add-on (and included in Clinic), so the grid names it -- the
+  // pricing cards mention Growth and otherwise nothing says what it is.
+  growth: {
+    eyebrow: 'Growth',
+    title: 'Captación de pacientes nuevos',
+    short: 'Los leads de tus anuncios entran solos en un tablero por etapas, una recepcionista con IA prepara las respuestas de WhatsApp y la reseña de Google se pide tras la visita.',
   },
 
   agenda: {
@@ -98,9 +161,9 @@ export const es = {
 
   whatsapp: {
     eyebrow: 'WhatsApp integrado',
-    title: 'Todo tu WhatsApp, dentro de QuiroFlow',
+    title: 'Recordatorios que se confirman en un toque',
     description: 'Recordatorios automáticos con botones para confirmar o cambiar la cita en un toque, recalls para pacientes inactivos, y los mensajes que te escriben tus pacientes llegan directamente a tu bandeja en QuiroFlow — sin cambiar de app ni depender de que abran un email.',
-    short: 'Recordatorios con botón para confirmar o cambiar la cita, y los mensajes de tus pacientes en tu bandeja, sin cambiar de app.',
+    short: 'Recordatorios por WhatsApp con botón para confirmar o cambiar la cita, y recalls automáticos para los pacientes que hace tiempo que no vienen.',
   },
 
   booking: {
@@ -113,7 +176,7 @@ export const es = {
   waitlist: {
     eyebrow: 'Lista de espera y continuidad',
     title: 'Ningún hueco vacío ni paciente perdido a medio tratamiento',
-    description: 'Cuando se cancela una cita, QuiroFlow ofrece automáticamente ese hueco al primer paciente en lista de espera, con un enlace para reservarlo al momento. Y si un paciente con un plan de tratamiento activo se retrasa respecto a su propia cadencia, te avisa antes de que deje de venir.',
+    description: 'Cuando se cancela una cita, QuiroFlow ofrece automáticamente ese hueco al primer paciente en lista de espera, con un enlace para reservarlo al momento. Y si un paciente con un plan de tratamiento activo se retrasa respecto a su propia cadencia, te avisa antes de que deje de venir. Los planes se definen como N visitas cada M semanas, se reservan enteros de una vez y muestran semana a semana si el paciente va al día.',
     short: 'El hueco cancelado se reofrece solo, y te avisa cuando un paciente se retrasa en su plan.',
     visual: {
       canceledHeader: 'CITA CANCELADA → REOFRECIDA',
@@ -130,7 +193,7 @@ export const es = {
   billing: {
     eyebrow: 'Facturación y bonos',
     title: 'Bonos y membresías con cobro automático',
-    description: 'Facturas al momento, bonos de sesiones y membresías con cobro recurrente automatizado vía Stripe. Si quieres, activa la facturación legal y automática para tus membresías — sin perseguir pagos manualmente cada mes.',
+    description: 'Facturas al momento, bonos de sesiones que puede usar toda la familia y membresías con cobro recurrente automatizado vía Stripe. Cada plan de tratamiento dice cómo se paga — por visita, con un bono o con una membresía — y la facturación legal de tus membresías puede ir en automático, sin perseguir pagos cada mes.',
     short: 'Bonos que se descuentan solos, cobro recurrente con Stripe y factura legal automática.',
     visual: {
       header: 'FACTURA #0142',
@@ -150,8 +213,8 @@ export const es = {
   forms: {
     eyebrow: 'Docs',
     title: 'Formularios sin papel',
-    description: 'Crea tus propios formularios de intake y consentimiento con un generador simple de arrastrar y soltar. El paciente los rellena antes de la cita, desde el móvil.',
-    short: 'Intake y consentimiento con un generador de arrastrar y soltar. El paciente los rellena desde el móvil antes de llegar.',
+    description: 'Crea tus propios formularios de intake y consentimiento con un generador simple de arrastrar y soltar, con firma y diagramas corporales sobre los que el paciente marca dónde le duele. Los rellena en su idioma desde el móvil antes de la cita, o en el iPad de recepción al llegar.',
+    short: 'Intake y consentimiento con firma y diagrama corporal. El paciente los rellena desde el móvil antes de llegar, o en el iPad de recepción.',
     visual: {
       header: 'FORMULARIO DE PRIMERA VISITA',
       fields: [
@@ -165,8 +228,8 @@ export const es = {
   reports: {
     eyebrow: 'Informes',
     title: 'Tu clínica, en números claros',
-    description: 'Ocupación, ingresos, PVA (precio medio por visita), retención, conversión, número de primeras visitas y estadísticas por profesional, al minuto y comparadas con el periodo anterior — no solo cuántas visitas tienes, sino cómo evoluciona tu negocio día a día. Sin exportar nada a una hoja de cálculo.',
-    short: 'Ocupación, PVA, retención, conversión y primeras visitas, al minuto y comparadas con el periodo anterior.',
+    description: 'Ocupación, ingresos, PVA (precio medio por visita), retención, conversión, número de primeras visitas y estadísticas por profesional, al minuto y comparadas con el periodo anterior — no solo cuántas visitas tienes, sino cómo evoluciona tu negocio día a día. Además, cuánto esperan tus pacientes y cuánto duran las sesiones, cada mensaje enviado por cualquier canal, y paneles propios que descargas en PDF.',
+    short: 'Ocupación, PVA, retención y conversión comparadas con el periodo anterior, tiempos de espera y paneles propios que descargas en PDF.',
     visual: {
       header: 'ESTADÍSTICAS',
       compareLabel: 'vs. mes anterior',
@@ -227,6 +290,14 @@ export const es = {
         title: 'Encargado del tratamiento, por contrato',
         body: 'Tu clínica sigue siendo la responsable de los datos de sus pacientes. QuiroFlow actúa como encargado del tratamiento y firma el contrato correspondiente, conforme al RGPD y a la LOPDGDD.',
       },
+      {
+        title: 'Doble factor al entrar',
+        body: 'Cada persona puede proteger su acceso con un código de una app de autenticación, y tu clínica puede exigirlo a todo el equipo. Una contraseña robada, por sí sola, no abre ninguna ficha.',
+      },
+      {
+        title: 'Registro de actividad',
+        body: 'Quién ha abierto o cambiado cada ficha, y quién ha entrado y cuándo, queda registrado y lo consultas desde Ajustes. Y si mandas un informe por WhatsApp, va en un PDF que solo se abre con el DNI o NIE del paciente.',
+      },
     ],
     note: '¿Necesitas el detalle técnico o el contrato de encargado antes de decidir? Escríbenos y te lo mandamos sin pasar por una demo.',
   },
@@ -281,6 +352,9 @@ export const es = {
     ctaSecondary: 'Hablar con el equipo',
     exVat: 'sin IVA',
     vatNote: 'Precios sin IVA. Se añade un 21% en la factura.',
+    // What the app bills (addons.verifactu, 750 cents per active location),
+    // and only from the day a clinic goes live -- test mode is free.
+    verifactuNote: 'VeriFactu: 7,50 €/mes por sede, solo desde el día en que empiezas a enviar a la AEAT.',
     ctaNote: '30 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
@@ -299,6 +373,7 @@ export const es = {
           'Recordatorios de revisión y campañas automáticas',
           'Lista de espera y alertas de continuidad',
           'Facturación, pagos y bonos',
+          'App para tu equipo y tus pacientes',
         ],
       },
       practice: {
@@ -340,6 +415,14 @@ export const es = {
       {
         q: '¿Y si un día quiero irme? ¿Puedo llevarme mis datos?',
         a: 'Sí, y sin pedir permiso. Pacientes, citas, notas clínicas, formularios y facturación se exportan en CSV y PDF desde tu propia cuenta, cuando quieras y sin coste. Preferimos decirlo antes de que lo preguntes.',
+      },
+      {
+        q: '¿QuiroFlow está preparado para VeriFactu?',
+        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Puedes enviar con el certificado de tu clínica o autorizar a QuiroFlow para que envíe por ti. Hasta el 1 de enero de 2027 funciona en modo de pruebas, sin coste; a partir de ese día, el envío real cuesta 7,50 € al mes por sede.',
+      },
+      {
+        q: '¿Hay app para el móvil?',
+        a: 'Sí, para iPhone, iPad y Android. Tu equipo tiene la agenda, las fichas, los cobros y la bandeja en el móvil, y tus pacientes usan la misma app para confirmar sus citas, pagar y hacer sus ejercicios. Está incluida en todos los planes.',
       },
       {
         q: '¿Sirve si no soy quiropráctico?',
@@ -452,7 +535,7 @@ export const es = {
       planes: {
         eyebrow: 'Planes de cuidado',
         title: 'El paciente que se cae del plan, antes de que se caiga',
-        description: 'Un plan de cuidado quiropráctico se sostiene en la cadencia: dos por semana, luego una, luego mantenimiento. QuiroFlow conoce la cadencia de cada paciente y te avisa cuando alguien se retrasa respecto a la suya, mientras todavía estás a tiempo de recuperarlo — en vez de descubrirlo revisando la agenda dos meses después.',
+        description: 'Un plan de cuidado quiropráctico se sostiene en la cadencia: dos por semana, luego una, luego mantenimiento. QuiroFlow conoce la cadencia de cada paciente, reserva el plan entero de una vez, te enseña semana a semana si va al día y te avisa cuando alguien se retrasa, mientras todavía estás a tiempo de recuperarlo — en vez de descubrirlo revisando la agenda dos meses después.',
       },
       bonos: {
         eyebrow: 'Bonos y membresías',
@@ -467,7 +550,7 @@ export const es = {
       historia: {
         eyebrow: 'Historial clínico y consentimientos',
         title: 'Valoración, ajustes y consentimiento sin papel',
-        description: 'Historial clínico digital con la valoración inicial, el registro de cada ajuste y las pruebas que quieras adjuntar. Los formularios de primera visita y el consentimiento informado los rellena el paciente desde el móvil antes de llegar.',
+        description: 'Historial clínico digital con la valoración inicial, notas S/O/A/P de cada ajuste y los listados vertebrales al lado, marcados por segmento a izquierda o derecha, con un toque para repetir los de la última visita. Los formularios de primera visita y el consentimiento informado los rellena el paciente desde el móvil antes de llegar.',
       },
       informes: {
         eyebrow: 'Informes',
@@ -498,7 +581,7 @@ export const es = {
         },
         {
           q: '¿Puedo gestionar planes de cuidado con cadencias distintas?',
-          a: 'Sí. Defines la cadencia de cada plan (por ejemplo dos visitas por semana durante un mes y luego una) y QuiroFlow la sigue paciente a paciente, avisándote cuando alguien se retrasa respecto a la suya.',
+          a: 'Sí. Cada plan se define como N visitas cada M semanas (por ejemplo, dos por semana durante un mes y luego una cada dos semanas), se reserva entero de una vez y QuiroFlow lo sigue paciente a paciente, avisándote cuando alguien se retrasa respecto a su cadencia.',
         },
         {
           q: '¿Cómo se asignan las salas?',
@@ -556,7 +639,7 @@ export const es = {
       historia: {
         eyebrow: 'Historia clínica y consentimientos',
         title: 'Valoración, evolución y consentimiento sin papel',
-        description: 'Historia clínica digital con la valoración inicial, la evolución sesión a sesión y las pruebas que quieras adjuntar. Los formularios de anamnesis y el consentimiento informado los rellena el paciente desde el móvil antes de llegar.',
+        description: 'Historia clínica digital con la valoración inicial, la evolución sesión a sesión en notas S/O/A/P y las pruebas que quieras adjuntar. Los formularios de anamnesis y el consentimiento informado los rellena el paciente desde el móvil antes de llegar, y puede marcar sobre un diagrama corporal dónde le duele.',
       },
       reserva: {
         eyebrow: 'Reserva online',
@@ -571,15 +654,15 @@ export const es = {
     },
     edge: {
       title: 'Dos detalles que pesan en tratamientos largos',
-      description: 'La fisioterapia rara vez se juega en una sola sesión. Se juega en si el paciente completa el plan y en si vuelve el año que viene.',
+      description: 'La fisioterapia rara vez se juega en una sola sesión. Se juega en si el paciente completa el plan y en lo que hace entre sesión y sesión.',
       items: [
         {
           title: 'Te avisa antes de que un paciente deje de venir',
           body: 'Un tratamiento se pierde en el hueco entre sesiones, no en la consulta. Si un paciente con un plan activo se retrasa respecto a su propia cadencia, QuiroFlow te avisa mientras todavía estás a tiempo de recuperarlo, en vez de que lo descubras al revisar la agenda dos meses después.',
         },
         {
-          title: 'Las reseñas de Google se piden solas',
-          body: 'Tras la visita, QuiroFlow puede pedir la reseña automáticamente. Para una clínica que compite en búsquedas locales, esa constancia acaba valiendo más que cualquier campaña puntual.',
+          title: 'Ejercicios en casa, y aviso si los deja',
+          body: 'Asigna un programa de ejercicios con vídeo o foto desde la ficha. El paciente lo sigue en la app con un recordatorio diario, y si deja de hacerlos aparece junto a los planes con retraso, mientras todavía puedes corregirlo.',
         },
       ],
     },
@@ -593,6 +676,10 @@ export const es = {
         {
           q: '¿Puedo gestionar bonos de sesiones?',
           a: 'Sí. Puedes crear bonos del número de sesiones que quieras y cada visita descuenta una automáticamente, sin llevar la cuenta a mano. También puedes activar el cobro recurrente para tarifas planas o membresías mensuales.',
+        },
+        {
+          q: '¿Puedo mandar ejercicios para casa?',
+          a: 'Sí. Desde la ficha asignas ejercicios sueltos o un programa entero, con tu propio vídeo o foto. El paciente los ve en la app con un recordatorio diario, marca los que hace, y QuiroFlow te avisa cuando deja de hacerlos.',
         },
         {
           q: '¿Cómo se asignan las camillas o los boxes?',

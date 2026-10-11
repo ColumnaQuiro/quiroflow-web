@@ -164,7 +164,7 @@ function price(tier: (typeof TIERS)[number]) {
       </div>
 
       <p class="mt-4 max-w-[640px] text-center text-[13.5px] text-ink-muted">
-        {{ t('pricing.vatNote') }} {{ t('pricing.ctaNote') }}
+        {{ t('pricing.vatNote') }} {{ t('pricing.verifactuNote') }} {{ t('pricing.ctaNote') }}
       </p>
     </div>
   </section>
