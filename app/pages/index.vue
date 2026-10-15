@@ -118,6 +118,19 @@ usePageSeo({
       </div>
     </section>
 
+    <!-- First, because it is the newest and the one most worth seeing: it
+         answers and books on its own, from the clinic's real calendar. -->
+    <FeatureSection
+      :eyebrow="t('receptionist.eyebrow')"
+      :title="t('receptionist.title')"
+      :description="t('receptionist.description')"
+      reverse
+    >
+      <template #visual>
+        <MockupsReceptionistMockup />
+      </template>
+    </FeatureSection>
+
     <FeatureSection
       :eyebrow="t('waitlist.eyebrow')"
       :title="t('waitlist.title')"

@@ -121,7 +121,7 @@ export const fr: Messages = {
   growth: {
     eyebrow: 'Growth',
     title: 'Attirer de nouveaux patients',
-    short: "Les prospects de vos publicités arrivent tout seuls sur un tableau par étapes, une réceptionniste IA prépare les réponses WhatsApp et l'avis Google est demandé après la séance.",
+    short: "Les prospects de vos publicités arrivent tout seuls sur un tableau par étapes, la réceptionniste IA leur répond sur WhatsApp et réserve le rendez-vous, et l'avis Google est demandé après la séance.",
   },
 
   agenda: {
@@ -151,6 +151,21 @@ export const fr: Messages = {
     title: 'Un module de réservation sur votre propre sous-domaine',
     description: "Chaque cabinet reçoit sa propre page publique de réservation, à votre marque et avec vos horaires réels. Les patients réservent sans appeler, et le rendez-vous arrive directement dans votre agenda.",
     short: 'Votre propre page de réservation, à votre marque et avec vos horaires réels. Le rendez-vous arrive directement dans l\'agenda.',
+  },
+
+  receptionist: {
+    eyebrow: 'Nouveau · Réceptionniste IA',
+    title: 'Elle répond à votre WhatsApp et réserve le rendez-vous, même à vingt-trois heures',
+    description: "La réceptionniste IA répond sur WhatsApp à vos patients et aux personnes qui vous écrivent pour la première fois, avec ce que vous lui dites de la clinique : tarifs, horaires, ce que vous traitez. Elle propose de vrais créneaux libres de votre agenda et, dès que le patient en choisit un, réserve ou déplace le rendez-vous elle-même. Vous décidez quand elle répond seule — en dehors des horaires, ou aussi pendant — et quand elle laisse seulement un brouillon à valider. Ce qui ne la concerne pas passe à une personne avec une note dans la conversation, et elle n'annule jamais un rendez-vous.",
+    visual: {
+      header: 'WHATSAPP · 22:47',
+      patient1: 'Bonjour, vous avez de la place cette semaine pour une première visite ? Mon dos me fait souffrir',
+      ai1: 'Bonjour Laura. La première visite coûte 50 € et comprend le bilan et la première séance. J\'ai jeudi à 10:00 ou vendredi à 17:30. L\'un des deux vous convient ?',
+      patient2: 'Jeudi à 10h',
+      ai2: 'C\'est fait : votre première visite est jeudi à 10:00 avec Marta. Vous recevrez la confirmation ici.',
+      booked: 'Réservé par la réceptionniste IA',
+      footer: 'Réponse seule, en dehors des horaires',
+    },
   },
 
   waitlist: {
@@ -312,11 +327,13 @@ export const fr: Messages = {
     mostChosen: 'Recommandé',
     extraPro: 'Praticien supplémentaire : 19 €/mois',
     growthAddOn: 'Growth (acquisition, réceptionniste IA et réputation) : +39 €/mois',
+    receptionistAddOn: 'Seulement la réceptionniste IA : +19 €/mois',
     cta: "Démarrer l'essai de 30 jours",
     ctaSecondary: "Parler à l'équipe",
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
     verifactuNote: "VeriFactu : 7,50 €/mois par site, uniquement à partir du jour où vous commencez à envoyer à l'AEAT.",
+    receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
     ctaNote: "30 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
@@ -377,6 +394,10 @@ export const fr: Messages = {
       {
         q: 'Et si un jour je veux partir ? Puis-je emporter mes données ?',
         a: "Oui, et sans demander la permission. Patients, rendez-vous, notes cliniques, formulaires et facturation s'exportent en CSV et PDF depuis votre propre compte, quand vous le souhaitez et sans frais. Nous préférons le dire avant que vous ne posiez la question.",
+      },
+      {
+        q: 'Que fait la réceptionniste IA et combien coûte-t-elle ?',
+        a: "Elle répond sur WhatsApp à vos patients et aux personnes qui écrivent pour la première fois, avec les informations que vous lui donnez sur la clinique et les vrais créneaux libres de votre agenda, et réserve ou déplace le rendez-vous quand le patient choisit une heure. Vous choisissez si elle répond seule (en dehors des horaires, ou aussi pendant) ou si elle laisse des brouillons à valider, et ce qui ne la concerne pas passe à une personne. Elle coûte 19 €/mois (17 €/mois en annuel) et inclut 1 000 réponses par mois ; chaque 1 000 de plus coûte 15 €, et vous pouvez fixer une limite mensuelle. Elle est incluse dans Growth et dans le plan Clinic.",
       },
       {
         q: 'QuiroFlow est-il prêt pour VeriFactu ?',

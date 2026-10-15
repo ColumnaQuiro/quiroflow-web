@@ -121,7 +121,7 @@ export const en: Messages = {
   growth: {
     eyebrow: 'Growth',
     title: 'Bringing in new patients',
-    short: 'Leads from your ads land on a board by stage on their own, an AI receptionist drafts the WhatsApp replies, and the Google review is requested after the visit.',
+    short: 'Leads from your ads land on a board by stage on their own, the AI receptionist answers them on WhatsApp and books the visit, and the Google review is requested after the visit.',
   },
 
   agenda: {
@@ -151,6 +151,21 @@ export const en: Messages = {
     title: 'A booking widget on your own subdomain',
     description: 'Every clinic gets its own public booking page, with your branding and real availability. Patients book without calling, and the appointment lands straight in your calendar.',
     short: 'Your own booking page, with your branding and real opening hours. The appointment lands straight in the calendar.',
+  },
+
+  receptionist: {
+    eyebrow: 'New · AI receptionist',
+    title: 'Answers your WhatsApp and books the visit, even at eleven at night',
+    description: 'The AI receptionist replies on WhatsApp to your patients and to people writing for the first time, using what you tell it about the clinic: prices, hours, what you treat. It offers real free times from your calendar and, once the patient picks one, books or moves the visit itself. You decide when it answers on its own — outside clinic hours, or during them too — and when it only leaves a draft for you to approve. Anything that is not its to answer goes to a person with a note in the conversation, and it never cancels a visit.',
+    visual: {
+      header: 'WHATSAPP · 22:47',
+      patient1: 'Hi, any space this week for a first visit? My back is killing me',
+      ai1: 'Hi Laura. The first visit is €50 and includes the assessment and the first session. I have Thursday at 10:00 or Friday at 17:30. Does either suit you?',
+      patient2: 'Thursday at 10',
+      ai2: 'Done: your first visit is on Thursday at 10:00 with Marta. You will get the confirmation here.',
+      booked: 'Booked by the AI receptionist',
+      footer: 'Answered on its own, outside clinic hours',
+    },
   },
 
   waitlist: {
@@ -312,11 +327,13 @@ export const en: Messages = {
     mostChosen: 'Recommended',
     extraPro: 'Extra practitioner: €19/mo',
     growthAddOn: 'Growth (lead capture, AI receptionist and reputation): +€39/mo',
+    receptionistAddOn: 'Just the AI receptionist: +€19/mo',
     cta: 'Start 30-day trial',
     ctaSecondary: 'Talk to the team',
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
     verifactuNote: 'VeriFactu: €7.50/mo per location, only from the day you start sending to the AEAT.',
+    receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and Clinic. 1,000 replies a month included; each further 1,000 is €15.',
     ctaNote: '30-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
@@ -377,6 +394,10 @@ export const en: Messages = {
       {
         q: 'And if I want to leave one day — can I take my data with me?',
         a: 'Yes, and without asking permission. Patients, appointments, clinical notes, forms and billing export as CSV and PDF from your own account, whenever you want, at no charge. We would rather say it before you ask.',
+      },
+      {
+        q: 'What does the AI receptionist do, and what does it cost?',
+        a: 'It answers WhatsApp from your patients and from people writing for the first time, using what you tell it about the clinic and the real free times in your calendar, and books or moves the visit once the patient picks a time. You choose whether it answers on its own (outside clinic hours, or during them too) or leaves drafts for you to approve, and it hands anything that is not its to answer to a person. It costs €19/mo (€17/mo billed annually) and includes 1,000 replies a month; each further 1,000 is €15, and you can set a monthly limit. It is included in Growth and in the Clinic plan.',
       },
       {
         q: 'Is QuiroFlow ready for VeriFactu?',

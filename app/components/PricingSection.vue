@@ -149,6 +149,11 @@ function price(tier: (typeof TIERS)[number]) {
             <li v-if="tier.key !== 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.growthAddOn') }}
             </li>
+            <!-- The receptionist is also sold on its own, for a clinic that
+                 wants WhatsApp answered without the rest of Growth. -->
+            <li v-if="tier.key !== 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
+              {{ t('pricing.receptionistAddOn') }}
+            </li>
           </ul>
         </div>
       </div>
@@ -164,7 +169,7 @@ function price(tier: (typeof TIERS)[number]) {
       </div>
 
       <p class="mt-4 max-w-[640px] text-center text-[13.5px] text-ink-muted">
-        {{ t('pricing.vatNote') }} {{ t('pricing.verifactuNote') }} {{ t('pricing.ctaNote') }}
+        {{ t('pricing.vatNote') }} {{ t('pricing.verifactuNote') }} {{ t('pricing.receptionistNote') }} {{ t('pricing.ctaNote') }}
       </p>
     </div>
   </section>
