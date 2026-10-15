@@ -141,7 +141,7 @@ export const es = {
   growth: {
     eyebrow: 'Growth',
     title: 'Captación de pacientes nuevos',
-    short: 'Los leads de tus anuncios entran solos en un tablero por etapas, una recepcionista con IA prepara las respuestas de WhatsApp y la reseña de Google se pide tras la visita.',
+    short: 'Los leads de tus anuncios entran solos en un tablero por etapas, la recepcionista con IA les contesta por WhatsApp y reserva la cita, y la reseña de Google se pide tras la visita.',
   },
 
   agenda: {
@@ -171,6 +171,23 @@ export const es = {
     title: 'Un widget de reserva en tu propio subdominio',
     description: 'Cada clínica recibe su propia página pública de reservas, con tu marca y horarios reales. Los pacientes reservan cita sin llamar, y la cita entra directamente en tu agenda.',
     short: 'Tu propia página de reservas, con tu marca y tus horarios reales. La cita entra directa en la agenda.',
+  },
+
+  // The headline feature since October 2026: it answers and books on its
+  // own, and is sold on its own as well as inside Growth and Clinic.
+  receptionist: {
+    eyebrow: 'Nuevo · Recepcionista con IA',
+    title: 'Contesta tu WhatsApp y reserva la cita, también a las once de la noche',
+    description: 'La recepcionista con IA responde por WhatsApp a tus pacientes y a quien te escribe por primera vez, con lo que tú le cuentas de la clínica: precios, horarios, qué tratáis. Ofrece huecos reales de tu agenda y, cuando el paciente elige uno, reserva o mueve la cita ella sola. Tú decides cuándo contesta sola — fuera de horario, o también en horario — y cuándo solo deja un borrador para que lo apruebes. Lo que no le toca lo pasa a una persona con una nota en la conversación, y nunca cancela una cita.',
+    visual: {
+      header: 'WHATSAPP · 22:47',
+      patient1: 'Hola, ¿tenéis hueco esta semana para una primera visita? Tengo la espalda fatal',
+      ai1: 'Hola, Laura. La primera visita cuesta 50 € e incluye la valoración y la primera sesión. Tengo el jueves a las 10:00 o el viernes a las 17:30. ¿Te encaja alguna?',
+      patient2: 'El jueves a las 10',
+      ai2: 'Hecho: tu primera visita queda el jueves a las 10:00 con Marta. Te llegará la confirmación por aquí.',
+      booked: 'Reservada por la recepcionista IA',
+      footer: 'Contestado sola, fuera de horario',
+    },
   },
 
   waitlist: {
@@ -345,6 +362,7 @@ export const es = {
     mostChosen: 'Recomendado',
     extraPro: 'Profesional adicional: 19 €/mes',
     growthAddOn: 'Growth (captación, recepcionista con IA y reputación): +39 €/mes',
+    receptionistAddOn: 'Solo la recepcionista con IA: +19 €/mes',
     // The trial button now opens the real sign-up at app.quiroflow.com, and
     // the call has its own separate button. Before, both promises were on one
     // button that only ever led to a calendar.
@@ -355,6 +373,7 @@ export const es = {
     // What the app bills (addons.verifactu, 750 cents per active location),
     // and only from the day a clinic goes live -- test mode is free.
     verifactuNote: 'VeriFactu: 7,50 €/mes por sede, solo desde el día en que empiezas a enviar a la AEAT.',
+    receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
     ctaNote: '30 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
@@ -415,6 +434,10 @@ export const es = {
       {
         q: '¿Y si un día quiero irme? ¿Puedo llevarme mis datos?',
         a: 'Sí, y sin pedir permiso. Pacientes, citas, notas clínicas, formularios y facturación se exportan en CSV y PDF desde tu propia cuenta, cuando quieras y sin coste. Preferimos decirlo antes de que lo preguntes.',
+      },
+      {
+        q: '¿Qué hace la recepcionista con IA y cuánto cuesta?',
+        a: 'Contesta los WhatsApp de tus pacientes y de quien te escribe por primera vez, con la información que tú le das de la clínica y los huecos reales de tu agenda, y reserva o mueve la cita cuando el paciente elige una hora. Tú eliges si contesta sola (fuera de horario, o también en horario) o si deja borradores para que los apruebes, y lo que no le corresponde lo pasa a una persona. Cuesta 19 €/mes (17 €/mes en anual) e incluye 1.000 respuestas al mes; cada 1.000 más son 15 €, y puedes ponerle un límite mensual. Está incluida en Growth y en el plan Clinic.',
       },
       {
         q: '¿QuiroFlow está preparado para VeriFactu?',
