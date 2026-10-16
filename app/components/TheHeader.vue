@@ -38,7 +38,6 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
         <a :href="homeAnchor('precios')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.pricing') }}</a>
         <a :href="homeAnchor('comparativa')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.comparison') }}</a>
         <a :href="homeAnchor('migracion')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.migrate') }}</a>
-        <NuxtLink :to="localePath('quienes-somos')" class="whitespace-nowrap text-sm font-medium text-ink-600 hover:text-ink-900">{{ t('nav.about') }}</NuxtLink>
       </nav>
       <div class="flex shrink-0 items-center gap-2.5 md:gap-4">
         <div class="flex items-center rounded-full border border-line-control bg-surface-page p-0.5 text-[12px] font-semibold md:text-[12.5px]">

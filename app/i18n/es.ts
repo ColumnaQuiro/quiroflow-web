@@ -7,7 +7,6 @@ export const es = {
     // "Cambiar de programa" say the same thing from their side of the screen.
     comparison: 'Comparar',
     migrate: 'Cambiar de programa',
-    about: 'Quiénes somos',
     chiro: 'Quiropráctica',
     physio: 'Fisioterapia',
     resources: 'Recursos',
@@ -482,51 +481,6 @@ export const es = {
     ctaSecondary: 'Reservar una demo',
   },
 
-  about: {
-    badge: 'Quiénes somos',
-    title: 'QuiroFlow lo mantiene la clínica que lo necesitaba',
-    description: 'No somos una agencia que decidió hacer software sanitario. Somos COLUMNAQUIRO S.L., la sociedad que gestiona Columna Quiro, una clínica quiropráctica de Valencia — y QuiroFlow nació dentro de ella porque ningún programa del mercado hacía lo que necesitábamos.',
-    story: {
-      title: 'Por qué existe',
-      paragraphs: [
-        'Columna Quiro funcionaba con un programa que costaba más de lo que resolvía. La agenda no sabía qué sala estaba libre, los bonos se llevaban a mano, los recordatorios salían de un móvil personal y nadie se enteraba de que un paciente había dejado de venir hasta dos meses después.',
-        'Construimos QuiroFlow para la propia clínica, con la agenda y la caja de un centro real encima. Cada función que ves en esta web salió de un problema que tuvimos en consulta, no de una lista de la competencia.',
-        'Cuando otras clínicas nos empezaron a preguntar qué usábamos, decidimos abrirlo. Eso significa que seguimos siendo los primeros usuarios del producto: si algo se rompe, se rompe en nuestra propia agenda antes que en la tuya.',
-      ],
-    },
-    people: {
-      title: 'Con quién hablas',
-      description: 'Somos un equipo pequeño. Cuando reservas una demo o escribes al soporte, no hay un call center en medio.',
-      items: [
-        {
-          name: 'Raúl',
-          role: 'Producto y desarrollo',
-          body: 'Construye y mantiene QuiroFlow, y es quien está al otro lado del enlace de la demo. Si tienes una pregunta técnica sobre la migración o la exportación de datos, la contesta él.',
-        },
-        {
-          name: 'Léa',
-          role: 'Columna Quiro · uso diario en clínica',
-          body: 'Pasa consulta en Columna Quiro y usa QuiroFlow todos los días. Buena parte de lo que hay en el roadmap sale de lo que le estorba a ella primero.',
-        },
-      ],
-    },
-    facts: {
-      title: 'Los datos, sin adornos',
-      contactLabel: 'Contacto directo',
-      items: [
-        { label: 'Empresa', value: 'COLUMNAQUIRO S.L. · NIF B16365504' },
-        { label: 'Dónde estamos', value: 'Valencia, España' },
-        { label: 'Desde dónde damos soporte', value: 'Valencia, en español, inglés y francés' },
-        { label: 'Dónde viven tus datos', value: 'Servidores en la Unión Europea' },
-      ],
-    },
-    cta: {
-      title: '¿Prefieres preguntar antes de probar?',
-      description: 'Escríbenos y te contesta una persona que pasa consulta o que ha escrito el código. Normalmente el mismo día.',
-      button: 'Reservar una demo',
-      emailButton: 'Escribir un email',
-    },
-  },
 
   resources: {
     badge: 'Recursos',
@@ -744,7 +698,6 @@ export const es = {
     migrate: 'Cambiar de programa',
     chiro: 'Quiropráctica',
     physio: 'Fisioterapia',
-    about: 'Quiénes somos',
     resources: 'Recursos',
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
     privacy: 'Política de privacidad',

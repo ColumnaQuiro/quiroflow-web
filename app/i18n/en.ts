@@ -6,7 +6,6 @@ export const en: Messages = {
     pricing: 'Pricing',
     comparison: 'Compare',
     migrate: 'Switch systems',
-    about: 'About us',
     chiro: 'Chiropractic',
     physio: 'Physiotherapy',
     resources: 'Resources',
@@ -442,51 +441,6 @@ export const en: Messages = {
     ctaSecondary: 'Book a demo',
   },
 
-  about: {
-    badge: 'About us',
-    title: 'QuiroFlow is maintained by the clinic that needed it',
-    description: 'We are not an agency that decided to build healthcare software. We are COLUMNAQUIRO S.L., the company behind Columna Quiro, a chiropractic clinic in Valencia — and QuiroFlow was built inside it because nothing on the market did what we needed.',
-    story: {
-      title: 'Why it exists',
-      paragraphs: [
-        'Columna Quiro ran on software that cost more than it solved. The calendar did not know which room was free, packages were tallied by hand, reminders went out from a personal phone, and nobody noticed a patient had stopped coming until two months later.',
-        'We built QuiroFlow for the clinic itself, with a real practice\'s calendar and till riding on it. Every feature on this site came out of a problem we had in the treatment room, not off a competitor\'s list.',
-        'When other clinics started asking what we were using, we decided to open it up. That means we are still the product\'s first users: if something breaks, it breaks in our own calendar before it breaks in yours.',
-      ],
-    },
-    people: {
-      title: 'Who you talk to',
-      description: 'We are a small team. When you book a demo or write to support, there is no call centre in between.',
-      items: [
-        {
-          name: 'Raúl',
-          role: 'Product and engineering',
-          body: 'Builds and maintains QuiroFlow, and is the person on the other side of the demo link. If you have a technical question about migration or data export, he is the one answering it.',
-        },
-        {
-          name: 'Léa',
-          role: 'Columna Quiro · daily use in clinic',
-          body: 'Sees patients at Columna Quiro and uses QuiroFlow every day. A good share of what is on the roadmap comes from what gets in her way first.',
-        },
-      ],
-    },
-    facts: {
-      title: 'The facts, unvarnished',
-      contactLabel: 'Direct contact',
-      items: [
-        { label: 'Company', value: 'COLUMNAQUIRO S.L. · VAT no. B16365504' },
-        { label: 'Where we are', value: 'Valencia, Spain' },
-        { label: 'Where support comes from', value: 'Valencia, in Spanish, English and French' },
-        { label: 'Where your data lives', value: 'Servers in the European Union' },
-      ],
-    },
-    cta: {
-      title: 'Rather ask before you try it?',
-      description: 'Write to us and you get an answer from someone who either sees patients or wrote the code. Usually the same day.',
-      button: 'Book a demo',
-      emailButton: 'Send an email',
-    },
-  },
 
   resources: {
     badge: 'Resources',
@@ -704,7 +658,6 @@ export const en: Messages = {
     migrate: 'Switch systems',
     chiro: 'Chiropractic',
     physio: 'Physiotherapy',
-    about: 'About us',
     resources: 'Resources',
     copyright: '© 2026 QuiroFlow. All rights reserved.',
     privacy: 'Privacy policy',

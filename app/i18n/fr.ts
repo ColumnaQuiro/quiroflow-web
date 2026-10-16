@@ -6,7 +6,6 @@ export const fr: Messages = {
     pricing: 'Tarifs',
     comparison: 'Comparer',
     migrate: 'Changer de logiciel',
-    about: 'Qui sommes-nous',
     chiro: 'Chiropraxie',
     physio: 'Kinésithérapie',
     resources: 'Ressources',
@@ -442,51 +441,6 @@ export const fr: Messages = {
     ctaSecondary: 'Réserver une démo',
   },
 
-  about: {
-    badge: 'Qui sommes-nous',
-    title: "QuiroFlow est maintenu par le cabinet qui en avait besoin",
-    description: "Nous ne sommes pas une agence qui a décidé de faire du logiciel de santé. Nous sommes COLUMNAQUIRO S.L., la société qui gère Columna Quiro, un cabinet de chiropraxie à Valence — et QuiroFlow est né à l'intérieur, parce qu'aucun logiciel du marché ne faisait ce dont nous avions besoin.",
-    story: {
-      title: 'Pourquoi il existe',
-      paragraphs: [
-        "Columna Quiro tournait avec un logiciel qui coûtait plus qu'il ne résolvait. L'agenda ne savait pas quelle salle était libre, les forfaits se comptaient à la main, les rappels partaient d'un téléphone personnel, et personne ne s'apercevait qu'un patient avait cessé de venir avant deux mois.",
-        "Nous avons construit QuiroFlow pour le cabinet lui-même, avec l'agenda et la caisse d'un vrai centre dessus. Chaque fonctionnalité de ce site vient d'un problème rencontré en consultation, pas d'une liste de concurrents.",
-        "Quand d'autres cabinets ont commencé à nous demander ce que nous utilisions, nous avons décidé de l'ouvrir. Cela veut dire que nous restons les premiers utilisateurs du produit : si quelque chose casse, cela casse dans notre propre agenda avant le vôtre.",
-      ],
-    },
-    people: {
-      title: 'À qui vous parlez',
-      description: "Nous sommes une petite équipe. Quand vous réservez une démo ou écrivez au support, il n'y a pas de centre d'appels au milieu.",
-      items: [
-        {
-          name: 'Raúl',
-          role: 'Produit et développement',
-          body: "Construit et maintient QuiroFlow, et c'est lui qui se trouve de l'autre côté du lien de démo. Si vous avez une question technique sur la migration ou l'export des données, c'est lui qui y répond.",
-        },
-        {
-          name: 'Léa',
-          role: 'Columna Quiro · usage quotidien en cabinet',
-          body: "Consulte à Columna Quiro et utilise QuiroFlow tous les jours. Une bonne partie de la feuille de route vient de ce qui la gêne en premier.",
-        },
-      ],
-    },
-    facts: {
-      title: 'Les faits, sans fioritures',
-      contactLabel: 'Contact direct',
-      items: [
-        { label: 'Société', value: 'COLUMNAQUIRO S.L. · NIF B16365504' },
-        { label: 'Où nous sommes', value: 'Valence, Espagne' },
-        { label: "D'où vient le support", value: 'Valence, en espagnol, anglais et français' },
-        { label: 'Où vivent vos données', value: "Serveurs dans l'Union européenne" },
-      ],
-    },
-    cta: {
-      title: "Vous préférez poser des questions avant d'essayer ?",
-      description: "Écrivez-nous et vous obtenez une réponse de quelqu'un qui consulte ou qui a écrit le code. En général le jour même.",
-      button: 'Réserver une démo',
-      emailButton: 'Envoyer un e-mail',
-    },
-  },
 
   resources: {
     badge: 'Ressources',
@@ -704,7 +658,6 @@ export const fr: Messages = {
     migrate: 'Changer de logiciel',
     chiro: 'Chiropraxie',
     physio: 'Kinésithérapie',
-    about: 'Qui sommes-nous',
     resources: 'Ressources',
     copyright: '© 2026 QuiroFlow. Tous droits réservés.',
     privacy: 'Politique de confidentialité',
