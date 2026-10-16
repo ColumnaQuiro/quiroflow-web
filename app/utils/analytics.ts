@@ -24,19 +24,13 @@ export const GOOGLE_ADS = {
   demoLabel: '5UrYCPu3svccEMea591E',
   /**
    * "Clic empezar prueba" — the click-out to app.quiroflow.com/signup.
-   * Created 16 Oct 2026 as a manual event-snippet action under the Registro
-   * category, primary, one conversion per click, value 1 EUR. Worth its own
+   * Empty until the conversion action exists in Google Ads, which disables
+   * it the same way an empty id disables everything else here. Worth its own
    * action rather than folding into demoLabel: a self-serve trial and a sales
    * call are different outcomes with very different values, and bidding
    * against one average of the two optimises for neither.
-   *
-   * Setting the label here is necessary but not sufficient: a campaign only
-   * bids towards this action if its conversion goals include Registro. They
-   * do today -- Registro is an account-default goal and "QF | ES |
-   * Fisioterapia" runs on the account defaults -- but a campaign created with
-   * its own goal selection would silently not optimise for this.
    */
-  signupLabel: 'IlXfCNWZj58dEMea591E',
+  signupLabel: '',
 }
 
 // Deploy previews, branch builds and localhost share this code, and without a
