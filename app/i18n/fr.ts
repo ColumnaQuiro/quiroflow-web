@@ -648,11 +648,73 @@ export const fr: Messages = {
     },
   },
 
+  // Landing de campagne pour l'angle automatisations. Les sections produit
+  // reutilisent receptionist/whatsapp/waitlist/booking au lieu de dupliquer.
+  automatizaciones: {
+    badge: 'Automatisations',
+    title: "Votre cabinet repond, rappelle et recupere les patients tout seul",
+    description: "La receptionniste IA repond a votre WhatsApp et reserve le rendez-vous, les rappels se confirment en un geste, un creneau annule est repropose tout seul, et vous etes prevenu quand un patient prend du retard sur son plan. Vous etes a la table, pas sur votre telephone.",
+    ctaPrimary: "Essai de 30 jours",
+    ctaSecondary: "Reserver une demo",
+    seeFeatures: "Voir comment ca marche",
+    sectionTitle: "Les quatre choses que vous cessez de faire a la main",
+    edge: {
+      title: "Ce qui change dans une semaine de cabinet",
+      description: "Pas du \"gain de temps\" en general. Quatre trous precis qui se bouchent tout seuls.",
+      items: [
+        {
+          title: "Le WhatsApp de 23 h",
+          body: "Celui qui ecrit hors horaires recoit une reponse, de vrais creneaux de votre agenda et un rendez-vous reserve. Il n'attend pas demain — et demain, il n'est pas parti ailleurs.",
+        },
+        {
+          title: "L'annulation de derniere minute",
+          body: "Une seance jamais remplacee, a 45 € la seance, represente environ 180 € par mois. Le creneau est propose directement au premier de la liste d'attente, avec un lien pour le prendre tout de suite.",
+        },
+        {
+          title: "Le patient qui ne revient plus",
+          body: "Si quelqu'un avec un plan de traitement actif prend du retard sur sa propre cadence, vous etes prevenu avant qu'il ne disparaisse. Pas deux mois plus tard, quand il est parti.",
+        },
+        {
+          title: "Les appels de confirmation",
+          body: "Les rappels comportent un bouton pour confirmer ou deplacer le rendez-vous. Ce que le patient repond arrive dans l'agenda sans que personne ne le saisisse.",
+        },
+      ],
+    },
+    faq: {
+      title: "Questions sur les automatisations",
+      items: [
+        {
+          q: "La receptionniste IA peut-elle annuler un rendez-vous ?",
+          a: "Non. Elle reserve et deplace des rendez-vous, mais n'annule jamais. Ce qui sort de son perimetre passe a une personne, avec une note dans la conversation.",
+        },
+        {
+          q: "Repond-elle toujours, ou seulement hors horaires ?",
+          a: "C'est vous qui decidez. Elle peut repondre seule tout le temps, uniquement hors horaires, ou se contenter de preparer un brouillon que vous validez.",
+        },
+        {
+          q: "Que sait-elle de mon cabinet ?",
+          a: "Ce que vous lui dites : tarifs, horaires, ce que vous traitez et ce que vous ne traitez pas. Les creneaux proposes sont les vrais creneaux de votre agenda.",
+        },
+        {
+          q: "Est-ce que tout est compris dans le prix ?",
+          a: "Les rappels WhatsApp, la liste d'attente et les alertes de plan de traitement sont dans toutes les formules. La receptionniste IA fait partie de l'option Growth, 39 €/mois hors taxes, et est incluse dans la formule Clinic.",
+        },
+      ],
+    },
+    cta: {
+      title: "Essayez-le sur votre propre agenda",
+      description: "30 jours, sans carte, migration comprise. Si cela ne convient pas, vous n'avez rien perdu.",
+      button: "Essai de 30 jours",
+      buttonSecondary: "Reserver une demo",
+    },
+  },
+
   footer: {
     productTitle: 'Produit',
     sectorsTitle: 'Par spécialité',
     companyTitle: 'Entreprise',
     features: 'Fonctionnalités',
+    automations: 'Automatisations',
     pricing: 'Tarifs',
     comparison: 'Comparer',
     migrate: 'Changer de logiciel',
