@@ -648,11 +648,73 @@ export const en: Messages = {
     },
   },
 
+  // Campaign landing for the automation angle. The product sections reuse
+  // receptionist/whatsapp/waitlist/booking instead of duplicating copy.
+  automatizaciones: {
+    badge: 'Automation',
+    title: 'Your clinic answers, reminds and wins patients back on its own',
+    description: 'The AI receptionist answers your WhatsApp and books the appointment, reminders are confirmed with one tap, a cancelled slot is re-offered by itself, and you get told when a patient falls behind their plan. You are at the table, not on your phone.',
+    ctaPrimary: 'Start a 30-day trial',
+    ctaSecondary: 'Book a demo',
+    seeFeatures: 'See how it works',
+    sectionTitle: 'The four things you stop doing by hand',
+    edge: {
+      title: 'What changes in a clinic week',
+      description: 'Not "saving time" in the abstract. Four specific holes that close themselves.',
+      items: [
+        {
+          title: 'The 11pm WhatsApp',
+          body: 'Someone who writes after hours gets an answer, real slots from your calendar and a booked appointment. They do not wait until morning — and by morning they have not gone elsewhere.',
+        },
+        {
+          title: 'The last-minute cancellation',
+          body: 'One session that never gets refilled, at 45 € a session, is about 180 € a month. The slot is offered straight to the first person on the waiting list, with a link to take it there and then.',
+        },
+        {
+          title: 'The patient who stops coming',
+          body: 'If someone on an active treatment plan falls behind their own cadence, you hear about it before they disappear. Not two months later, when they are gone.',
+        },
+        {
+          title: 'The confirmation calls',
+          body: 'Reminders carry a button to confirm or move the appointment. Whatever the patient answers lands in the calendar without anyone typing it in.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Questions about the automations',
+      items: [
+        {
+          q: 'Can the AI receptionist cancel an appointment?',
+          a: 'No. It books and moves appointments, but it never cancels. Anything outside its remit goes to a person, with a note in the conversation so they can pick it up.',
+        },
+        {
+          q: 'Does it always answer, or only after hours?',
+          a: 'You decide. It can answer on its own all the time, only outside opening hours, or just leave a draft for you to approve before it goes out.',
+        },
+        {
+          q: 'What does it know about my clinic?',
+          a: 'Whatever you tell it: prices, hours, what you treat and what you do not. The slots it offers are the real ones in your calendar, not invented.',
+        },
+        {
+          q: 'Is all of it included in the price?',
+          a: 'WhatsApp reminders, the waiting list and treatment-plan alerts are in every plan. The AI receptionist is part of the Growth add-on, 39 €/month plus VAT, and is included in the Clinic plan.',
+        },
+      ],
+    },
+    cta: {
+      title: 'Try it against your own calendar',
+      description: '30 days, no card, migration included. If it does not fit, you have lost nothing.',
+      button: 'Start a 30-day trial',
+      buttonSecondary: 'Book a demo',
+    },
+  },
+
   footer: {
     productTitle: 'Product',
     sectorsTitle: 'By speciality',
     companyTitle: 'Company',
     features: 'Features',
+    automations: 'Automation',
     pricing: 'Pricing',
     comparison: 'Compare',
     migrate: 'Switch systems',
