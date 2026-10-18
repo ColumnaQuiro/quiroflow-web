@@ -7,6 +7,8 @@ import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
 interface GtagWindow extends Window {
   dataLayer?: unknown[]
   gtag?: (...args: unknown[]) => void
+  fbq?: ((...args: unknown[]) => void) & { callMethod?: (...args: unknown[]) => void; queue?: unknown[][]; loaded?: boolean; version?: string; push?: unknown }
+  _fbq?: unknown
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -58,6 +60,37 @@ export default defineNuxtPlugin((nuxtApp) => {
     w.gtag!('config', GOOGLE_ADS.id)
   }
 
+  let metaLoaded = false
+
+  // Meta's own snippet, minus the automatic PageView: the pixel is only
+  // reached after an explicit opt-in, so the first thing it must see is the
+  // consent grant, and only then the page view. Firing PageView from inside
+  // the snippet would send it before that grant is queued.
+  function loadMeta() {
+    if (metaLoaded || !metaEnabled()) return
+    metaLoaded = true
+
+    const n: GtagWindow['fbq'] = function fbq(...args: unknown[]) {
+      const self = w.fbq!
+      if (self.callMethod) self.callMethod(...args)
+      else self.queue!.push(args)
+    } as NonNullable<GtagWindow['fbq']>
+    n.queue = []
+    n.loaded = true
+    n.version = '2.0'
+    w.fbq = n
+    w._fbq = n
+
+    const s = document.createElement('script')
+    s.async = true
+    s.src = 'https://connect.facebook.net/en_US/fbevents.js'
+    document.head.appendChild(s)
+
+    w.fbq('consent', 'grant')
+    w.fbq('init', META_PIXEL.id)
+    w.fbq('track', 'PageView')
+  }
+
   function sync() {
     const g = granted.value
     // Nothing granted means nothing loads. This is the whole point of basic
@@ -65,6 +98,9 @@ export default defineNuxtPlugin((nuxtApp) => {
     if (!g.ads && !g.analytics) return
 
     loadGtag()
+    // Meta has no analytics/ads split: it is an advertising pixel, so it
+    // rides on the ads grant alone.
+    if (g.ads) loadMeta()
     w.gtag?.('consent', 'update', {
       ad_storage: g.ads ? 'granted' : 'denied',
       ad_user_data: g.ads ? 'granted' : 'denied',
@@ -86,8 +122,14 @@ export default defineNuxtPlugin((nuxtApp) => {
       const target = e.target as HTMLElement | null
       const link = target?.closest?.('a[href]') as HTMLAnchorElement | null
       if (!link) return
-      if (link.href.startsWith(BOOKING_URL)) trackConversion('demo')
-      else if (link.href.startsWith(SIGNUP_URL)) trackConversion('signup')
+      if (link.href.startsWith(BOOKING_URL)) {
+        trackConversion('demo')
+        trackMetaConversion('demo')
+      }
+      else if (link.href.startsWith(SIGNUP_URL)) {
+        trackConversion('signup')
+        trackMetaConversion('signup')
+      }
     },
     { capture: true },
   )

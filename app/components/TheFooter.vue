@@ -33,6 +33,7 @@ const CONTACT_EMAIL = 'hola@quiroflow.com'
           <nav class="flex flex-col gap-2.5">
             <p class="text-[12.5px] font-semibold uppercase tracking-wide text-ink-faint">{{ t('footer.productTitle') }}</p>
             <a :href="homeAnchor('funcionalidades')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.features') }}</a>
+            <NuxtLink :to="localePath('automatizaciones')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.automations') }}</NuxtLink>
             <a :href="homeAnchor('precios')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.pricing') }}</a>
             <a :href="homeAnchor('comparativa')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.comparison') }}</a>
             <a :href="homeAnchor('migracion')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.migrate') }}</a>

@@ -36,11 +36,14 @@ async function submitCapture() {
     })
     if (!res.ok) throw new Error(String(res.status))
     status.value = 'ok'
-    // Primary conversion: unlike the demo and sign-up buttons this one
-    // completes on-site, so it is the only signal Google Ads can attribute
-    // with confidence. No-ops unless the visitor accepted ads cookies and
-    // the labels are set.
+    // The only conversion that completes on-site -- the demo and sign-up
+    // buttons both leave for another domain, so a click-out is all they can
+    // observe. It is a secondary action in Google Ads since 16 Oct 2026:
+    // bidding optimises towards the trial, and an email address and a trial
+    // are not worth the same. No-ops unless the visitor accepted ads cookies
+    // and the ids are set.
     trackConversion('emailCapture')
+    trackMetaConversion('emailCapture')
   }
   catch {
     status.value = 'error'

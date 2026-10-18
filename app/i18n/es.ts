@@ -688,11 +688,74 @@ export const es = {
     },
   },
 
+  // Landing de campaña para el ángulo de automatizaciones. Las secciones de
+  // producto reutilizan receptionist/whatsapp/waitlist/booking en vez de
+  // duplicar texto: si cambia la funcionalidad, cambia en un sitio.
+  automatizaciones: {
+    badge: 'Automatizaciones',
+    title: 'Tu clínica contesta, recuerda y recupera pacientes sola',
+    description: 'La recepcionista con IA responde tu WhatsApp y reserva la cita, los recordatorios se confirman en un toque, el hueco que se cancela se reofrece solo y te avisa cuando un paciente se retrasa en su plan. Tú estás en la camilla, no en el móvil.',
+    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaSecondary: 'Reservar una demo',
+    seeFeatures: 'Ver cómo funciona',
+    sectionTitle: 'Las cuatro cosas que dejas de hacer a mano',
+    edge: {
+      title: 'Qué cambia en la semana de una clínica',
+      description: 'No es "ahorrar tiempo" en abstracto. Son cuatro agujeros concretos que se tapan solos.',
+      items: [
+        {
+          title: 'El WhatsApp de las 23:00',
+          body: 'Quien te escribe fuera de horario recibe respuesta, huecos reales de tu agenda y la cita reservada. No espera a mañana — y mañana no se ha ido a otra clínica.',
+        },
+        {
+          title: 'La cancelación de última hora',
+          body: 'Una sesión que no se vuelve a llenar, a 45 € la sesión, son unos 180 € al mes. El hueco se ofrece solo al primero de la lista de espera, con enlace para reservarlo al momento.',
+        },
+        {
+          title: 'El paciente que deja de venir',
+          body: 'Si alguien con un plan activo se retrasa respecto a su propia cadencia, te avisa antes de que desaparezca. No dos meses después, cuando ya no vuelve.',
+        },
+        {
+          title: 'Las llamadas para confirmar',
+          body: 'Los recordatorios llevan botón para confirmar o cambiar la cita. Lo que el paciente responde entra en la agenda sin que nadie lo teclee.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Preguntas sobre las automatizaciones',
+      items: [
+        {
+          q: '¿La recepcionista con IA puede cancelar una cita?',
+          a: 'No. Reserva y mueve citas, pero nunca cancela. Lo que no le toca lo pasa a una persona, con una nota en la conversación para que sepa por dónde iba.',
+        },
+        {
+          q: '¿Contesta siempre o solo fuera de horario?',
+          a: 'Lo decides tú. Puede contestar sola siempre, solo fuera de horario, o limitarse a dejar un borrador para que lo apruebes antes de que salga.',
+        },
+        {
+          q: '¿Qué sabe decir de mi clínica?',
+          a: 'Lo que tú le cuentes: precios, horarios, qué tratáis y qué no. Los huecos que ofrece son los reales de tu agenda, no inventados.',
+        },
+        {
+          q: '¿Está todo incluido en el precio?',
+          a: 'Los recordatorios por WhatsApp, la lista de espera y los avisos de plan de tratamiento están en todos los planes. La recepcionista con IA forma parte del add-on Growth, 39 €/mes + IVA, y va incluida en el plan Clinic.',
+        },
+      ],
+    },
+    cta: {
+      title: 'Pruébalo con tu propia agenda',
+      description: '30 días, sin tarjeta y con la migración incluida. Si no te encaja, no has perdido nada.',
+      button: 'Empezar prueba de 30 días',
+      buttonSecondary: 'Reservar una demo',
+    },
+  },
+
   footer: {
     productTitle: 'Producto',
     sectorsTitle: 'Por especialidad',
     companyTitle: 'Empresa',
     features: 'Funcionalidades',
+    automations: 'Automatizaciones',
     pricing: 'Precios',
     comparison: 'Comparar',
     migrate: 'Cambiar de programa',
