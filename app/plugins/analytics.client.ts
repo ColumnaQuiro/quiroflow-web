@@ -111,6 +111,47 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   watch(consent, sync, { immediate: true })
 
+  // Everything an ad network put on the landing URL, kept for the session so
+  // it survives the walk from the landing page to whichever button the
+  // visitor eventually presses. Without this the sign-up link arrives at
+  // app.quiroflow.com naked and the account it creates can only be tied back
+  // to a campaign by lining timestamps up by eye -- which is a guess.
+  const ATTRIBUTION_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term']
+
+  function rememberAttribution() {
+    try {
+      const params = new URLSearchParams(window.location.search)
+      const found = ATTRIBUTION_KEYS.filter(k => params.get(k))
+      // Only when this page actually carries something: a later direct visit
+      // must not wipe the click that brought them here earlier.
+      if (!found.length) return
+      const stored: Record<string, string> = {}
+      for (const key of found) stored[key] = params.get(key)!.slice(0, 200)
+      sessionStorage.setItem('qf_attribution', JSON.stringify(stored))
+    }
+    catch {
+      // Private mode, blocked storage: attribution is a nice-to-have, never
+      // a reason for a button to stop working.
+    }
+  }
+
+  function signupHref(base: string) {
+    try {
+      const stored = sessionStorage.getItem('qf_attribution')
+      if (!stored) return base
+      const url = new URL(base)
+      for (const [key, value] of Object.entries(JSON.parse(stored) as Record<string, string>)) {
+        url.searchParams.set(key, value)
+      }
+      return url.toString()
+    }
+    catch {
+      return base
+    }
+  }
+
+  nuxtApp.hook('app:mounted', () => rememberAttribution())
+
   // A demo booking finishes on calendar.app.google and a trial sign-up
   // finishes on app.quiroflow.com -- both off this domain, so the click-out
   // is the only thing we can observe. Delegated on document rather than wired
@@ -129,6 +170,10 @@ export default defineNuxtPlugin((nuxtApp) => {
       else if (link.href.startsWith(SIGNUP_URL)) {
         trackConversion('signup')
         trackMetaConversion('signup')
+        // Rewritten here rather than in every template that renders a trial
+        // button: this listener already exists precisely so a new button
+        // anywhere is covered without anyone remembering to wire it up.
+        link.href = signupHref(link.href)
       }
     },
     { capture: true },
