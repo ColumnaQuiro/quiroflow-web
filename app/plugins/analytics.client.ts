@@ -118,9 +118,17 @@ export default defineNuxtPlugin((nuxtApp) => {
   // to a campaign by lining timestamps up by eye -- which is a guess.
   const ATTRIBUTION_KEYS = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term']
 
+  // Captured here, while the plugin is still running, rather than read inside
+  // rememberAttribution. Hydrating a prerendered page makes the router rewrite
+  // history to the canonical route before app:mounted fires, so by the time a
+  // hook runs window.location.search is briefly empty -- the query reappears
+  // afterwards, which is why this looked fine in `nuxt dev` (no prerender, no
+  // rewrite) and silently dropped every gclid on the generated site.
+  const initialSearch = window.location.search
+
   function rememberAttribution() {
     try {
-      const params = new URLSearchParams(window.location.search)
+      const params = new URLSearchParams(initialSearch)
       const found = ATTRIBUTION_KEYS.filter(k => params.get(k))
       // Only when this page actually carries something: a later direct visit
       // must not wipe the click that brought them here earlier.
