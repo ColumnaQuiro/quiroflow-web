@@ -765,6 +765,7 @@ export const es = {
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
     privacy: 'Política de privacidad',
     terms: 'Aviso legal',
+    verifactu: 'Declaración responsable VERI*FACTU',
     cookies: 'Preferencias de cookies',
   },
 

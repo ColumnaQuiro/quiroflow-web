@@ -724,6 +724,7 @@ export const fr: Messages = {
     copyright: '© 2026 QuiroFlow. Tous droits réservés.',
     privacy: 'Politique de confidentialité',
     terms: 'Mentions légales',
+    verifactu: 'Déclaration responsable VERI*FACTU',
     cookies: 'Préférences de cookies',
   },
 
