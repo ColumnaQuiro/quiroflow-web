@@ -12,6 +12,12 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
 // email address fails to compile ("Invalid linked format") -- and an email
 // isn't translatable content anyway, same language in both locales.
 const CONTACT_EMAIL = 'hola@quiroflow.com'
+
+// The VERI*FACTU declaración responsable lives in the app, where it is
+// versioned with the invoicing system it describes. Linked here because the
+// Orden HAC/1177/2024 (art. 15.3) requires it to reach a clinic BEFORE it
+// buys, not only once it has an account.
+const DECLARATION_URL = 'https://app.quiroflow.com/legal/declaracion-responsable'
 </script>
 
 <template>
@@ -54,9 +60,10 @@ const CONTACT_EMAIL = 'hola@quiroflow.com'
 
       <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line-control/60 pt-6">
         <p class="text-[12.5px] text-ink-faint">{{ t('footer.copyright') }}</p>
-        <div class="flex gap-[18px]">
+        <div class="flex flex-wrap gap-x-[18px] gap-y-2">
           <NuxtLink :to="localePath('politica-de-privacidad')" class="text-[12.5px] text-ink-faint hover:text-ink-600">{{ t('footer.privacy') }}</NuxtLink>
           <NuxtLink :to="localePath('aviso-legal')" class="text-[12.5px] text-ink-faint hover:text-ink-600">{{ t('footer.terms') }}</NuxtLink>
+          <a :href="DECLARATION_URL" class="text-[12.5px] text-ink-faint hover:text-ink-600">{{ t('footer.verifactu') }}</a>
           <!-- Consent has to be as easy to withdraw as it was to give, so the
                banner stays reachable after the first choice. -->
           <button type="button" class="text-[12.5px] text-ink-faint hover:text-ink-600" @click="reopen">
