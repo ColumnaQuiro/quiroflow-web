@@ -135,7 +135,7 @@ export const es = {
     short: 'Enlaces de pago desde el chat, facturas pendientes que el paciente paga con tarjeta desde la app, y la caja del día con cada cobro y a qué corresponde.',
   },
 
-  // Sold as an add-on (and included in Clinic), so the grid names it -- the
+  // Sold as an add-on (and included in Practice and Clinic), so the grid names it -- the
   // pricing cards mention Growth and otherwise nothing says what it is.
   growth: {
     eyebrow: 'Growth',
@@ -173,7 +173,7 @@ export const es = {
   },
 
   // The headline feature since October 2026: it answers and books on its
-  // own, and is sold on its own as well as inside Growth and Clinic.
+  // own, and is sold on its own as well as inside Growth, Practice and Clinic.
   receptionist: {
     eyebrow: 'Nuevo · Recepcionista con IA',
     title: 'Contesta tu WhatsApp y reserva la cita, también a las once de la noche',
@@ -372,7 +372,7 @@ export const es = {
     // What the app bills (addons.verifactu, 750 cents per active location),
     // and only from the day a clinic goes live -- test mode is free.
     verifactuNote: 'VeriFactu: 7,50 €/mes por sede, solo desde el día en que empiezas a enviar a la AEAT.',
-    receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
+    receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en los planes Practice y Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
     ctaNote: '30 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
@@ -402,6 +402,7 @@ export const es = {
           'Roles y permisos personalizados',
           'Informes avanzados: PVA, retención y conversión',
           'Profesionales adicionales a 19 €/mes',
+          'Growth incluido: captación, recepcionista con IA y reputación',
         ],
       },
       clinic: {
@@ -436,7 +437,7 @@ export const es = {
       },
       {
         q: '¿Qué hace la recepcionista con IA y cuánto cuesta?',
-        a: 'Contesta los WhatsApp de tus pacientes y de quien te escribe por primera vez, con la información que tú le das de la clínica y los huecos reales de tu agenda, y reserva o mueve la cita cuando el paciente elige una hora. Tú eliges si contesta sola (fuera de horario, o también en horario) o si deja borradores para que los apruebes, y lo que no le corresponde lo pasa a una persona. Cuesta 19 €/mes (17 €/mes en anual) e incluye 1.000 respuestas al mes; cada 1.000 más son 15 €, y puedes ponerle un límite mensual. Está incluida en Growth y en el plan Clinic.',
+        a: 'Contesta los WhatsApp de tus pacientes y de quien te escribe por primera vez, con la información que tú le das de la clínica y los huecos reales de tu agenda, y reserva o mueve la cita cuando el paciente elige una hora. Tú eliges si contesta sola (fuera de horario, o también en horario) o si deja borradores para que los apruebes, y lo que no le corresponde lo pasa a una persona. Cuesta 19 €/mes (17 €/mes en anual) e incluye 1.000 respuestas al mes; cada 1.000 más son 15 €, y puedes ponerle un límite mensual. Está incluida en Growth y en los planes Practice y Clinic.',
       },
       {
         q: '¿QuiroFlow está preparado para VeriFactu?',
@@ -738,7 +739,7 @@ export const es = {
         },
         {
           q: '¿Está todo incluido en el precio?',
-          a: 'Los recordatorios por WhatsApp, la lista de espera y los avisos de plan de tratamiento están en todos los planes. La recepcionista con IA forma parte del add-on Growth, 39 €/mes + IVA, y va incluida en el plan Clinic.',
+          a: 'Los recordatorios por WhatsApp, la lista de espera y los avisos de plan de tratamiento están en todos los planes. La recepcionista con IA forma parte del add-on Growth, 39 €/mes + IVA, y va incluida en los planes Practice y Clinic.',
         },
       ],
     },

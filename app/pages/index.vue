@@ -84,7 +84,7 @@ usePageSeo({
         offers: {
           '@type': 'Offer',
           // The Solo tier's monthly price -- keep in step with PricingSection's TIERS.
-          price: '49',
+          price: '45',
           priceCurrency: 'EUR',
           url: 'https://quiroflow.com/#precios',
         },

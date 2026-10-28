@@ -15,12 +15,14 @@ const annual = ref(false)
 // PracticeHub ~115 EUR for one practitioner, QuiroHiro 67, Doctoralia 89 per
 // professional -- not against the generalist tools at 29-45 that do not know
 // what a chiropractor is. Annual is the per-month figure, 10% off.
+// Repriced again 2026-10-28: Solo 49 -> 45 (40 annual), and Practice now
+// includes Growth as Clinic already did, at the same 99.
 //
 // These must match `plans` in the app's database, which is what Stripe
 // actually charges from. A number changed here and not there advertises a
 // price nobody is billed.
 const TIERS = [
-  { key: 'solo', monthly: 49, annual: 44, featured: false },
+  { key: 'solo', monthly: 45, annual: 40, featured: false },
   { key: 'practice', monthly: 99, annual: 89, featured: true },
   { key: 'clinic', monthly: 149, annual: 134, featured: false },
 ] as const
@@ -143,15 +145,15 @@ function price(tier: (typeof TIERS)[number]) {
             <li v-if="tier.key !== 'solo'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.extraPro') }}
             </li>
-            <!-- Clinic's feature list says Growth is included; without this
-                 line the other two tiers leave the reader wondering what that
-                 is and whether they have it. -->
-            <li v-if="tier.key !== 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
+            <!-- Practice and Clinic list Growth as included; without this
+                 line Solo leaves the reader wondering what that is and
+                 whether they can have it. -->
+            <li v-if="tier.key === 'solo'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.growthAddOn') }}
             </li>
             <!-- The receptionist is also sold on its own, for a clinic that
                  wants WhatsApp answered without the rest of Growth. -->
-            <li v-if="tier.key !== 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
+            <li v-if="tier.key === 'solo'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.receptionistAddOn') }}
             </li>
           </ul>

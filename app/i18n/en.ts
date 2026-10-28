@@ -332,7 +332,7 @@ export const en: Messages = {
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
     verifactuNote: 'VeriFactu: €7.50/mo per location, only from the day you start sending to the AEAT.',
-    receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and Clinic. 1,000 replies a month included; each further 1,000 is €15.',
+    receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and in the Practice and Clinic plans. 1,000 replies a month included; each further 1,000 is €15.',
     ctaNote: '30-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
@@ -362,6 +362,7 @@ export const en: Messages = {
           'Custom roles and permissions',
           'Advanced reporting: PVA, retention, conversion',
           'Extra practitioners at €19/mo',
+          'Growth included: lead capture, AI receptionist and reputation',
         ],
       },
       clinic: {
@@ -396,7 +397,7 @@ export const en: Messages = {
       },
       {
         q: 'What does the AI receptionist do, and what does it cost?',
-        a: 'It answers WhatsApp from your patients and from people writing for the first time, using what you tell it about the clinic and the real free times in your calendar, and books or moves the visit once the patient picks a time. You choose whether it answers on its own (outside clinic hours, or during them too) or leaves drafts for you to approve, and it hands anything that is not its to answer to a person. It costs €19/mo (€17/mo billed annually) and includes 1,000 replies a month; each further 1,000 is €15, and you can set a monthly limit. It is included in Growth and in the Clinic plan.',
+        a: 'It answers WhatsApp from your patients and from people writing for the first time, using what you tell it about the clinic and the real free times in your calendar, and books or moves the visit once the patient picks a time. You choose whether it answers on its own (outside clinic hours, or during them too) or leaves drafts for you to approve, and it hands anything that is not its to answer to a person. It costs €19/mo (€17/mo billed annually) and includes 1,000 replies a month; each further 1,000 is €15, and you can set a monthly limit. It is included in Growth and in the Practice and Clinic plans.',
       },
       {
         q: 'Is QuiroFlow ready for VeriFactu?',
@@ -697,7 +698,7 @@ export const en: Messages = {
         },
         {
           q: 'Is all of it included in the price?',
-          a: 'WhatsApp reminders, the waiting list and treatment-plan alerts are in every plan. The AI receptionist is part of the Growth add-on, 39 €/month plus VAT, and is included in the Clinic plan.',
+          a: 'WhatsApp reminders, the waiting list and treatment-plan alerts are in every plan. The AI receptionist is part of the Growth add-on, 39 €/month plus VAT, and is included in the Practice and Clinic plans.',
         },
       ],
     },
