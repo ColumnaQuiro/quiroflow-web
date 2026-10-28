@@ -332,7 +332,7 @@ export const fr: Messages = {
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
     verifactuNote: "VeriFactu : 7,50 €/mois par site, uniquement à partir du jour où vous commencez à envoyer à l'AEAT.",
-    receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
+    receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et dans les formules Practice et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
     ctaNote: "30 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
@@ -362,6 +362,7 @@ export const fr: Messages = {
           'Rôles et permissions personnalisés',
           'Rapports avancés : valeur par visite, fidélisation, conversion',
           'Praticiens supplémentaires à 19 €/mois',
+          'Growth inclus : acquisition, réceptionniste IA et réputation',
         ],
       },
       clinic: {
@@ -396,7 +397,7 @@ export const fr: Messages = {
       },
       {
         q: 'Que fait la réceptionniste IA et combien coûte-t-elle ?',
-        a: "Elle répond sur WhatsApp à vos patients et aux personnes qui écrivent pour la première fois, avec les informations que vous lui donnez sur la clinique et les vrais créneaux libres de votre agenda, et réserve ou déplace le rendez-vous quand le patient choisit une heure. Vous choisissez si elle répond seule (en dehors des horaires, ou aussi pendant) ou si elle laisse des brouillons à valider, et ce qui ne la concerne pas passe à une personne. Elle coûte 19 €/mois (17 €/mois en annuel) et inclut 1 000 réponses par mois ; chaque 1 000 de plus coûte 15 €, et vous pouvez fixer une limite mensuelle. Elle est incluse dans Growth et dans le plan Clinic.",
+        a: "Elle répond sur WhatsApp à vos patients et aux personnes qui écrivent pour la première fois, avec les informations que vous lui donnez sur la clinique et les vrais créneaux libres de votre agenda, et réserve ou déplace le rendez-vous quand le patient choisit une heure. Vous choisissez si elle répond seule (en dehors des horaires, ou aussi pendant) ou si elle laisse des brouillons à valider, et ce qui ne la concerne pas passe à une personne. Elle coûte 19 €/mois (17 €/mois en annuel) et inclut 1 000 réponses par mois ; chaque 1 000 de plus coûte 15 €, et vous pouvez fixer une limite mensuelle. Elle est incluse dans Growth et dans les formules Practice et Clinic.",
       },
       {
         q: 'QuiroFlow est-il prêt pour VeriFactu ?',
@@ -697,7 +698,7 @@ export const fr: Messages = {
         },
         {
           q: "Est-ce que tout est compris dans le prix ?",
-          a: "Les rappels WhatsApp, la liste d'attente et les alertes de plan de traitement sont dans toutes les formules. La receptionniste IA fait partie de l'option Growth, 39 €/mois hors taxes, et est incluse dans la formule Clinic.",
+          a: "Les rappels WhatsApp, la liste d'attente et les alertes de plan de traitement sont dans toutes les formules. La receptionniste IA fait partie de l'option Growth, 39 €/mois hors taxes, et est incluse dans les formules Practice et Clinic.",
         },
       ],
     },
