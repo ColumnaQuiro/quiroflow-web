@@ -18,13 +18,52 @@ export const fr: Messages = {
 
   hero: {
     badge: 'Logiciel de gestion pour cabinets',
-    titleLine1: "Moins de temps sur l'agenda.",
-    titleLine2: 'Plus de temps sur la table.',
-    description: "Un agenda qui attribue tout seul la salle ou la table libre, des forfaits de séances qui se décomptent seuls, des rappels WhatsApp, une facturation prête pour VeriFactu et une alerte quand un patient prend du retard sur son plan de traitement. Sur ordinateur et dans l'app pour iPhone, iPad et Android, pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie.",
+    titleLine1: 'Tout votre cabinet dans une seule app.',
+    titleLine2: 'Du premier message au bilan de suivi.',
+    description: "Les prospects de vos publicités, la réceptionniste IA qui répond et réserve, l'agenda, l'analyse posturale, les plans de soins, les forfaits, les factures VeriFactu et l'app de vos patients. Tout partage le même dossier patient : rien à synchroniser, rien ne se perd en route. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie.",
     ctaPrimary: "Démarrer l'essai de 30 jours",
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir les fonctionnalités',
     proof: ['30 jours d\'essai', 'Sans carte bancaire', 'Migration incluse'],
+    // The five steps of a patient's journey, which name the One app section below.
+    verbs: ['Attirer', 'Répondre', 'Soigner', 'Encaisser', 'Fidéliser'],
+  },
+
+  // Everything the product does, grouped by the step of the patient's
+  // journey it serves. Only what is live in the app: web chat, Messenger and
+  // replying to Google reviews join once they are in production.
+  oneApp: {
+    badge: 'Une seule app',
+    title: 'Cinq choses que fait un cabinet, au même endroit',
+    description: "Un cabinet n'achète pas un CRM, une réceptionniste et un logiciel de gestion : il veut que les nouveaux patients arrivent et que les autres restent. Tout ce que fait QuiroFlow tient dans l'une de ces cinq étapes, et toutes lisent le même dossier patient.",
+    pillars: [
+      { verb: 'Attirer', what: 'Le nouveau patient arrive.', items: ['Prospects de vos publicités Meta', 'Tableau des prospects par étape', 'Coût par prospect et par patient', 'Réservation en ligne à votre image'] },
+      { verb: 'Répondre', what: 'Personne ne reste sans réponse.', items: ['Réceptionniste IA, la nuit aussi', 'WhatsApp et Instagram dans une boîte', 'Réservé dans le vrai agenda', 'Rappels confirmés en un geste'] },
+      { verb: 'Soigner', what: 'La consultation, sans papier.', items: ['Agenda avec salle attribuée', 'Analyse posturale', 'Plans de soins et bilans', 'Exercices à la maison'] },
+      { verb: 'Encaisser', what: 'La caisse tombe juste.', items: ['Forfaits et abonnements', 'Factures VeriFactu', 'Paiement en ligne', 'Cartes cadeaux'] },
+      { verb: 'Fidéliser', what: 'Il revient, et il en parle.', items: ['Rappels de bilan', 'Avis Google demandé après la visite', 'App patient avec Wallet', 'Parrainages'] },
+    ],
+  },
+
+  // The hero's illustration (JourneyIllustration.vue). Invented patient, invented numbers.
+  journey: {
+    aria: "Le parcours d'un patient dans QuiroFlow : attirer, répondre, soigner, encaisser et fidéliser, autour d'une seule app.",
+    center: 'une app · un dossier',
+    lead: 'Laura G. · prospect',
+    leadFrom: 'Meta Ads → WhatsApp',
+    ask: 'Une place mardi ?',
+    reply: 'Mardi 17h30, réservé ✓',
+    replyBy: 'Réceptionniste IA · 23h12',
+    shoulders: 'Épaules',
+    shouldersValue: '4,2° droite',
+    pelvis: 'Bassin',
+    pelvisValue: '1,8° gauche',
+    plan: 'Plan de 12 visites',
+    invoiceItem: 'Forfait 10 séances',
+    amount: '380,00 €',
+    accepted: "Acceptée par l'AEAT",
+    review: 'Avis demandé après la visite',
+    recall: 'Bilan dans 6 semaines',
   },
 
   video: {

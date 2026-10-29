@@ -18,13 +18,52 @@ export const en: Messages = {
 
   hero: {
     badge: 'Practice management software for clinics',
-    titleLine1: 'Less time on the calendar.',
-    titleLine2: 'More time on the table.',
-    description: 'A calendar that assigns the free room or table on its own, session packages that count themselves down, WhatsApp reminders, VeriFactu-ready invoicing, and an alert when a patient falls behind their treatment plan. On the computer and in the app for iPhone, iPad and Android, for chiropractic, physiotherapy, osteopathy and podiatry clinics.',
+    titleLine1: 'Your whole clinic in one app.',
+    titleLine2: 'From the first message to the re-exam.',
+    description: "The leads from your ads, the AI receptionist that answers and books, the calendar, posture analysis, care plans, packages, VeriFactu invoices and your patients' app. It all shares one patient record, so nothing needs syncing and nothing gets lost on the way. For chiropractic, physiotherapy, osteopathy and podiatry clinics.",
     ctaPrimary: 'Start 30-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See features',
     proof: ['30-day trial', 'No card required', 'Migration included'],
+    // The five steps of a patient's journey, which name the One app section below.
+    verbs: ['Attract', 'Respond', 'Treat', 'Get paid', 'Retain'],
+  },
+
+  // Everything the product does, grouped by the step of the patient's
+  // journey it serves. Only what is live in the app: web chat, Messenger and
+  // replying to Google reviews join once they are in production.
+  oneApp: {
+    badge: 'One app',
+    title: 'Five things a clinic does, in one place',
+    description: "A clinic doesn't buy a CRM, a receptionist and a practice management system: it wants new patients to arrive and existing ones to stay. Everything QuiroFlow does sits in one of these five steps, and all of them read the same patient record.",
+    pillars: [
+      { verb: 'Attract', what: 'New patients find you.', items: ['Leads from your Meta ads', 'A leads board by stage', 'Cost per lead and per patient', 'Online booking with your brand'] },
+      { verb: 'Respond', what: 'Nobody is left waiting.', items: ['An AI receptionist, at night too', 'WhatsApp and Instagram in one inbox', 'Booked into the real calendar', 'Reminders confirmed in one tap'] },
+      { verb: 'Treat', what: 'The visit, paper-free.', items: ['A calendar with rooms assigned', 'Posture analysis', 'Care plans and re-exams', 'Home exercises'] },
+      { verb: 'Get paid', what: 'The till balances itself.', items: ['Packages and memberships', 'VeriFactu invoices', 'Online payment', 'Gift cards'] },
+      { verb: 'Retain', what: 'They come back, and say so.', items: ['Recall reminders', 'A Google review asked for after the visit', 'Patient app with Wallet', 'Referrals'] },
+    ],
+  },
+
+  // The hero's illustration (JourneyIllustration.vue). Invented patient, invented numbers.
+  journey: {
+    aria: "A patient's journey inside QuiroFlow: attract, respond, treat, get paid and retain, around one app.",
+    center: 'one app · one record',
+    lead: 'Laura G. · new lead',
+    leadFrom: 'Meta Ads → WhatsApp',
+    ask: 'Any time free on Tuesday?',
+    reply: 'Tuesday 17:30, booked ✓',
+    replyBy: 'AI receptionist · 23:12',
+    shoulders: 'Shoulders',
+    shouldersValue: '4.2° right',
+    pelvis: 'Pelvis',
+    pelvisValue: '1.8° left',
+    plan: '12-visit plan',
+    invoiceItem: '10-session package',
+    amount: '€380.00',
+    accepted: 'Accepted by the AEAT',
+    review: 'Review asked for after the visit',
+    recall: 'Re-exam in 6 weeks',
   },
 
   video: {
