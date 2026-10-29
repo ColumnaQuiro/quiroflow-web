@@ -301,7 +301,7 @@ export const fr: Messages = {
       'Attribue automatiquement une salle ou une table libre',
       'Rappels et confirmation de rendez-vous par WhatsApp',
       'Le patient choisit combien de rappels il reçoit',
-      'Page de réservation en ligne sur votre propre sous-domaine',
+      'Réservation en ligne 24h/24 pour vos patients',
       "Formulaires numériques d'admission et de consentement",
       'Factures légales automatiques pour forfaits et abonnements',
       'Statistiques de fidélisation, conversion et valeur par visite',
@@ -309,9 +309,12 @@ export const fr: Messages = {
       'Alerte quand un patient prend du retard sur son plan de traitement',
       'Campagne automatique de remerciement aux patients qui recommandent',
       'Demande automatique d\'avis Google après la visite',
+      'Réceptionniste IA qui répond et prend les rendez-vous',
+      'Analyse posturale à partir de photos',
+      "Bibliothèque d'exercices en vidéo pour le patient",
       "Tarif d'entrée publié sur son propre site",
     ],
-    footnote: "Comparatif établi à partir des informations publiées sur les sites officiels de chaque fournisseur (septembre 2026). Un « — » indique que le fournisseur ne l'affiche pas publiquement, pas que cela n'existe pas — vérifiez directement auprès de chacun avant de décider.",
+    footnote: "Comparatif établi à partir des informations publiées sur les sites officiels de chaque fournisseur, ou confirmées par le fournisseur lui-même (octobre 2026). Un « — » indique que le fournisseur ne l'affiche pas publiquement, pas que cela n'existe pas — vérifiez directement auprès de chacun avant de décider.",
   },
 
   pricing: {
