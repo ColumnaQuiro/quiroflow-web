@@ -28,15 +28,54 @@ export const es = {
     // and /software-fisioterapia, where it earns its keyword instead of
     // excluding three quarters of the market on the root URL.
     badge: 'Software de gestión para clínicas',
-    titleLine1: 'Menos tiempo en la agenda.',
-    titleLine2: 'Más tiempo en la camilla.',
-    description: 'Agenda con sala o camilla asignada automáticamente, bonos de sesiones que se descuentan solos, recordatorios por WhatsApp, facturación lista para VeriFactu y aviso cuando un paciente se retrasa en su plan de tratamiento. En el ordenador y en la app para iPhone, iPad y Android, para clínicas de quiropráctica, fisioterapia, osteopatía y podología.',
+    titleLine1: 'Toda tu clínica en una sola app.',
+    titleLine2: 'Del primer mensaje a la revisión.',
+    description: 'Los leads de tus anuncios, la recepcionista con IA que contesta y reserva, la agenda, el análisis postural, los planes de cuidado, los bonos, las facturas VeriFactu y la app de tus pacientes. Todo comparte la misma ficha, así que nada se sincroniza y nada se pierde por el camino. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología.',
     ctaPrimary: 'Empezar prueba de 30 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver funcionalidades',
     // The risk-reversal used to be buried in the small print under Pricing,
     // which is the one place a visitor who has not scrolled will never see it.
     proof: ['30 días de prueba', 'Sin tarjeta', 'Migración incluida'],
+    // The five steps of a patient's journey, which name the One app section below.
+    verbs: ['Captar', 'Atender', 'Tratar', 'Cobrar', 'Fidelizar'],
+  },
+
+  // Everything the product does, grouped by the step of the patient's
+  // journey it serves. Only what is live in the app: web chat, Messenger and
+  // replying to Google reviews join once they are in production.
+  oneApp: {
+    badge: 'Una sola app',
+    title: 'Cinco cosas que hace una clínica, en el mismo sitio',
+    description: 'Una clínica no compra un CRM, una recepcionista y un programa de gestión: quiere que lleguen pacientes y que no se vayan. Cada cosa que hace QuiroFlow está en uno de estos cinco pasos, y todos leen la misma ficha del paciente.',
+    pillars: [
+      { verb: 'Captar', what: 'Que el paciente nuevo llegue.', items: ['Leads de tus anuncios de Meta', 'Tablero de leads por etapas', 'Coste por lead y por paciente', 'Reserva online con tu marca'] },
+      { verb: 'Atender', what: 'Que nadie se quede sin respuesta.', items: ['Recepcionista con IA, también de noche', 'WhatsApp e Instagram en una bandeja', 'Reserva en la agenda real', 'Recordatorios que se confirman en un toque'] },
+      { verb: 'Tratar', what: 'La consulta, sin papel.', items: ['Agenda con sala asignada', 'Análisis postural', 'Planes de cuidado y revaloraciones', 'Ejercicios en casa'] },
+      { verb: 'Cobrar', what: 'Que la caja cuadre sola.', items: ['Bonos y membresías', 'Facturas VeriFactu', 'Pago online', 'Tarjetas regalo'] },
+      { verb: 'Fidelizar', what: 'Que vuelva, y que lo cuente.', items: ['Recordatorios de revisión', 'Reseña de Google pedida tras la visita', 'App del paciente con Wallet', 'Referidos'] },
+    ],
+  },
+
+  // The hero's illustration (JourneyIllustration.vue). Invented patient, invented numbers.
+  journey: {
+    aria: 'El recorrido de un paciente dentro de QuiroFlow: captar, atender, tratar, cobrar y fidelizar, alrededor de una sola app.',
+    center: 'una app · una ficha',
+    lead: 'Laura G. · nuevo lead',
+    leadFrom: 'Meta Ads → WhatsApp',
+    ask: '¿Tenéis hueco el martes?',
+    reply: 'Martes 17:30, reservado ✓',
+    replyBy: 'Recepcionista IA · 23:12',
+    shoulders: 'Hombros',
+    shouldersValue: '4,2° dcha',
+    pelvis: 'Pelvis',
+    pelvisValue: '1,8° izq',
+    plan: 'Plan de 12 visitas',
+    invoiceItem: 'Bono 10 sesiones',
+    amount: '380,00 €',
+    accepted: 'Aceptada por la AEAT',
+    review: 'Reseña pedida tras la visita',
+    recall: 'Revisión en 6 semanas',
   },
 
   video: {

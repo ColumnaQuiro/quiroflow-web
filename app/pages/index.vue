@@ -15,9 +15,9 @@ const titles: LocalisedText = {
   fr: 'QuiroFlow — Logiciel de gestion pour cabinets',
 }
 const descriptions: LocalisedText = {
-  es: 'Agenda con sala asignada automáticamente, bonos con cobro recurrente, WhatsApp, facturación VeriFactu y app para iPhone y Android. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología. 30 días de prueba, sin tarjeta.',
-  en: 'A calendar with automatic room assignment, packages with recurring billing, WhatsApp, VeriFactu invoicing and an iPhone and Android app. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 30-day trial, no card.',
-  fr: "Un agenda avec attribution automatique des salles, des forfaits à prélèvement récurrent, WhatsApp, la facturation VeriFactu et une app iPhone et Android. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie. 30 jours d'essai, sans carte.",
+  es: 'Toda tu clínica en una sola app: leads de tus anuncios, recepcionista con IA en WhatsApp e Instagram, agenda, análisis postural, bonos, facturación VeriFactu y app para pacientes. Para quiropráctica, fisioterapia, osteopatía y podología. 30 días de prueba, sin tarjeta.',
+  en: 'Your whole clinic in one app: leads from your ads, an AI receptionist on WhatsApp and Instagram, calendar, posture analysis, packages, VeriFactu invoicing and a patient app. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 30-day trial, no card.',
+  fr: "Tout votre cabinet dans une seule app : prospects de vos publicités, réceptionniste IA sur WhatsApp et Instagram, agenda, analyse posturale, forfaits, facturation VeriFactu et app patient. Pour la chiropraxie, la kinésithérapie, l'ostéopathie et la podologie. 30 jours d'essai, sans carte.",
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para clínicas de terapia manual',
@@ -98,6 +98,8 @@ usePageSeo({
 <template>
   <div>
     <HeroSection />
+
+    <OneAppSection />
 
     <VideoSection />
 

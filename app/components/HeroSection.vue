@@ -20,6 +20,13 @@ const { tm } = useI18n()
         <p class="max-w-[480px] text-[17px] leading-[1.55] text-ink-muted">
           {{ t('hero.description') }}
         </p>
+        <!-- The five steps the One app section below is built on, named here
+             so the page reads as one argument from the first screen. -->
+        <ul class="flex flex-wrap gap-2" :aria-label="t('oneApp.badge')">
+          <li v-for="verb in (tm('hero.verbs') as string[])" :key="verb" class="rounded-ctl border border-line bg-white px-2.5 py-1 text-[13.5px] font-semibold text-ink-600">
+            {{ verb }}
+          </li>
+        </ul>
         <div class="mt-1 flex flex-wrap gap-3">
           <!-- Primary is the self-serve trial and it opens the real sign-up.
                The demo keeps its own button rather than sharing one label
@@ -45,7 +52,7 @@ const { tm } = useI18n()
           </li>
         </ul>
       </div>
-      <MockupsCalendarMockup />
+      <JourneyIllustration />
     </div>
   </section>
 </template>
