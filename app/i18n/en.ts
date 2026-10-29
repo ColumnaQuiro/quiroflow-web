@@ -301,7 +301,7 @@ export const en: Messages = {
       'Assigns a free room or table automatically',
       'WhatsApp appointment reminders and confirmation',
       'Patients choose how many reminders they get',
-      'Online booking page on your own subdomain',
+      '24/7 online booking for your patients',
       'Digital intake and consent forms',
       'Automatic legal invoices for packages and memberships',
       'Retention, conversion, and value-per-visit stats',
@@ -309,9 +309,12 @@ export const en: Messages = {
       'Alert when a patient falls behind on their treatment plan',
       'Automatic thank-you campaign for referring patients',
       'Automatic Google review request after the visit',
+      'AI receptionist that answers and books appointments',
+      'Posture analysis from photos',
+      'Exercise library with video for patients',
       'Entry price published on its own website',
     ],
-    footnote: 'Comparison built from information published on each provider\'s own website (September 2026). A "—" means the provider doesn\'t show it publicly, not that it doesn\'t exist — confirm directly with each one before deciding.',
+    footnote: 'Comparison built from information published on each provider\'s own website, or confirmed by the provider itself (October 2026). A "—" means the provider doesn\'t show it publicly, not that it doesn\'t exist — confirm directly with each one before deciding.',
   },
 
   pricing: {

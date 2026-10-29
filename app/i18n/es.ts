@@ -334,7 +334,7 @@ export const es = {
       'Asigna sala o camilla libre en automático',
       'Recordatorios y confirmación de cita por WhatsApp',
       'El paciente elige cuántos recordatorios recibir',
-      'Página de reserva online en tu propio subdominio',
+      'Reserva online 24/7 para tus pacientes',
       'Formularios digitales de intake y consentimiento',
       'Facturas legales automáticas para bonos y membresías',
       'Estadísticas de retención, conversión y valor por visita',
@@ -342,9 +342,12 @@ export const es = {
       'Alerta cuando un paciente se retrasa en su plan de tratamiento',
       'Campaña automática de agradecimiento a pacientes que refieren',
       'Solicitud automática de reseña de Google tras la visita',
+      'Recepcionista con IA que contesta y reserva citas',
+      'Análisis postural a partir de fotos',
+      'Biblioteca de ejercicios con vídeo para el paciente',
       'Precio de entrada publicado en su propia web',
     ],
-    footnote: 'Comparativa elaborada a partir de la información publicada en las webs oficiales de cada proveedor (septiembre de 2026). Un "—" indica que el proveedor no lo muestra públicamente, no que no exista — confirma directamente con cada uno antes de decidir.',
+    footnote: 'Comparativa elaborada a partir de la información publicada en las webs oficiales de cada proveedor, o confirmada por el propio proveedor (octubre de 2026). Un "—" indica que el proveedor no lo muestra públicamente, no que no exista — confirma directamente con cada uno antes de decidir.',
   },
 
   pricing: {
