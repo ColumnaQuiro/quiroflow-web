@@ -768,6 +768,8 @@ export const en: Messages = {
     privacy: 'Privacy policy',
     terms: 'Legal notice',
     verifactu: 'VERI*FACTU responsible declaration',
+    // Only rendered on Spanish pages -- the guide it links to is Spanish only.
+    verifactuGuide: 'VERI*FACTU for clinics',
     cookies: 'Cookie preferences',
   },
 
