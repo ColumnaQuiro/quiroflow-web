@@ -1,0 +1,46 @@
+# QuiroFlow
+
+> QuiroFlow es un software de gestión en la nube para clínicas de quiropráctica, fisioterapia, osteopatía y podología en España. Reúne en una sola app la captación de pacientes, la recepcionista con IA por WhatsApp, la agenda con asignación automática de sala, los planes de cuidado, los bonos con cobro recurrente, la facturación VeriFactu y la app del paciente. Lo desarrolla COLUMNAQUIRO S.L. (Valencia, España).
+
+Datos clave:
+
+- Para quién: clínicas de quiropráctica, fisioterapia, osteopatía y podología, desde un profesional autónomo hasta clínicas con varias sedes.
+- Idiomas: español, inglés y francés.
+- Plataformas: web, app para iPhone, iPad y Android (para el equipo y para los pacientes).
+- Prueba: 30 días gratis, sin tarjeta. La migración de datos está incluida.
+- Datos: conforme al RGPD y la LOPDGDD, alojados en la Unión Europea. La clínica puede exportar todos sus datos en CSV y PDF cuando quiera, sin coste.
+- VeriFactu: cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Gratis en modo de pruebas hasta el 1 de enero de 2027; después, 7,50 €/mes por sede.
+- Migración: desde PracticeHub (por API, incluyendo notas clínicas, planes de tratamiento, pagos y formularios), desde cualquier programa con exportación, o desde Excel/CSV.
+
+## Precios (sin IVA, por profesional que pasa consulta; pacientes y usuarios de administración ilimitados)
+
+- Solo: 45 €/mes (40 €/mes en anual). 1 profesional, 1 sede.
+- Practice: 99 €/mes (89 €/mes en anual). Hasta 4 profesionales, 1 sede. Incluye Growth (captación, recepcionista con IA y reputación). Profesional adicional: 19 €/mes.
+- Clinic: 149 €/mes (134 €/mes en anual). Profesionales y sedes ilimitados, API y webhooks, migración asistida y soporte prioritario. Incluye Growth.
+- Add-on Growth en el plan Solo: +39 €/mes. Solo la recepcionista con IA: +19 €/mes (1.000 respuestas al mes incluidas).
+
+## Qué lo diferencia
+
+- Agenda que asigna la sala automáticamente al reservar.
+- Lista de espera que reofrece el hueco de una cancelación al primer paciente de la lista.
+- Aviso de paciente retrasado respecto a su plan de cuidado.
+- Bonos y membresías con cobro recurrente.
+- Recepcionista con IA que contesta WhatsApp e Instagram con los huecos reales de la agenda y reserva o mueve citas.
+
+## Páginas
+
+- [Inicio](https://quiroflow.com/): visión general, precios y preguntas frecuentes
+- [Software para quiroprácticos](https://quiroflow.com/software-quiropractica): planes de cuidado, revaloraciones y análisis postural
+- [Software para fisioterapia](https://quiroflow.com/software-fisioterapia): bonos, ejercicios en casa y agenda por salas
+- [Recepcionista con IA y automatizaciones](https://quiroflow.com/automatizaciones): WhatsApp, recordatorios y campañas
+- [Precios](https://quiroflow.com/#precios)
+
+## Otros idiomas
+
+- [English](https://quiroflow.com/en): practice management software for chiropractic, physiotherapy, osteopathy and podiatry clinics
+- [Français](https://quiroflow.com/fr): logiciel de gestion pour cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie
+
+## Contacto
+
+- Email: hola@quiroflow.com
+- Prueba gratuita: https://app.quiroflow.com/signup
