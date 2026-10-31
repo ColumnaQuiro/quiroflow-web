@@ -16,9 +16,9 @@ export const REDUCING_NO_SHOWS: Post = {
     fr: 'Comment réduire les rendez-vous non honorés dans votre cabinet',
   },
   description: {
-    es: 'Ocho prácticas que se refuerzan entre sí para que falten menos pacientes en una clínica de fisioterapia, quiropráctica, osteopatía o podología: recordatorios por WhatsApp, cancelación fácil, lista de espera, planes reservados y medición.',
-    en: 'Eight practices that reinforce each other to cut no-shows in a physiotherapy, chiropractic, osteopathy or podiatry clinic: messaging reminders, easy cancellation, a waiting list, pre-booked plans and measurement.',
-    fr: "Huit pratiques qui se renforcent pour réduire les absences dans un cabinet de kinésithérapie, chiropraxie, ostéopathie ou podologie : rappels par messagerie, annulation facile, liste d'attente, plans réservés et suivi.",
+    es: 'Ocho prácticas para que falten menos pacientes en tu clínica: recordatorios por WhatsApp, cancelación fácil, lista de espera, planes reservados y medición.',
+    en: 'Eight practices that cut no-shows in a clinic: messaging reminders, easy cancellation, a waiting list, pre-booked treatment plans and measurement.',
+    fr: "Huit pratiques pour réduire les absences au cabinet : rappels par messagerie, annulation facile, liste d'attente, plans de soins réservés et suivi.",
   },
   body: {
     es: [

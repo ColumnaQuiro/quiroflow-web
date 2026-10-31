@@ -19,9 +19,9 @@ const titles: LocalisedText = {
   fr: 'Réceptionniste IA et rappels WhatsApp pour cabinets | QuiroFlow',
 }
 const descriptions: LocalisedText = {
-  es: 'La recepcionista con IA contesta tu WhatsApp y reserva la cita, los recordatorios se confirman en un toque y el hueco cancelado se reofrece solo al primero de la lista de espera.',
-  en: 'An AI receptionist that answers your WhatsApp and books the appointment, reminders confirmed in one tap, and cancelled slots re-offered to the first patient on the waiting list.',
-  fr: "Une réceptionniste IA qui répond à votre WhatsApp et réserve le rendez-vous, des rappels confirmés en un geste et les créneaux annulés reproposés automatiquement.",
+  es: 'La recepcionista con IA contesta tu WhatsApp y reserva, los recordatorios se confirman en un toque y el hueco cancelado se reofrece solo a la lista de espera.',
+  en: 'An AI receptionist that answers your WhatsApp and books, reminders confirmed in one tap, and cancelled slots re-offered to the waiting list.',
+  fr: "Une réceptionniste IA qui répond à votre WhatsApp et réserve, des rappels confirmés en un geste et les créneaux annulés reproposés automatiquement.",
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — recepcionista con IA y automatizaciones para clínicas',

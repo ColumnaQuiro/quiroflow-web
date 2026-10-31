@@ -35,6 +35,25 @@
 [[plugins]]
   package = "./plugins/indexnow"
 
+# Baseline security headers; until now the only one sent was HSTS.
+# - Permissions-Policy turns off device APIs this site never uses. The
+#   product video iframe only needs autoplay/encrypted-media/gyroscope, which
+#   stay allowed.
+# - X-Frame-Options instead of a CSP frame-ancestors: nothing frames this
+#   site, and a full CSP has to allowlist Google Fonts and the post-consent
+#   Google Ads tag -- worth doing, but in Report-Only first, not blind.
+# - HSTS is left as Netlify sends it. includeSubDomains would also bind
+#   app.quiroflow.com and anything added under the domain later.
+# Headers from [[headers]] here and from dist/_headers (cache rules Nitro
+# writes for /_nuxt and the sitemaps) are merged by Netlify, not replaced.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    X-Frame-Options = "SAMEORIGIN"
+
 # No [[redirects]] here on purpose: they never fired. Nitro's netlify-static
 # preset writes a `/* /404.html 404` catch-all into dist/_redirects, which
 # Netlify reads before this file. Redirects are routeRules in nuxt.config.ts,

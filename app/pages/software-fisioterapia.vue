@@ -21,8 +21,8 @@ const titles: LocalisedText = {
   fr: 'Logiciel de gestion pour cabinets de kinésithérapie | QuiroFlow',
 }
 const descriptions: LocalisedText = {
-  es: 'Software de gestión para clínicas de fisioterapia: agenda con asignación automática de camilla o box, bonos de sesiones, historia clínica digital y recordatorios por WhatsApp.',
-  en: 'Practice management software for physiotherapy clinics: automatic room and table assignment, session packages, digital clinical records and WhatsApp reminders.',
+  es: 'Software para clínicas de fisioterapia: asignación automática de camilla o box, bonos de sesiones, historia clínica digital y recordatorios por WhatsApp.',
+  en: 'Physiotherapy clinic software: automatic room and table assignment, session packages, digital clinical records and WhatsApp reminders.',
   fr: 'Logiciel de gestion pour cabinets de kinésithérapie : attribution automatique des tables, forfaits de séances, dossier patient numérique et rappels WhatsApp.',
 }
 // Was inheriting the site-wide default, which said "clínicas quiroprácticas"

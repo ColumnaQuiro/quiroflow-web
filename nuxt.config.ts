@@ -131,7 +131,7 @@ export default defineNuxtConfig({
       // the physiotherapy page's social card.
       title: 'QuiroFlow — Software de gestión para clínicas',
       meta: [
-        { name: 'description', content: 'Agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp — todo en una sola plataforma para clínicas de quiropráctica, fisioterapia, osteopatía y podología.' },
+        { name: 'description', content: 'Agenda con salas asignadas solas, historiales, facturación VeriFactu, bonos y WhatsApp para clínicas de quiropráctica, fisioterapia, osteopatía y podología.' },
         // Site-wide OG/Twitter defaults -- constant across every page, so
         // they live here rather than being repeated in each page's useHead.
         // Per-page og:title/og:description/og:url still override these

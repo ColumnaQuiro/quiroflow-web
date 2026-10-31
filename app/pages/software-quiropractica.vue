@@ -24,9 +24,9 @@ const titles: LocalisedText = {
   fr: 'Logiciel de gestion pour chiropracteurs | QuiroFlow',
 }
 const descriptions: LocalisedText = {
-  es: 'Software para quiroprácticos: agenda con asignación automática de sala, planes de cuidado con aviso de paciente retrasado, bonos con cobro recurrente y recordatorios por WhatsApp. Migra desde PracticeHub en un fin de semana.',
-  en: 'Software for chiropractors: a calendar with automatic room assignment, care plans with behind-schedule alerts, packages with recurring billing, and WhatsApp reminders. Migrate from PracticeHub in a weekend.',
-  fr: "Logiciel pour chiropracteurs : agenda avec attribution automatique des salles, plans de soins avec alerte de retard, forfaits à prélèvement récurrent et rappels WhatsApp. Migrez depuis PracticeHub en un week-end.",
+  es: 'Software para quiroprácticos: sala asignada sola, planes de cuidado con aviso de retraso, bonos con cobro recurrente y WhatsApp. Migra desde PracticeHub.',
+  en: 'Chiropractic software: automatic room assignment, care plans with behind-schedule alerts, recurring-billing packages and WhatsApp reminders.',
+  fr: "Logiciel pour chiropracteurs : salles attribuées automatiquement, plans de soins avec alerte de retard, forfaits récurrents et rappels WhatsApp.",
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para clínicas quiroprácticas',

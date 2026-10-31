@@ -105,7 +105,7 @@ const faqItems = [
 
 const title = 'VERI*FACTU para clínicas: fechas, obligaciones y software | QuiroFlow'
 const description =
-  'Qué es VERI*FACTU, cuándo es obligatorio para clínicas de fisioterapia, quiropráctica, osteopatía y podología (fechas en vigor y aplazamiento anunciado a 2028) y cómo facturar con QR y envío automático a la AEAT.'
+  'VERI*FACTU para clínicas de fisioterapia, quiropráctica, osteopatía y podología: fechas en vigor, aplazamiento anunciado a 2028 y cómo facturar con QR.'
 
 usePageSeo({
   titles: onlyEs(title),
