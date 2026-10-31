@@ -25,7 +25,7 @@ Datos clave:
 - Lista de espera que reofrece el hueco de una cancelación al primer paciente de la lista.
 - Aviso de paciente retrasado respecto a su plan de cuidado.
 - Bonos y membresías con cobro recurrente.
-- Recepcionista con IA que contesta WhatsApp e Instagram con los huecos reales de la agenda y reserva o mueve citas.
+- Recepcionista con IA que contesta WhatsApp con los huecos reales de la agenda y reserva o mueve citas; WhatsApp e Instagram llegan a la misma bandeja.
 
 ## Páginas
 
