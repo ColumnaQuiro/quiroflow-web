@@ -72,7 +72,10 @@ export default defineNuxtConfig({
   // a local `netlify build` was seen skipping all three.
   nitro: {
     prerender: {
-      ignore: ['/sitemap.xml'],
+      // Same reason for the three routeRules redirects below: prerendered,
+      // each became a meta-refresh .html stub that Netlify served with a 200
+      // instead of applying the 301 in _redirects.
+      ignore: ['/sitemap.xml', '/quienes-somos', '/en/about', '/fr/a-propos'],
       autoSubfolderIndex: false,
       routes: ['/__sitemap__/es-ES.xml', '/__sitemap__/en-US.xml', '/__sitemap__/fr-FR.xml'],
     },
