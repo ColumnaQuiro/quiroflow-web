@@ -368,6 +368,29 @@ export const fr: Messages = {
     footnote: "Comparatif établi à partir des informations publiées sur les sites officiels de chaque fournisseur, ou confirmées par le fournisseur lui-même (octobre 2026). Un « — » indique que le fournisseur ne l'affiche pas publiquement, pas que cela n'existe pas — vérifiez directement auprès de chacun avant de décider.",
   },
 
+  plansStrip: {
+    title: 'Ce que ça coûte, sans demander de devis',
+    price: {
+      title: 'À partir de {price} €/mois par praticien',
+      body: 'Hors taxes, patients illimités. L’accueil et l’administration ne comptent pas comme praticiens.',
+      link: 'Voir les trois formules',
+    },
+    trial: {
+      title: '15 jours d’essai sans carte',
+      body: 'Avec vos propres patients et votre agenda, et la migration comprise si vous venez d’un autre logiciel.',
+      link: 'Démarrer l’essai',
+    },
+    verifactu: {
+      title: 'Facturation VeriFactu',
+      body: 'QR code, chaînage et envoi à l’AEAT depuis le même logiciel. 7,50 €/mois par site, seulement une fois l’envoi commencé.',
+      link: 'Comment fonctionne VeriFactu',
+    },
+    automations: {
+      text: 'La réceptionniste IA, les rappels WhatsApp et la liste d’attente sont dans',
+      link: 'automatisations',
+    },
+  },
+
   pricing: {
     badge: 'Tarifs',
     title: 'Un tarif par praticien, pas par patient',
