@@ -118,14 +118,6 @@ export default defineNuxtConfig({
       '/en/privacy-policy',
       '/fr/mentions-legales',
       '/fr/politique-de-confidentialite',
-      // The Resources index has no posts yet, so it is a thin page that also
-      // sets its own robots noindex (see app/pages/recursos/index.vue).
-      // Delete these three lines together with that noindex when the first
-      // post ships -- a listed-but-noindexed URL is the inconsistency the
-      // legal-page exclusions above exist to avoid.
-      '/recursos',
-      '/en/resources',
-      '/fr/ressources',
     ],
   },
   app: {

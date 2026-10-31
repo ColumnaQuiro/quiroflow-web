@@ -11,13 +11,21 @@ const { locale } = useLocale()
 const localePath = useLocalePath()
 const route = useRoute()
 
-const post = computed(() => findPost(String(route.params.slug)))
+const post = computed(() => findPost(String(route.params.slug), locale.value as Locale))
 
 // A slug that does not match any entry is a 404, not an empty article page --
 // otherwise every typo under /recursos/ renders a blank indexable URL.
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found' })
 }
+
+// Each locale has its own slug. Without this, the language switcher and the
+// hreflang links keep the current slug and point /en/resources/ at the
+// Spanish one.
+const setI18nParams = useSetI18nParams()
+setI18nParams(
+  Object.fromEntries((['es', 'en', 'fr'] as Locale[]).map(l => [l, { slug: post.value!.slug[l] }])),
+)
 
 const entry = computed(() => {
   const p = post.value!
