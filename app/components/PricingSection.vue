@@ -9,23 +9,9 @@ const { tm } = useI18n()
 
 const annual = ref(false)
 
-// Amounts live here rather than in the translations: they are identical in
-// every language, and duplicating them across es/en/fr is how they drift.
-// Repriced 2026-09-17 against the vertical these clinics actually shop in --
-// PracticeHub ~115 EUR for one practitioner, QuiroHiro 67, Doctoralia 89 per
-// professional -- not against the generalist tools at 29-45 that do not know
-// what a chiropractor is. Annual is the per-month figure, 10% off.
-// Repriced again 2026-10-28: Solo 49 -> 45 (40 annual), and Practice now
-// includes Growth as Clinic already did, at the same 99.
-//
-// These must match `plans` in the app's database, which is what Stripe
-// actually charges from. A number changed here and not there advertises a
-// price nobody is billed.
-const TIERS = [
-  { key: 'solo', monthly: 45, annual: 40, featured: false },
-  { key: 'practice', monthly: 99, annual: 89, featured: true },
-  { key: 'clinic', monthly: 149, annual: 134, featured: false },
-] as const
+// See app/utils/pricing.ts for where the amounts come from and what they
+// must stay in step with.
+const TIERS = PRICING_TIERS
 
 function price(tier: (typeof TIERS)[number]) {
   return annual.value ? tier.annual : tier.monthly

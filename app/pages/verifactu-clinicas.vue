@@ -116,24 +116,8 @@ usePageSeo({
   jsonLd: ({ url }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebPage',
-        url,
-        name: title,
-        description,
-        inLanguage: 'es-ES',
-        dateModified: '2026-10-30',
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
-      {
-        '@type': 'SoftwareApplication',
-        name: 'QuiroFlow',
-        url: 'https://quiroflow.com/',
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web, iOS, Android',
-        featureList: STEPS.map(step => step.title),
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
+      // dateModified is the ISO form of UPDATED above -- change both together.
+      webPageJsonLd({ url, name: title, description, locale: 'es', dateModified: '2026-10-30' }),
       faqJsonLd(faqItems),
     ],
   }),
