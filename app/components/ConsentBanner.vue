@@ -27,10 +27,12 @@ function saveSelection() {
     :aria-label="t('consent.title')"
     class="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-white/95 backdrop-blur"
   >
-    <div class="mx-auto flex max-w-[1120px] flex-col gap-4 px-5 py-5 md:px-8">
-      <div class="flex flex-col gap-2">
-        <p class="text-[15px] font-semibold text-ink-900">{{ t('consent.title') }}</p>
-        <p class="max-w-[70ch] text-[13.5px] leading-[1.6] text-ink-muted">
+    <!-- Compact below md: at 375px the full-size banner covered the bottom
+         40% of the screen, hero CTA included, on every first visit. -->
+    <div class="mx-auto flex max-w-[1120px] flex-col gap-3 px-4 py-3.5 md:gap-4 md:px-8 md:py-5">
+      <div class="flex flex-col gap-1 md:gap-2">
+        <p class="text-[14px] font-semibold text-ink-900 md:text-[15px]">{{ t('consent.title') }}</p>
+        <p class="max-w-[70ch] text-[12.5px] leading-[1.5] text-ink-muted md:text-[13.5px] md:leading-[1.6]">
           {{ t('consent.body') }}
           <NuxtLink :to="localePath('politica-de-privacidad')" class="text-brand underline">
             {{ t('footer.privacy') }}
@@ -69,17 +71,17 @@ function saveSelection() {
       <!-- Accept and Decline are deliberately identical in size and weight.
            Making rejection visibly harder than acceptance is the specific
            dark pattern the AEPD has sanctioned. -->
-      <div class="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+      <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
         <button
           type="button"
-          class="rounded-ctl bg-brand px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-brand-hover"
+          class="min-h-[44px] flex-1 rounded-ctl bg-brand px-5 py-2.5 text-[14px] font-semibold text-white hover:bg-brand-hover sm:flex-none"
           @click="acceptAll"
         >
           {{ t('consent.accept') }}
         </button>
         <button
           type="button"
-          class="rounded-ctl border border-line-control bg-white px-5 py-2.5 text-[14px] font-semibold text-ink-700 hover:border-ink-faint"
+          class="min-h-[44px] flex-1 rounded-ctl border border-line-control bg-white px-5 py-2.5 text-[14px] font-semibold text-ink-700 hover:border-ink-faint sm:flex-none"
           @click="rejectAll"
         >
           {{ t('consent.reject') }}

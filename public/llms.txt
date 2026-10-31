@@ -25,7 +25,7 @@ Datos clave:
 - Lista de espera que reofrece el hueco de una cancelación al primer paciente de la lista.
 - Aviso de paciente retrasado respecto a su plan de cuidado.
 - Bonos y membresías con cobro recurrente.
-- Recepcionista con IA que contesta WhatsApp e Instagram con los huecos reales de la agenda y reserva o mueve citas.
+- Recepcionista con IA que contesta WhatsApp con los huecos reales de la agenda y reserva o mueve citas; WhatsApp e Instagram llegan a la misma bandeja.
 
 ## Páginas
 
@@ -37,6 +37,17 @@ Datos clave:
 - [VERI*FACTU para clínicas](https://quiroflow.com/verifactu-clinicas): qué es, fechas en vigor y aplazamiento anunciado, y cómo factura QuiroFlow con QR y envío a la AEAT
 - [Recepcionista con IA y automatizaciones](https://quiroflow.com/automatizaciones): WhatsApp, recordatorios y campañas
 - [Precios](https://quiroflow.com/#precios)
+
+## Comparativas
+
+- [Alternativa a PracticeHub](https://quiroflow.com/alternativa-a-practicehub): VeriFactu, WhatsApp sin integraciones y migración por API
+- [Alternativa a Clinic Cloud](https://quiroflow.com/alternativa-a-clinic-cloud): para clínicas de terapia manual
+- [Alternativa a la agenda de Doctoralia](https://quiroflow.com/alternativa-a-doctoralia): directorio frente a programa de gestión
+
+## Guías
+
+- [Cómo elegir un programa de gestión para tu clínica: 10 preguntas](https://quiroflow.com/recursos/como-elegir-programa-gestion-clinica)
+- [Cómo reducir las ausencias de pacientes en tu clínica](https://quiroflow.com/recursos/reducir-ausencias-pacientes-clinica)
 
 ## Otros idiomas
 

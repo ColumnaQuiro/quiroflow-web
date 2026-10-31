@@ -116,12 +116,16 @@ export const es = {
 
   funcionalidades: {
     badge: 'Funcionalidades',
-    title: 'Lo que no hace ningún otro programa de tu lista',
+    // Was "Lo que no hace ningún otro programa de tu lista". The comparison
+    // table on this same page credits QuiroHiro with the AI receptionist and
+    // the waitlist, and four providers with bono invoicing, so the claim
+    // contradicted the page. Don't reintroduce an exclusivity claim here
+    // unless every competitor shows "—" for all three features below it.
+    title: 'Lo que te devuelve horas cada semana',
     sectorTitle: 'Todo lo que necesita tu clínica, en un solo lugar',
     subtitle: 'Agenda, facturación y formularios los tiene todo el mundo. Estas tres son la razón por la que una clínica cambia.',
-    // Heads the VeriFactu and app sections. Neither belongs under the title
-    // above: other programs do VeriFactu too, and "no other program does
-    // this" would stop being true the moment either sat under it.
+    // Heads the VeriFactu and app sections, which are table stakes rather
+    // than reasons to switch, so they stay out from under the title above.
     essentialsTitle: 'Lo que te piden Hacienda y tus pacientes',
     moreTitle: 'Y todo lo demás que esperas de un programa de gestión',
   },
@@ -378,6 +382,8 @@ export const es = {
     title: 'Cómo se compara QuiroFlow',
     subtitle: 'Sin exagerar: esto es lo que cada plataforma muestra públicamente en su propia web.',
     featureHeader: 'Funcionalidad',
+    yes: 'Sí',
+    notShown: 'No lo muestra públicamente',
     rows: [
       'Exportación completa de tus datos desde tu cuenta',
       'Asigna sala o camilla libre en automático',
