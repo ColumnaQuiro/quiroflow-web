@@ -98,9 +98,19 @@ export const es = {
       body: 'Camilla o box asignado en cada franja, bonos de sesiones que se descuentan solos y seguimiento del alta.',
       link: 'Ver el software para clínicas de fisioterapia',
     },
+    osteo: {
+      title: 'Osteopatía',
+      body: 'Anamnesis y diagrama corporal rellenados desde el móvil antes de la primera visita, notas con pruebas adjuntas y revisiones que no se olvidan.',
+      link: 'Ver el software para osteópatas',
+    },
+    podo: {
+      title: 'Podología',
+      body: 'Gabinete asignado en cada cita, fotos de la evolución en la ficha y venta de productos con su stock.',
+      link: 'Ver el software para podólogos',
+    },
     others: {
-      title: 'Osteopatía, podología y otras terapias manuales',
-      body: 'No tienen página propia todavía, pero QuiroFlow se usa igual: los tipos de sesión, las salas y los formularios los defines tú. Escríbenos y te enseñamos cómo encaja en tu consulta.',
+      title: 'Otras terapias manuales',
+      body: 'QuiroFlow se usa igual en cualquier consulta de terapia manual: los tipos de sesión, las salas y los formularios los defines tú. Escríbenos y te enseñamos cómo encaja en la tuya.',
     },
   },
 
@@ -731,6 +741,193 @@ export const es = {
     },
   },
 
+  // Built only from what the app does for every clinic: there is nothing
+  // osteopathy-specific in QuiroFlow, so this page says how the shared tools
+  // fit an osteopath's week rather than inventing features for it.
+  osteopatia: {
+    badge: 'Osteopatía',
+    title: 'Software de gestión para centros de osteopatía',
+    description: 'Agenda con sala asignada automáticamente, anamnesis y diagrama corporal que el paciente rellena desde el móvil antes de la primera visita, notas de cada sesión con sus pruebas adjuntas y revisiones que no se olvidan. Para el osteópata que trabaja solo y para centros de varias sedes.',
+    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaSecondary: 'Reservar una demo',
+    seeFeatures: 'Ver cómo funciona',
+    features: {
+      agenda: {
+        eyebrow: 'Agenda',
+        title: 'Primeras visitas y revisiones, cada una con su sala',
+        description: 'Una primera visita de osteopatía no dura lo mismo que una revisión. Defines cada tipo de sesión con su duración y QuiroFlow asigna la sala libre al crear la cita, así que nunca acabas con dos pacientes en la misma camilla. Vista por día o por semana, y varias sedes desde la misma cuenta.',
+      },
+      historia: {
+        eyebrow: 'Anamnesis y diagrama corporal',
+        title: 'La anamnesis, hecha antes de que entre por la puerta',
+        description: 'El formulario de primera visita y el consentimiento informado los rellena el paciente desde el móvil antes de venir, y marca con el dedo sobre un diagrama corporal dónde le duele. El diagrama lo eliges tú: subes la imagen que ya usas en consulta. En cada sesión escribes tus notas en la ficha, junto a los informes y las pruebas de imagen que adjuntes en PDF o en foto.',
+      },
+      revisiones: {
+        eyebrow: 'Revisiones y WhatsApp',
+        title: 'El paciente que tenía que volver, vuelve',
+        description: 'Mucha osteopatía vive de la revisión al cabo de unos meses. QuiroFlow lista los pacientes que llevan tiempo sin cita para que recepción los contacte, y los recordatorios por WhatsApp con botón para confirmar o cambiar la cita reducen las ausencias. Si alguien cancela, el hueco se ofrece solo al primero de la lista de espera.',
+      },
+      bonos: {
+        eyebrow: 'Bonos y facturación',
+        title: 'Bonos, cobros y facturas desde la misma ficha',
+        description: 'Vende bonos de sesiones que se descuentan solos en cada visita, cobra con tarjeta o en caja y emite la factura desde la ficha del paciente. Preparado para VeriFactu: QR y envío a la AEAT desde el día en que pases a producción.',
+      },
+      informes: {
+        eyebrow: 'Informes',
+        title: 'Ocupación, ingresos y pacientes que repiten',
+        description: 'Ocupación por profesional y por sala, ingresos, precio medio por visita y retención, al minuto y comparados con el periodo anterior, sin exportar nada a una hoja de cálculo.',
+      },
+    },
+    edge: {
+      title: 'Dos cosas que una consulta de osteopatía agradece',
+      description: 'Documentar la evolución sin perder tiempo, y que el paciente no se quede a medias.',
+      items: [
+        {
+          title: 'Análisis postural a partir de fotos',
+          body: 'Haz fotos de frente, de lado y de espaldas con el móvil o el iPad. QuiroFlow coloca los puntos de referencia, tú los ajustas y guarda las mediciones para compararlas en la revaloración. Son estimaciones para documentar la evolución, no un diagnóstico.',
+        },
+        {
+          title: 'Planes de tratamiento con aviso de retraso',
+          body: 'Si propones varias sesiones, reservas el plan entero de una vez y QuiroFlow te avisa cuando un paciente se sale de su cadencia, mientras todavía estás a tiempo de llamarle.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Sirve QuiroFlow si soy un osteópata que trabaja solo?',
+          a: 'Sí. Funciona igual para una consulta individual que para un centro con varias salas y profesionales. El plan Solo es para un profesional y una sede, y solo pagas por los profesionales que pasan consulta: recepción y administración son gratis.',
+        },
+        {
+          q: '¿Puedo usar mi propio diagrama corporal?',
+          a: 'Sí. En el editor de formularios añades un bloque de imagen para dibujar y subes el diagrama que quieras. El paciente marca encima con el dedo desde el móvil, y lo que marca queda guardado en su ficha.',
+        },
+        {
+          q: '¿Cómo hago el seguimiento de los pacientes que vuelven cada pocos meses?',
+          a: 'La lista de recordatorios muestra los pacientes que llevan tiempo sin cita, contando desde la última visita a la que vinieron. Recepción los contacta desde ahí, los pospone hasta una fecha o los descarta, y el paciente vuelve a aparecer solo si deja de venir otra vez.',
+        },
+        {
+          q: '¿Está preparado para VeriFactu?',
+          a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente desde el día en que pasas a producción. Hasta entonces funciona en modo de pruebas, sin coste; desde ese día cuesta 7,50 € al mes por sede.',
+        },
+        {
+          q: '¿Puedo migrar desde el programa que uso ahora?',
+          a: 'Sí. Importamos pacientes y citas desde el export de tu programa actual, y desde cualquier otro sistema puedes importar por CSV mapeando tus propias columnas. La migración está incluida.',
+        },
+        {
+          q: '¿Cómo se tratan los datos de los pacientes?',
+          a: 'Conforme al RGPD y a la LOPDGDD, con los datos alojados en servidores de la Unión Europea. QuiroFlow actúa como encargado del tratamiento y firma el contrato correspondiente con cada clínica, que sigue siendo la responsable de los datos de sus pacientes.',
+        },
+      ],
+    },
+    cta: {
+      title: 'Ve QuiroFlow con los datos de tu consulta',
+      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de osteopatía.',
+      button: 'Empezar prueba de 30 días',
+      buttonSecondary: 'Reservar una demo',
+    },
+    mockups: {
+      invoiceItem: 'Sesión de osteopatía x1',
+      calendarType: 'Osteopatía',
+    },
+  },
+
+  // Same rule as osteopatia: only what the app already does. Products with
+  // stock is the one tool here a podologist uses more than anyone else.
+  podologia: {
+    badge: 'Podología',
+    title: 'Software de gestión para clínicas de podología',
+    description: 'Agenda por gabinete con quiropodias cortas y estudios largos en el mismo día, fotos e informes en la ficha del paciente, venta de productos con su stock y revisiones periódicas que no se olvidan. Para la consulta de un podólogo y para clínicas de varias sedes.',
+    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaSecondary: 'Reservar una demo',
+    seeFeatures: 'Ver cómo funciona',
+    features: {
+      agenda: {
+        eyebrow: 'Agenda por gabinete',
+        title: 'Quiropodias cortas y estudios largos, en el mismo gabinete',
+        description: 'Cada tipo de visita con su duración: una quiropodia de veinte minutos, un estudio biomecánico de una hora. QuiroFlow asigna el gabinete libre al crear la cita, así que nunca acabas con dos pacientes citados en el mismo sillón. Vista por día o por semana, y varias sedes desde la misma cuenta.',
+      },
+      historia: {
+        eyebrow: 'Historia clínica, fotos e informes',
+        title: 'La evolución de cada lesión, con sus fotos',
+        description: 'Antecedentes, anamnesis y consentimiento los rellena el paciente desde el móvil antes de venir, y puede marcar sobre un diagrama del pie que subes tú. En cada visita escribes tus notas y adjuntas fotos o informes en PDF, que se ven en la propia ficha sin tener que descargarlos.',
+      },
+      productos: {
+        eyebrow: 'Productos y stock',
+        title: 'Lo que vendes en el mostrador, con su stock',
+        description: 'Cremas, calzado o plantillas prefabricadas: cada producto con su IVA, su stock y su mínimo. La venta se hace desde la ficha del paciente junto a la sesión, y el stock solo se mueve con una entrada, un ajuste con motivo o una venta, así que la estantería cuadra con la lista.',
+      },
+      revisiones: {
+        eyebrow: 'Revisiones y WhatsApp',
+        title: 'La revisión de cada pocas semanas, sin depender de la memoria',
+        description: 'QuiroFlow lista los pacientes que llevan tiempo sin cita para que recepción los contacte antes de que se vayan a otra consulta, y los recordatorios por WhatsApp con botón para confirmar o cambiar la cita reducen las ausencias. Si alguien cancela, el hueco se ofrece solo al primero de la lista de espera.',
+      },
+      reserva: {
+        eyebrow: 'Reserva online',
+        title: 'Una página de reservas con tu marca',
+        description: 'Tu clínica tiene su propia página pública de reservas, con tus horarios reales y la disponibilidad de cada podólogo. El paciente reserva sin llamar y la cita entra directa en la agenda.',
+      },
+    },
+    edge: {
+      title: 'Dos cosas que una clínica de podología agradece',
+      description: 'Que el paciente vuelva cuando le toca, y que lo cuente.',
+      items: [
+        {
+          title: 'Bonos y facturas preparadas para VeriFactu',
+          body: 'Vende bonos de sesiones que se descuentan solos en cada visita y emite la factura desde la misma ficha, con la sesión y los productos juntos. Con el QR y el envío a la AEAT desde el día en que pases a producción.',
+        },
+        {
+          title: 'La reseña de Google se pide sola',
+          body: 'Tras la visita, QuiroFlow puede pedir la valoración automáticamente: las notas bajas te llegan a ti, y a las altas se les invita a dejar la reseña en Google. Para una clínica que compite en búsquedas locales, esa constancia pesa.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      items: [
+        {
+          q: '¿Sirve QuiroFlow si soy un podólogo que trabaja solo?',
+          a: 'Sí. Funciona igual para una consulta individual que para una clínica con varios gabinetes y profesionales. El plan Solo es para un profesional y una sede, y solo pagas por los profesionales que pasan consulta: recepción y administración son gratis.',
+        },
+        {
+          q: '¿Puedo vender productos y llevar el stock?',
+          a: 'Sí. Cada producto tiene su IVA, su stock con un mínimo y el coste de la última entrada para ver el margen. Lo vendes desde la ficha del paciente y el stock se descuenta solo.',
+        },
+        {
+          q: '¿Puedo guardar fotos de la evolución de una lesión?',
+          a: 'Sí. Adjuntas fotos e informes en PDF a la ficha del paciente y se ven en la propia ficha, sin descargarlos, con la fecha y quién los subió.',
+        },
+        {
+          q: '¿Puedo usar un diagrama del pie en mis formularios?',
+          a: 'Sí. En el editor de formularios añades un bloque de imagen para dibujar y subes el diagrama que quieras. El paciente marca encima con el dedo desde el móvil, y lo que marca queda guardado en su ficha.',
+        },
+        {
+          q: '¿Los pacientes pueden reservar cita online?',
+          a: 'Sí. Cada clínica tiene su propia página de reservas con la disponibilidad real de cada podólogo. La cita entra directamente en tu agenda, sin llamadas ni confirmaciones manuales.',
+        },
+        {
+          q: '¿Puedo migrar desde el programa que uso ahora?',
+          a: 'Sí. Importamos pacientes y citas desde el export de tu programa actual, y desde cualquier otro sistema puedes importar por CSV mapeando tus propias columnas. La migración está incluida.',
+        },
+        {
+          q: '¿Cómo se tratan los datos de los pacientes?',
+          a: 'Conforme al RGPD y a la LOPDGDD, con los datos alojados en servidores de la Unión Europea. QuiroFlow actúa como encargado del tratamiento y firma el contrato correspondiente con cada clínica, que sigue siendo la responsable de los datos de sus pacientes.',
+        },
+      ],
+    },
+    cta: {
+      title: 'Ve QuiroFlow con los datos de tu clínica',
+      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu clínica de podología.',
+      button: 'Empezar prueba de 30 días',
+      buttonSecondary: 'Reservar una demo',
+    },
+    mockups: {
+      invoiceItem: 'Quiropodia x1',
+      calendarType: 'Quiropodia',
+    },
+  },
+
   // Landing de campaña para el ángulo de automatizaciones. Las secciones de
   // producto reutilizan receptionist/whatsapp/waitlist/booking en vez de
   // duplicar texto: si cambia la funcionalidad, cambia en un sitio.
@@ -804,6 +1001,8 @@ export const es = {
     migrate: 'Cambiar de programa',
     chiro: 'Quiropráctica',
     physio: 'Fisioterapia',
+    osteo: 'Osteopatía',
+    podo: 'Podología',
     resources: 'Recursos',
     copyright: '© 2026 QuiroFlow. Todos los derechos reservados.',
     privacy: 'Política de privacidad',

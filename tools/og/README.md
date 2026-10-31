@@ -1,6 +1,6 @@
 # OG card sources
 
-The four `public/og-*.png` social cards are generated from this template
+The `public/og-*.png` social cards are generated from this template
 rather than drawn by hand, so a copy change means editing text here and
 re-running the command instead of reopening a design file.
 

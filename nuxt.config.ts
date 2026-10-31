@@ -58,9 +58,18 @@ export default defineNuxtConfig({
   // never gets a turn. Not prerendering it leaves the path free for the real
   // 301 in netlify.toml. The index itself and the per-locale sitemaps are
   // unaffected; robots.txt points at the index directly either way.
+  //
+  // autoSubfolderIndex: false writes /software-fisioterapia.html instead of
+  // /software-fisioterapia/index.html. With the folder version, Netlify's
+  // pretty URLs 301'd every page except the root to its trailing-slash form,
+  // while the canonical, hreflang and sitemap all name the URL without the
+  // slash -- so every URL Google was told to index redirected to one that
+  // pointed back at it. Only the homepage ever got indexed. A .html file is
+  // served at the bare path with a 200.
   nitro: {
     prerender: {
       ignore: ['/sitemap.xml'],
+      autoSubfolderIndex: false,
     },
   },
 

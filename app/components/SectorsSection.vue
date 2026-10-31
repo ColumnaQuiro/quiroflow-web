@@ -5,9 +5,8 @@ const localePath = useLocalePath()
 
 <template>
   <!-- The homepage no longer claims a vertical, so it has to say out loud
-       which ones it serves. Osteopathy and podiatry get named here even
-       though neither has a page yet: a podologist who reads only the hero
-       has no way to tell whether this is for them, and silence reads as no. -->
+       which ones it serves: a podologist who reads only the hero has no way
+       to tell whether this is for them, and silence reads as no. -->
   <section id="especialidades" class="border-y border-line bg-surface-page py-20">
     <div class="mx-auto flex max-w-[1120px] flex-col gap-10 px-8">
       <div class="mx-auto flex max-w-[660px] flex-col items-center gap-3.5 text-center">
@@ -35,6 +34,24 @@ const localePath = useLocalePath()
           <h3 class="text-[18px] font-semibold tracking-tightTitle text-ink-900">{{ t('sectors.physio.title') }}</h3>
           <p class="text-[14.5px] leading-[1.65] text-ink-muted">{{ t('sectors.physio.body') }}</p>
           <span class="mt-1 text-[14px] font-semibold text-brand-text group-hover:underline">{{ t('sectors.physio.link') }} →</span>
+        </NuxtLink>
+
+        <NuxtLink
+          :to="localePath('software-osteopatia')"
+          class="group flex flex-col gap-2.5 rounded-card border border-line bg-white p-7 transition-colors hover:border-brand"
+        >
+          <h3 class="text-[18px] font-semibold tracking-tightTitle text-ink-900">{{ t('sectors.osteo.title') }}</h3>
+          <p class="text-[14.5px] leading-[1.65] text-ink-muted">{{ t('sectors.osteo.body') }}</p>
+          <span class="mt-1 text-[14px] font-semibold text-brand-text group-hover:underline">{{ t('sectors.osteo.link') }} →</span>
+        </NuxtLink>
+
+        <NuxtLink
+          :to="localePath('software-podologia')"
+          class="group flex flex-col gap-2.5 rounded-card border border-line bg-white p-7 transition-colors hover:border-brand"
+        >
+          <h3 class="text-[18px] font-semibold tracking-tightTitle text-ink-900">{{ t('sectors.podo.title') }}</h3>
+          <p class="text-[14.5px] leading-[1.65] text-ink-muted">{{ t('sectors.podo.body') }}</p>
+          <span class="mt-1 text-[14px] font-semibold text-brand-text group-hover:underline">{{ t('sectors.podo.link') }} →</span>
         </NuxtLink>
       </div>
 
