@@ -14,7 +14,19 @@ export default defineNuxtConfig({
   // Nuxt's own devtools-kit) ships a compatible version.
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/sitemap'],
-  css: ['~/assets/css/main.css'],
+  // Instrument Sans is self-hosted from @fontsource instead of
+  // fonts.googleapis.com: the Google stylesheet was render-blocking, cost two
+  // extra connections, and sent every visitor's IP to Google before the
+  // consent banner had been answered. Only the four weights the design uses;
+  // each file's unicode-range means a Spanish page only fetches the latin
+  // subset.
+  css: [
+    '@fontsource/instrument-sans/400.css',
+    '@fontsource/instrument-sans/500.css',
+    '@fontsource/instrument-sans/600.css',
+    '@fontsource/instrument-sans/700.css',
+    '~/assets/css/main.css',
+  ],
   // Canonical production origin -- backs the sitemap's <loc> entries and
   // every page's canonical/og:url tag (each page builds its own absolute
   // URL from this in useHead). Matches README.md: deployed at the bare
@@ -154,9 +166,6 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow' },
       ],
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },

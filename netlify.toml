@@ -40,8 +40,8 @@
 #   product video iframe only needs autoplay/encrypted-media/gyroscope, which
 #   stay allowed.
 # - X-Frame-Options instead of a CSP frame-ancestors: nothing frames this
-#   site, and a full CSP has to allowlist Google Fonts and the post-consent
-#   Google Ads tag -- worth doing, but in Report-Only first, not blind.
+#   site, and a full CSP has to allowlist the post-consent Google Ads tag
+#   (fonts are self-hosted now) -- worth doing, but in Report-Only first.
 # - HSTS is left as Netlify sends it. includeSubDomains would also bind
 #   app.quiroflow.com and anything added under the domain later.
 # Headers from [[headers]] here and from dist/_headers (cache rules Nitro

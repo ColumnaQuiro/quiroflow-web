@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/instrument-sans':
+    specifier: ^5.3.0
+    version: 5.3.0
   '@nuxtjs/i18n':
     specifier: ^10.6.0
     version: 10.6.0(@nuxt/schema@4.6.3)(rolldown@1.2.16)(rollup@4.67.2)(typescript@6.0.3)(vite@8.3.5)(vue@3.5.44)
@@ -892,6 +895,10 @@ packages:
     dev: false
     optional: true
 
+  /@fontsource/instrument-sans@5.3.0:
+    resolution: {integrity: sha512-QwXc4hb/px3XvSPS2CPAOgey8nyrQFxgxrmXQQ+pN+P51hKdAcchxpg8rSbjANFfPu6VKXhDqkVDucXMZ9CM5g==}
+    dev: false
+
   /@intlify/bundle-utils@11.2.8(vue-i18n@11.4.16):
     resolution: {integrity: sha512-8p7MeoNlcVISGcwAT8rLqQdli78bQXK3dRRcbZhheD0YkWchRnH70B5mA5Rt1xrK1+ApZ0o7V2lDxjUV1zQbDw==}
     engines: {node: '>= 22.13'}
@@ -1560,7 +1567,7 @@ packages:
       std-env: 4.3.0
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      unctx: 3.0.1(magic-string@1.4.5)(oxc-parser@0.141.0)(rolldown@1.2.16)(unplugin@3.7.0)
+      unctx: 3.0.1(magic-string@0.30.21)(oxc-parser@0.141.0)(rolldown@1.2.16)(unplugin@3.7.0)
       verkit: 0.5.0
     transitivePeerDependencies:
       - magic-string

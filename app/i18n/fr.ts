@@ -114,7 +114,7 @@ export const fr: Messages = {
   verifactu: {
     eyebrow: 'VeriFactu',
     title: 'Des factures prêtes pour VeriFactu, sans changer de logiciel en 2027',
-    description: "VeriFactu est la nouvelle règle de facturation en Espagne. Chaque facture porte son QR code, est chaînée à la précédente et part toute seule vers l'administration fiscale espagnole (AEAT) dans la minute qui suit son émission. Rembourser un paiement émet la facture rectificative, et chaque site a sa propre série. Envoyez avec le certificat de votre cabinet, ou laissez QuiroFlow envoyer pour vous grâce à une procuration. Essayez-le dès aujourd'hui en mode test ; l'envoi réel démarre tout seul le 1er janvier 2027.",
+    description: "VeriFactu est la nouvelle règle de facturation en Espagne. Chaque facture porte son QR code, est chaînée à la précédente et part toute seule vers l'administration fiscale espagnole (AEAT) dans la minute qui suit son émission. Rembourser un paiement émet la facture rectificative, et chaque site a sa propre série. Envoyez avec le certificat de votre cabinet, ou laissez QuiroFlow envoyer pour vous grâce à une procuration. Commencez en mode test et passez à l'envoi réel le jour que vous choisissez.",
     short: "Un QR sur chaque facture, des enregistrements chaînés et l'envoi automatique à l'AEAT, avec votre certificat ou le nôtre.",
     visual: {
       header: 'FACTURE F2027-0142',
@@ -334,12 +334,6 @@ export const fr: Messages = {
     note: "Vous avez besoin du détail technique ou du contrat de sous-traitance avant de décider ? Écrivez-nous et nous vous l'envoyons sans passer par une démo.",
   },
 
-  testimonial: {
-    quote: "Nous avons migré depuis PracticeHub en un week-end. Les confirmations de rendez-vous arrivent maintenant toutes seules par WhatsApp et nous avons arrêté de courir après les paiements à la main — l'agenda et la caisse s'accordent enfin sans que personne ait à les vérifier.",
-    name: 'Léa · Columna Quiro',
-    location: 'Valence, Espagne',
-  },
-
   comparison: {
     badge: 'Comparer',
     title: 'Comment QuiroFlow se compare',
@@ -478,7 +472,7 @@ export const fr: Messages = {
       },
       {
         q: 'QuiroFlow est-il prêt pour VeriFactu ?',
-        a: "Oui. Chaque facture porte son QR code, est chaînée à la précédente et est envoyée automatiquement à l'AEAT. Vous pouvez envoyer avec le certificat de votre cabinet ou autoriser QuiroFlow à envoyer pour vous. Jusqu'au 1er janvier 2027, cela fonctionne en mode test, sans frais ; à partir de ce jour, l'envoi réel coûte 7,50 € par mois et par site.",
+        a: "Oui. Chaque facture porte son QR code, est chaînée à la précédente et est envoyée automatiquement à l'AEAT. Vous pouvez envoyer avec le certificat de votre cabinet ou autoriser QuiroFlow à envoyer pour vous. Vous commencez en mode test, sans frais, et passez à l'envoi réel le jour que vous choisissez ; à partir de là, cela coûte 7,50 € par mois et par site.",
       },
       {
         q: 'Y a-t-il une app mobile ?',
