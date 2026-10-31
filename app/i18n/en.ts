@@ -368,6 +368,29 @@ export const en: Messages = {
     footnote: 'Comparison built from information published on each provider\'s own website, or confirmed by the provider itself (October 2026). A "—" means the provider doesn\'t show it publicly, not that it doesn\'t exist — confirm directly with each one before deciding.',
   },
 
+  plansStrip: {
+    title: 'What it costs, without asking for a quote',
+    price: {
+      title: 'From €{price}/mo per practitioner',
+      body: 'Excluding VAT, with unlimited patients. Front desk and admin users do not count as practitioners.',
+      link: 'See the three plans',
+    },
+    trial: {
+      title: '15-day trial, no card',
+      body: 'With your own patients and calendar, and migration included if you are coming from another system.',
+      link: 'Start the trial',
+    },
+    verifactu: {
+      title: 'VeriFactu invoicing',
+      body: 'QR code, chaining and sending to the AEAT from the same system. €7.50/mo per location, only once you start sending.',
+      link: 'How VeriFactu works',
+    },
+    automations: {
+      text: 'The AI receptionist, WhatsApp reminders and the waiting list are under',
+      link: 'automation',
+    },
+  },
+
   pricing: {
     badge: 'Pricing',
     title: 'Priced per practitioner, not per patient',

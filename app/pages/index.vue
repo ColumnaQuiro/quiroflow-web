@@ -165,7 +165,10 @@ usePageSeo({
       </div>
     </section>
 
+    <!-- id is the target of PlansStrip's VERI*FACTU link on /en and /fr,
+         where the Spanish-only guide page does not exist. -->
     <FeatureSection
+      id="verifactu"
       reverse
       :eyebrow="t('verifactu.eyebrow')"
       :title="t('verifactu.title')"

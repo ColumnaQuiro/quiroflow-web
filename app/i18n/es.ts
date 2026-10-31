@@ -405,6 +405,29 @@ export const es = {
     footnote: 'Comparativa elaborada a partir de la información publicada en las webs oficiales de cada proveedor, o confirmada por el propio proveedor (octubre de 2026). Un "—" indica que el proveedor no lo muestra públicamente, no que no exista — confirma directamente con cada uno antes de decidir.',
   },
 
+  plansStrip: {
+    title: 'Lo que cuesta, sin pedir presupuesto',
+    price: {
+      title: 'Desde {price} €/mes por profesional',
+      body: 'Sin IVA y con pacientes ilimitados. Recepción y administración no cuentan como profesionales.',
+      link: 'Ver los tres planes',
+    },
+    trial: {
+      title: '15 días de prueba sin tarjeta',
+      body: 'Con tus propios pacientes y tu agenda, y con la migración incluida si vienes de otro programa.',
+      link: 'Empezar la prueba',
+    },
+    verifactu: {
+      title: 'Facturas VERI*FACTU',
+      body: 'QR, encadenado y envío a la AEAT desde el mismo programa. 7,50 €/mes por sede, solo desde que empiezas a enviar.',
+      link: 'Fechas y obligaciones para clínicas',
+    },
+    automations: {
+      text: 'La recepcionista con IA, los recordatorios por WhatsApp y la lista de espera están en',
+      link: 'automatizaciones',
+    },
+  },
+
   pricing: {
     badge: 'Precios',
     title: 'Precio por profesional, no por paciente',

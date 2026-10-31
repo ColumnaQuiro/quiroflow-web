@@ -146,6 +146,8 @@ usePageSeo({
       </div>
     </section>
 
+    <PlansStrip />
+
     <MigrationSection />
 
     <DataSection />
