@@ -57,7 +57,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: '¿Cuánto cuesta QuiroFlow?',
-        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 30 días de prueba sin tarjeta.',
+        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 15 días de prueba sin tarjeta.',
       },
     ],
   },
@@ -87,7 +87,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: '¿Cuánto cuesta QuiroFlow?',
-        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 30 días de prueba sin tarjeta.',
+        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 15 días de prueba sin tarjeta.',
       },
     ],
   },
@@ -117,7 +117,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: '¿Cuánto cuesta QuiroFlow?',
-        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 30 días de prueba sin tarjeta.',
+        a: 'Solo, para un profesional, 45 €/mes; Practice, hasta cuatro profesionales, 99 €/mes; Clinic, sin límite de profesionales ni sedes, 149 €/mes. Precios sin IVA, pacientes ilimitados y 15 días de prueba sin tarjeta.',
       },
     ],
   },

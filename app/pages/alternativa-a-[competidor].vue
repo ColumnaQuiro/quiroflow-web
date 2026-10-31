@@ -125,7 +125,7 @@ usePageSeo({
       <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 px-8 text-center">
         <h2 class="text-[30px] tracking-tightTitle text-ink-900">Pruébalo con los datos de tu clínica</h2>
         <p class="text-[15.5px] leading-[1.6] text-ink-muted">
-          30 días de prueba sin tarjeta, con la migración incluida, o cuéntanos cómo trabajáis con {{ alternative.name }} y te enseñamos el cambio.
+          15 días de prueba sin tarjeta, con la migración incluida, o cuéntanos cómo trabajáis con {{ alternative.name }} y te enseñamos el cambio.
         </p>
         <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
           <a
