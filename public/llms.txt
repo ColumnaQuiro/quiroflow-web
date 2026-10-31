@@ -9,7 +9,7 @@ Datos clave:
 - Plataformas: web, app para iPhone, iPad y Android (para el equipo y para los pacientes).
 - Prueba: 15 días gratis, sin tarjeta. La migración de datos está incluida.
 - Datos: conforme al RGPD y la LOPDGDD, alojados en la Unión Europea. La clínica puede exportar todos sus datos en CSV y PDF cuando quiera, sin coste.
-- VeriFactu: cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Gratis en modo de pruebas hasta el 1 de enero de 2027; después, 7,50 €/mes por sede.
+- VeriFactu: cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Gratis en modo de pruebas; cada clínica elige el día en que pasa a envío real, y desde entonces cuesta 7,50 €/mes por sede.
 - Migración: desde PracticeHub (por API, incluyendo notas clínicas, planes de tratamiento, pagos y formularios), desde cualquier programa con exportación, o desde Excel/CSV.
 
 ## Precios (sin IVA, por profesional que pasa consulta; pacientes y usuarios de administración ilimitados)

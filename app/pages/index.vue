@@ -200,7 +200,10 @@ usePageSeo({
 
     <DataSection />
 
-    <TestimonialSection />
+    <!-- The testimonial section was removed on 31 Oct 2026: its only quote
+         came from Columna Quiro, the clinic of the company behind QuiroFlow,
+         without saying so. Bring a testimonial section back only with
+         quotes from independent clinics. -->
 
     <ComparisonSection />
 

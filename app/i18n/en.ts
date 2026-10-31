@@ -114,7 +114,7 @@ export const en: Messages = {
   verifactu: {
     eyebrow: 'VeriFactu',
     title: 'Invoices ready for VeriFactu, with no change of software in 2027',
-    description: "VeriFactu is Spain's new invoicing rule. Every invoice carries its QR code, is chained to the one before, and is sent to the Spanish tax agency (AEAT) by itself within a minute of being issued. Refunding a payment issues the corrective invoice, and each location keeps its own series. Send with your clinic's own certificate, or let QuiroFlow send on your behalf under a power of representation. Try it in test mode today; real sending starts by itself on 1 January 2027.",
+    description: "VeriFactu is Spain's new invoicing rule. Every invoice carries its QR code, is chained to the one before, and is sent to the Spanish tax agency (AEAT) by itself within a minute of being issued. Refunding a payment issues the corrective invoice, and each location keeps its own series. Send with your clinic's own certificate, or let QuiroFlow send on your behalf under a power of representation. Start in test mode and switch to real sending on the day you choose.",
     short: 'A QR on every invoice, chained records and automatic sending to the AEAT, with your certificate or ours.',
     visual: {
       header: 'INVOICE F2027-0142',
@@ -334,12 +334,6 @@ export const en: Messages = {
     note: 'Need the technical detail or the processor agreement before you decide? Write to us and we will send it without putting you through a demo.',
   },
 
-  testimonial: {
-    quote: 'We migrated from PracticeHub in a weekend. Now appointment confirmations arrive on their own over WhatsApp and we\'ve stopped chasing payments by hand — the calendar and the cash register finally match up without anyone having to check them.',
-    name: 'Léa · Columna Quiro',
-    location: 'Valencia, Spain',
-  },
-
   comparison: {
     badge: 'Compare',
     title: 'How QuiroFlow compares',
@@ -478,7 +472,7 @@ export const en: Messages = {
       },
       {
         q: 'Is QuiroFlow ready for VeriFactu?',
-        a: "Yes. Every invoice carries its QR code, is chained to the previous one and is sent to the AEAT automatically. You can send with your clinic's own certificate or authorise QuiroFlow to send on your behalf. Until 1 January 2027 it runs in test mode at no charge; from that day, real sending costs €7.50 a month per location.",
+        a: "Yes. Every invoice carries its QR code, is chained to the previous one and is sent to the AEAT automatically. You can send with your clinic's own certificate or authorise QuiroFlow to send on your behalf. You start in test mode at no charge and switch to real sending on the day you choose; from then it costs €7.50 a month per location.",
       },
       {
         q: 'Is there a mobile app?',

@@ -133,10 +133,11 @@ export const es = {
   verifactu: {
     eyebrow: 'VeriFactu',
     title: 'Facturas listas para VeriFactu, sin cambiar de programa en 2027',
-    // The real chain starts on 1 Jan 2027 by itself (the app's #443); before
-    // that a clinic can only run in test mode, which is why the copy says so
-    // instead of implying anything is being sent to the AEAT for real today.
-    description: 'Cada factura sale con su código QR, queda encadenada a la anterior y se envía sola a la AEAT al minuto de emitirla. Al devolver un pago se genera la rectificativa, y cada sede lleva su propia serie. Envía con el certificado de tu clínica o deja que QuiroFlow envíe por ti con un apoderamiento. Puedes probarlo hoy en modo de pruebas; el envío real empieza solo el 1 de enero de 2027.',
+    // Each clinic picks its own go-live date in Ajustes > VeriFactu (today at
+    // the earliest); until then it runs in test mode. 1 Jan 2027 is only the
+    // form's default, not a date the product imposes -- the copy used to say
+    // real sending "starts on 1 January 2027 by itself", which was wrong.
+    description: 'Cada factura sale con su código QR, queda encadenada a la anterior y se envía sola a la AEAT al minuto de emitirla. Al devolver un pago se genera la rectificativa, y cada sede lleva su propia serie. Envía con el certificado de tu clínica o deja que QuiroFlow envíe por ti con un apoderamiento. Empieza en modo de pruebas y pasa a envío real el día que tú elijas.',
     short: 'QR en cada factura, registros encadenados y envío automático a la AEAT, con tu certificado o el nuestro.',
     visual: {
       header: 'FACTURA F2027-0142',
@@ -371,12 +372,6 @@ export const es = {
     note: '¿Necesitas el detalle técnico o el contrato de encargado antes de decidir? Escríbenos y te lo mandamos sin pasar por una demo.',
   },
 
-  testimonial: {
-    quote: 'Migramos desde PracticeHub en un fin de semana. Ahora las confirmaciones de cita llegan solas por WhatsApp y dejamos de perseguir pagos a mano — la agenda y la caja por fin cuadran sin que nadie tenga que revisarlas.',
-    name: 'Léa · Columna Quiro',
-    location: 'Valencia, España',
-  },
-
   comparison: {
     badge: 'Comparar',
     title: 'Cómo se compara QuiroFlow',
@@ -522,7 +517,7 @@ export const es = {
       },
       {
         q: '¿QuiroFlow está preparado para VeriFactu?',
-        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Puedes enviar con el certificado de tu clínica o autorizar a QuiroFlow para que envíe por ti. Hasta el 1 de enero de 2027 funciona en modo de pruebas, sin coste; a partir de ese día, el envío real cuesta 7,50 € al mes por sede.',
+        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Puedes enviar con el certificado de tu clínica o autorizar a QuiroFlow para que envíe por ti. Empiezas en modo de pruebas, sin coste, y pasas a envío real el día que elijas; desde ese día cuesta 7,50 € al mes por sede.',
       },
       {
         q: '¿Hay app para el móvil?',
