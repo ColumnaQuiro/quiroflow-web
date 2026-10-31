@@ -29,6 +29,12 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Tells Bing and the other IndexNow engines which pages each production
+# deploy added, changed or removed. Local plugin, see plugins/indexnow/index.js;
+# it skips deploy previews and branch deploys on its own.
+[[plugins]]
+  package = "./plugins/indexnow"
+
 # /sitemap.xml is the path everyone assumes exists, and it may already be
 # submitted in Search Console -- but the prerendered file sitting there is an
 # HTML meta-refresh stub, not XML (see public/robots.txt for why). A real 301

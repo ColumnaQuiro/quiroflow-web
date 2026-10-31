@@ -66,10 +66,15 @@ export default defineNuxtConfig({
   // slash -- so every URL Google was told to index redirected to one that
   // pointed back at it. Only the homepage ever got indexed. A .html file is
   // served at the bare path with a 200.
+  //
+  // The per-locale sitemaps are listed explicitly because otherwise they only
+  // exist if the prerender crawler follows them out of sitemap_index.xml, and
+  // a local `netlify build` was seen skipping all three.
   nitro: {
     prerender: {
       ignore: ['/sitemap.xml'],
       autoSubfolderIndex: false,
+      routes: ['/__sitemap__/es-ES.xml', '/__sitemap__/en-US.xml', '/__sitemap__/fr-FR.xml'],
     },
   },
 
