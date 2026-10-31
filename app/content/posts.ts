@@ -1,4 +1,6 @@
 import type { Locale } from '~/composables/useLocale'
+import { CHOOSING_SOFTWARE } from '~/content/articles/choosing-software'
+import { REDUCING_NO_SHOWS } from '~/content/articles/reducing-no-shows'
 
 /**
  * The Resources index and article pages read from here. Deliberately a typed
@@ -31,8 +33,14 @@ export interface Post {
   body: Record<Locale, PostBlock[]>
 }
 
-export const posts: Post[] = []
+export const posts: Post[] = [CHOOSING_SOFTWARE, REDUCING_NO_SHOWS]
 
-export function findPost(slug: string) {
-  return posts.find(post => Object.values(post.slug).includes(slug))
+/**
+ * With a locale, only that locale's slug matches: /en/resources/<spanish slug>
+ * must 404, or every post exists at three URLs per language. Without one, any
+ * locale's slug finds the post (the header uses that to build the language
+ * switcher's links).
+ */
+export function findPost(slug: string, locale?: Locale) {
+  return posts.find(post => (locale ? post.slug[locale] === slug : Object.values(post.slug).includes(slug)))
 }

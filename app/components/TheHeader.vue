@@ -1,10 +1,26 @@
 <script setup lang="ts">
 import { SIGNUP_URL } from '~/utils/links'
+import { findPost } from '~/content/posts'
+import type { Locale } from '~/composables/useLocale'
 
 const { locale } = useLocale()
+const route = useRoute()
 const t = useT()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
+
+// The language switcher's target for each locale. A post has its own slug per
+// locale, and switchLocalePath() alone keeps the current one: the post page
+// does call useSetI18nParams, but this header renders before the page during
+// SSR, so it never sees them. The route already names the post, so the header
+// works the slug out itself. Spanish-only pages (/verifactu-clinicas,
+// /alternativa-a-*) have no other locale, and switchLocalePath() returns ''
+// for them: those go to that locale's homepage.
+function localeLink(l: Locale) {
+  const post = String(route.name).startsWith('recursos-slug') ? findPost(String(route.params.slug)) : undefined
+  if (post) return localePath({ name: 'recursos-slug', params: { slug: post.slug[l] } }, l)
+  return switchLocalePath(l) || localePath('index', l)
+}
 
 // Real hrefs (via localePath), not a hardcoded "/#slug" -- on an /en/* page
 // that would take the visitor to the Spanish homepage's section instead of
@@ -45,18 +61,15 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
                crawlable, reinforces the hreflang tags, and works with
                right-click/open-in-new-tab like a normal link should. -->
           <NuxtLink
-            :to="switchLocalePath('es')"
+            :to="localeLink('es')"
             class="rounded-full px-2 py-1 transition-colors md:px-2.5"
             :class="locale === 'es' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
             :aria-current="locale === 'es' ? 'true' : undefined"
           >
             ES
           </NuxtLink>
-          <!-- The `||` is for Spanish-only pages (/verifactu-clinicas), where
-               there is no English or French version to switch to and
-               switchLocalePath() returns an empty string. -->
           <NuxtLink
-            :to="switchLocalePath('en') || localePath('index', 'en')"
+            :to="localeLink('en')"
             class="rounded-full px-2 py-1 transition-colors md:px-2.5"
             :class="locale === 'en' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
             :aria-current="locale === 'en' ? 'true' : undefined"
@@ -64,7 +77,7 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
             EN
           </NuxtLink>
           <NuxtLink
-            :to="switchLocalePath('fr') || localePath('index', 'fr')"
+            :to="localeLink('fr')"
             class="rounded-full px-2 py-1 transition-colors md:px-2.5"
             :class="locale === 'fr' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
             :aria-current="locale === 'fr' ? 'true' : undefined"

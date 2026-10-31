@@ -104,7 +104,7 @@ export const en: Messages = {
 
   funcionalidades: {
     badge: 'Features',
-    title: 'What no other system on your shortlist does',
+    title: 'What gives you hours back every week',
     sectorTitle: 'Everything your clinic needs, in one place',
     subtitle: 'Everyone has a calendar, invoicing and forms. These three are the reason a clinic actually switches.',
     essentialsTitle: 'What the tax office and your patients ask of you',
@@ -345,6 +345,8 @@ export const en: Messages = {
     title: 'How QuiroFlow compares',
     subtitle: 'No exaggeration: this is what each platform shows publicly on its own website.',
     featureHeader: 'Feature',
+    yes: 'Yes',
+    notShown: 'Not shown publicly',
     rows: [
       'Full export of your data from your own account',
       'Assigns a free room or table automatically',

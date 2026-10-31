@@ -104,7 +104,7 @@ export const fr: Messages = {
 
   funcionalidades: {
     badge: 'Fonctionnalités',
-    title: "Ce qu'aucun autre logiciel de votre liste ne fait",
+    title: 'Ce qui vous rend des heures chaque semaine',
     sectorTitle: 'Tout ce dont votre cabinet a besoin, au même endroit',
     subtitle: "Agenda, facturation et formulaires, tout le monde les a. Ces trois-là sont la raison pour laquelle un cabinet change vraiment.",
     essentialsTitle: 'Ce que le fisc et vos patients attendent de vous',
@@ -345,6 +345,8 @@ export const fr: Messages = {
     title: 'Comment QuiroFlow se compare',
     subtitle: "Sans exagérer : voici ce que chaque plateforme affiche publiquement sur son propre site.",
     featureHeader: 'Fonctionnalité',
+    yes: 'Oui',
+    notShown: 'Non affiché publiquement',
     rows: [
       'Export complet de vos données depuis votre compte',
       'Attribue automatiquement une salle ou une table libre',

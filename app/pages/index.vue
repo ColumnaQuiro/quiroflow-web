@@ -14,20 +14,18 @@ const titles: LocalisedText = {
   en: 'QuiroFlow — Practice management software for clinics',
   fr: 'QuiroFlow — Logiciel de gestion pour cabinets',
 }
+// Kept near 155 characters so Google shows them whole; the previous ones ran
+// to 260-290 and were cut mid-list. The AI receptionist answers on WhatsApp
+// only -- Instagram shares the inbox but the receptionist does not reply there.
 const descriptions: LocalisedText = {
-  es: 'Toda tu clínica en una sola app: leads de tus anuncios, recepcionista con IA en WhatsApp e Instagram, agenda, análisis postural, bonos, facturación VeriFactu y app para pacientes. Para quiropráctica, fisioterapia, osteopatía y podología. 15 días de prueba, sin tarjeta.',
-  en: 'Your whole clinic in one app: leads from your ads, an AI receptionist on WhatsApp and Instagram, calendar, posture analysis, packages, VeriFactu invoicing and a patient app. For chiropractic, physiotherapy, osteopathy and podiatry clinics. 15-day trial, no card.',
-  fr: "Tout votre cabinet dans une seule app : prospects de vos publicités, réceptionniste IA sur WhatsApp et Instagram, agenda, analyse posturale, forfaits, facturation VeriFactu et app patient. Pour la chiropraxie, la kinésithérapie, l'ostéopathie et la podologie. 15 jours d'essai, sans carte.",
+  es: 'Agenda, recepcionista con IA en WhatsApp, bonos, facturación VeriFactu y app para pacientes. Para quiropráctica, fisioterapia, osteopatía y podología.',
+  en: 'Calendar, AI receptionist on WhatsApp, packages, VeriFactu invoicing and a patient app. For chiropractic, physiotherapy, osteopathy and podiatry clinics.',
+  fr: 'Agenda, réceptionniste IA sur WhatsApp, forfaits, facturation VeriFactu et app patient. Pour la chiropraxie, la kinésithérapie, l’ostéopathie et la podologie.',
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para clínicas de terapia manual',
   en: 'QuiroFlow — practice management software for manual therapy clinics',
   fr: 'QuiroFlow — logiciel de gestion pour cabinets de thérapie manuelle',
-}
-const jsonLdDescriptions: LocalisedText = {
-  es: 'Software de gestión para clínicas de quiropráctica, fisioterapia, osteopatía y podología: agenda con asignación automática de salas, historiales clínicos, facturación, bonos y recordatorios por WhatsApp.',
-  en: 'Practice management software for chiropractic, physiotherapy, osteopathy and podiatry clinics: scheduling with automatic room assignment, clinical records, billing, memberships, and WhatsApp reminders.',
-  fr: "Logiciel de gestion pour cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie : agenda avec attribution automatique des salles, dossiers cliniques, facturation, forfaits et rappels WhatsApp.",
 }
 
 const faqItems = useFaqItems('faq.items')
@@ -51,44 +49,14 @@ usePageSeo({
   image: '/og-image.png',
   imageAlts,
   jsonLdKey: 'ld-json-home',
-  // SoftwareApplication + Organization + FAQPage. The FAQ schema is honest
-  // here for the first time: every question below is really on the page as
-  // visible text, which is what Google requires for the rich result.
-  jsonLd: ({ url, locale }) => ({
+  // Organization, WebSite and the SoftwareApplication with its offers come
+  // from usePageSeo on every page; this adds the page itself and its FAQ.
+  // The FAQ schema is honest: every question below is really on the page as
+  // visible text.
+  jsonLd: ({ url, locale, description }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': 'https://quiroflow.com/#organization',
-        name: 'QuiroFlow',
-        legalName: 'COLUMNAQUIRO S.L.',
-        url: 'https://quiroflow.com/',
-        logo: 'https://quiroflow.com/icon-512.png',
-        email: 'hola@quiroflow.com',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Calle dels Vivons, 29',
-          postalCode: '46006',
-          addressLocality: 'Valencia',
-          addressCountry: 'ES',
-        },
-      },
-      {
-        '@type': 'SoftwareApplication',
-        name: 'QuiroFlow',
-        url,
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web, iOS, Android',
-        description: jsonLdDescriptions[locale],
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-        offers: {
-          '@type': 'Offer',
-          // The Solo tier's monthly price -- keep in step with PricingSection's TIERS.
-          price: '45',
-          priceCurrency: 'EUR',
-          url: 'https://quiroflow.com/#precios',
-        },
-      },
+      webPageJsonLd({ url, name: titles[locale], description, locale }),
       faqJsonLd(faqItems.value),
     ],
   }),
