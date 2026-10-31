@@ -20,9 +20,9 @@ const titles: LocalisedText = {
   fr: 'Logiciel de gestion pour ostéopathes | QuiroFlow',
 }
 const descriptions: LocalisedText = {
-  es: 'Software para osteópatas: agenda con sala asignada, anamnesis y diagrama corporal que el paciente rellena desde el móvil, notas de sesión con pruebas adjuntas, revisiones que no se olvidan y facturación VeriFactu.',
-  en: 'Software for osteopaths: a calendar with automatic room assignment, a case history and body chart the patient fills in on their phone, session notes with scans attached, and recalls that do not slip.',
-  fr: "Logiciel pour ostéopathes : agenda avec attribution automatique des salles, anamnèse et schéma corporel remplis par le patient sur son téléphone, notes de séance avec examens joints et rappels de suivi.",
+  es: 'Software para osteópatas: sala asignada sola, anamnesis y diagrama corporal desde el móvil del paciente, notas con pruebas adjuntas y facturación VeriFactu.',
+  en: 'Software for osteopaths: automatic room assignment, a case history and body chart patients fill in on their phone, and session notes with scans attached.',
+  fr: "Logiciel pour ostéopathes : salles attribuées automatiquement, anamnèse et schéma corporel remplis sur mobile, notes de séance avec examens joints.",
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para centros de osteopatía',

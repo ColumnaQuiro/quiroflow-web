@@ -18,7 +18,7 @@ const titles: LocalisedText = {
 const descriptions: LocalisedText = {
   es: 'Guías prácticas sobre agenda, retención de pacientes, bonos y protección de datos en clínicas de quiropráctica, fisioterapia y osteopatía.',
   en: 'Practical guides on scheduling, patient retention, packages and data protection in chiropractic, physiotherapy and osteopathy clinics.',
-  fr: "Guides pratiques sur l'agenda, la fidélisation des patients, les forfaits et la protection des données dans les cabinets de chiropraxie, kinésithérapie et ostéopathie.",
+  fr: "Guides pratiques sur l'agenda, la fidélisation des patients, les forfaits et la protection des données pour les cabinets de chiropraxie et de kinésithérapie.",
 }
 
 const hasPosts = computed(() => posts.length > 0)

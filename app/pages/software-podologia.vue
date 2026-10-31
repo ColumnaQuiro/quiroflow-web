@@ -19,9 +19,9 @@ const titles: LocalisedText = {
   fr: 'Logiciel de gestion pour podologues | QuiroFlow',
 }
 const descriptions: LocalisedText = {
-  es: 'Software para podólogos: agenda por gabinete, fotos e informes en la ficha del paciente, venta de productos con stock, revisiones periódicas por WhatsApp, reserva online y facturación VeriFactu.',
-  en: 'Software for podiatrists: a calendar by treatment room, photos and reports on the patient record, product sales with stock, WhatsApp check-up reminders and online booking.',
-  fr: 'Logiciel pour podologues : agenda par cabinet, photos et comptes rendus dans le dossier patient, vente de produits avec stock, rappels de contrôle par WhatsApp et réservation en ligne.',
+  es: 'Software para podólogos: agenda por gabinete, fotos e informes en la ficha, venta de productos con stock, revisiones por WhatsApp y facturación VeriFactu.',
+  en: 'Software for podiatrists: a calendar by treatment room, photos and reports on the record, product sales with stock, WhatsApp check-ups and online booking.',
+  fr: 'Logiciel pour podologues : agenda par cabinet, photos et comptes rendus au dossier, vente de produits avec stock, rappels WhatsApp et réservation en ligne.',
 }
 const imageAlts: LocalisedText = {
   es: 'QuiroFlow — software de gestión para clínicas de podología',

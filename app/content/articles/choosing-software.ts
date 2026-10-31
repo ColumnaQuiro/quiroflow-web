@@ -17,9 +17,9 @@ export const CHOOSING_SOFTWARE: Post = {
     fr: 'Choisir un logiciel de gestion pour votre cabinet : 10 questions à poser avant de décider',
   },
   description: {
-    es: 'Las preguntas que conviene hacer a cualquier programa de gestión para clínicas de fisioterapia, quiropráctica, osteopatía o podología antes de cambiar: datos, migración, VeriFactu, agenda, bonos, WhatsApp, RGPD y precio real.',
-    en: 'The questions worth asking any practice management software for physiotherapy, chiropractic, osteopathy or podiatry clinics before you switch: data, migration, scheduling, packages, reminders, GDPR and the real price.',
-    fr: 'Les questions à poser à tout logiciel de gestion pour cabinets de kinésithérapie, chiropraxie, ostéopathie ou podologie avant de changer : données, migration, agenda, forfaits, rappels, RGPD et prix réel.',
+    es: 'Las preguntas que conviene hacer a un programa de gestión para clínicas antes de cambiar: datos, migración, VeriFactu, agenda, bonos, WhatsApp, RGPD y precio.',
+    en: 'The questions to ask any clinic management software before you switch: data, migration, scheduling, packages, reminders, GDPR and the real price.',
+    fr: 'Les questions à poser à un logiciel de gestion de cabinet avant de changer : données, migration, agenda, forfaits, rappels, RGPD et prix réel.',
   },
   body: {
     es: [
