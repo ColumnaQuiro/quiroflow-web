@@ -21,10 +21,10 @@ export const fr: Messages = {
     titleLine1: 'Tout votre cabinet dans une seule app.',
     titleLine2: 'Du premier message au bilan de suivi.',
     description: "Les prospects de vos publicités, la réceptionniste IA qui répond et réserve, l'agenda, l'analyse posturale, les plans de soins, les forfaits, les factures VeriFactu et l'app de vos patients. Tout partage le même dossier patient : rien à synchroniser, rien ne se perd en route. Pour les cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie.",
-    ctaPrimary: "Démarrer l'essai de 30 jours",
+    ctaPrimary: "Démarrer l'essai de 15 jours",
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir les fonctionnalités',
-    proof: ['30 jours d\'essai', 'Sans carte bancaire', 'Migration incluse'],
+    proof: ['15 jours d\'essai', 'Sans carte bancaire', 'Migration incluse'],
     // The five steps of a patient's journey, which name the One app section below.
     verbs: ['Attirer', 'Répondre', 'Soigner', 'Encaisser', 'Fidéliser'],
   },
@@ -379,13 +379,13 @@ export const fr: Messages = {
     extraPro: 'Praticien supplémentaire : 19 €/mois',
     growthAddOn: 'Growth (acquisition, réceptionniste IA et réputation) : +39 €/mois',
     receptionistAddOn: 'Seulement la réceptionniste IA : +19 €/mois',
-    cta: "Démarrer l'essai de 30 jours",
+    cta: "Démarrer l'essai de 15 jours",
     ctaSecondary: "Parler à l'équipe",
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
     verifactuNote: "VeriFactu : 7,50 €/mois par site, uniquement à partir du jour où vous commencez à envoyer à l'AEAT.",
     receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et dans les formules Practice et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
-    ctaNote: "30 jours d'essai. Sans carte bancaire. Migration incluse.",
+    ctaNote: "15 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
       body: "Une annulation qui n'est jamais recomblée, à 45 € la séance, représente environ 180 € par mois. Le forfait Practice coûte 99 €. La nouvelle proposition automatique du créneau et l'alerte de retard existent précisément pour combler ce trou.",
@@ -464,7 +464,7 @@ export const fr: Messages = {
         a: "Oui. QuiroFlow est utilisé dans des cabinets de chiropraxie, kinésithérapie, ostéopathie et podologie. Les types de séance, les salles, les formulaires et les plans de traitement, c'est vous qui les définissez : l'outil s'adapte à votre façon de travailler au lieu de vous imposer un flux.",
       },
       {
-        q: "Que comprend l'essai de 30 jours ?",
+        q: "Que comprend l'essai de 15 jours ?",
         a: "Le produit entier, sans restriction et sans carte bancaire. Si vous décidez de rester pendant l'essai, nous migrons vos données avant que vous ne commenciez à payer.",
       },
       {
@@ -489,8 +489,8 @@ export const fr: Messages = {
 
   finalCta: {
     title: 'Changez votre façon de gérer votre cabinet',
-    description: "Ouvrez un essai de 30 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment QuiroFlow s'intègre.",
-    cta: "Démarrer l'essai de 30 jours",
+    description: "Ouvrez un essai de 15 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment QuiroFlow s'intègre.",
+    cta: "Démarrer l'essai de 15 jours",
     ctaSecondary: 'Réserver une démo',
   },
 
@@ -513,7 +513,7 @@ export const fr: Messages = {
     badge: 'Chiropraxie',
     title: 'Logiciel de gestion pour cabinets de chiropraxie',
     description: "Un agenda avec flux de cabinet et attribution automatique des salles, des plans de soins qui vous alertent quand un patient prend du retard, des forfaits avec prélèvement récurrent, un dossier clinique numérique et des rappels WhatsApp. Pour les chiropracteurs seuls comme pour les centres multi-sites.",
-    ctaPrimary: "Démarrer l'essai de 30 jours",
+    ctaPrimary: "Démarrer l'essai de 15 jours",
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir comment ça marche',
     features: {
@@ -593,8 +593,8 @@ export const fr: Messages = {
     },
     cta: {
       title: 'Voyez QuiroFlow avec les données de votre cabinet',
-      description: "Ouvrez un essai de 30 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de chiropraxie.",
-      button: "Démarrer l'essai de 30 jours",
+      description: "Ouvrez un essai de 15 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de chiropraxie.",
+      button: "Démarrer l'essai de 15 jours",
       buttonSecondary: 'Réserver une démo',
     },
     mockups: {
@@ -607,7 +607,7 @@ export const fr: Messages = {
     badge: 'Kinésithérapie',
     title: 'Logiciel de gestion pour cabinets de kinésithérapie',
     description: "Un agenda qui attribue automatiquement la table ou le box libre, des forfaits de séances qui se décomptent seuls, un dossier clinique numérique et des rappels WhatsApp. Une seule plateforme, que vous exerciez seul ou sur plusieurs sites.",
-    ctaPrimary: "Démarrer l'essai de 30 jours",
+    ctaPrimary: "Démarrer l'essai de 15 jours",
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir comment ça marche',
     features: {
@@ -691,8 +691,8 @@ export const fr: Messages = {
     },
     cta: {
       title: 'Voyez QuiroFlow avec les données de votre cabinet',
-      description: "Ouvrez un essai de 30 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de kinésithérapie.",
-      button: "Démarrer l'essai de 30 jours",
+      description: "Ouvrez un essai de 15 jours sans carte bancaire, ou dites-nous comment vous travaillez et nous vous montrons comment cela s'intègre à votre cabinet de kinésithérapie.",
+      button: "Démarrer l'essai de 15 jours",
       buttonSecondary: 'Réserver une démo',
     },
     mockups: {
@@ -708,7 +708,7 @@ export const fr: Messages = {
     badge: 'Ostéopathie',
     title: 'Logiciel de gestion pour cabinets d\'ostéopathie',
     description: 'Un agenda qui attribue seul la salle libre, une anamnèse et un schéma corporel que le patient remplit sur son téléphone avant la première séance, des notes pour chaque séance avec leurs examens joints, et des rappels de suivi qui ne s\'oublient pas. Pour l\'ostéopathe qui exerce seul comme pour les cabinets à plusieurs sites.',
-    ctaPrimary: 'Essai gratuit de 30 jours',
+    ctaPrimary: 'Essai gratuit de 15 jours',
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir comment ça marche',
     features: {
@@ -779,8 +779,8 @@ export const fr: Messages = {
     },
     cta: {
       title: 'Découvrez QuiroFlow avec les données de votre cabinet',
-      description: 'Ouvrez un essai de 30 jours sans carte, ou dites-nous comment vous travaillez et nous vous montrons comment il s\'adapte à votre cabinet d\'ostéopathie.',
-      button: 'Essai gratuit de 30 jours',
+      description: 'Ouvrez un essai de 15 jours sans carte, ou dites-nous comment vous travaillez et nous vous montrons comment il s\'adapte à votre cabinet d\'ostéopathie.',
+      button: 'Essai gratuit de 15 jours',
       buttonSecondary: 'Réserver une démo',
     },
     mockups: {
@@ -793,7 +793,7 @@ export const fr: Messages = {
     badge: 'Podologie',
     title: 'Logiciel de gestion pour cabinets de podologie',
     description: 'Un agenda par cabinet avec des soins courts et des bilans longs le même jour, photos et comptes rendus dans le dossier du patient, vente de produits avec leur stock, et des contrôles réguliers qui ne s\'oublient pas. Pour le podologue qui exerce seul comme pour les cabinets à plusieurs sites.',
-    ctaPrimary: 'Essai gratuit de 30 jours',
+    ctaPrimary: 'Essai gratuit de 15 jours',
     ctaSecondary: 'Réserver une démo',
     seeFeatures: 'Voir comment ça marche',
     features: {
@@ -872,8 +872,8 @@ export const fr: Messages = {
     },
     cta: {
       title: 'Découvrez QuiroFlow avec les données de votre cabinet',
-      description: 'Ouvrez un essai de 30 jours sans carte, ou dites-nous comment vous travaillez et nous vous montrons comment il s\'adapte à votre cabinet de podologie.',
-      button: 'Essai gratuit de 30 jours',
+      description: 'Ouvrez un essai de 15 jours sans carte, ou dites-nous comment vous travaillez et nous vous montrons comment il s\'adapte à votre cabinet de podologie.',
+      button: 'Essai gratuit de 15 jours',
       buttonSecondary: 'Réserver une démo',
     },
     mockups: {
@@ -888,7 +888,7 @@ export const fr: Messages = {
     badge: 'Automatisations',
     title: "Votre cabinet repond, rappelle et recupere les patients tout seul",
     description: "La receptionniste IA repond a votre WhatsApp et reserve le rendez-vous, les rappels se confirment en un geste, un creneau annule est repropose tout seul, et vous etes prevenu quand un patient prend du retard sur son plan. Vous etes a la table, pas sur votre telephone.",
-    ctaPrimary: "Essai de 30 jours",
+    ctaPrimary: "Essai de 15 jours",
     ctaSecondary: "Reserver une demo",
     seeFeatures: "Voir comment ca marche",
     sectionTitle: "Les quatre choses que vous cessez de faire a la main",
@@ -937,8 +937,8 @@ export const fr: Messages = {
     },
     cta: {
       title: "Essayez-le sur votre propre agenda",
-      description: "30 jours, sans carte, migration comprise. Si cela ne convient pas, vous n'avez rien perdu.",
-      button: "Essai de 30 jours",
+      description: "15 jours, sans carte, migration comprise. Si cela ne convient pas, vous n'avez rien perdu.",
+      button: "Essai de 15 jours",
       buttonSecondary: "Reserver une demo",
     },
   },

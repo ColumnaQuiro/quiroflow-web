@@ -21,10 +21,10 @@ export const en: Messages = {
     titleLine1: 'Your whole clinic in one app.',
     titleLine2: 'From the first message to the re-exam.',
     description: "The leads from your ads, the AI receptionist that answers and books, the calendar, posture analysis, care plans, packages, VeriFactu invoices and your patients' app. It all shares one patient record, so nothing needs syncing and nothing gets lost on the way. For chiropractic, physiotherapy, osteopathy and podiatry clinics.",
-    ctaPrimary: 'Start 30-day trial',
+    ctaPrimary: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See features',
-    proof: ['30-day trial', 'No card required', 'Migration included'],
+    proof: ['15-day trial', 'No card required', 'Migration included'],
     // The five steps of a patient's journey, which name the One app section below.
     verbs: ['Attract', 'Respond', 'Treat', 'Get paid', 'Retain'],
   },
@@ -379,13 +379,13 @@ export const en: Messages = {
     extraPro: 'Extra practitioner: €19/mo',
     growthAddOn: 'Growth (lead capture, AI receptionist and reputation): +€39/mo',
     receptionistAddOn: 'Just the AI receptionist: +€19/mo',
-    cta: 'Start 30-day trial',
+    cta: 'Start 15-day trial',
     ctaSecondary: 'Talk to the team',
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
     verifactuNote: 'VeriFactu: €7.50/mo per location, only from the day you start sending to the AEAT.',
     receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and in the Practice and Clinic plans. 1,000 replies a month included; each further 1,000 is €15.',
-    ctaNote: '30-day trial. No card required. Migration included.',
+    ctaNote: '15-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
       body: 'A cancellation that never gets refilled, at €45 a session, is roughly €180 a month. The Practice plan is €99. The automatic slot re-offer and the behind-schedule alert exist precisely to close that gap.',
@@ -464,7 +464,7 @@ export const en: Messages = {
         a: 'Yes. QuiroFlow is used in chiropractic, physiotherapy, osteopathy and podiatry clinics. You define the session types, the rooms, the forms and the treatment plans, so the tool adapts to how you work instead of imposing a flow on you.',
       },
       {
-        q: 'What does the 30-day trial include?',
+        q: 'What does the 15-day trial include?',
         a: 'The whole product, nothing held back and no card required. If you decide to stay during the trial, we migrate your data before you start paying.',
       },
       {
@@ -489,8 +489,8 @@ export const en: Messages = {
 
   finalCta: {
     title: 'Start changing how you run your clinic',
-    description: 'Open a 30-day trial with no card, or tell us how you work and we will show you how QuiroFlow fits.',
-    cta: 'Start 30-day trial',
+    description: 'Open a 15-day trial with no card, or tell us how you work and we will show you how QuiroFlow fits.',
+    cta: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
   },
 
@@ -513,7 +513,7 @@ export const en: Messages = {
     badge: 'Chiropractic',
     title: 'Practice management software for chiropractic clinics',
     description: 'A calendar with practice flow and automatic room assignment, care plans that alert you when a patient falls behind, packages with recurring billing, digital clinical records and WhatsApp reminders. For solo chiropractors and for multi-site practices.',
-    ctaPrimary: 'Start 30-day trial',
+    ctaPrimary: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See how it works',
     features: {
@@ -593,8 +593,8 @@ export const en: Messages = {
     },
     cta: {
       title: 'See QuiroFlow with your own practice\'s data',
-      description: 'Open a 30-day trial with no card, or tell us how you work and we will show you how it fits your chiropractic clinic.',
-      button: 'Start 30-day trial',
+      description: 'Open a 15-day trial with no card, or tell us how you work and we will show you how it fits your chiropractic clinic.',
+      button: 'Start 15-day trial',
       buttonSecondary: 'Book a demo',
     },
     mockups: {
@@ -607,7 +607,7 @@ export const en: Messages = {
     badge: 'Physiotherapy',
     title: 'Practice management software for physiotherapy clinics',
     description: 'A calendar that assigns the free treatment room or table on its own, session packages that count themselves down, digital clinical records, and WhatsApp reminders. One platform, whether you practise alone or run several locations.',
-    ctaPrimary: 'Start 30-day trial',
+    ctaPrimary: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See how it works',
     features: {
@@ -691,8 +691,8 @@ export const en: Messages = {
     },
     cta: {
       title: 'See QuiroFlow with your own clinic\'s data',
-      description: 'Open a 30-day trial with no card, or tell us how you work and we will show you how it fits your physiotherapy practice.',
-      button: 'Start 30-day trial',
+      description: 'Open a 15-day trial with no card, or tell us how you work and we will show you how it fits your physiotherapy practice.',
+      button: 'Start 15-day trial',
       buttonSecondary: 'Book a demo',
     },
     mockups: {
@@ -708,7 +708,7 @@ export const en: Messages = {
     badge: 'Osteopathy',
     title: 'Practice management software for osteopathy clinics',
     description: 'A calendar that assigns the free treatment room on its own, a case history and body chart the patient fills in on their phone before the first visit, notes for every session with their scans attached, and recalls that do not slip. For the osteopath who works alone and for clinics with several locations.',
-    ctaPrimary: 'Start 30-day trial',
+    ctaPrimary: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See how it works',
     features: {
@@ -779,8 +779,8 @@ export const en: Messages = {
     },
     cta: {
       title: 'See QuiroFlow with your own clinic\'s data',
-      description: 'Start a 30-day trial with no card, or tell us how you work and we will show you how it fits your osteopathy clinic.',
-      button: 'Start 30-day trial',
+      description: 'Start a 15-day trial with no card, or tell us how you work and we will show you how it fits your osteopathy clinic.',
+      button: 'Start 15-day trial',
       buttonSecondary: 'Book a demo',
     },
     mockups: {
@@ -793,7 +793,7 @@ export const en: Messages = {
     badge: 'Podiatry',
     title: 'Practice management software for podiatry clinics',
     description: 'A calendar by treatment room with short routine visits and long assessments on the same day, photos and reports on the patient record, product sales with stock, and regular check-ups that do not slip. For the podiatrist who works alone and for clinics with several locations.',
-    ctaPrimary: 'Start 30-day trial',
+    ctaPrimary: 'Start 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See how it works',
     features: {
@@ -872,8 +872,8 @@ export const en: Messages = {
     },
     cta: {
       title: 'See QuiroFlow with your own clinic\'s data',
-      description: 'Start a 30-day trial with no card, or tell us how you work and we will show you how it fits your podiatry clinic.',
-      button: 'Start 30-day trial',
+      description: 'Start a 15-day trial with no card, or tell us how you work and we will show you how it fits your podiatry clinic.',
+      button: 'Start 15-day trial',
       buttonSecondary: 'Book a demo',
     },
     mockups: {
@@ -888,7 +888,7 @@ export const en: Messages = {
     badge: 'Automation',
     title: 'Your clinic answers, reminds and wins patients back on its own',
     description: 'The AI receptionist answers your WhatsApp and books the appointment, reminders are confirmed with one tap, a cancelled slot is re-offered by itself, and you get told when a patient falls behind their plan. You are at the table, not on your phone.',
-    ctaPrimary: 'Start a 30-day trial',
+    ctaPrimary: 'Start a 15-day trial',
     ctaSecondary: 'Book a demo',
     seeFeatures: 'See how it works',
     sectionTitle: 'The four things you stop doing by hand',
@@ -937,8 +937,8 @@ export const en: Messages = {
     },
     cta: {
       title: 'Try it against your own calendar',
-      description: '30 days, no card, migration included. If it does not fit, you have lost nothing.',
-      button: 'Start a 30-day trial',
+      description: '15 days, no card, migration included. If it does not fit, you have lost nothing.',
+      button: 'Start a 15-day trial',
       buttonSecondary: 'Book a demo',
     },
   },

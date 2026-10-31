@@ -222,7 +222,7 @@ usePageSeo({
       <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 px-8 text-center">
         <h2 class="text-[30px] tracking-tightTitle text-ink-900">Llega a 2027 sin cambiar de programa a última hora</h2>
         <p class="text-[15.5px] leading-[1.6] text-ink-muted">
-          Prueba QuiroFlow 30 días sin tarjeta, con VERI*FACTU en modo de pruebas desde el primer día, o cuéntanos cómo facturáis hoy y te enseñamos el paso.
+          Prueba QuiroFlow 15 días sin tarjeta, con VERI*FACTU en modo de pruebas desde el primer día, o cuéntanos cómo facturáis hoy y te enseñamos el paso.
         </p>
         <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
           <a

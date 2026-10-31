@@ -31,12 +31,12 @@ export const es = {
     titleLine1: 'Toda tu clínica en una sola app.',
     titleLine2: 'Del primer mensaje a la revisión.',
     description: 'Los leads de tus anuncios, la recepcionista con IA que contesta y reserva, la agenda, el análisis postural, los planes de cuidado, los bonos, las facturas VeriFactu y la app de tus pacientes. Todo comparte la misma ficha, así que nada se sincroniza y nada se pierde por el camino. Para clínicas de quiropráctica, fisioterapia, osteopatía y podología.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver funcionalidades',
     // The risk-reversal used to be buried in the small print under Pricing,
     // which is the one place a visitor who has not scrolled will never see it.
-    proof: ['30 días de prueba', 'Sin tarjeta', 'Migración incluida'],
+    proof: ['15 días de prueba', 'Sin tarjeta', 'Migración incluida'],
     // The five steps of a patient's journey, which name the One app section below.
     verbs: ['Captar', 'Atender', 'Tratar', 'Cobrar', 'Fidelizar'],
   },
@@ -417,7 +417,7 @@ export const es = {
     // The trial button now opens the real sign-up at app.quiroflow.com, and
     // the call has its own separate button. Before, both promises were on one
     // button that only ever led to a calendar.
-    cta: 'Empezar prueba de 30 días',
+    cta: 'Empezar prueba de 15 días',
     ctaSecondary: 'Hablar con el equipo',
     exVat: 'sin IVA',
     vatNote: 'Precios sin IVA. Se añade un 21% en la factura.',
@@ -425,7 +425,7 @@ export const es = {
     // and only from the day a clinic goes live -- test mode is free.
     verifactuNote: 'VeriFactu: 7,50 €/mes por sede, solo desde el día en que empiezas a enviar a la AEAT.',
     receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en los planes Practice y Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
-    ctaNote: '30 días de prueba. Sin tarjeta. Migración incluida.',
+    ctaNote: '15 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
       body: 'Una cancelación que no se vuelve a llenar, a 45 € la sesión, son unos 180 € al mes. El plan Practice cuesta 99 €. La reoferta automática del hueco y el aviso de paciente retrasado existen justamente para tapar ese agujero.',
@@ -504,7 +504,7 @@ export const es = {
         a: 'Sí. QuiroFlow se usa en clínicas de quiropráctica, fisioterapia, osteopatía y podología. Los tipos de sesión, las salas, los formularios y los planes de tratamiento los defines tú, así que la herramienta se adapta a cómo trabajas en lugar de imponerte un flujo.',
       },
       {
-        q: '¿Qué incluye la prueba de 30 días?',
+        q: '¿Qué incluye la prueba de 15 días?',
         a: 'El producto entero, sin recortes y sin tarjeta. Si durante la prueba decides quedarte, migramos tus datos antes de que empieces a pagar.',
       },
       {
@@ -529,8 +529,8 @@ export const es = {
 
   finalCta: {
     title: 'Empieza a cambiar cómo gestionas tu clínica',
-    description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja QuiroFlow.',
-    cta: 'Empezar prueba de 30 días',
+    description: 'Abre una prueba de 15 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja QuiroFlow.',
+    cta: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
   },
 
@@ -553,7 +553,7 @@ export const es = {
     badge: 'Quiropráctica',
     title: 'Software de gestión para clínicas de quiropráctica',
     description: 'Agenda con flujo de consulta y sala asignada automáticamente, planes de cuidado con aviso cuando un paciente se retrasa, bonos con cobro recurrente, historial clínico digital y recordatorios por WhatsApp. Para consultas de un quiropráctico y para centros de varias sedes.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver cómo funciona',
     features: {
@@ -633,8 +633,8 @@ export const es = {
     },
     cta: {
       title: 'Ve QuiroFlow con los datos de tu consulta',
-      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu clínica quiropráctica.',
-      button: 'Empezar prueba de 30 días',
+      description: 'Abre una prueba de 15 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu clínica quiropráctica.',
+      button: 'Empezar prueba de 15 días',
       buttonSecondary: 'Reservar una demo',
     },
     mockups: {
@@ -647,7 +647,7 @@ export const es = {
     badge: 'Fisioterapia',
     title: 'Software de gestión para clínicas de fisioterapia',
     description: 'Agenda con asignación automática de camilla o box, bonos de sesiones que se descuentan solos, historia clínica digital y recordatorios por WhatsApp. Todo en una sola plataforma, para consultas de un fisioterapeuta y para centros de varias sedes.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver cómo funciona',
     features: {
@@ -731,8 +731,8 @@ export const es = {
     },
     cta: {
       title: 'Ve QuiroFlow con los datos de tu clínica',
-      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de fisioterapia.',
-      button: 'Empezar prueba de 30 días',
+      description: 'Abre una prueba de 15 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de fisioterapia.',
+      button: 'Empezar prueba de 15 días',
       buttonSecondary: 'Reservar una demo',
     },
     mockups: {
@@ -748,7 +748,7 @@ export const es = {
     badge: 'Osteopatía',
     title: 'Software de gestión para centros de osteopatía',
     description: 'Agenda con sala asignada automáticamente, anamnesis y diagrama corporal que el paciente rellena desde el móvil antes de la primera visita, notas de cada sesión con sus pruebas adjuntas y revisiones que no se olvidan. Para el osteópata que trabaja solo y para centros de varias sedes.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver cómo funciona',
     features: {
@@ -823,8 +823,8 @@ export const es = {
     },
     cta: {
       title: 'Ve QuiroFlow con los datos de tu consulta',
-      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de osteopatía.',
-      button: 'Empezar prueba de 30 días',
+      description: 'Abre una prueba de 15 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu centro de osteopatía.',
+      button: 'Empezar prueba de 15 días',
       buttonSecondary: 'Reservar una demo',
     },
     mockups: {
@@ -839,7 +839,7 @@ export const es = {
     badge: 'Podología',
     title: 'Software de gestión para clínicas de podología',
     description: 'Agenda por gabinete con quiropodias cortas y estudios largos en el mismo día, fotos e informes en la ficha del paciente, venta de productos con su stock y revisiones periódicas que no se olvidan. Para la consulta de un podólogo y para clínicas de varias sedes.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver cómo funciona',
     features: {
@@ -918,8 +918,8 @@ export const es = {
     },
     cta: {
       title: 'Ve QuiroFlow con los datos de tu clínica',
-      description: 'Abre una prueba de 30 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu clínica de podología.',
-      button: 'Empezar prueba de 30 días',
+      description: 'Abre una prueba de 15 días sin tarjeta, o cuéntanos cómo trabajáis y te enseñamos cómo encaja en tu clínica de podología.',
+      button: 'Empezar prueba de 15 días',
       buttonSecondary: 'Reservar una demo',
     },
     mockups: {
@@ -935,7 +935,7 @@ export const es = {
     badge: 'Automatizaciones',
     title: 'Tu clínica contesta, recuerda y recupera pacientes sola',
     description: 'La recepcionista con IA responde tu WhatsApp y reserva la cita, los recordatorios se confirman en un toque, el hueco que se cancela se reofrece solo y te avisa cuando un paciente se retrasa en su plan. Tú estás en la camilla, no en el móvil.',
-    ctaPrimary: 'Empezar prueba de 30 días',
+    ctaPrimary: 'Empezar prueba de 15 días',
     ctaSecondary: 'Reservar una demo',
     seeFeatures: 'Ver cómo funciona',
     sectionTitle: 'Las cuatro cosas que dejas de hacer a mano',
@@ -984,8 +984,8 @@ export const es = {
     },
     cta: {
       title: 'Pruébalo con tu propia agenda',
-      description: '30 días, sin tarjeta y con la migración incluida. Si no te encaja, no has perdido nada.',
-      button: 'Empezar prueba de 30 días',
+      description: '15 días, sin tarjeta y con la migración incluida. Si no te encaja, no has perdido nada.',
+      button: 'Empezar prueba de 15 días',
       buttonSecondary: 'Reservar una demo',
     },
   },
