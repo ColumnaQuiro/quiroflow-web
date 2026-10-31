@@ -809,6 +809,7 @@ export const es = {
     privacy: 'Política de privacidad',
     terms: 'Aviso legal',
     verifactu: 'Declaración responsable VERI*FACTU',
+    verifactuGuide: 'VERI*FACTU para clínicas',
     cookies: 'Preferencias de cookies',
   },
 

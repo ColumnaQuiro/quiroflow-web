@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const t = useT()
+const { locale } = useLocale()
 const localePath = useLocalePath()
 const { reopen } = useConsent()
 
@@ -43,6 +44,9 @@ const DECLARATION_URL = 'https://app.quiroflow.com/legal/declaracion-responsable
             <a :href="homeAnchor('precios')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.pricing') }}</a>
             <a :href="homeAnchor('comparativa')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.comparison') }}</a>
             <a :href="homeAnchor('migracion')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.migrate') }}</a>
+            <!-- Spanish only, like the page: there is no /en or /fr version
+                 for localePath to resolve to. -->
+            <NuxtLink v-if="locale === 'es'" :to="localePath('verifactu-clinicas')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.verifactuGuide') }}</NuxtLink>
           </nav>
 
           <nav class="flex flex-col gap-2.5">

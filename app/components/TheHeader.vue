@@ -52,8 +52,11 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
           >
             ES
           </NuxtLink>
+          <!-- The `||` is for Spanish-only pages (/verifactu-clinicas), where
+               there is no English or French version to switch to and
+               switchLocalePath() returns an empty string. -->
           <NuxtLink
-            :to="switchLocalePath('en')"
+            :to="switchLocalePath('en') || localePath('index', 'en')"
             class="rounded-full px-2 py-1 transition-colors md:px-2.5"
             :class="locale === 'en' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
             :aria-current="locale === 'en' ? 'true' : undefined"
@@ -61,7 +64,7 @@ const homeAnchor = (hash: string) => `${localePath('index')}#${hash}`
             EN
           </NuxtLink>
           <NuxtLink
-            :to="switchLocalePath('fr')"
+            :to="switchLocalePath('fr') || localePath('index', 'fr')"
             class="rounded-full px-2 py-1 transition-colors md:px-2.5"
             :class="locale === 'fr' ? 'bg-white text-ink-900 shadow-card' : 'text-ink-faint hover:text-ink-600'"
             :aria-current="locale === 'fr' ? 'true' : undefined"
