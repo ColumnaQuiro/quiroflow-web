@@ -3,7 +3,7 @@
 export const BOOKING_URL = 'https://calendar.app.google/mGCPXToAJcfgv6LR6'
 
 // Self-service sign-up in the product itself. Every button that promises a
-// 30-day trial points here; every button that promises a conversation points
+// 15-day trial points here; every button that promises a conversation points
 // at BOOKING_URL. The two used to share one button labelled "Empezar prueba
 // de 30 días" that opened the demo calendar -- which burned exactly the
 // self-serve visitor who is cheapest to acquire.
