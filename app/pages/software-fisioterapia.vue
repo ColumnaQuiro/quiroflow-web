@@ -50,18 +50,10 @@ usePageSeo({
   image: '/og-fisioterapia.png',
   imageAlts,
   jsonLdKey: 'ld-json-fisioterapia',
-  jsonLd: ({ url, description }) => ({
+  jsonLd: ({ url, locale, description }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'SoftwareApplication',
-        name: 'QuiroFlow',
-        url,
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
-        description,
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
+      webPageJsonLd({ url, name: titles[locale], description, locale }),
       // FAQPage schema is honest here -- every question below is really on
       // the page as visible text, which is what Google requires for the rich
       // result.

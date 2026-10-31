@@ -48,18 +48,10 @@ usePageSeo({
   image: '/og-image.png',
   imageAlts,
   jsonLdKey: 'ld-json-automatizaciones',
-  jsonLd: ({ url, description }) => ({
+  jsonLd: ({ url, locale, description }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'SoftwareApplication',
-        name: 'QuiroFlow',
-        url,
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
-        description,
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
+      webPageJsonLd({ url, name: titles[locale], description, locale }),
       faqJsonLd(faqItems.value),
     ],
   }),
