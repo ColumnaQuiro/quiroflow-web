@@ -46,18 +46,10 @@ usePageSeo({
   image: '/og-podologia.png',
   imageAlts,
   jsonLdKey: 'ld-json-podologia',
-  jsonLd: ({ url, description }) => ({
+  jsonLd: ({ url, locale, description }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'SoftwareApplication',
-        name: 'QuiroFlow',
-        url,
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web, iOS, Android',
-        description,
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
+      webPageJsonLd({ url, name: titles[locale], description, locale }),
       faqJsonLd(faqItems.value),
     ],
   }),

@@ -42,14 +42,7 @@ usePageSeo({
   jsonLd: ({ url, description }) => ({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebPage',
-        url,
-        name: alternative.title,
-        description,
-        inLanguage: 'es-ES',
-        publisher: { '@id': 'https://quiroflow.com/#organization' },
-      },
+      webPageJsonLd({ url, name: alternative.title, description, locale: 'es' }),
       faqJsonLd(alternative.faq),
     ],
   }),
