@@ -22,5 +22,17 @@
     "title": "Lo mantiene <em>la clínica que lo necesitaba</em>",
     "sub": "COLUMNAQUIRO S.L. — la sociedad detrás de Columna Quiro, una clínica quiropráctica de Valencia.",
     "proof": ["Valencia, España", "Soporte ES · EN · FR", "Datos en la UE"]
+  },
+  "og-osteopatia": {
+    "eyebrow": "Osteopatía",
+    "title": "Software de gestión para <em>centros de osteopatía</em>",
+    "sub": "Anamnesis y diagrama corporal desde el móvil, notas con pruebas adjuntas y revisiones que no se olvidan.",
+    "proof": ["30 días de prueba", "Sin tarjeta", "Migración incluida"]
+  },
+  "og-podologia": {
+    "eyebrow": "Podología",
+    "title": "Software de gestión para <em>clínicas de podología</em>",
+    "sub": "Gabinete asignado en cada cita, fotos de la evolución en la ficha y venta de productos con su stock.",
+    "proof": ["30 días de prueba", "Sin tarjeta", "Migración incluida"]
   }
 }

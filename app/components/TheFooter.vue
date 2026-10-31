@@ -53,6 +53,8 @@ const DECLARATION_URL = 'https://app.quiroflow.com/legal/declaracion-responsable
             <p class="text-[12.5px] font-semibold uppercase tracking-wide text-ink-faint">{{ t('footer.sectorsTitle') }}</p>
             <NuxtLink :to="localePath('software-quiropractica')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.chiro') }}</NuxtLink>
             <NuxtLink :to="localePath('software-fisioterapia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.physio') }}</NuxtLink>
+            <NuxtLink :to="localePath('software-osteopatia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.osteo') }}</NuxtLink>
+            <NuxtLink :to="localePath('software-podologia')" class="text-[13.5px] text-ink-muted hover:text-ink-900">{{ t('footer.podo') }}</NuxtLink>
           </nav>
 
           <nav class="flex flex-col gap-2.5">

@@ -86,9 +86,19 @@ export const en: Messages = {
       body: 'A table or room assigned for every slot, session packages that count themselves down, and discharge tracking.',
       link: 'See the software for physiotherapy clinics',
     },
+    osteo: {
+      title: 'Osteopathy',
+      body: 'A case history and body chart filled in on the phone before the first visit, notes with scans attached, and recalls that do not slip.',
+      link: 'See the software for osteopaths',
+    },
+    podo: {
+      title: 'Podiatry',
+      body: 'A room assigned for every appointment, progress photos on the record, and product sales with stock.',
+      link: 'See the software for podiatrists',
+    },
     others: {
-      title: 'Osteopathy, podiatry and other manual therapies',
-      body: 'They do not have a page of their own yet, but QuiroFlow is used the same way: you define the session types, the rooms and the forms. Write to us and we will show you how it fits your practice.',
+      title: 'Other manual therapies',
+      body: 'QuiroFlow works the same way in any manual therapy practice: you define the session types, the rooms and the forms. Write to us and we will show you how it fits yours.',
     },
   },
 
@@ -691,6 +701,187 @@ export const en: Messages = {
     },
   },
 
+  // VeriFactu is left out of the osteopathy and podiatry copy in English and
+  // French on purpose: it is a Spanish tax rule, and means nothing to a
+  // clinic reading this page outside Spain.
+  osteopatia: {
+    badge: 'Osteopathy',
+    title: 'Practice management software for osteopathy clinics',
+    description: 'A calendar that assigns the free treatment room on its own, a case history and body chart the patient fills in on their phone before the first visit, notes for every session with their scans attached, and recalls that do not slip. For the osteopath who works alone and for clinics with several locations.',
+    ctaPrimary: 'Start 30-day trial',
+    ctaSecondary: 'Book a demo',
+    seeFeatures: 'See how it works',
+    features: {
+      agenda: {
+        eyebrow: 'Calendar',
+        title: 'First visits and follow-ups, each with its own room',
+        description: 'A first osteopathy visit does not last as long as a follow-up. You set each session type with its length and QuiroFlow assigns the free room when the appointment is booked, so you never end up with two patients on the same table. Day or week view, and several locations from one account.',
+      },
+      historia: {
+        eyebrow: 'Case history and body chart',
+        title: 'The case history, done before they walk in',
+        description: 'The patient fills in the first-visit form and the consent form on their phone before they come, and marks on a body chart with their finger where it hurts. You choose the chart: upload the image you already use in clinic. At every session you write your notes on the patient record, next to the reports and scans you attach as PDFs or photos.',
+      },
+      revisiones: {
+        eyebrow: 'Recalls and WhatsApp',
+        title: 'The patient who was due back comes back',
+        description: 'A lot of osteopathy lives on the follow-up a few months later. QuiroFlow lists the patients who have gone a while without an appointment so the front desk can get in touch, and WhatsApp reminders with a button to confirm or move the appointment cut no-shows. When someone cancels, the slot is offered to the first person on the waiting list.',
+      },
+      bonos: {
+        eyebrow: 'Packages and invoicing',
+        title: 'Packages, payments and invoices from the same record',
+        description: 'Sell session packages that count down on their own at every visit, take payment by card or at the desk, and issue the invoice from the patient record.',
+      },
+      informes: {
+        eyebrow: 'Reports',
+        title: 'Occupancy, revenue and returning patients',
+        description: 'Occupancy by practitioner and by room, revenue, average visit value and retention, live and compared with the previous period, without exporting anything to a spreadsheet.',
+      },
+    },
+    edge: {
+      title: 'Two things an osteopathy clinic will appreciate',
+      description: 'Recording progress without losing time, and patients who do not stop halfway.',
+      items: [
+        {
+          title: 'Posture analysis from photos',
+          body: 'Take front, side and back photos with a phone or iPad. QuiroFlow places the reference points, you adjust them, and it saves the measurements to compare at the re-assessment. They are estimates for recording progress, not a diagnosis.',
+        },
+        {
+          title: 'Treatment plans with behind-schedule alerts',
+          body: 'When you propose several sessions, you book the whole plan at once and QuiroFlow tells you when a patient falls behind their own cadence, while there is still time to call them.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      items: [
+        {
+          q: 'Does QuiroFlow work if I am an osteopath working alone?',
+          a: 'Yes. It works the same for a solo practice as for a clinic with several rooms and practitioners. The Solo plan is for one practitioner and one location, and you only pay for the practitioners who see patients: front desk and admin users are free.',
+        },
+        {
+          q: 'Can I use my own body chart?',
+          a: 'Yes. In the form builder you add a drawable image block and upload whatever chart you want. The patient marks on it with their finger on their phone, and what they mark is saved to their record.',
+        },
+        {
+          q: 'How do I keep track of patients who come back every few months?',
+          a: 'The recalls list shows the patients who have gone a while without an appointment, counting from the last visit they attended. The front desk contacts them from there, snoozes them until a date or dismisses them, and a patient only comes back onto the list if they lapse again.',
+        },
+        {
+          q: 'Can I move over from the software I use now?',
+          a: 'Yes. We import patients and appointments from your current software\'s export, and from any other system you can import a CSV by mapping your own columns. Migration is included.',
+        },
+        {
+          q: 'How is patient data handled?',
+          a: 'In line with the GDPR, with the data hosted on servers in the European Union. QuiroFlow acts as data processor and signs the corresponding agreement with each clinic, which remains the controller of its patients\' data.',
+        },
+      ],
+    },
+    cta: {
+      title: 'See QuiroFlow with your own clinic\'s data',
+      description: 'Start a 30-day trial with no card, or tell us how you work and we will show you how it fits your osteopathy clinic.',
+      button: 'Start 30-day trial',
+      buttonSecondary: 'Book a demo',
+    },
+    mockups: {
+      invoiceItem: 'Osteopathy session x1',
+      calendarType: 'Osteopathy',
+    },
+  },
+
+  podologia: {
+    badge: 'Podiatry',
+    title: 'Practice management software for podiatry clinics',
+    description: 'A calendar by treatment room with short routine visits and long assessments on the same day, photos and reports on the patient record, product sales with stock, and regular check-ups that do not slip. For the podiatrist who works alone and for clinics with several locations.',
+    ctaPrimary: 'Start 30-day trial',
+    ctaSecondary: 'Book a demo',
+    seeFeatures: 'See how it works',
+    features: {
+      agenda: {
+        eyebrow: 'Calendar by room',
+        title: 'Short routine visits and long assessments, in the same room',
+        description: 'Each visit type has its own length: a twenty-minute routine treatment, an hour-long biomechanical assessment. QuiroFlow assigns the free room when the appointment is booked, so you never end up with two patients booked into the same chair. Day or week view, and several locations from one account.',
+      },
+      historia: {
+        eyebrow: 'Clinical record, photos and reports',
+        title: 'How each lesion is healing, with its photos',
+        description: 'The patient fills in their history, case notes and consent on their phone before they come, and can mark on a foot diagram that you upload. At every visit you write your notes and attach photos or PDF reports, which open right on the record without downloading them.',
+      },
+      productos: {
+        eyebrow: 'Products and stock',
+        title: 'What you sell at the desk, with its stock',
+        description: 'Creams, footwear or off-the-shelf insoles: each product with its own tax rate, stock and minimum. You sell from the patient record alongside the session, and stock only moves with a delivery, an adjustment with a reason or a sale, so the shelf matches the list.',
+      },
+      revisiones: {
+        eyebrow: 'Recalls and WhatsApp',
+        title: 'The check-up every few weeks, without relying on memory',
+        description: 'QuiroFlow lists the patients who have gone a while without an appointment so the front desk can contact them before they go elsewhere, and WhatsApp reminders with a button to confirm or move the appointment cut no-shows. When someone cancels, the slot is offered to the first person on the waiting list.',
+      },
+      reserva: {
+        eyebrow: 'Online booking',
+        title: 'A booking page with your brand',
+        description: 'Your clinic gets its own public booking page, with your real opening hours and each podiatrist\'s availability. The patient books without calling and the appointment goes straight into the calendar.',
+      },
+    },
+    edge: {
+      title: 'Two things a podiatry clinic will appreciate',
+      description: 'Patients who come back when they are due, and who tell others.',
+      items: [
+        {
+          title: 'Packages and invoices from the same record',
+          body: 'Sell session packages that count down on their own at every visit, and issue the invoice from the same record, with the session and the products together.',
+        },
+        {
+          title: 'The Google review asks for itself',
+          body: 'After the visit, QuiroFlow can ask for a rating automatically: low scores come to you, and high ones are invited to leave a Google review. For a clinic competing in local search, that consistency adds up.',
+        },
+      ],
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      items: [
+        {
+          q: 'Does QuiroFlow work if I am a podiatrist working alone?',
+          a: 'Yes. It works the same for a solo practice as for a clinic with several rooms and practitioners. The Solo plan is for one practitioner and one location, and you only pay for the practitioners who see patients: front desk and admin users are free.',
+        },
+        {
+          q: 'Can I sell products and keep track of stock?',
+          a: 'Yes. Each product has its own tax rate, stock with a minimum, and the unit cost of the last delivery so you can see the margin. You sell it from the patient record and the stock comes down on its own.',
+        },
+        {
+          q: 'Can I keep photos of how a lesion is healing?',
+          a: 'Yes. You attach photos and PDF reports to the patient record and they open right there, without downloading, with the date and who uploaded them.',
+        },
+        {
+          q: 'Can I use a foot diagram in my forms?',
+          a: 'Yes. In the form builder you add a drawable image block and upload whatever diagram you want. The patient marks on it with their finger on their phone, and what they mark is saved to their record.',
+        },
+        {
+          q: 'Can patients book online?',
+          a: 'Yes. Each clinic has its own booking page with each podiatrist\'s real availability. The appointment goes straight into your calendar, with no calls or manual confirmations.',
+        },
+        {
+          q: 'Can I move over from the software I use now?',
+          a: 'Yes. We import patients and appointments from your current software\'s export, and from any other system you can import a CSV by mapping your own columns. Migration is included.',
+        },
+        {
+          q: 'How is patient data handled?',
+          a: 'In line with the GDPR, with the data hosted on servers in the European Union. QuiroFlow acts as data processor and signs the corresponding agreement with each clinic, which remains the controller of its patients\' data.',
+        },
+      ],
+    },
+    cta: {
+      title: 'See QuiroFlow with your own clinic\'s data',
+      description: 'Start a 30-day trial with no card, or tell us how you work and we will show you how it fits your podiatry clinic.',
+      button: 'Start 30-day trial',
+      buttonSecondary: 'Book a demo',
+    },
+    mockups: {
+      invoiceItem: 'Podiatry treatment x1',
+      calendarType: 'Podiatry',
+    },
+  },
+
   // Campaign landing for the automation angle. The product sections reuse
   // receptionist/whatsapp/waitlist/booking instead of duplicating copy.
   automatizaciones: {
@@ -763,6 +954,8 @@ export const en: Messages = {
     migrate: 'Switch systems',
     chiro: 'Chiropractic',
     physio: 'Physiotherapy',
+    osteo: 'Osteopathy',
+    podo: 'Podiatry',
     resources: 'Resources',
     copyright: '© 2026 QuiroFlow. All rights reserved.',
     privacy: 'Privacy policy',

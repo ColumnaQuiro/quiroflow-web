@@ -32,6 +32,8 @@ Datos clave:
 - [Inicio](https://quiroflow.com/): visión general, precios y preguntas frecuentes
 - [Software para quiroprácticos](https://quiroflow.com/software-quiropractica): planes de cuidado, revaloraciones y análisis postural
 - [Software para fisioterapia](https://quiroflow.com/software-fisioterapia): bonos, ejercicios en casa y agenda por salas
+- [Software para osteópatas](https://quiroflow.com/software-osteopatia): anamnesis y diagrama corporal desde el móvil, análisis postural y revisiones
+- [Software para podólogos](https://quiroflow.com/software-podologia): agenda por gabinete, fotos en la ficha y venta de productos con stock
 - [VERI*FACTU para clínicas](https://quiroflow.com/verifactu-clinicas): qué es, fechas en vigor y aplazamiento anunciado, y cómo factura QuiroFlow con QR y envío a la AEAT
 - [Recepcionista con IA y automatizaciones](https://quiroflow.com/automatizaciones): WhatsApp, recordatorios y campañas
 - [Precios](https://quiroflow.com/#precios)
