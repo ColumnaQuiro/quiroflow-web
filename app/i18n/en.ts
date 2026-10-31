@@ -962,6 +962,16 @@ export const en: Messages = {
     },
   },
 
+  errorPage: {
+    notFoundTitle: 'Page not found',
+    notFoundHeading: 'This page does not exist',
+    notFoundBody: 'The link may be mistyped or the page may have moved. Everything else is one click from the homepage.',
+    genericTitle: 'Something went wrong',
+    genericHeading: 'Something went wrong',
+    genericBody: 'We could not load this page. Try again in a moment or go back to the homepage.',
+    home: 'Go to the homepage',
+  },
+
   footer: {
     productTitle: 'Product',
     sectorsTitle: 'By speciality',

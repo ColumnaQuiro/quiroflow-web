@@ -1014,6 +1014,16 @@ export const es = {
     },
   },
 
+  errorPage: {
+    notFoundTitle: 'Página no encontrada',
+    notFoundHeading: 'Esta página no existe',
+    notFoundBody: 'Puede que el enlace esté mal escrito o que la página se haya movido. Desde el inicio llegas a todo lo demás.',
+    genericTitle: 'Algo ha fallado',
+    genericHeading: 'Algo ha fallado',
+    genericBody: 'No hemos podido cargar esta página. Prueba de nuevo en un momento o vuelve al inicio.',
+    home: 'Ir al inicio',
+  },
+
   footer: {
     productTitle: 'Producto',
     sectorsTitle: 'Por especialidad',

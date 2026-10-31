@@ -962,6 +962,16 @@ export const fr: Messages = {
     },
   },
 
+  errorPage: {
+    notFoundTitle: 'Page introuvable',
+    notFoundHeading: "Cette page n'existe pas",
+    notFoundBody: "Le lien est peut-être mal saisi ou la page a été déplacée. Tout le reste est à un clic depuis l'accueil.",
+    genericTitle: "Une erreur s'est produite",
+    genericHeading: "Une erreur s'est produite",
+    genericBody: "Nous n'avons pas pu charger cette page. Réessayez dans un instant ou revenez à l'accueil.",
+    home: "Aller à l'accueil",
+  },
+
   footer: {
     productTitle: 'Produit',
     sectorsTitle: 'Par spécialité',

@@ -25,7 +25,13 @@ export default <Partial<Config>>{
           700: '#22252F',
           600: '#2B3040',
           muted: '#4A4F60',
-          faint: '#8A8FA0',
+          // Was #8A8FA0: 3.22:1 on white and 3.03:1 on surface-page, under
+          // WCAG AA's 4.5:1 -- and it is used for real text (language
+          // switcher, footer links, table header, footnotes, mockup labels),
+          // which was Lighthouse's only accessibility failure. Same hue,
+          // darkened to 4.86:1 on white / 4.57:1 on #F7F8FA, still clearly
+          // lighter than `muted`.
+          faint: '#6B7184',
         },
         line: {
           DEFAULT: '#E8E9ED',

@@ -24,7 +24,14 @@ const rows = computed(() => (tm('comparison.rows') as string[]).map((feature, i)
         </p>
       </div>
 
-      <div class="overflow-x-auto rounded-card border border-line bg-white shadow-card">
+      <!-- Scrolls sideways on phones, so it has to be focusable for keyboard
+           users to scroll it, and a focusable region needs a name. -->
+      <div
+        class="overflow-x-auto rounded-card border border-line bg-white shadow-card"
+        tabindex="0"
+        role="region"
+        :aria-label="t('comparison.title')"
+      >
         <table class="w-full min-w-[720px] border-collapse text-left">
           <thead>
             <tr class="border-b border-line">
