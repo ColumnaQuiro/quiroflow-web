@@ -78,6 +78,38 @@ export default defineNuxtConfig({
     },
   },
 
+  // Redirects live here, not in netlify.toml. The netlify-static preset
+  // writes a catch-all `/* /404.html 404` into dist/_redirects, and Netlify
+  // evaluates _redirects before netlify.toml -- so every [[redirects]] rule
+  // there was dead: /quienes-somos answered 404 and /sitemap.xml kept the
+  // sitemap module's 302. Nitro writes route-rule redirects into _redirects
+  // above its catch-all, which is the only place they get a turn.
+  //
+  // The "Quiénes somos" page was removed on 16 Oct 2026: it restated the
+  // COLUMNAQUIRO S.L. identity block, the Valencia address and the names and
+  // roles of the people behind the product, which is more than the owners
+  // want public on a marketing page. The same identity data still exists in
+  // aviso-legal and politica-de-privacidad because Spanish LSSI-CE art. 10
+  // and the GDPR require a reachable controller identity -- those two pages
+  // are noindexed, which is as far as it can be taken. 301 rather than 404:
+  // all three locales were in the sitemap and linked from every page, so
+  // they are indexed and may have external links.
+  routeRules: {
+    '/quienes-somos': { redirect: { to: '/', statusCode: 301 } },
+    '/en/about': { redirect: { to: '/en', statusCode: 301 } },
+    '/fr/a-propos': { redirect: { to: '/fr', statusCode: 301 } },
+  },
+
+  hooks: {
+    // @nuxtjs/sitemap assigns routeRules['/sitemap.xml'] itself during setup
+    // (a 302 to the index), overwriting anything set above. nitro:config runs
+    // after every module, so this is where a permanent redirect can stick.
+    'nitro:config'(nitroConfig) {
+      nitroConfig.routeRules ||= {}
+      nitroConfig.routeRules['/sitemap.xml'] = { redirect: { to: '/sitemap_index.xml', statusCode: 301 } }
+    },
+  },
+
   sitemap: {
     exclude: [
       '/aviso-legal',

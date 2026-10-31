@@ -128,19 +128,34 @@ const rows = computed(() => (tm('comparison.rows') as string[]).map((feature, i)
               <td class="sticky left-0 bg-white px-5 py-3.5 text-[14px] text-ink-700">
                 {{ row.feature }}
               </td>
+              <!-- The ticks are bare SVGs, so each cell also carries a
+                   visually hidden word: without it, screen readers and AI
+                   text extractors read the whole QuiroFlow column as empty. -->
               <td class="bg-brand-tint/40 px-4 py-3.5 text-center">
-                <svg v-if="row.quiroflow" width="18" height="18" viewBox="0 0 18 18" fill="none" class="mx-auto">
-                  <circle cx="9" cy="9" r="9" fill="#E9F6EF" />
-                  <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#157F52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                </svg>
-                <span v-else class="text-ink-faint">—</span>
+                <template v-if="row.quiroflow">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mx-auto" aria-hidden="true">
+                    <circle cx="9" cy="9" r="9" fill="#E9F6EF" />
+                    <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#157F52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  </svg>
+                  <span class="sr-only">{{ t('comparison.yes') }}</span>
+                </template>
+                <template v-else>
+                  <span class="text-ink-faint" aria-hidden="true">—</span>
+                  <span class="sr-only">{{ t('comparison.notShown') }}</span>
+                </template>
               </td>
               <td v-for="c in competitors" :key="c.key" class="px-4 py-3.5 text-center">
-                <svg v-if="row[c.key]" width="18" height="18" viewBox="0 0 18 18" fill="none" class="mx-auto">
-                  <circle cx="9" cy="9" r="9" fill="#F1F2F5" />
-                  <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#5B6072" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                </svg>
-                <span v-else class="text-ink-faint">—</span>
+                <template v-if="row[c.key]">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="mx-auto" aria-hidden="true">
+                    <circle cx="9" cy="9" r="9" fill="#F1F2F5" />
+                    <path d="M5.5 9.3l2.2 2.2 4.8-5" stroke="#5B6072" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  </svg>
+                  <span class="sr-only">{{ t('comparison.yes') }}</span>
+                </template>
+                <template v-else>
+                  <span class="text-ink-faint" aria-hidden="true">—</span>
+                  <span class="sr-only">{{ t('comparison.notShown') }}</span>
+                </template>
               </td>
             </tr>
           </tbody>
