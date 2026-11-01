@@ -613,7 +613,7 @@ export const es = {
       },
     },
     edge: {
-      title: 'Dos cosas que deciden el año de una consulta quiropráctica',
+      title: 'Lo que decide el año de una consulta quiropráctica',
       description: 'La quiropráctica no se juega en el ajuste. Se juega en si el paciente completa el plan y en si la agenda no deja huecos por el camino.',
       items: [
         {
@@ -623,6 +623,10 @@ export const es = {
         {
           title: 'La reseña de Google se pide sola',
           body: 'Tras la visita, QuiroFlow puede pedir la reseña automáticamente. Para una consulta que compite en búsquedas locales, esa constancia acaba pesando más que cualquier campaña puntual.',
+        },
+        {
+          title: 'Análisis postural y revaloraciones',
+          body: 'Haz fotos de frente, de lado y de espaldas con el móvil o el iPad. QuiroFlow coloca los puntos de referencia, tú los ajustas y guarda las mediciones para compararlas en cada revaloración del plan. Son estimaciones para documentar la evolución, no un diagnóstico.',
         },
       ],
     },
@@ -1002,7 +1006,7 @@ export const es = {
         },
         {
           q: '¿Está todo incluido en el precio?',
-          a: 'Los recordatorios por WhatsApp, la lista de espera y los avisos de plan de tratamiento están en todos los planes. La recepcionista con IA forma parte del add-on Growth, 39 €/mes + IVA, y va incluida en los planes Practice y Clinic.',
+          a: 'Los recordatorios por WhatsApp, la lista de espera y los avisos de plan de tratamiento están en todos los planes. La recepcionista con IA va incluida en los planes Practice y Clinic; en Solo la añades con el add-on Growth, 39 €/mes + IVA, o sola por 19 €/mes + IVA.',
         },
       ],
     },

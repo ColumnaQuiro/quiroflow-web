@@ -170,7 +170,7 @@ usePageSeo({
           <h2 class="text-[30px] tracking-tightTitle text-ink-900">{{ t('quiropractica.edge.title') }}</h2>
           <p class="text-[15.5px] leading-[1.6] text-ink-muted">{{ t('quiropractica.edge.description') }}</p>
         </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <div
             v-for="item in edgeItems"
             :key="item.title"
