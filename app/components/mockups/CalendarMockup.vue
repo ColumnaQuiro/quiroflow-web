@@ -54,7 +54,7 @@ function typeLabel(type: ApptType) {
       <div v-for="d in tm('mockups.calendar.days')" :key="d" class="pb-2 text-center text-[11px] font-semibold text-ink-faint">{{ d }}</div>
 
       <template v-for="row in rows" :key="row.time">
-        <div class="pr-1.5 text-right text-[10px] text-ink-faint/70">{{ row.time }}</div>
+        <div class="pr-1.5 text-right text-[10px] text-ink-faint">{{ row.time }}</div>
         <div v-for="col in 3" :key="col" class="border-t border-line-control/60 p-1">
           <div
             v-if="row.appts[col - 1]"
