@@ -568,7 +568,7 @@ export const fr: Messages = {
       },
     },
     edge: {
-      title: "Deux choses qui décident l'année d'un cabinet de chiropraxie",
+      title: "Ce qui décide l'année d'un cabinet de chiropraxie",
       description: "La chiropraxie ne se joue pas sur l'ajustement. Elle se joue sur le fait que le patient termine son plan, et que l'agenda ne laisse pas de trous en chemin.",
       items: [
         {
@@ -578,6 +578,10 @@ export const fr: Messages = {
         {
           title: "L'avis Google se demande tout seul",
           body: "Après la visite, QuiroFlow peut demander l'avis automatiquement. Pour un cabinet qui se bat sur les recherches locales, cette régularité finit par peser plus que n'importe quelle campagne ponctuelle.",
+        },
+        {
+          title: 'Analyse posturale et bilans de suivi',
+          body: "Prenez des photos de face, de profil et de dos avec un téléphone ou un iPad. QuiroFlow place les points de repère, vous les ajustez, et il enregistre les mesures pour les comparer à chaque bilan de suivi du plan. Ce sont des estimations pour documenter l'évolution, pas un diagnostic.",
         },
       ],
     },
@@ -950,7 +954,7 @@ export const fr: Messages = {
         },
         {
           q: "Est-ce que tout est compris dans le prix ?",
-          a: "Les rappels WhatsApp, la liste d'attente et les alertes de plan de traitement sont dans toutes les formules. La réceptionniste IA fait partie de l'option Growth, 39 €/mois hors taxes, et est incluse dans les formules Practice et Clinic.",
+          a: "Les rappels WhatsApp, la liste d'attente et les alertes de plan de traitement sont dans toutes les formules. La réceptionniste IA est incluse dans les formules Practice et Clinic ; avec Solo, vous l'ajoutez avec l'option Growth, 39 €/mois hors taxes, ou seule pour 19 €/mois hors taxes.",
         },
       ],
     },

@@ -568,7 +568,7 @@ export const en: Messages = {
       },
     },
     edge: {
-      title: 'Two things that decide a chiropractic practice\'s year',
+      title: 'What decides a chiropractic practice\'s year',
       description: 'Chiropractic is not decided in the adjustment. It is decided by whether the patient finishes the plan, and whether the calendar leaves holes along the way.',
       items: [
         {
@@ -578,6 +578,10 @@ export const en: Messages = {
         {
           title: 'The Google review asks for itself',
           body: 'After the visit, QuiroFlow can request the review automatically. For a practice competing in local search, that consistency ends up worth more than any one-off campaign.',
+        },
+        {
+          title: 'Posture analysis and re-exams',
+          body: 'Take front, side and back photos with a phone or iPad. QuiroFlow places the reference points, you adjust them, and it saves the measurements to compare at every re-exam in the plan. They are estimates for recording progress, not a diagnosis.',
         },
       ],
     },
@@ -950,7 +954,7 @@ export const en: Messages = {
         },
         {
           q: 'Is all of it included in the price?',
-          a: 'WhatsApp reminders, the waiting list and treatment-plan alerts are in every plan. The AI receptionist is part of the Growth add-on, 39 €/month plus VAT, and is included in the Practice and Clinic plans.',
+          a: 'WhatsApp reminders, the waiting list and treatment-plan alerts are in every plan. The AI receptionist is included in the Practice and Clinic plans; on Solo you add it with the Growth add-on, 39 €/month plus VAT, or on its own for 19 €/month plus VAT.',
         },
       ],
     },
