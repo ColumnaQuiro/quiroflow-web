@@ -15,7 +15,7 @@ Datos clave:
 ## Precios (sin IVA, por profesional que pasa consulta; pacientes y usuarios de administración ilimitados)
 
 - Solo: 45 €/mes (40 €/mes en anual). 1 profesional, 1 sede.
-- Practice: 99 €/mes (89 €/mes en anual). Hasta 4 profesionales, 1 sede. Incluye Growth (captación, recepcionista con IA y reputación). Profesional adicional: 19 €/mes.
+- Practice: 99 €/mes (89 €/mes en anual). Hasta 4 profesionales, 1 sede. Incluye Growth (leads de Facebook e Instagram, recepcionista con IA y reseñas de Google). Profesional adicional: 19 €/mes.
 - Clinic: 149 €/mes (134 €/mes en anual). Profesionales y sedes ilimitados, API y webhooks, migración asistida y soporte prioritario. Incluye Growth.
 - Add-on Growth en el plan Solo: +39 €/mes. Solo la recepcionista con IA: +19 €/mes (1.000 respuestas al mes incluidas).
 

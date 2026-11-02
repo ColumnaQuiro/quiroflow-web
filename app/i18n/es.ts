@@ -436,7 +436,7 @@ export const es = {
     // cannot yet back. "Recomendado" carries the same signal honestly.
     mostChosen: 'Recomendado',
     extraPro: 'Profesional adicional: 19 €/mes',
-    growthAddOn: 'Growth (captación, recepcionista con IA y reputación): +39 €/mes',
+    growthAddOn: 'Growth (leads de Facebook e Instagram, recepcionista con IA y reseñas de Google): +39 €/mes',
     receptionistAddOn: 'Solo la recepcionista con IA: +19 €/mes',
     // The trial button now opens the real sign-up at app.quiroflow.com, and
     // the call has its own separate button. Before, both promises were on one
@@ -478,7 +478,7 @@ export const es = {
           'Roles y permisos personalizados',
           'Informes avanzados: PVA, retención y conversión',
           'Profesionales adicionales a 19 €/mes',
-          'Growth incluido: captación, recepcionista con IA y reputación',
+          'Growth incluido: leads de tus anuncios de Facebook e Instagram, recepcionista con IA y reseñas de Google',
         ],
       },
       clinic: {
@@ -489,7 +489,7 @@ export const es = {
           'Multi-sede',
           'API y webhooks',
           'Migración asistida y soporte prioritario',
-          'Growth incluido: captación, recepcionista con IA y reputación',
+          'Growth incluido: leads de tus anuncios de Facebook e Instagram, recepcionista con IA y reseñas de Google',
         ],
       },
     },
