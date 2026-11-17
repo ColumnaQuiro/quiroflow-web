@@ -334,6 +334,33 @@ export const en: Messages = {
     note: 'Need the technical detail or the processor agreement before you decide? Write to us and we will send it without putting you through a demo.',
   },
 
+  // Homepage IntegrationsSection: who moves the money and sends the
+  // messages. See the component for the brand rules (no Meta logo,
+  // never "partner" for Stripe).
+  integrations: {
+    badge: 'Payments and messaging',
+    title: 'Your money and your messages go through official providers',
+    description: 'QuiroFlow does not hold your patients’ money or send WhatsApp through shortcuts. Each job goes through a specialist provider, connected to your own clinic’s account.',
+    items: [
+      {
+        key: 'stripe',
+        title: 'Card payments',
+        body: 'Payment links from the chat and invoices patients pay in the app. You connect your own Stripe account and the money goes straight to your bank.',
+      },
+      {
+        key: 'gocardless',
+        title: 'Direct Debit',
+        body: 'Fees and recurring payments by SEPA Direct Debit. If you already collect with GoCardless, you connect the same account and your patients do not have to sign a new mandate.',
+      },
+      {
+        key: 'whatsapp',
+        title: 'Official WhatsApp Business API',
+        body: 'Reminders, messages and the AI receptionist go out through the official WhatsApp Business API, from your clinic’s number. No browser extensions or automated WhatsApp Web that end with a banned number.',
+      },
+    ],
+    note: 'Stripe, GoCardless and WhatsApp are trademarks of their respective owners. Each provider charges its own fees, separate from your QuiroFlow subscription.',
+  },
+
   comparison: {
     badge: 'Compare',
     title: 'How QuiroFlow compares',
