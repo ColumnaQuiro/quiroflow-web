@@ -423,6 +423,7 @@ export const en: Messages = {
     billedAnnually: 'billed annually',
     mostChosen: 'Recommended',
     extraPro: 'Extra practitioner: €19/mo',
+    extraSite: 'Extra site: €29/mo',
     growthAddOn: 'Growth (Facebook and Instagram ad leads, AI receptionist and Google reviews): +€39/mo',
     receptionistAddOn: 'Just the AI receptionist: +€19/mo',
     cta: 'Start 15-day trial',
@@ -465,7 +466,7 @@ export const en: Messages = {
       },
       clinic: {
         name: 'Clinic',
-        for: 'Unlimited practitioners, unlimited sites',
+        for: '6 practitioners and 2 sites included',
         features: [
           'Everything in Practice',
           'Multi-site',

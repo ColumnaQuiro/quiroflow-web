@@ -463,6 +463,7 @@ export const es = {
     // cannot yet back. "Recomendado" carries the same signal honestly.
     mostChosen: 'Recomendado',
     extraPro: 'Profesional adicional: 19 €/mes',
+    extraSite: 'Sede adicional: 29 €/mes',
     growthAddOn: 'Growth (leads de Facebook e Instagram, recepcionista con IA y reseñas de Google): +39 €/mes',
     receptionistAddOn: 'Solo la recepcionista con IA: +19 €/mes',
     // The trial button now opens the real sign-up at app.quiroflow.com, and
@@ -510,7 +511,7 @@ export const es = {
       },
       clinic: {
         name: 'Clinic',
-        for: 'Profesionales ilimitados, sedes ilimitadas',
+        for: '6 profesionales y 2 sedes incluidos',
         features: [
           'Todo lo de Practice',
           'Multi-sede',
