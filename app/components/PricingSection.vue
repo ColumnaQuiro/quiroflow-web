@@ -131,6 +131,10 @@ function price(tier: (typeof TIERS)[number]) {
             <li v-if="tier.key !== 'solo'" class="pl-[28px] text-[13px] text-ink-faint2">
               {{ t('pricing.extraPro') }}
             </li>
+            <!-- Only Clinic has more than one site, so only Clinic sells another. -->
+            <li v-if="tier.key === 'clinic'" class="pl-[28px] text-[13px] text-ink-faint2">
+              {{ t('pricing.extraSite') }}
+            </li>
             <!-- Practice and Clinic list Growth as included; without this
                  line Solo leaves the reader wondering what that is and
                  whether they can have it. -->

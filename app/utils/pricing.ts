@@ -11,6 +11,10 @@
 // what a chiropractor is. Annual is the per-month figure, 10% off.
 // Repriced again 2026-10-28: Solo 49 -> 45 (40 annual), and Practice now
 // includes Growth as Clinic already did, at the same 99.
+// 2026-11-19: Clinic stops being unlimited -- 6 practitioners and 2 sites
+// included, 19 EUR per extra practitioner and 29 EUR per extra site. The 149
+// is unchanged; the limits are in the translations (pricing.tiers.clinic.for,
+// pricing.extraSite) and in public/llms.txt.
 //
 // These must match `plans` in the app's database, which is what Stripe
 // actually charges from. A number changed here and not there advertises a
