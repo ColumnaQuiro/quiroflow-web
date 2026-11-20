@@ -1,0 +1,138 @@
+/* QuiroFlow brand layer over the taste-skill kit (public/kit).
+
+   Loaded last by layouts/kit.vue, after every kit stylesheet, so it wins at
+   equal specificity. Holds the corporate palette (the same values as
+   tailwind.config.ts and the app), the type tokens and the CSS of the drawn
+   product views (collage pieces, the app window, the small panels). The kit's
+   own files stay untouched: they are regenerated from the skill. */
+:root {
+  --p-bg: #ffffff; --p-surface: #F7F8FA; --p-ink: #15171E; --p-muted: #4A4F60;
+  --p-accent: #4F46E5; --p-accent-ink: #ffffff; --p-action: #4F46E5; --p-action-ink: #ffffff;
+  --p-inv-bg: #15171E; --p-inv-surface: #22252F; --p-inv-ink: #ffffff; --p-inv-muted: #A9ADBA;
+  --p-inv-accent: #ffffff; --p-inv-accent-ink: #15171E; --p-inv-action: #4F46E5; --p-inv-action-ink: #ffffff;
+  --font-display: "IBM Plex Sans", system-ui, sans-serif;
+  --font-text: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 500;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
+  --ly-scale: 0.98;
+}
+html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --ground-ink: #15171E; --ground-muted: #4A4F60; --ground-accent: #4F46E5; }
+.qf-mark { width: .95em; height: .95em; flex: none; margin-right: .32em; fill: #4F46E5; vertical-align: -0.12em; }
+.footer .qf-mark { fill: #ffffff; }
+.ly-collage .ly-piece, .mini { border: 1px solid #E8E9ED; }
+/* flat brand tint behind the product mocks: no corner glow */
+:root:root .panel:not([data-fx], .panel--device), :root:root .frame--lit { background-image: none; background-color: #EEF0FE; }
+
+/* page CSS: only inside visuals */
+/* hero collage pieces, sized in container units */
+.ly-collage { container-type: inline-size; }
+.ly-collage .ly-piece { background: #fff; color: #15171E; box-shadow: 0 1px 2px rgb(21 23 30 / .1), 0 22px 48px -22px rgb(21 23 30 / .4); font: 400 max(13px, 2.15cqw)/1.35 var(--font-text); }
+.pc-head { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; padding: 2.4cqw 3cqw; border-bottom: 1px solid #E8E9ED; font-weight: 500; }
+.pc-head small, .pc-mono { font: 400 max(13px, 1.9cqw)/1.2 var(--font-mono); color: #4A4F60; }
+.pc-wa { display: grid; align-content: start; }
+.pc-wa .msgs { display: grid; gap: 1.6cqw; padding: 3cqw; background: #F7F8FA; }
+.pc-wa .m { max-width: 86%; padding: 1.6cqw 2.2cqw; border-radius: 1.6cqw; background: #fff; }
+.pc-wa .m.me { justify-self: end; background: #d9f2cf; }
+.pc-wa .ok { margin: 3cqw; padding: 1.8cqw 2.2cqw; border-radius: 1.4cqw; background: #EEF0FE; color: #3B32C9; font-weight: 500; }
+.pc-flow { display: grid; align-content: start; }
+.pc-flow .r { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; padding: 2cqw 3cqw; border-top: 1px solid #E8E9ED; }
+.pc-flow .r:first-of-type { border-top: 0; }
+.chip { display: inline-flex; padding: .5cqw 1.6cqw; border-radius: 99px; font-weight: 500; font-size: max(13px, 1.8cqw); white-space: nowrap; }
+.chip.s1 { background: #EEF0FE; color: #3B32C9; } .chip.s2 { background: #E9F6EF; color: #157F52; } .chip.s3 { background: #f6ecd9; color: #7a4d08; } .chip.s4 { background: #FDF0F2; color: #B4230F; }
+.pc-inv { display: grid; align-content: start; }
+.pc-inv .ln { display: flex; justify-content: space-between; padding: 1.8cqw 3cqw; border-top: 1px solid #E8E9ED; }
+.pc-inv .ln.t { font-weight: 500; font-size: max(14px, 2.6cqw); }
+.pc-inv .qr { display: flex; gap: 2.4cqw; align-items: center; padding: 2.4cqw 3cqw; border-top: 1px solid #E8E9ED; }
+.pc-inv .qr i { flex: none; width: 11cqw; height: 11cqw; border-radius: .8cqw; background:
+  conic-gradient(#15171E 25%, #fff 0 50%, #15171E 0 75%, #fff 0) 0 0 / 3.66cqw 3.66cqw, #fff; border: .6cqw solid #15171E; }
+.pc-post { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.pc-post .fig { grid-row: span 3; background: #E4E6FB; position: relative; min-height: 34cqw; }
+.pc-post .fig::before { content: ""; position: absolute; left: 50%; top: 10%; width: 9cqw; height: 9cqw; margin-left: -4.5cqw; border-radius: 50%; background: #A9AEEB; }
+.pc-post .fig::after { content: ""; position: absolute; left: 50%; top: 31%; width: 18cqw; height: 60%; margin-left: -9cqw; border-radius: 5cqw 5cqw 1cqw 1cqw; background: #A9AEEB; }
+.pc-post .fig b { position: absolute; z-index: 1; left: 12%; right: 12%; top: 36%; height: 0; border-top: 2px solid #4F46E5; transform: rotate(-4.2deg); }
+.pc-post .fig b + b { top: 78%; transform: rotate(1.8deg); }
+.pc-post .v { padding: 2.2cqw 3cqw; border-bottom: 1px solid #E8E9ED; display: grid; }
+.pc-post .v strong { font: 500 max(15px, 3.4cqw)/1.1 var(--font-display); letter-spacing: -0.02em; }
+.pc-note { padding: 2.6cqw 3cqw; display: grid; gap: .8cqw; }
+.pc-note strong { font-weight: 500; }
+.pc-note span { color: #4A4F60; }
+@media (max-width: 639px) { .ly-collage .hide-s { display: none; } }
+
+/* app-frame (sections-library.md) */
+.app.ui { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); margin-top: var(--s-7); background: var(--u-bg); border: 1px solid var(--u-border); border-radius: var(--u-r); box-shadow: var(--u-shadow); }
+.app > .app__pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+.app > .app__pane + .app__pane { border-left: 1px solid var(--u-line); }
+.app > .app__pane > .ui-panel { width: 100%; border: 0; border-radius: 0; box-shadow: none; }
+.app > .app__pane::after { content: ""; position: absolute; inset: auto 0 0 0; height: 64px; background: linear-gradient(transparent, var(--u-bg)); pointer-events: none; }
+@media (min-width: 1024px) and (max-width: 1279px) { .app.ui { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); } }
+@media (max-width: 1023px) {
+  .app.ui { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .app > .app__pane--list { max-height: 252px; }
+  .app > .app__pane--list::after { display: none; }
+  .app .ui-win__side { display: none; }
+  .app .ui-win__body { grid-template-columns: minmax(0, 1fr); }
+  .app > .app__pane + .app__pane { border-left: 0; border-top: 1px solid var(--u-line); }
+}
+@media (max-width: 639px) {
+  .app.ui { grid-template-rows: minmax(0, 1fr); }
+  .app > .app__pane--list { display: none; }
+  .app > .app__pane + .app__pane { border-top: 0; }
+}
+/* the open pane: the patient's record */
+.ficha { padding: 20px 24px; display: grid; gap: 16px; align-content: start; font: 400 14px/20px var(--font-text); color: #15171E; }
+.ficha__top { display: flex; align-items: center; gap: 12px; }
+.ficha__top b { font: 500 18px/24px var(--font-text); }
+.ficha__top span { color: #4A4F60; }
+.ficha__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ficha__box { border: 1px solid #E8E9ED; border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.ficha__box .ficha__label { margin: 0; font: 500 13px/16px var(--font-text); color: #4A4F60; }
+.ficha__box p { margin: 0; } .ficha__box .ficha__label { font: 500 13px/16px var(--font-text); color: #4A4F60; }
+.ficha__box strong { font: 500 22px/26px var(--font-display); letter-spacing: -0.02em; }
+.weeks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+.weeks i { height: 22px; border-radius: 4px; background: #EEF0FE; }
+.weeks i.on { background: #4F46E5; } .weeks i.late { background: #B4230F; }
+.ficha__rows { display: grid; }
+.ficha__rows div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid #E8E9ED; }
+.ficha__rows span:last-child { color: #4A4F60; }
+.ficha .chip { font-size: 13px; padding: 2px 10px; }
+@media (max-width: 639px) { .ficha__grid { grid-template-columns: 1fr; } }
+
+#funcionalidades .panel, #cobros .panel { --p-h: 300px; }
+#clinicas .panel { --p-h: 240px; }
+.frame--split.frame--tall { aspect-ratio: 1 / 1; }
+@media (max-width: 1023px) { .frame--split.frame--tall { aspect-ratio: 5 / 4; } }
+.mini { position: absolute; inset: 50% 24px auto 24px; transform: translateY(-50%); background: #fff; border-radius: 10px; border: 1px solid #E8E9ED; font: 400 14px/20px var(--font-text); color: #15171E; box-shadow: 0 12px 28px -18px rgb(21 23 30 / .35); }
+.mini > div { display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; font-size: 16px; line-height: 24px; border-top: 1px solid #E8E9ED; }
+.mini > div:first-child { border-top: 0; font-weight: 500; }
+.mini .chip { font-size: 13px; padding: 1px 9px; }
+.mini s { color: #4A4F60; }
+@media (max-width: 639px) { #funcionalidades .panel, #cobros .panel { --p-h: 200px; } #clinicas .panel { --p-h: 150px; } }
+
+/* nav menu card: a smaller mock than the ones in sections */
+.mini.mini--sm > div { padding: 10px 14px; font-size: 14px; line-height: 20px; }
+
+/* footer legal row: the legal links, the cookie button and the languages */
+.footer__legal { flex-wrap: wrap; gap: var(--s-3) var(--s-6); }
+.footer__legal-links, .footer__langs { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); align-items: center; }
+.footer__cookies { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.footer__cookies:hover, .footer__legal a:hover { color: var(--ink); }
+.footer__langs a[aria-current="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+
+/* homepage pricing on a phone: three lines per plan, the full lists are on
+   the pricing page, so the section stays within two screens */
+@media (max-width: 639px) {
+  .plans--summary .checks li:nth-child(n+4) { display: none; }
+}
+
+/* tablet (640 to 1023): stacked cards need two screens there */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #clinicas, #precios, #cobros { --h: 2; }
+}
+
+/* triptych hero: the trial button and, under it, the demo */
+.hero--triptych .hero__cta { flex-direction: column; align-items: flex-end; gap: var(--s-3); }
+@media (max-width: 1023px) { .hero--triptych .hero__cta { align-items: flex-start; } }
+@media (max-width: 639px) { .hero--triptych .hero__cta { align-items: stretch; } .hero--triptych .hero__cta .btn { width: 100%; } }

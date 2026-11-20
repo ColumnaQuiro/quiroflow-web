@@ -4,8 +4,19 @@ import type { Config } from 'tailwindcss'
 // tailwind.config.ts in the app repo) — same brand hue and radii so the
 // marketing site and the product feel like one thing.
 export default <Partial<Config>>{
+  // The redesigned pages (layout "kit") are styled by the plain CSS kit in
+  // public/kit, which expects browser defaults, not Tailwind's reset. The
+  // reset now lives in app/assets/css/legacy-preflight.css, scoped to
+  // .tw-legacy, the wrapper of the pages still built with Tailwind.
+  corePlugins: { preflight: false },
+  // The kit places blocks on its grid with .start-N; Tailwind reads the same
+  // names as inset-inline-start utilities and would shift those blocks.
+  blocklist: Array.from({ length: 12 }, (_, i) => `start-${i + 1}`),
   content: [
     './app/**/*.{vue,ts}',
+    // Kit markup uses kit classes only; scanning it would only add stray
+    // utilities that collide with kit class names.
+    '!./app/components/kit/**',
   ],
   theme: {
     extend: {

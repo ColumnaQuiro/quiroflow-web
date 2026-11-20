@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white">
+  <!-- tw-legacy: the scope of the Tailwind reset (assets/css/legacy-preflight.css)
+       for the pages not yet moved to the kit layout. -->
+  <div class="tw-legacy bg-white">
     <TheHeader />
     <slot />
     <TheFooter />
