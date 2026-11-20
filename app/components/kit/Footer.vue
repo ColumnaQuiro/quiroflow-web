@@ -33,7 +33,7 @@ const localeHref = (l: Locale) => switchLocalePath(l) || localePath('index', l)
           <h2 id="close-h">{{ site.close.title }}</h2>
           <p>{{ site.close.line }} <a class="link" :href="BOOKING_URL">{{ site.demoLong }}</a></p>
         </div>
-        <a class="btn btn--primary btn--xl btn--wide" :href="SIGNUP_URL">{{ site.cta }}<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8" /><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5" /></svg></a>
+        <a class="btn btn--primary" :href="SIGNUP_URL">{{ site.cta }}<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8" /><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5" /></svg></a>
       </div>
       <div class="closing__links">
         <div class="grid">

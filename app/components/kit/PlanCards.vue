@@ -27,7 +27,7 @@ const annualIds = PRICING_TIERS.map(t => `price-${t.key}-a`).join(' ')
 </script>
 
 <template>
-  <div class="stack-6" :class="{ 'plans--summary': mode === 'summary' }">
+  <div class="stack-6" :class="mode === 'summary' ? 'plans--summary' : 'plans--full'">
     <div v-if="mode === 'full'" class="tabs" role="tablist" :aria-label="page.tabsLabel">
       <button class="tab" type="button" role="tab" aria-selected="true" :aria-controls="monthlyIds">{{ pricing.monthly }}</button>
       <button class="tab" type="button" role="tab" aria-selected="false" :aria-controls="annualIds">{{ pricing.annual }} · {{ pricing.annualSave }}</button>

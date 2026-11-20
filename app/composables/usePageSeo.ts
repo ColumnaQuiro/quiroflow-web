@@ -100,6 +100,13 @@ export const SOFTWARE_ID = 'https://quiroflow.com/#software'
 
 const LANGUAGE_TAGS: Record<Locale, string> = { es: 'es-ES', en: 'en-US', fr: 'fr-FR' }
 
+// The pricing page in each locale (pages/precios.vue and its i18n paths).
+const PRICING_URLS: Record<Locale, string> = {
+  es: 'https://quiroflow.com/precios',
+  en: 'https://quiroflow.com/en/pricing',
+  fr: 'https://quiroflow.com/fr/tarifs',
+}
+
 const SOFTWARE_DESCRIPTIONS: LocalisedText = {
   es: 'Software de gestión para clínicas de quiropráctica, fisioterapia, osteopatía y podología: agenda con asignación automática de salas, historiales clínicos, facturación VeriFactu, bonos y recordatorios por WhatsApp.',
   en: 'Practice management software for chiropractic, physiotherapy, osteopathy and podiatry clinics: scheduling with automatic room assignment, clinical records, VeriFactu invoicing, packages and WhatsApp reminders.',
@@ -116,7 +123,6 @@ const SOFTWARE_DESCRIPTIONS: LocalisedText = {
  * -- never a guessed URL.
  */
 function siteJsonLd(locale: Locale) {
-  const home = locale === 'es' ? 'https://quiroflow.com/' : `https://quiroflow.com/${locale}`
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -166,7 +172,7 @@ function siteJsonLd(locale: Locale) {
             name: tier.name,
             price: String(tier.monthly),
             priceCurrency: 'EUR',
-            url: `${home}#precios`,
+            url: PRICING_URLS[locale],
             // Per professional per month, VAT excluded -- as the pricing
             // cards say. The annual figures are a client-side toggle and
             // are not in the prerendered HTML, so they stay out of here.

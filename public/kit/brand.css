@@ -23,7 +23,8 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
 .footer .qf-mark { fill: #ffffff; }
 .ly-collage .ly-piece, .mini { border: 1px solid #E8E9ED; }
 /* flat brand tint behind the product mocks: no corner glow */
-:root:root .panel:not([data-fx], .panel--device), :root:root .frame--lit { background-image: none; background-color: #EEF0FE; }
+/* !important: the kit sets this mesh with a :has() selector no plain class can outrank */
+.panel:not([data-fx], .panel--device), .frame--lit { background-image: none !important; background-color: #EEF0FE !important; }
 
 /* page CSS: only inside visuals */
 /* hero collage pieces, sized in container units */
@@ -132,7 +133,130 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
   #clinicas, #precios, #cobros { --h: 2; }
 }
 
-/* triptych hero: the trial button and, under it, the demo */
-.hero--triptych .hero__cta { flex-direction: column; align-items: flex-end; gap: var(--s-3); }
-@media (max-width: 1023px) { .hero--triptych .hero__cta { align-items: flex-start; } }
-@media (max-width: 639px) { .hero--triptych .hero__cta { align-items: stretch; } .hero--triptych .hero__cta .btn { width: 100%; } }
+/* triptych hero: the trial button and, under it, the demo, both the width of
+   the column so the demo's label lines up with the trial's before any hover */
+.hero--triptych .hero__cta { flex-direction: column; align-items: stretch; gap: var(--s-3); }
+.hero--triptych .hero__cta .btn { justify-content: center; }
+@media (min-width: 640px) and (max-width: 1279px) { .hero--triptych .hero__cta { max-width: 320px; } }
+
+/* the close's button at the normal size, on the left line */
+.close--type .btn { align-self: flex-start; }
+
+/* the "prices by email" form (KitEmailCapture), on the page ground */
+.capture { display: grid; gap: var(--s-4); max-width: 480px; }
+.capture__title { font: 500 var(--t-card)/1.3 var(--font-text); margin: 0; }
+.capture .field { display: grid; gap: var(--s-2); }
+.capture .field label { font: 500 14px/20px var(--font-text); }
+.capture .field input { height: 48px; padding: 0 var(--s-4); font: 400 16px/24px var(--font-text); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--r-sm); }
+.capture .field input:focus-visible { outline: 2px solid var(--action); outline-offset: 1px; }
+.capture__consent { display: grid; grid-template-columns: 20px 1fr; gap: var(--s-3); align-items: start; font-size: 14px; line-height: 20px; color: var(--muted); }
+.capture__consent input { width: 20px; height: 20px; margin: 0; accent-color: var(--action); }
+.capture__consent a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.capture .btn { justify-self: start; }
+.capture__error { margin: 0; color: #B4230F; font-size: 14px; }
+.capture__ok { margin: 0; padding: var(--s-4); border-radius: var(--r-md); background: #E9F6EF; color: #157F52; font-weight: 500; }
+.capture__trap { display: none; }
+
+/* ---------------------------------------------------------------- inner pages */
+
+/* pricing hero: the monthly bill drawn on the lit ground, the trial floating */
+.hero__media--drawn { background: #EEF0FE; }
+.bill { position: absolute; left: 12%; right: 12%; top: 12%; background: #fff; border: 1px solid #E8E9ED; border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(21 23 30 / .08), 0 22px 48px -22px rgb(21 23 30 / .35); font: 400 15px/22px var(--font-text); color: #15171E; }
+.bill__head { padding: 16px 20px; font-weight: 500; border-bottom: 1px solid #E8E9ED; }
+.bill__row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 20px; border-top: 1px solid #F0F1F4; }
+.bill__row span:last-child { color: #4A4F60; white-space: nowrap; }
+.bill__row--total { font-weight: 500; font-size: 17px; border-top: 1px solid #E8E9ED; }
+.bill__row--total span:last-child { color: #15171E; }
+@media (max-width: 639px) { .bill { left: 16px; right: 16px; top: 16px; font-size: 14px; } .bill__row { padding: 9px 14px; } .bill__head { padding: 12px 14px; } }
+
+/* features hero: the inbox window in the centred hero */
+.app.ui.app--hero { margin-top: 0; height: 440px; }
+.hero__window .ly-piece { width: min(1040px, calc(100% - 2 * var(--s-6))); }
+@media (max-width: 1023px) { .app.ui.app--hero { height: 360px; } }
+
+/* comparison hero: an excerpt of the table, cut by its frame */
+.hero__art.frame--lit { background: #EEF0FE; }
+.cmp-piece { background: #fff; color: #15171E; border: 1px solid #E8E9ED; border-radius: 12px; font: 400 14px/20px var(--font-text);
+  box-shadow: 0 22px 48px -22px rgb(21 23 30 / .35); overflow: hidden; }
+.cmp-piece .pc-head { padding: 14px 18px; font-size: 15px; }
+.cmp-piece__row { display: grid; grid-template-columns: 200px repeat(6, 104px); align-items: center; border-top: 1px solid #F0F1F4; }
+.cmp-piece { width: max-content; }
+.cmp-piece__row > span { padding: 12px 10px; }
+.cmp-piece__row > span:first-child { padding-left: 18px; }
+.cmp-piece__row--head { font-size: 13px; color: #4A4F60; font-weight: 500; }
+.cmp-piece__row .yes { color: #157F52; font-weight: 500; }
+.cmp-piece__row .no { color: #A9ADBA; }
+.cmp-piece__row > span:nth-child(2) { background: #F7F8FF; }
+.cmp-note { left: var(--s-5); bottom: var(--s-5); width: 280px; background: #fff; border: 1px solid #E8E9ED; border-radius: 12px;
+  font: 400 14px/20px var(--font-text); padding: 14px 16px; }
+
+/* comparison table */
+.cmp { border-top: 1px solid var(--line); font-size: 15px; line-height: 22px; }
+.cmp__row { display: grid; grid-template-columns: minmax(0, 4fr) repeat(6, minmax(0, 1.333fr)); align-items: center; border-bottom: 1px solid var(--line); min-height: 44px; }
+.cmp__row > span { padding: 10px 8px; }
+.cmp__row > span:first-child { padding-left: 0; }
+.cmp__row > span:nth-child(2) { background: #F7F8FF; text-align: center; }
+.cmp__row > span:not(:first-child) { text-align: center; }
+.cmp__row--head { font: 500 13px/18px var(--font-text); color: var(--muted); }
+.cmp__row .yes { color: #157F52; font-weight: 500; }
+.cmp__row .no { color: var(--muted); }
+.cmp__foot { margin-top: var(--s-5); max-width: 80ch; }
+@media (max-width: 1023px) {
+  .cmp__row--head { display: none; }
+  .cmp__row { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 12px 0; }
+  .cmp__row > span:first-child { grid-column: 1 / -1; font-weight: 500; padding: 0 0 6px; }
+  .cmp__row > span:not(:first-child) { text-align: left; padding: 4px 0; font-size: 13px; }
+  .cmp__row > span:nth-child(2) { background: none; }
+  .cmp__row > span:not(:first-child)::before { content: attr(data-name) " "; color: var(--muted); }
+}
+
+/* the alternative pages' cards: the program's name leading to QuiroFlow */
+.panel.panel--name { display: flex; align-items: center; justify-content: center; gap: var(--s-4); font: 500 20px/1.2 var(--font-display); color: #15171E; }
+.panel--name .panel__arrow { color: #4F46E5; }
+.panel--name .panel__to { color: #4F46E5; }
+#alternativas .panel { --p-h: 160px; }
+
+/* providers: the real marks on the flat panel */
+.panel.panel--logo { display: flex; align-items: center; justify-content: center; gap: 10px; font: 500 20px/1 var(--font-text); color: #15171E; }
+.panel--logo img { height: 32px; width: auto; }
+#proveedores .panel { --p-h: 160px; }
+.providers__note { margin-top: var(--s-5); }
+
+/* switch: what moves, the data rows and the activity log */
+.moves { border-top: 1px solid var(--line); }
+.moves__row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3); align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.moves__row--head { font: 500 13px/18px var(--font-text); color: var(--muted); }
+.moves .chip { font-size: 13px; padding: 2px 10px; }
+.rows--data .rows__name small { display: block; margin-top: 4px; font-weight: 400; font-size: 14px; line-height: 20px; color: var(--muted); }
+.mini.mini--log { top: 50%; transform: translateY(-50%); }
+#pasos .panel { --p-h: 200px; }
+
+/* pricing page on a phone: five lines per plan, the switch above shows both prices */
+@media (max-width: 639px) { .plans--full .checks li:nth-child(n+4) { display: none; } }
+/* feature cards on a phone: lower panels so a two-screen section stays two */
+@media (max-width: 639px) { #consulta .panel, #cobros .panel, #reservas .panel, #pasos .panel { --p-h: 136px; } #alternativas .panel { --p-h: 120px; } }
+#alternativas .panel { --p-h: 300px; }
+/* comparison table, phone and tablet: the short names once, then one row of
+   six marks under each feature */
+.cmp__short { display: none; }
+@media (max-width: 1023px) {
+  .cmp__row--head { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .cmp__row--head > span:first-child { display: none; }
+  .cmp__full { display: none; } .cmp__short { display: inline; }
+  .cmp__row { grid-template-columns: repeat(6, minmax(0, 1fr)); padding: 10px 0; }
+  .cmp__row > span:not(:first-child) { text-align: center; font-size: 15px; padding: 2px 0; }
+  .cmp__row > span:not(:first-child)::before { content: none; }
+  .cmp__row--head > span { text-align: center; font-size: 13px; padding: 8px 0; }
+}
+/* the import table's chips wrap rather than push the page sideways */
+.moves .chip { white-space: normal; }
+.moves { margin-top: var(--s-4); }
+
+.rows--data li { padding-block: 10px; }
+@media (max-width: 639px) {
+  .cmp__row { padding: 6px 0; }
+  .cmp__row > span:first-child { font-size: 14px; line-height: 20px; padding-bottom: 2px; }
+  .cmp__row > span:not(:first-child) { padding: 0; line-height: 20px; }
+}
