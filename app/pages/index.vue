@@ -68,10 +68,13 @@ usePageSeo({
     <KitHomePricing />
     <KitFaq
       id="preguntas"
+      :hm="2"
       :h2="home.faq.h2"
       :lead="home.faq.lead"
       :items="home.faq.items"
       :link="{ href: BOOKING_URL, label: home.faq.link }"
-    />
+    >
+      <KitEmailCapture />
+    </KitFaq>
   </main>
 </template>

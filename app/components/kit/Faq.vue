@@ -8,11 +8,13 @@ defineProps<{
   lead: string
   items: { q: string; a: string }[]
   link?: { href: string; label: string }
+  /** screens on a phone, when the column under the h2 makes it taller */
+  hm?: number
 }>()
 </script>
 
 <template>
-  <section :id="id" class="section" :aria-labelledby="`${id}-h`">
+  <section :id="id" class="section" :style="hm ? `--hm: ${hm}` : undefined" :aria-labelledby="`${id}-h`">
     <div class="wrap">
       <div class="grid">
         <div class="span-5 stack-5">
