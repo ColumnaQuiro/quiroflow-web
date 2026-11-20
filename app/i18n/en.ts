@@ -403,7 +403,7 @@ export const en: Messages = {
     },
     verifactu: {
       title: 'VeriFactu invoicing',
-      body: 'QR code, chaining and sending to the AEAT from the same system. €7.50/mo per location, only once you start sending.',
+      body: 'QR code, chaining and sending to the AEAT from the same system. Included in every plan at no cost.',
       link: 'How VeriFactu works',
     },
     automations: {
@@ -430,7 +430,7 @@ export const en: Messages = {
     ctaSecondary: 'Talk to the team',
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
-    verifactuNote: 'VeriFactu: €7.50/mo per location, only from the day you start sending to the AEAT.',
+    verifactuNote: 'VeriFactu: included in every plan at no cost, also once you send to the AEAT for real.',
     receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and in the Practice and Clinic plans. 1,000 replies a month included; each further 1,000 is €15.',
     ctaNote: '15-day trial. No card required. Migration included.',
     anchor: {
@@ -500,7 +500,7 @@ export const en: Messages = {
       },
       {
         q: 'Is QuiroFlow ready for VeriFactu?',
-        a: "Yes. Every invoice carries its QR code, is chained to the previous one and is sent to the AEAT automatically. You can send with your clinic's own certificate or authorise QuiroFlow to send on your behalf. You start in test mode at no charge and switch to real sending on the day you choose; from then it costs €7.50 a month per location.",
+        a: "Yes. Every invoice carries its QR code, is chained to the previous one and is sent to the AEAT automatically. You can send with your clinic's own certificate or authorise QuiroFlow to send on your behalf. You start in test mode and switch to real sending on the day you choose. It is included in every plan at no cost.",
       },
       {
         q: 'Is there a mobile app?',

@@ -23,7 +23,7 @@ const f = computed(() => c('home.features'))
         <article class="card card--row card--open span-6">
           <h3>{{ f.plans.title }}</h3>
           <p>{{ f.plans.body }}</p>
-          <div class="panel"><KitMini :rows="f.plans.rows" :tones="['', 's4', 's2', 's2']" /></div>
+          <KitShotPanel src="/screens/plan-cuidados.webp" :alt="c('site.shots.planCuidados')" />
         </article>
       </div>
     </div>

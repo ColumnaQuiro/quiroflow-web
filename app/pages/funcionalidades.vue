@@ -5,25 +5,26 @@ const c = useCopy()
 const f = computed(() => c('featuresPage'))
 const home = computed(() => c('home'))
 const localePath = useLocalePath()
+const alt = computed(() => c('site.shots'))
 useKitSeo('featuresPage')
 
 const clinicCards = computed(() => [
-  { ...f.value.clinic.agenda, tones: ['', 's1', 's2', 's3'] },
+  { ...f.value.clinic.agenda, shot: { src: '/screens/calendario-salas.webp', alt: alt.value.calendarioSalas } },
   { ...f.value.clinic.waitlist, tones: ['', 'strike s4', 's2'] },
   { ...f.value.clinic.forms, tones: ['', '', '', ''] },
   { ...f.value.clinic.exercises, tones: ['', '', '', 's2'] },
 ])
 const moneyCards = computed(() => [
-  { ...f.value.money.billing, tones: ['', 's2', '', 's2'] },
-  { ...f.value.money.verifactu, tones: ['', '', '', 's2'] },
+  { ...f.value.money.billing, shot: { src: '/screens/bono.webp', alt: alt.value.bono } },
+  { ...f.value.money.verifactu, shot: { src: '/screens/facturas.webp', alt: alt.value.facturas } },
   { ...f.value.money.payments },
-  { ...f.value.money.reports },
+  { ...f.value.money.reports, shot: { src: '/screens/retencion.webp', alt: alt.value.retencion } },
   { ...f.value.money.growth, tones: ['', '', 's2'] },
 ])
 const moreCards = computed(() => [
   { ...f.value.more.booking, tones: ['', '', '', 's2'] },
   { ...f.value.more.automations },
-  { ...f.value.more.app },
+  { ...f.value.more.app, shot: { src: '/screens/app-paciente-inicio.webp', alt: alt.value.app, phone: true } },
   { ...f.value.more.reminders, tones: ['', 's2', ''] },
 ])
 </script>

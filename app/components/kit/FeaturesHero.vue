@@ -23,10 +23,7 @@ const localePath = useLocalePath()
         </div>
         <div class="hero__window frame--lit" role="img" :aria-label="h.aria">
           <div class="ly-piece">
-            <div class="ui app app--hero" data-ui-pause-host>
-              <div class="app__pane app__pane--list"><KitWindow :w="h.window" /></div>
-              <div class="app__pane app__pane--open" data-ui-loop><KitChat :chat="h.chat" /></div>
-            </div>
+            <div class="shot shot--hero"><img src="/screens/bandeja.webp" alt="" width="1600" height="1000" fetchpriority="high"></div>
           </div>
         </div>
       </div>

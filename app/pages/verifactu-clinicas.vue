@@ -91,7 +91,7 @@ const faqItems = [
   },
   {
     q: '¿Cuánto cuesta VERI*FACTU en QuiroFlow?',
-    a: 'El modo de pruebas es gratis. Desde el día en que pasas a producción y empiezas a enviar a la AEAT de verdad, cuesta 7,50 € + IVA al mes por sede, que se añade a tu suscripción. Antes de ese día no pagas nada por VERI*FACTU.',
+    a: 'Nada aparte. VERI*FACTU está incluido en todos los planes de QuiroFlow, tanto en modo de pruebas como cuando envías a la AEAT de verdad.',
   },
   {
     q: '¿Necesito un certificado digital?',

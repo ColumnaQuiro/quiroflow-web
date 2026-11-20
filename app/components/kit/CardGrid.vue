@@ -3,7 +3,7 @@
 // a small drawn panel (KitMini). layout "two-rows" puts four cards as two
 // rows of two over two screens (.g2); "bento" puts five as a wide card and a
 // narrow one, then three; "three" puts three in one row on one screen.
-interface Card { title: string; body: string; rows: string[][]; tones?: string[] }
+interface Card { title: string; body: string; rows: string[][]; tones?: string[]; shot?: { src: string; alt: string; phone?: boolean } }
 defineProps<{
   id: string
   h2: string
@@ -31,7 +31,8 @@ defineProps<{
           >
             <h3>{{ card.title }}</h3>
             <p>{{ card.body }}</p>
-            <div class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
+            <KitShotPanel v-if="card.shot" :src="card.shot.src" :alt="card.shot.alt" :phone="card.shot.phone" />
+            <div v-else class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
           </article>
         </div>
       </div>
@@ -44,7 +45,8 @@ defineProps<{
         >
           <h3>{{ card.title }}</h3>
           <p>{{ card.body }}</p>
-          <div class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
+          <KitShotPanel v-if="card.shot" :src="card.shot.src" :alt="card.shot.alt" :phone="card.shot.phone" />
+          <div v-else class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
         </article>
       </div>
     </div>

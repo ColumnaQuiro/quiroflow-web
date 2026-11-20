@@ -6,7 +6,6 @@ import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
 // with a pause button), one large button on the right line.
 const c = useCopy()
 const h = computed(() => c('home.hero'))
-const flowTones = ['s1', 's2', 's3']
 </script>
 
 <template>
@@ -18,52 +17,21 @@ const flowTones = ['s1', 's2', 's3']
           <p class="hero__lead">{{ h.lead }}</p>
         </div>
         <div class="ly-collage span-6 start-4" role="img" :aria-label="h.aria">
+          <!-- Real screens of the app (public/screens), captured from the
+               fictional Clínica Demo; layout.js crossfades the three sets. -->
           <div class="ly-collage__set is-on">
-            <div class="ly-piece pc-wa" style="left: 4%; top: 4%; width: 56%">
-              <div class="pc-head">{{ h.wa.head }}<small>22:47</small></div>
-              <div class="msgs">
-                <div class="m">{{ h.wa.msgs[0] }}</div>
-                <div class="m me">{{ h.wa.msgs[1] }}</div>
-                <div class="m">{{ h.wa.msgs[2] }}</div>
-                <div class="m me hide-s">{{ h.wa.msgs[3] }}</div>
-              </div>
-              <div class="ok">{{ h.wa.ok }}</div>
-            </div>
-            <div class="ly-piece pc-flow" style="left: 44%; top: 65%; width: 52%; height: 31%">
-              <div class="pc-head">{{ h.flow.head }}<small>{{ h.flow.today }}</small></div>
-              <div v-for="(r, i) in h.flow.rows" :key="r[0]" class="r"><span>{{ r[0] }}</span><span class="chip" :class="flowTones[i]">{{ r[1] }}</span></div>
-            </div>
-            <div class="ly-piece pc-note hide-s" style="left: 64%; top: 14%; width: 32%">
-              <strong>{{ h.reoffer[0] }}</strong><span>{{ h.reoffer[1] }}</span>
-            </div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 5%; width: 64%; height: 50%"><img src="/screens/calendario-salas.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 58%; height: 30%"><img src="/screens/plan-cuidados.webp" alt=""></div>
+            <div class="ly-piece pc-shot pc-shot--phone" style="left: 66%; top: 18%; width: 30%; height: 76%"><img src="/screens/app-paciente-inicio.webp" alt=""></div>
           </div>
           <div class="ly-collage__set" aria-hidden="true">
-            <div class="ly-piece pc-inv" style="left: 4%; top: 6%; width: 58%">
-              <div class="pc-head">{{ h.invoice.head }}<small>VERI*FACTU</small></div>
-              <div v-for="l in h.invoice.lines" :key="l[0]" class="ln"><span>{{ l[0] }}</span><span>{{ l[1] }}</span></div>
-              <div class="ln t"><span>{{ h.invoice.total[0] }}</span><span>{{ h.invoice.total[1] }}</span></div>
-              <div class="qr"><i /><span>{{ h.invoice.chained }}</span></div>
-            </div>
-            <div class="ly-piece pc-note" style="left: 44%; top: 66%; width: 52%; height: 30%">
-              <strong>{{ h.accepted[0] }}</strong><span>{{ h.accepted[1] }}</span><span class="pc-mono">{{ h.accepted[2] }}</span>
-            </div>
-            <div class="ly-piece pc-note hide-s" style="left: 66%; top: 18%; width: 30%">
-              <strong>{{ h.bono[0] }}</strong><span>{{ h.bono[1] }}</span>
-            </div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 84%; height: 24%"><img src="/screens/bono.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 12%; top: 36%; width: 84%; height: 18%"><img src="/screens/facturas.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 74%; height: 34%"><img src="/screens/retencion.webp" alt=""></div>
           </div>
           <div class="ly-collage__set" aria-hidden="true">
-            <div class="ly-piece pc-post" style="left: 4%; top: 6%; width: 60%">
-              <div class="fig"><b /><b /></div>
-              <div v-for="v in h.posture" :key="v[0]" class="v"><span>{{ v[0] }}</span><strong>{{ v[1] }}</strong></div>
-            </div>
-            <div class="ly-piece pc-flow" style="left: 40%; top: 62%; width: 56%; height: 34%">
-              <div class="pc-head">{{ h.plan.head }}<small>{{ h.plan.week }}</small></div>
-              <div class="r"><span>{{ h.plan.rows[0][0] }}</span><span class="chip s4">{{ h.plan.rows[0][1] }}</span></div>
-              <div class="r"><span>{{ h.plan.rows[1][0] }}</span><span class="chip s2">{{ h.plan.rows[1][1] }}</span></div>
-            </div>
-            <div class="ly-piece pc-note hide-s" style="left: 68%; top: 16%; width: 28%">
-              <strong>{{ h.review[0] }}</strong><span>{{ h.review[1] }}</span>
-            </div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 74%; height: 56%"><img src="/screens/postural.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 24%; top: 66%; width: 72%; height: 28%"><img src="/screens/plan-cuidados.webp" alt=""></div>
           </div>
         </div>
         <div class="span-3 start-10 hero__cta">

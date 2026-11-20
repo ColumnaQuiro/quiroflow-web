@@ -403,7 +403,7 @@ export const fr: Messages = {
     },
     verifactu: {
       title: 'Facturation VeriFactu',
-      body: 'QR code, chaînage et envoi à l’AEAT depuis le même logiciel. 7,50 €/mois par site, seulement une fois l’envoi commencé.',
+      body: 'QR code, chaînage et envoi à l’AEAT depuis le même logiciel. Inclus dans toutes les formules, sans frais.',
       link: 'Comment fonctionne VeriFactu',
     },
     automations: {
@@ -430,7 +430,7 @@ export const fr: Messages = {
     ctaSecondary: "Parler à l'équipe",
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
-    verifactuNote: "VeriFactu : 7,50 €/mois par site, uniquement à partir du jour où vous commencez à envoyer à l'AEAT.",
+    verifactuNote: "VeriFactu : inclus dans toutes les formules, sans frais, y compris pour l'envoi réel à l'AEAT.",
     receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et dans les formules Practice et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
     ctaNote: "15 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
@@ -500,7 +500,7 @@ export const fr: Messages = {
       },
       {
         q: 'QuiroFlow est-il prêt pour VeriFactu ?',
-        a: "Oui. Chaque facture porte son QR code, est chaînée à la précédente et est envoyée automatiquement à l'AEAT. Vous pouvez envoyer avec le certificat de votre cabinet ou autoriser QuiroFlow à envoyer pour vous. Vous commencez en mode test, sans frais, et passez à l'envoi réel le jour que vous choisissez ; à partir de là, cela coûte 7,50 € par mois et par site.",
+        a: "Oui. Chaque facture porte son QR code, est chaînée à la précédente et est envoyée automatiquement à l'AEAT. Vous pouvez envoyer avec le certificat de votre cabinet ou autoriser QuiroFlow à envoyer pour vous. Vous commencez en mode test et passez à l'envoi réel le jour que vous choisissez. C'est inclus dans toutes les formules, sans frais.",
       },
       {
         q: 'Y a-t-il une app mobile ?',

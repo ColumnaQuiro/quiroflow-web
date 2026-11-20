@@ -45,7 +45,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: '¿QuiroFlow emite facturas VeriFactu?',
-        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente desde el día en que pasas a producción. Hasta entonces funciona en modo de pruebas, sin coste; desde ese día cuesta 7,50 € al mes por sede.',
+        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente desde el día en que pasas a producción. Hasta entonces funciona en modo de pruebas. Está incluido en todos los planes, sin coste.',
       },
       {
         q: '¿Los recordatorios por WhatsApp necesitan una integración aparte?',
