@@ -1,0 +1,66 @@
+/* Tailwind's preflight (v3.4), scoped to .tw-legacy.
+
+   Tailwind's own preflight is switched off in tailwind.config.ts because the
+   redesigned pages use the plain CSS kit in public/kit, which expects browser
+   defaults. The pages that still use Tailwind utilities rely on this reset
+   (margins at 0, headings inheriting size, borders solid by default), so it
+   is kept here for them only. Every selector is wrapped in :where() so its
+   specificity stays that of the original element selector and Tailwind's
+   utility classes still win over it, exactly as before.
+
+   Delete this file once no page renders inside .tw-legacy. */
+
+:where(.tw-legacy), :where(.tw-legacy) *, :where(.tw-legacy) ::before, :where(.tw-legacy) ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+:where(.tw-legacy) ::before, :where(.tw-legacy) ::after { --tw-content: ''; }
+:where(.tw-legacy) {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+:where(.tw-legacy) hr { height: 0; color: inherit; border-top-width: 1px; }
+:where(.tw-legacy) abbr:where([title]) { text-decoration: underline dotted; }
+:where(.tw-legacy) :is(h1, h2, h3, h4, h5, h6) { font-size: inherit; font-weight: inherit; }
+:where(.tw-legacy) a { color: inherit; text-decoration: inherit; }
+:where(.tw-legacy) :is(b, strong) { font-weight: bolder; }
+:where(.tw-legacy) :is(code, kbd, samp, pre) { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 1em; }
+:where(.tw-legacy) small { font-size: 80%; }
+:where(.tw-legacy) :is(sub, sup) { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+:where(.tw-legacy) sub { bottom: -0.25em; }
+:where(.tw-legacy) sup { top: -0.5em; }
+:where(.tw-legacy) table { text-indent: 0; border-color: inherit; border-collapse: collapse; }
+:where(.tw-legacy) :is(button, input, optgroup, select, textarea) {
+  font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit;
+  font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit;
+  color: inherit; margin: 0; padding: 0;
+}
+:where(.tw-legacy) :is(button, select) { text-transform: none; }
+:where(.tw-legacy) :is(button, input:where([type='button']), input:where([type='reset']), input:where([type='submit'])) {
+  -webkit-appearance: button; background-color: transparent; background-image: none;
+}
+:where(.tw-legacy) :-moz-focusring { outline: auto; }
+:where(.tw-legacy) :-moz-ui-invalid { box-shadow: none; }
+:where(.tw-legacy) progress { vertical-align: baseline; }
+:where(.tw-legacy) ::-webkit-inner-spin-button, :where(.tw-legacy) ::-webkit-outer-spin-button { height: auto; }
+:where(.tw-legacy) [type='search'] { -webkit-appearance: textfield; outline-offset: -2px; }
+:where(.tw-legacy) ::-webkit-search-decoration { -webkit-appearance: none; }
+:where(.tw-legacy) ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+:where(.tw-legacy) summary { display: list-item; }
+:where(.tw-legacy) :is(blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre) { margin: 0; }
+:where(.tw-legacy) fieldset { margin: 0; padding: 0; }
+:where(.tw-legacy) legend { padding: 0; }
+:where(.tw-legacy) :is(ol, ul, menu) { list-style: none; margin: 0; padding: 0; }
+:where(.tw-legacy) dialog { padding: 0; }
+:where(.tw-legacy) textarea { resize: vertical; }
+:where(.tw-legacy) :is(input, textarea)::placeholder { opacity: 1; color: #9ca3af; }
+:where(.tw-legacy) :is(button, [role="button"]) { cursor: pointer; }
+:where(.tw-legacy) :disabled { cursor: default; }
+:where(.tw-legacy) :is(img, svg, video, canvas, audio, iframe, embed, object) { display: block; vertical-align: middle; }
+:where(.tw-legacy) :is(img, video) { max-width: 100%; height: auto; }
+:where(.tw-legacy) [hidden] { display: none; }

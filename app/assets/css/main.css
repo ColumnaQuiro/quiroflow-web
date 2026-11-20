@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
+/* The pages still built with Tailwind sit inside .tw-legacy (layouts/default
+   and error.vue). Their reset is legacy-preflight.css, scoped to that
+   wrapper, so it never reaches the redesigned pages. */
+.tw-legacy {
   font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }

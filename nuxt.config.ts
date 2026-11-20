@@ -25,6 +25,13 @@ export default defineNuxtConfig({
     '@fontsource/instrument-sans/500.css',
     '@fontsource/instrument-sans/600.css',
     '@fontsource/instrument-sans/700.css',
+    // IBM Plex is the redesigned pages' face (layout "kit"), self-hosted for
+    // the same reason as Instrument Sans above. Only the weights the kit
+    // sets: 400 for text, 500 for headlines, labels and buttons.
+    '@fontsource/ibm-plex-sans/400.css',
+    '@fontsource/ibm-plex-sans/500.css',
+    '@fontsource/ibm-plex-mono/400.css',
+    '~/assets/css/legacy-preflight.css',
     '~/assets/css/main.css',
   ],
   // Canonical production origin -- backs the sitemap's <loc> entries and
