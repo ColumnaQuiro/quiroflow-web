@@ -14,6 +14,7 @@ export const siteEs = {
     demo: 'Reservar una demo',
     demoLong: 'O reserva una demo de 30 minutos con nosotros',
     shots: {
+      recepcionista: 'La recepcionista con IA cambiando una cita por WhatsApp, con sus mensajes marcados como Recepcionista IA',
       calendario: 'El calendario de QuiroFlow con una columna por sala, el estado de cada cita y la caja del día',
       calendarioSalas: 'Citas del día repartidas por sala, cada una con su profesional y su estado',
       bandeja: 'La bandeja de entrada con las conversaciones de WhatsApp y la ficha del paciente al lado',

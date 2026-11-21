@@ -21,9 +21,9 @@ const localePath = useLocalePath()
             <a class="btn btn--secondary" :href="localePath('precios')">{{ h.secondary }}</a>
           </div>
         </div>
-        <div class="hero__window frame--lit" role="img" :aria-label="h.aria">
+        <div class="hero__window stage-brand">
           <div class="ly-piece">
-            <div class="shot shot--hero"><img src="/screens/bandeja.webp" alt="" width="1600" height="1000" fetchpriority="high"></div>
+            <KitBrowser screen="bandeja" :alt="c('site.shots.bandeja')" eager />
           </div>
         </div>
       </div>

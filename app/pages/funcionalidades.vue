@@ -9,22 +9,22 @@ const alt = computed(() => c('site.shots'))
 useKitSeo('featuresPage')
 
 const clinicCards = computed(() => [
-  { ...f.value.clinic.agenda, shot: { src: '/screens/calendario-salas.webp', alt: alt.value.calendarioSalas } },
+  { ...f.value.clinic.agenda, shot: { screen: 'calendarioSalas' as const, alt: alt.value.calendarioSalas } },
   { ...f.value.clinic.waitlist, tones: ['', 'strike s4', 's2'] },
   { ...f.value.clinic.forms, tones: ['', '', '', ''] },
   { ...f.value.clinic.exercises, tones: ['', '', '', 's2'] },
 ])
 const moneyCards = computed(() => [
-  { ...f.value.money.billing, shot: { src: '/screens/bono.webp', alt: alt.value.bono } },
-  { ...f.value.money.verifactu, shot: { src: '/screens/facturas.webp', alt: alt.value.facturas } },
+  { ...f.value.money.billing, shot: { screen: 'bono' as const, alt: alt.value.bono } },
+  { ...f.value.money.verifactu, shot: { screen: 'facturas' as const, alt: alt.value.facturas } },
   { ...f.value.money.payments },
-  { ...f.value.money.reports, shot: { src: '/screens/retencion.webp', alt: alt.value.retencion } },
+  { ...f.value.money.reports, shot: { screen: 'retencion' as const, alt: alt.value.retencion } },
   { ...f.value.money.growth, tones: ['', '', 's2'] },
 ])
 const moreCards = computed(() => [
   { ...f.value.more.booking, tones: ['', '', '', 's2'] },
   { ...f.value.more.automations },
-  { ...f.value.more.app, shot: { src: '/screens/app-paciente-inicio.webp', alt: alt.value.app, phone: true } },
+  { ...f.value.more.app, shot: { screen: 'appPaciente' as const, alt: alt.value.app, phone: true } },
   { ...f.value.more.reminders, tones: ['', 's2', ''] },
 ])
 </script>
@@ -40,6 +40,7 @@ const moreCards = computed(() => [
       :rows="f.receptionist.rows"
       :link="{ href: localePath('precios'), label: f.receptionist.link }"
       :chat="home.receptionist.chat"
+      :shot="{ alt: c('site.shots.recepcionista') }"
     />
     <KitCardGrid id="cobros" :h2="f.money.h2" layout="bento" :cards="moneyCards" />
     <KitCardGrid

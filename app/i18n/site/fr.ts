@@ -9,6 +9,7 @@ export const siteFr = {
     demo: 'Réserver une démo',
     demoLong: 'Ou réservez une démo de 30 minutes avec nous',
     shots: {
+      recepcionista: 'La réceptionniste IA qui déplace un rendez-vous sur WhatsApp, ses messages marqués Réceptionniste IA',
       calendario: 'L’agenda de QuiroFlow avec une colonne par salle, le statut de chaque rendez-vous et la caisse du jour',
       calendarioSalas: 'Les rendez-vous du jour répartis par salle, chacun avec son praticien et son statut',
       bandeja: 'La messagerie avec les conversations WhatsApp et le dossier du patient à côté',

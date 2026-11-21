@@ -20,18 +20,18 @@ const h = computed(() => c('home.hero'))
           <!-- Real screens of the app (public/screens), captured from the
                fictional Clínica Demo; layout.js crossfades the three sets. -->
           <div class="ly-collage__set is-on">
-            <div class="ly-piece pc-shot" style="left: 4%; top: 5%; width: 64%; height: 50%"><img src="/screens/calendario-salas.webp" alt=""></div>
-            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 58%; height: 30%"><img src="/screens/plan-cuidados.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 5%; width: 64%; height: 50%"><img src="/screens/calendario-salas.webp" alt="" style="width: 860px"></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 58%; height: 30%"><img src="/screens/plan-cuidados.webp" alt="" style="width: 942px"></div>
             <div class="ly-piece pc-shot pc-shot--phone" style="left: 66%; top: 18%; width: 30%; height: 76%"><img src="/screens/app-paciente-inicio.webp" alt=""></div>
           </div>
           <div class="ly-collage__set" aria-hidden="true">
-            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 84%; height: 24%"><img src="/screens/bono.webp" alt=""></div>
-            <div class="ly-piece pc-shot" style="left: 12%; top: 36%; width: 84%; height: 18%"><img src="/screens/facturas.webp" alt=""></div>
-            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 74%; height: 34%"><img src="/screens/retencion.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 84%; height: 24%"><img src="/screens/bono.webp" alt="" style="width: 1314px"></div>
+            <div class="ly-piece pc-shot" style="left: 12%; top: 36%; width: 84%; height: 18%"><img src="/screens/facturas.webp" alt="" style="width: 1349px"></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 60%; width: 74%; height: 34%"><img src="/screens/retencion.webp" alt="" style="width: 1316px"></div>
           </div>
           <div class="ly-collage__set" aria-hidden="true">
-            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 74%; height: 56%"><img src="/screens/postural.webp" alt=""></div>
-            <div class="ly-piece pc-shot" style="left: 24%; top: 66%; width: 72%; height: 28%"><img src="/screens/plan-cuidados.webp" alt=""></div>
+            <div class="ly-piece pc-shot" style="left: 4%; top: 6%; width: 74%; height: 56%"><img src="/screens/postural.webp" alt="" style="width: 1044px"></div>
+            <div class="ly-piece pc-shot" style="left: 24%; top: 66%; width: 72%; height: 28%"><img src="/screens/plan-cuidados.webp" alt="" style="width: 942px"></div>
           </div>
         </div>
         <div class="span-3 start-10 hero__cta">

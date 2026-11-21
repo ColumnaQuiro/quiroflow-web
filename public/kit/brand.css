@@ -279,8 +279,39 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
 @media (max-width: 639px) { .panel--shot > img { left: 16px; top: 16px; width: calc(100% + 48px); } }
 /* screenshots at their own size, cut by their frame, so their text stays
    readable; the phone is the exception, shown whole and scaled to fit */
-.ly-collage .ly-piece.pc-shot > img { width: auto; height: auto; max-width: none; object-fit: none; }
+.ly-collage .ly-piece.pc-shot > img { width: auto; height: auto; max-width: none; object-fit: fill; }
 .ly-collage .ly-piece.pc-shot--phone { background: transparent; box-shadow: none; }
 .ly-collage .ly-piece.pc-shot--phone > img { width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .panel--shot > img { width: auto; max-width: none; }
 .ly-collage .ly-piece.pc-shot--phone > img { border-radius: 34px; }
+
+/* ---------------------------------------------------------------- product shots, v2 (2x screens) */
+/* the brand stage: the indigo of the logo, a real screen in a browser window
+   standing on it and cut by its foot */
+.stage-brand { position: relative; overflow: hidden; border-radius: 20px; padding: 40px 48px 0;
+  background: linear-gradient(135deg, #4F46E5 0%, #6A61EC 55%, #9089F2 100%); }
+.stage-brand.fill { margin-top: var(--s-7); }
+.browser { overflow: hidden; background: #fff; border-radius: 12px 12px 0 0;
+  box-shadow: 0 1px 0 rgb(255 255 255 / .5) inset, 0 32px 80px -24px rgb(21 23 30 / .55); }
+.browser__bar { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; background: #F7F8FA; border-bottom: 1px solid #E8E9ED; }
+.browser__bar i { width: 11px; height: 11px; border-radius: 50%; background: #DADCE3; }
+.browser__bar span { margin-left: 16px; padding: 4px 16px; border-radius: 6px; background: #fff; border: 1px solid #E8E9ED;
+  font: 400 13px/16px var(--font-text); color: #4A4F60; }
+.browser > img { display: block; width: 100%; height: auto; }
+@media (max-width: 639px) { .stage-brand { padding: 20px 16px 0; border-radius: 14px; } .browser__bar { height: 30px; } .browser__bar span { display: none; } }
+
+/* the features hero: the brand stage under the centred words */
+.hero--centred .hero__window.stage-brand { padding: 0; border-radius: 20px 20px 0 0; background: linear-gradient(135deg, #4F46E5 0%, #6A61EC 55%, #9089F2 100%); }
+.hero--centred .hero__window.stage-brand .ly-piece { top: 40px; height: auto; }
+
+/* card panels holding a screen: a soft indigo ground */
+.panel.panel--shot { background-image: linear-gradient(160deg, #F1F2FE 0%, #DFE2FC 100%) !important; }
+.panel--shot > img { height: auto; }
+
+/* the receptionist's real conversation on the soft ground */
+.stage-soft { position: relative; overflow: hidden; background: linear-gradient(160deg, #F1F2FE 0%, #DFE2FC 100%); }
+.stage-soft__shot { position: absolute; left: 40px; top: 40px; width: 592px; max-width: none; height: auto; border-radius: 12px;
+  border: 1px solid #E8E9ED; box-shadow: 0 32px 72px -28px rgb(21 23 30 / .45); }
+@media (max-width: 639px) { .stage-soft__shot { left: 16px; top: 16px; } }
+/* the features h1 ("Todo lo que hace QuiroFlow en tu clínica") on two lines */
+.hero--centred h1 { max-width: 22ch; }

@@ -9,6 +9,7 @@ export const siteEn = {
     demo: 'Book a demo',
     demoLong: 'Or book a 30-minute demo with us',
     shots: {
+      recepcionista: 'The AI receptionist moving an appointment on WhatsApp, its messages marked as AI receptionist',
       calendario: 'The QuiroFlow calendar with one column per room, each appointment’s status and the day’s takings',
       calendarioSalas: 'The day’s appointments split by room, each with its practitioner and status',
       bandeja: 'The inbox with WhatsApp conversations and the patient’s details beside them',

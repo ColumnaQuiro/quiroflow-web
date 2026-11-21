@@ -13,8 +13,8 @@ const localePath = useLocalePath()
         <h2 id="agenda-h" class="span-5">{{ a.h2 }}</h2>
         <p class="span-6 start-7 muted">{{ a.lead }} <a class="link" :href="localePath('funcionalidades')">{{ a.link }}</a></p>
       </div>
-      <div class="shot shot--app fill">
-        <img src="/screens/calendario.webp" :alt="c('site.shots.calendario')" width="1600" height="1000" loading="lazy" decoding="async">
+      <div class="stage-brand fill">
+        <KitBrowser screen="calendario" :alt="c('site.shots.calendario')" />
       </div>
     </div>
   </section>
