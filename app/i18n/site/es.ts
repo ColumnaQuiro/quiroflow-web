@@ -216,8 +216,8 @@ export const siteEs = {
     },
     patientApp: {
       h2: 'La app de tus pacientes',
-      lead: 'Confirman o cambian la cita, ven las sesiones que les quedan del bono y pagan sus facturas desde el móvil. Es la misma app para iPhone y Android.',
-      alts: ['La pantalla de inicio de la app del paciente con su próxima cita confirmada y sus sesiones restantes', 'Las citas del paciente, con la próxima por confirmar y las anteriores', 'La facturación del paciente con su bono, lo pendiente y sus cargos'],
+      lead: 'Confirman o cambian la cita, marcan los ejercicios que hacen en casa, ven cómo mejora su postura y pagan sus facturas. Es la misma app para iPhone y Android.',
+      alts: ['La pantalla de inicio de la app del paciente con su próxima cita confirmada y sus sesiones restantes', 'Las citas del paciente, con la próxima por confirmar y las anteriores', 'Los ejercicios para casa, con los días hechos esta semana y el botón Hecho hoy', 'El progreso de su postura entre dos valoraciones, con el peso que sostiene el cuello', 'La facturación del paciente con su bono, lo pendiente y sus cargos'],
       labels: ['Inicio', 'Citas', 'Facturación'],
     },
     teamApp: {

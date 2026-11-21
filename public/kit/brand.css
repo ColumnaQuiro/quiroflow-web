@@ -398,8 +398,8 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
 /* the patient app, screen by screen: whole phones on the brand stage; a row
    you swipe on narrower screens */
 .stage-brand.phones { margin-top: var(--s-7); padding: 32px 24px; }
-.phones__row { display: flex; justify-content: center; gap: 48px; }
-.phones__phone { flex: none; width: 200px; height: auto; filter: drop-shadow(0 24px 40px rgb(21 23 30 / .35)); }
+.phones__row { display: flex; justify-content: center; gap: 28px; }
+.phones__phone { flex: none; width: 196px; height: auto; filter: drop-shadow(0 24px 40px rgb(21 23 30 / .35)); }
 @media (max-width: 1023px) {
   .phones__row { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; gap: 24px; padding: 0 24px 8px; margin: 0 -24px; scrollbar-width: none; }
   .phones__row::-webkit-scrollbar { display: none; }
@@ -412,3 +412,4 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
 .team .team__phone--l { left: 8%; top: 15%; }
 .team .team__phone--r { right: 8%; top: 15%; }
 @media (min-width: 640px) and (max-width: 1023px) { #agenda, #automatizaciones { --h: 1 !important; } }
+@media (min-width: 1024px) and (max-width: 1279px) { .phones__row { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .phones__phone { scroll-snap-align: center; } }

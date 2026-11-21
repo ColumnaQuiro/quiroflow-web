@@ -6,7 +6,7 @@ import { SCREENS } from '~/utils/screens'
 // whole, never cut.
 const c = useCopy()
 const a = computed(() => c('home.patientApp'))
-const phones = computed(() => (['pacienteInicio', 'pacienteCitas', 'pacienteFacturas'] as const).map((k, i) => ({ ...SCREENS[k], alt: a.value.alts[i] as string })))
+const phones = computed(() => (['pacienteInicio', 'pacienteCitas', 'pacienteEjercicios', 'pacienteProgreso', 'pacienteFacturas'] as const).map((k, i) => ({ ...SCREENS[k], alt: a.value.alts[i] as string })))
 </script>
 
 <template>

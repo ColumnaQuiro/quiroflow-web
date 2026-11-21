@@ -211,8 +211,8 @@ export const siteFr = {
     },
     patientApp: {
       h2: 'L’app de vos patients',
-      lead: 'Ils confirment ou déplacent leur rendez-vous, voient les séances qui leur restent et paient leurs factures depuis leur téléphone. La même app sur iPhone et Android.',
-      alts: ['L’accueil de l’app patient avec le prochain rendez-vous confirmé et les séances restantes', 'Les rendez-vous du patient, le prochain à confirmer et les précédents', 'La facturation du patient avec son forfait, ce qui reste dû et ses paiements'],
+      lead: 'Ils confirment ou déplacent leur rendez-vous, cochent leurs exercices à la maison, voient leur posture progresser et paient leurs factures. La même app sur iPhone et Android.',
+      alts: ['L’accueil de l’app patient avec le prochain rendez-vous confirmé et les séances restantes', 'Les rendez-vous du patient, le prochain à confirmer et les précédents', 'Les exercices à la maison, avec les jours faits cette semaine et le bouton Fait aujourd’hui', 'Les progrès de sa posture entre deux bilans, avec le poids que porte le cou', 'La facturation du patient avec son forfait, ce qui reste dû et ses paiements'],
       labels: ['Accueil', 'Rendez-vous', 'Facturation'],
     },
     teamApp: {

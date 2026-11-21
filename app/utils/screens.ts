@@ -9,6 +9,8 @@ export const SCREENS = {
   recepcionista: { src: '/screens/recepcionista.webp', w: 592, h: 706 },
   pacienteInicio: { src: '/screens/paciente-inicio.webp', w: 416, h: 870 },
   pacienteCitas: { src: '/screens/paciente-citas.webp', w: 416, h: 870 },
+  pacienteEjercicios: { src: '/screens/paciente-ejercicios.webp', w: 416, h: 870 },
+  pacienteProgreso: { src: '/screens/paciente-progreso.webp', w: 416, h: 870 },
   pacienteFacturas: { src: '/screens/paciente-facturas.webp', w: 416, h: 870 },
   equipoDia: { src: '/screens/equipo-dia.webp', w: 416, h: 870 },
   equipoAgenda: { src: '/screens/equipo-agenda.webp', w: 416, h: 870 },
