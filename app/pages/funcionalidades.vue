@@ -5,19 +5,20 @@ const c = useCopy()
 const f = computed(() => c('featuresPage'))
 const home = computed(() => c('home'))
 const localePath = useLocalePath()
+const alt = computed(() => c('site.shots'))
 useKitSeo('featuresPage')
 
 const clinicCards = computed(() => [
-  { ...f.value.clinic.agenda, tones: ['', 's1', 's2', 's3'] },
-  { ...f.value.clinic.waitlist, tones: ['', 'strike s4', 's2'] },
+  { ...f.value.clinic.agenda, ill: 'rooms' as const },
+  { ...f.value.clinic.waitlist, ill: 'waitlist' as const },
   { ...f.value.clinic.forms, tones: ['', '', '', ''] },
   { ...f.value.clinic.exercises, tones: ['', '', '', 's2'] },
 ])
 const moneyCards = computed(() => [
-  { ...f.value.money.billing, tones: ['', 's2', '', 's2'] },
-  { ...f.value.money.verifactu, tones: ['', '', '', 's2'] },
+  { ...f.value.money.billing, ill: 'bono' as const },
+  { ...f.value.money.verifactu, ill: 'invoice' as const },
   { ...f.value.money.payments },
-  { ...f.value.money.reports },
+  { ...f.value.money.reports, ill: 'reports' as const },
   { ...f.value.money.growth, tones: ['', '', 's2'] },
 ])
 const moreCards = computed(() => [
@@ -39,6 +40,7 @@ const moreCards = computed(() => [
       :rows="f.receptionist.rows"
       :link="{ href: localePath('precios'), label: f.receptionist.link }"
       :chat="home.receptionist.chat"
+      :shot="{ alt: c('site.shots.recepcionista') }"
     />
     <KitCardGrid id="cobros" :h2="f.money.h2" layout="bento" :cards="moneyCards" />
     <KitCardGrid

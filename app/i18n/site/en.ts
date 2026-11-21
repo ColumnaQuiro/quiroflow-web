@@ -8,6 +8,18 @@ export const siteEn = {
     cta: 'Start free trial',
     demo: 'Book a demo',
     demoLong: 'Or book a 30-minute demo with us',
+    shots: {
+      recepcionista: 'The AI receptionist moving an appointment on WhatsApp, its messages marked as AI receptionist',
+      calendario: 'The QuiroFlow calendar with one column per room, each appointment’s status and the day’s takings',
+      calendarioSalas: 'The day’s appointments split by room, each with its practitioner and status',
+      bandeja: 'The inbox with WhatsApp conversations and the patient’s details beside them',
+      planCuidados: 'A patient record with her care plan and the behind-schedule flag',
+      bono: 'A 10-session package with the sessions left and the amount paid',
+      facturas: 'A patient’s invoices, signed in a chain as VeriFactu requires',
+      postural: 'A patient’s posture analysis on two dates, with the reference points marked',
+      retencion: 'Retention report with new patients, returning patients and unfinished plans',
+      app: 'The patient app with the next appointment, sessions left and messages with the clinic',
+    },
     nav: {
       product: 'Product',
       clinics: 'Clinics',
@@ -71,7 +83,7 @@ export const siteEn = {
     hero: {
       h1: 'Practice management software for clinics',
       lead: 'Your clinic’s calendar, WhatsApp, packages and VeriFactu invoices in one program. From €45 a month per practitioner.',
-      aria: 'Three views of QuiroFlow: the AI receptionist booking an appointment on WhatsApp, the day’s patient flow with rooms, and a VeriFactu invoice accepted by the AEAT',
+      aria: 'Real QuiroFlow screens: the calendar by room, the patient app, a package, invoices, the retention report and posture analysis',
       wa: {
         head: 'AI receptionist',
         msgs: ['Do you have a slot this week for a first visit?', 'A first visit is €50. I have Thursday at 10:00 or Friday at 17:30.', 'Thursday at 10, please', 'Done: Thursday at 10:00 with Marta.'],
@@ -195,7 +207,26 @@ export const siteEn = {
       },
     },
     money: {
-      h2: 'Payments, invoices and the app',
+      h2: 'Payments and invoices',
+    },
+    patientApp: {
+      h2: 'Your patients’ app',
+      lead: 'Patients confirm or move their appointment, tick off their home exercises, see their posture improve and pay their invoices. The same app on iPhone and Android.',
+      alts: ['The patient app home screen with the next appointment confirmed and the sessions left', 'The patient’s appointments, the next one to confirm and the past ones', 'Home exercises, with the video showing how to do a glute bridge and the days done this week', 'Posture progress, with the trend and the figure before and now', 'The patient’s billing with the package, what is due and the charges'],
+      labels: ['Home', 'Appointments', 'Billing'],
+    },
+    teamApp: {
+      h2: 'The clinic on your team’s phone',
+      lead: 'Today’s calendar, every patient’s record and the WhatsApp inbox, from the phone too. Sign in with Face ID and get a notice for every new booking.',
+      rows: ['Who is in session and who is arriving', 'The record with the plan, notes and payments', 'Call, message or book without going to the desk'],
+      alts: ['My day in the team app, with takings and this week’s visits', 'Today’s calendar on the phone, each patient with their status', 'A patient record on the phone, with her care plan'],
+    },
+    automations: {
+      h2: 'Automations you build yourself',
+      lead: 'You choose what starts it, such as an appointment the patient missed, and what happens next: messages, waits and a different path depending on the reply.',
+      example: 'In this example, when a patient misses a visit it writes to them on WhatsApp to rebook and, if they have not replied in two days, tells their practitioner.',
+      link: 'See the automations',
+      alt: 'The automation editor with the no-show flow: a tag, a WhatsApp message, a wait for the reply and a notice to the practitioner',
     },
     specialties: {
       h2: 'For chiropractic, physiotherapy, osteopathy and podiatry',
@@ -237,7 +268,7 @@ export const siteEn = {
         { q: 'Where is my patients’ data stored?', a: 'On servers inside the European Union, backed up daily. Your clinic is the data controller and QuiroFlow signs the data processing agreement.' },
         { q: 'Can I take my data with me if I leave?', a: 'Yes. Patients, appointments, notes, forms and invoicing export as CSV and PDF from your account, at no cost.' },
         { q: 'What does the AI receptionist cost?', a: '€19 a month with 1,000 replies, or included in Practice and Clinic. Each extra 1,000 replies is €15.' },
-        { q: 'What does VeriFactu cost?', a: '€7.50 a month per location, only from the day you start sending to the AEAT. Test mode is free.' },
+        { q: 'Does VeriFactu cost extra?', a: 'No. It is included in every plan, also once you send to the AEAT for real.' },
         { q: 'What is included in the 15-day trial?', a: 'The whole product, with no card. If you stay, we move your data over before you start paying.' },
       ],
     },
@@ -286,7 +317,7 @@ export const siteEn = {
         { q: 'How are practitioners counted?', a: 'Only people who see patients count. Front desk, admin and management are free and unlimited, and patients are never counted.' },
         { q: 'What is included in the 15-day trial?', a: 'The whole product, with no card. If you stay, we move your data over before you start paying.' },
         { q: 'What does the AI receptionist cost?', a: '€19 a month (€17 billed yearly) with 1,000 replies, or included in Growth, Practice and Clinic. Each extra 1,000 replies is €15, and you can set a monthly cap.' },
-        { q: 'What does VeriFactu cost?', a: '€7.50 a month per location, only from the day you start sending to the AEAT. Test mode is free.' },
+        { q: 'Does VeriFactu cost extra?', a: 'No. It is included in every plan, also once you send to the AEAT for real.' },
         { q: 'Do prices include VAT?', a: 'No. 21% Spanish VAT is added on the invoice.' },
       ],
     },

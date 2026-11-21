@@ -60,9 +60,13 @@ usePageSeo({
       :rows="home.receptionist.rows"
       :link="{ href: localePath('precios'), label: home.receptionist.link }"
       :chat="home.receptionist.chat"
+      :shot="{ alt: c('site.shots.recepcionista') }"
     />
     <KitHomeMoney />
+    <KitHomePatientApp />
     <KitStatement id="ficha" :copy="home.statement" />
+    <KitHomeTeamApp />
+    <KitHomeAutomations />
     <KitHomeSpecialties />
     <KitHomeSwitch />
     <KitHomePricing />

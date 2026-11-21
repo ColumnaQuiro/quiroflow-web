@@ -15,15 +15,12 @@ const f = computed(() => c('home.features'))
         <article class="card card--row card--open span-6">
           <h3>{{ f.waitlist.title }}</h3>
           <p>{{ f.waitlist.body }}</p>
-          <div class="panel">
-            <KitMini :rows="f.waitlist.slot" :tones="['', 'strike s4', 's2']" style="right: 32%; top: 34%" />
-            <KitMini :rows="f.waitlist.list" :tones="['', 's1', 's1']" style="left: 48%; top: 64%" />
-          </div>
+          <KitIll kind="waitlist" :rows="f.waitlist.slot" :extra="f.waitlist.list" />
         </article>
         <article class="card card--row card--open span-6">
           <h3>{{ f.plans.title }}</h3>
           <p>{{ f.plans.body }}</p>
-          <div class="panel"><KitMini :rows="f.plans.rows" :tones="['', 's4', 's2', 's2']" /></div>
+          <KitIll kind="plan" :rows="f.plans.rows" />
         </article>
       </div>
     </div>

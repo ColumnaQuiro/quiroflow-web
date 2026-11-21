@@ -13,6 +13,18 @@ export const siteEs = {
     cta: 'Probar gratis',
     demo: 'Reservar una demo',
     demoLong: 'O reserva una demo de 30 minutos con nosotros',
+    shots: {
+      recepcionista: 'La recepcionista con IA cambiando una cita por WhatsApp, con sus mensajes marcados como Recepcionista IA',
+      calendario: 'El calendario de QuiroFlow con una columna por sala, el estado de cada cita y la caja del día',
+      calendarioSalas: 'Citas del día repartidas por sala, cada una con su profesional y su estado',
+      bandeja: 'La bandeja de entrada con las conversaciones de WhatsApp y la ficha del paciente al lado',
+      planCuidados: 'La ficha de una paciente con su plan de cuidados y el aviso de retraso',
+      bono: 'Un bono de 10 sesiones con las sesiones restantes y lo pagado',
+      facturas: 'Las facturas de un paciente, firmadas en cadena conforme a VeriFactu',
+      postural: 'Análisis postural de un paciente en dos fechas, con los puntos de referencia marcados',
+      retencion: 'Informe de retención con los pacientes nuevos, los que vuelven y los planes sin terminar',
+      app: 'La app del paciente con su próxima cita, sus sesiones restantes y los mensajes con la clínica',
+    },
     nav: {
       product: 'Producto',
       clinics: 'Clínicas',
@@ -76,7 +88,7 @@ export const siteEs = {
     hero: {
       h1: 'Software de gestión para clínicas',
       lead: 'La agenda, el WhatsApp, los bonos y las facturas VeriFactu de tu clínica en un solo programa. Desde 45 € al mes por profesional.',
-      aria: 'Tres vistas de QuiroFlow: la recepcionista con IA reservando una cita por WhatsApp, el flujo de la consulta con su sala y una factura VeriFactu aceptada por la AEAT',
+      aria: 'Pantallas reales de QuiroFlow: el calendario por salas, la app del paciente, un bono, las facturas, el informe de retención y el análisis postural',
       wa: {
         head: 'Recepcionista con IA',
         msgs: ['¿Tenéis hueco esta semana para una primera visita?', 'La primera visita cuesta 50 €. Tengo el jueves a las 10:00 o el viernes a las 17:30.', 'El jueves a las 10', 'Hecho: jueves a las 10:00 con Marta.'],
@@ -200,7 +212,26 @@ export const siteEs = {
       },
     },
     money: {
-      h2: 'Cobros, facturas y la app',
+      h2: 'Cobros y facturas',
+    },
+    patientApp: {
+      h2: 'La app de tus pacientes',
+      lead: 'Confirman o cambian la cita, marcan los ejercicios que hacen en casa, ven cómo mejora su postura y pagan sus facturas. Es la misma app para iPhone y Android.',
+      alts: ['La pantalla de inicio de la app del paciente con su próxima cita confirmada y sus sesiones restantes', 'Las citas del paciente, con la próxima por confirmar y las anteriores', 'Los ejercicios para casa, con el vídeo de cómo hacer el puente de glúteo y los días hechos esta semana', 'El progreso de su postura, con la evolución y su figura antes y ahora', 'La facturación del paciente con su bono, lo pendiente y sus cargos'],
+      labels: ['Inicio', 'Citas', 'Facturación'],
+    },
+    teamApp: {
+      h2: 'La clínica en el móvil de tu equipo',
+      lead: 'La agenda del día, la ficha de cada paciente y la bandeja de WhatsApp, también desde el móvil. Entras con Face ID y te avisa de cada reserva nueva.',
+      rows: ['Quién está en consulta y quién llega ahora', 'La ficha con su plan, sus notas y sus cobros', 'Llamar, escribir o reservar sin ir al ordenador'],
+      alts: ['Mi día en la app del equipo, con los ingresos y las visitas de la semana', 'La agenda del día en el móvil, con cada paciente y su estado', 'La ficha de una paciente en el móvil, con su plan de cuidados'],
+    },
+    automations: {
+      h2: 'Automatizaciones que montas tú',
+      lead: 'Eliges qué la pone en marcha, como una cita a la que el paciente no vino, y qué pasa después: mensajes, esperas y un camino distinto según responda.',
+      example: 'En este ejemplo, si un paciente no viene, le escribe por WhatsApp para reprogramar y, si en dos días no ha respondido, avisa a su profesional.',
+      link: 'Ver las automatizaciones',
+      alt: 'El editor de automatizaciones con el flujo No asistió: etiqueta, mensaje de WhatsApp, espera a que responda y aviso al profesional',
     },
     specialties: {
       h2: 'Para quiropráctica, fisioterapia, osteopatía y podología',
@@ -242,7 +273,7 @@ export const siteEs = {
         { q: '¿Dónde se guardan los datos de mis pacientes?', a: 'En servidores dentro de la Unión Europea, con copia diaria. Tu clínica es la responsable y QuiroFlow firma el contrato de encargado del tratamiento.' },
         { q: '¿Puedo llevarme mis datos si me voy?', a: 'Sí. Pacientes, citas, notas, formularios y facturación se exportan en CSV y PDF desde tu cuenta, sin coste.' },
         { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes con 1.000 respuestas, o incluida en Practice y Clinic. Cada 1.000 respuestas más son 15 €.' },
-        { q: '¿Qué cuesta VeriFactu?', a: '7,50 € al mes por sede, solo desde el día en que empiezas a enviar a la AEAT. El modo de pruebas es gratis.' },
+        { q: '¿Cuesta algo VeriFactu?', a: 'No. Está incluido en todos los planes, también cuando envías de verdad a la AEAT.' },
         { q: '¿Qué incluye la prueba de 15 días?', a: 'El producto entero, sin tarjeta. Si te quedas, migramos tus datos antes de que empieces a pagar.' },
       ],
     },
@@ -291,7 +322,7 @@ export const siteEs = {
         { q: '¿Cómo se cuentan los profesionales?', a: 'Solo cuenta quien pasa consulta. Recepción, administración y dirección son usuarios gratis e ilimitados, y los pacientes no se cuentan nunca.' },
         { q: '¿Qué incluye la prueba de 15 días?', a: 'El producto entero, sin tarjeta. Si te quedas, migramos tus datos antes de que empieces a pagar.' },
         { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes (17 € en anual) con 1.000 respuestas, o incluida en Growth, Practice y Clinic. Cada 1.000 respuestas más son 15 €, y puedes ponerle un límite.' },
-        { q: '¿Qué cuesta VeriFactu?', a: '7,50 € al mes por sede, solo desde el día en que empiezas a enviar a la AEAT. El modo de pruebas es gratis.' },
+        { q: '¿Cuesta algo VeriFactu?', a: 'No. Está incluido en todos los planes, también cuando envías de verdad a la AEAT.' },
         { q: '¿Los precios llevan IVA?', a: 'No. Se añade un 21 % de IVA en la factura.' },
       ],
     },

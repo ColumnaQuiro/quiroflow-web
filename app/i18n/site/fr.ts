@@ -8,6 +8,18 @@ export const siteFr = {
     cta: 'Essai gratuit',
     demo: 'Réserver une démo',
     demoLong: 'Ou réservez une démo de 30 minutes avec nous',
+    shots: {
+      recepcionista: 'La réceptionniste IA qui déplace un rendez-vous sur WhatsApp, ses messages marqués Réceptionniste IA',
+      calendario: 'L’agenda de QuiroFlow avec une colonne par salle, le statut de chaque rendez-vous et la caisse du jour',
+      calendarioSalas: 'Les rendez-vous du jour répartis par salle, chacun avec son praticien et son statut',
+      bandeja: 'La messagerie avec les conversations WhatsApp et le dossier du patient à côté',
+      planCuidados: 'Le dossier d’une patiente avec son plan de soins et l’alerte de retard',
+      bono: 'Un forfait de 10 séances avec les séances restantes et le montant payé',
+      facturas: 'Les factures d’un patient, signées en chaîne comme l’exige VeriFactu',
+      postural: 'L’analyse posturale d’un patient à deux dates, avec les points de repère marqués',
+      retencion: 'Rapport de fidélisation avec les nouveaux patients, ceux qui reviennent et les plans non terminés',
+      app: 'L’app patient avec le prochain rendez-vous, les séances restantes et les messages avec le cabinet',
+    },
     nav: {
       product: 'Produit',
       clinics: 'Cabinets',
@@ -71,7 +83,7 @@ export const siteFr = {
     hero: {
       h1: 'Logiciel de gestion pour cabinets',
       lead: 'L’agenda, WhatsApp, les forfaits et les factures VeriFactu de votre cabinet dans un seul logiciel. À partir de 45 € par mois et par praticien.',
-      aria: 'Trois vues de QuiroFlow : la réceptionniste IA qui réserve un rendez-vous sur WhatsApp, le flux du cabinet avec ses salles et une facture VeriFactu acceptée par l’AEAT',
+      aria: 'Écrans réels de QuiroFlow : l’agenda par salle, l’app patient, un forfait, les factures, le rapport de fidélisation et l’analyse posturale',
       wa: {
         head: 'Réceptionniste IA',
         msgs: ['Vous avez un créneau cette semaine pour une première séance ?', 'La première séance coûte 50 €. J’ai jeudi à 10:00 ou vendredi à 17:30.', 'Jeudi à 10h', 'C’est fait : jeudi à 10:00 avec Marta.'],
@@ -195,7 +207,26 @@ export const siteFr = {
       },
     },
     money: {
-      h2: 'Paiements, factures et app',
+      h2: 'Paiements et factures',
+    },
+    patientApp: {
+      h2: 'L’app de vos patients',
+      lead: 'Ils confirment ou déplacent leur rendez-vous, cochent leurs exercices à la maison, voient leur posture progresser et paient leurs factures. La même app sur iPhone et Android.',
+      alts: ['L’accueil de l’app patient avec le prochain rendez-vous confirmé et les séances restantes', 'Les rendez-vous du patient, le prochain à confirmer et les précédents', 'Les exercices à la maison, avec la vidéo du pont fessier et les jours faits cette semaine', 'Les progrès de sa posture, avec l’évolution et sa silhouette avant et maintenant', 'La facturation du patient avec son forfait, ce qui reste dû et ses paiements'],
+      labels: ['Accueil', 'Rendez-vous', 'Facturation'],
+    },
+    teamApp: {
+      h2: 'Le cabinet dans le téléphone de votre équipe',
+      lead: 'L’agenda du jour, le dossier de chaque patient et la messagerie WhatsApp, aussi depuis le téléphone. Connexion avec Face ID et une alerte à chaque nouvelle réservation.',
+      rows: ['Qui est en séance et qui arrive', 'Le dossier avec le plan, les notes et les paiements', 'Appeler, écrire ou réserver sans aller à l’ordinateur'],
+      alts: ['Ma journée dans l’app de l’équipe, avec le chiffre d’affaires et les séances de la semaine', 'L’agenda du jour sur le téléphone, chaque patient avec son statut', 'Le dossier d’une patiente sur le téléphone, avec son plan de soins'],
+    },
+    automations: {
+      h2: 'Des automatisations que vous créez',
+      lead: 'Vous choisissez ce qui la déclenche, comme un rendez-vous manqué, et ce qui se passe ensuite : messages, attentes et un chemin différent selon la réponse.',
+      example: 'Dans cet exemple, quand un patient ne vient pas, elle lui écrit sur WhatsApp pour reprogrammer et, sans réponse en deux jours, prévient son praticien.',
+      link: 'Voir les automatisations',
+      alt: 'L’éditeur d’automatisations avec le parcours rendez-vous manqué : étiquette, message WhatsApp, attente de la réponse et alerte au praticien',
     },
     specialties: {
       h2: 'Pour la chiropraxie, la kinésithérapie, l’ostéopathie et la podologie',
@@ -237,7 +268,7 @@ export const siteFr = {
         { q: 'Où sont stockées les données de mes patients ?', a: 'Sur des serveurs dans l’Union européenne, sauvegardés chaque jour. Votre cabinet est responsable du traitement et QuiroFlow signe le contrat de sous-traitance.' },
         { q: 'Puis-je récupérer mes données si je pars ?', a: 'Oui. Patients, rendez-vous, notes, formulaires et facturation s’exportent en CSV et PDF depuis votre compte, sans frais.' },
         { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois avec 1 000 réponses, ou incluse dans Practice et Clinic. Chaque tranche de 1 000 réponses en plus coûte 15 €.' },
-        { q: 'Combien coûte VeriFactu ?', a: '7,50 € par mois et par site, seulement à partir du jour où vous envoyez à l’AEAT. Le mode test est gratuit.' },
+        { q: 'VeriFactu est-il payant ?', a: 'Non. Il est inclus dans toutes les formules, y compris pour l’envoi réel à l’AEAT.' },
         { q: 'Que comprend l’essai de 15 jours ?', a: 'Tout le produit, sans carte bancaire. Si vous restez, nous migrons vos données avant votre premier paiement.' },
       ],
     },
@@ -286,7 +317,7 @@ export const siteFr = {
         { q: 'Comment sont comptés les praticiens ?', a: 'Seuls ceux qui consultent comptent. L’accueil, l’administration et la direction sont des utilisateurs gratuits et illimités, et les patients ne sont jamais comptés.' },
         { q: 'Que comprend l’essai de 15 jours ?', a: 'Tout le produit, sans carte bancaire. Si vous restez, nous migrons vos données avant votre premier paiement.' },
         { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois (17 € en annuel) avec 1 000 réponses, ou incluse dans Growth, Practice et Clinic. Chaque tranche de 1 000 réponses en plus coûte 15 €, avec un plafond mensuel si vous le souhaitez.' },
-        { q: 'Combien coûte VeriFactu ?', a: '7,50 € par mois et par site, seulement à partir du jour où vous envoyez à l’AEAT. Le mode test est gratuit.' },
+        { q: 'VeriFactu est-il payant ?', a: 'Non. Il est inclus dans toutes les formules, y compris pour l’envoi réel à l’AEAT.' },
         { q: 'Les prix incluent-ils la TVA ?', a: 'Non. La TVA espagnole de 21 % s’ajoute sur la facture.' },
       ],
     },

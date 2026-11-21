@@ -441,7 +441,7 @@ export const es = {
     },
     verifactu: {
       title: 'Facturas VERI*FACTU',
-      body: 'QR, encadenado y envío a la AEAT desde el mismo programa. 7,50 €/mes por sede, solo desde que empiezas a enviar.',
+      body: 'QR, encadenado y envío a la AEAT desde el mismo programa. Incluido en todos los planes, sin coste.',
       link: 'Fechas y obligaciones para clínicas',
     },
     automations: {
@@ -473,9 +473,9 @@ export const es = {
     ctaSecondary: 'Hablar con el equipo',
     exVat: 'sin IVA',
     vatNote: 'Precios sin IVA. Se añade un 21% en la factura.',
-    // What the app bills (addons.verifactu, 750 cents per active location),
-    // and only from the day a clinic goes live -- test mode is free.
-    verifactuNote: 'VeriFactu: 7,50 €/mes por sede, solo desde el día en que empiezas a enviar a la AEAT.',
+    // VeriFactu has been free since 2026-11-20 (it used to be 7,50 €/month
+    // per location from go-live). Keep in step with the app's billing.
+    verifactuNote: 'VeriFactu: incluido en todos los planes, sin coste, también cuando envías de verdad a la AEAT.',
     receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en los planes Practice y Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
     ctaNote: '15 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
@@ -545,7 +545,7 @@ export const es = {
       },
       {
         q: '¿QuiroFlow está preparado para VeriFactu?',
-        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Puedes enviar con el certificado de tu clínica o autorizar a QuiroFlow para que envíe por ti. Empiezas en modo de pruebas, sin coste, y pasas a envío real el día que elijas; desde ese día cuesta 7,50 € al mes por sede.',
+        a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente. Puedes enviar con el certificado de tu clínica o autorizar a QuiroFlow para que envíe por ti. Empiezas en modo de pruebas y pasas a envío real el día que elijas. Está incluido en todos los planes, sin coste.',
       },
       {
         q: '¿Hay app para el móvil?',
@@ -865,7 +865,7 @@ export const es = {
         },
         {
           q: '¿Está preparado para VeriFactu?',
-          a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente desde el día en que pasas a producción. Hasta entonces funciona en modo de pruebas, sin coste; desde ese día cuesta 7,50 € al mes por sede.',
+          a: 'Sí. Cada factura lleva su QR, se encadena con la anterior y se envía a la AEAT automáticamente desde el día en que pasas a producción. Hasta entonces funciona en modo de pruebas. Está incluido en todos los planes, sin coste.',
         },
         {
           q: '¿Puedo migrar desde el programa que uso ahora?',
