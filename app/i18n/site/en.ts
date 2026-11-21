@@ -212,7 +212,7 @@ export const siteEn = {
     patientApp: {
       h2: 'Your patients’ app',
       lead: 'Patients confirm or move their appointment, tick off their home exercises, see their posture improve and pay their invoices. The same app on iPhone and Android.',
-      alts: ['The patient app home screen with the next appointment confirmed and the sessions left', 'The patient’s appointments, the next one to confirm and the past ones', 'Home exercises, with the days done this week and a Done today button', 'Posture progress between two assessments, with the weight the neck carries', 'The patient’s billing with the package, what is due and the charges'],
+      alts: ['The patient app home screen with the next appointment confirmed and the sessions left', 'The patient’s appointments, the next one to confirm and the past ones', 'Home exercises, with the video showing how to do a glute bridge and the days done this week', 'Posture progress, with the trend and the figure before and now', 'The patient’s billing with the package, what is due and the charges'],
       labels: ['Home', 'Appointments', 'Billing'],
     },
     teamApp: {
