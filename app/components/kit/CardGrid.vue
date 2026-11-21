@@ -5,7 +5,7 @@ import type { ScreenKey } from '~/utils/screens'
 // a small drawn panel (KitMini). layout "two-rows" puts four cards as two
 // rows of two over two screens (.g2); "bento" puts five as a wide card and a
 // narrow one, then three; "three" puts three in one row on one screen.
-interface Card { title: string; body: string; rows: string[][]; tones?: string[]; shot?: { screen: ScreenKey; alt: string; phone?: boolean } }
+interface Card { title: string; body: string; rows: string[][]; tones?: string[]; shot?: { screen: ScreenKey; alt: string; phone?: boolean }; ill?: 'plan' | 'waitlist' | 'bono' | 'invoice' | 'reports' | 'rooms' | 'list' }
 defineProps<{
   id: string
   h2: string
@@ -21,7 +21,7 @@ defineProps<{
     <div class="wrap">
       <div class="group">
         <div class="section-head">
-          <h2 :id="`${id}-h`">{{ h2 }}<template v-if="muted"> <span class="muted">{{ muted }}</span></template></h2>
+          <h2 :id="`${id}-h`">{{ h2 }}<template v-if="muted">{{ ' ' }}<span class="muted">{{ muted }}</span></template></h2>
           <p v-if="link"><a class="link" :href="link.href">{{ link.label }}</a></p>
         </div>
         <div class="grid">
@@ -34,7 +34,7 @@ defineProps<{
             <h3>{{ card.title }}</h3>
             <p>{{ card.body }}</p>
             <KitShotPanel v-if="card.shot" :screen="card.shot.screen" :alt="card.shot.alt" :phone="card.shot.phone" />
-            <div v-else class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
+            <KitIll v-else :kind="card.ill || 'list'" :rows="card.rows" />
           </article>
         </div>
       </div>
@@ -48,7 +48,7 @@ defineProps<{
           <h3>{{ card.title }}</h3>
           <p>{{ card.body }}</p>
           <KitShotPanel v-if="card.shot" :screen="card.shot.screen" :alt="card.shot.alt" :phone="card.shot.phone" />
-          <div v-else class="panel"><KitMini :rows="card.rows" :tones="card.tones" /></div>
+          <KitIll v-else :kind="card.ill || 'list'" :rows="card.rows" />
         </article>
       </div>
     </div>

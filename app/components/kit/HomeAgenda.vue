@@ -7,13 +7,13 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <section id="agenda" class="section" aria-labelledby="agenda-h">
+  <section id="agenda" class="section" style="--h: 2; --hm: 1" aria-labelledby="agenda-h">
     <div class="wrap">
       <div class="grid">
         <h2 id="agenda-h" class="span-5">{{ a.h2 }}</h2>
         <p class="span-6 start-7 muted">{{ a.lead }} <a class="link" :href="localePath('funcionalidades')">{{ a.link }}</a></p>
       </div>
-      <div class="stage-brand fill">
+      <div class="stage-brand stage-brand--whole">
         <KitBrowser screen="calendario" :alt="c('site.shots.calendario')" />
       </div>
     </div>

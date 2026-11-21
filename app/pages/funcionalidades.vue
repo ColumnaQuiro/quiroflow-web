@@ -9,16 +9,16 @@ const alt = computed(() => c('site.shots'))
 useKitSeo('featuresPage')
 
 const clinicCards = computed(() => [
-  { ...f.value.clinic.agenda, shot: { screen: 'calendarioSalas' as const, alt: alt.value.calendarioSalas } },
-  { ...f.value.clinic.waitlist, tones: ['', 'strike s4', 's2'] },
+  { ...f.value.clinic.agenda, ill: 'rooms' as const },
+  { ...f.value.clinic.waitlist, ill: 'waitlist' as const },
   { ...f.value.clinic.forms, tones: ['', '', '', ''] },
   { ...f.value.clinic.exercises, tones: ['', '', '', 's2'] },
 ])
 const moneyCards = computed(() => [
-  { ...f.value.money.billing, shot: { screen: 'bono' as const, alt: alt.value.bono } },
-  { ...f.value.money.verifactu, shot: { screen: 'facturas' as const, alt: alt.value.facturas } },
+  { ...f.value.money.billing, ill: 'bono' as const },
+  { ...f.value.money.verifactu, ill: 'invoice' as const },
   { ...f.value.money.payments },
-  { ...f.value.money.reports, shot: { screen: 'retencion' as const, alt: alt.value.retencion } },
+  { ...f.value.money.reports, ill: 'reports' as const },
   { ...f.value.money.growth, tones: ['', '', 's2'] },
 ])
 const moreCards = computed(() => [

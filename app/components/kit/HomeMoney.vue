@@ -16,12 +16,12 @@ const h2 = computed(() => c('home.money.h2'))
         <article class="card card--row card--open span-4">
           <h3>{{ f.billing.title }}</h3>
           <p>{{ f.billing.body }}</p>
-          <KitShotPanel screen="bono" :alt="c('site.shots.bono')" />
+          <KitIll kind="bono" :rows="f.billing.rows" />
         </article>
         <article class="card card--row card--open span-4">
           <h3>{{ f.verifactu.title }}</h3>
           <p>{{ f.verifactu.body }}</p>
-          <KitShotPanel screen="facturas" :alt="c('site.shots.facturas')" />
+          <KitIll kind="invoice" :rows="f.verifactu.rows" />
         </article>
         <article class="card card--row card--open span-4">
           <h3>{{ f.app.title }}</h3>

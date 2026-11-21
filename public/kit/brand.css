@@ -315,3 +315,80 @@ html[data-ground="sky"] { --ground-bg: #EEF0FE; --ground-surface: #F7F8FF; --gro
 @media (max-width: 639px) { .stage-soft__shot { left: 16px; top: 16px; } }
 /* the features h1 ("Todo lo que hace QuiroFlow en tu clínica") on two lines */
 .hero--centred h1 { max-width: 22ch; }
+
+/* ---------------------------------------------------------------- feature illustrations (KitIll) */
+.panel.panel--ill { overflow: hidden; background-image: none !important; background-color: #EEF0FE !important; font: 400 14px/20px var(--font-text); color: #15171E; }
+.il-card { position: absolute; background: #fff; border-radius: 14px; padding: 16px 18px; display: grid; gap: 10px;
+  box-shadow: 0 1px 2px rgb(21 23 30 / .06), 0 20px 44px -20px rgb(21 23 30 / .30); }
+.il-main { left: 24px; right: 24px; top: 24px; }
+.il-title { margin: 0; font-weight: 500; font-size: 15px; }
+.il-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+.il-row > span:first-child, .il-row > s { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.il-row s { color: #4A4F60; }
+.il-big b { font-size: 16px; font-weight: 500; }
+.il-big span { font: 500 16px/1 var(--font-text); font-variant-numeric: tabular-nums; }
+.il-badge { flex: none; padding: 2px 10px; border-radius: 99px; font-size: 13px; font-weight: 500; white-space: nowrap; }
+.il-badge.ok { background: #E9F6EF; color: #157F52; } .il-badge.late { background: #FDF0F2; color: #B4230F; } .il-badge.info { background: #EEF0FE; color: #3B32C9; }
+.il-plan { display: grid; gap: 8px; padding-top: 10px; border-top: 1px solid #F0F1F4; }
+.il-periods { display: flex; gap: 8px; }
+.il-periods span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 2px solid; font-size: 12px; font-weight: 500; }
+.il-periods .ok { border-color: #157F52; color: #157F52; background: #E9F6EF; } .il-periods .late { border-color: #B4230F; color: #B4230F; }
+.il-periods .now { border-color: #4F46E5; color: #4F46E5; box-shadow: 0 0 0 4px #EEF0FE; }
+.il-bar { height: 8px; border-radius: 99px; background: #E8E9ED; overflow: hidden; } .il-bar i { display: block; height: 100%; border-radius: 99px; background: #4F46E5; }
+.il-btns { display: flex; gap: 8px; } .il-btn { padding: 6px 14px; border-radius: 8px; background: #4F46E5; color: #fff; font-weight: 500; font-size: 13px; } .il-btn.ghost { background: #fff; color: #15171E; border: 1px solid #E8E9ED; }
+.il-toast { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #fff; border-radius: 14px; max-width: calc(100% - 32px);
+  box-shadow: 0 1px 2px rgb(21 23 30 / .06), 0 24px 48px -18px rgb(21 23 30 / .38); }
+.il-toast > span:not(.il-icon):not(.il-badge) { display: grid; min-width: 0; }
+.il-toast b { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.il-toast small { font-size: 13px; color: #4A4F60; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.il-at-br { right: 16px; bottom: 20px; }
+.il-icon { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; font-weight: 600; font-size: 15px; color: #fff; background: #4F46E5; }
+.il-icon.ok { background: #157F52; } .il-icon.late { background: #B4230F; }
+.il-icon.wa { background: #25D366 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.1-.4.1-.9.1-1.5-.1-.3-.1-.8-.3-1.3-.5-2.3-1-3.8-3.3-3.9-3.5-.1-.1-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.6c.1.1.1.3 0 .4l-.2.4-.3.4c-.1.1-.2.3-.1.5.2.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2z'/%3E%3C/svg%3E") center / 20px no-repeat; }
+.il-step { position: absolute; z-index: 2; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 2px solid #4F46E5; color: #4F46E5; font-weight: 600; font-size: 13px; }
+.il-slot { left: 8%; top: 14%; width: 54%; }
+.il-s1 { left: calc(8% - 12px); top: calc(14% - 12px); }
+.il-dots { position: absolute; left: 20%; top: 46%; height: 18%; border-left: 2px dotted #8C8FE8; }
+.il-offer { left: 12%; top: 64%; }
+.il-s2 { left: calc(12% - 12px); top: calc(64% - 12px); }
+.il-list { right: 6%; top: 10%; width: 34%; }
+.il-doc { left: 24px; top: 24px; width: 62%; }
+.il-lines { display: grid; gap: 6px; } .il-lines i { display: block; height: 8px; border-radius: 4px; background: #F0F1F4; }
+.il-qr-row { justify-content: flex-start; } .il-qr-row small { font-size: 13px; color: #4A4F60; white-space: normal; }
+.il-qr { flex: none; width: 44px; height: 44px; border: 4px solid #15171E; border-radius: 4px;
+  background: conic-gradient(#15171E 25%, #fff 0 50%, #15171E 0 75%, #fff 0) 0 0 / 12px 12px; }
+.il-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.il-kpis div { display: grid; gap: 2px; padding: 10px 12px; border: 1px solid #F0F1F4; border-radius: 10px; }
+.il-kpis small { font-size: 13px; color: #4A4F60; } .il-kpis b { font: 500 24px/1.1 var(--font-display); letter-spacing: -0.02em; }
+.il-chart { display: flex; align-items: flex-end; gap: 8px; height: 64px; }
+.il-chart i { flex: 1; border-radius: 4px 4px 0 0; background: #DADDFB; } .il-chart i.on { background: #4F46E5; }
+.il-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.il-col { min-height: 120px; border-radius: 10px; background: #F7F8FA; padding: 6px; }
+.il-appt { display: grid; gap: 2px; padding: 8px; border-radius: 8px; border-left: 3px solid; font-size: 13px; line-height: 18px; }
+.il-appt b { font-weight: 500; } .il-appt small { font-size: 12px; opacity: .85; }
+.il-appt.c0 { background: #ECEBFD; border-color: #6A61EC; } .il-appt.c1 { background: #E3F4EE; border-color: #1C8C6A; margin-top: 28px; } .il-appt.c2 { background: #FBE8F0; border-color: #C2457A; margin-top: 56px; }
+/* the small card panels on a phone: the main card only */
+@media (max-width: 639px) {
+  .panel--ill .il-sec { display: none; }
+  .il-main, .il-doc { left: 16px; right: 16px; top: 16px; width: auto; }
+  .il-card { padding: 12px 14px; gap: 8px; }
+}
+
+/* whole screens: the receptionist's conversation stands whole on the soft ground */
+.stage-soft__shot { left: 50%; top: 32px; transform: translateX(-50%); width: auto; height: calc(100% - 64px); }
+@media (max-width: 639px) { .stage-soft__shot { top: 16px; height: calc(100% - 32px); left: 50%; } }
+
+/* the whole calendar on the brand stage, nothing cut */
+.stage-brand--whole { margin-top: var(--s-7); padding-bottom: 40px; }
+.stage-brand--whole .browser { border-radius: 12px; }
+@media (max-width: 639px) { .stage-brand--whole { padding-bottom: 16px; } }
+/* hero collage: a whole screen, the phone, and illustration sets */
+.ly-collage .ly-piece.pc-screen { height: auto; background: #fff; border: 1px solid #E8E9ED; border-radius: 12px; }
+.ly-collage .ly-piece.pc-screen > img { width: 100%; height: auto; object-fit: fill; display: block; }
+.ly-collage .ly-piece.pc-ill { background: transparent; box-shadow: none; overflow: visible; }
+.ly-collage .ly-piece.pc-ill > .panel--ill { position: absolute; inset: 0; height: 100%; border-radius: 16px; }
+.ly-collage .ly-piece.pc-shot--phone { background: transparent; box-shadow: none; }
+.ly-collage .ly-piece.pc-shot--phone > img { width: 100%; height: 100%; object-fit: contain; object-position: center top; }
+
+.stage-soft { display: grid; place-items: center; }
+.stage-soft .stage-soft__shot { position: static; transform: none; width: auto; max-width: calc(100% - 48px); height: auto; max-height: calc(100% - 48px); }

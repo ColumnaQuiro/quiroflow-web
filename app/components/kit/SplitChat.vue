@@ -27,7 +27,7 @@ defineProps<{
           <p><a class="link" :href="link.href">{{ link.label }}</a></p>
         </div>
         <div v-if="shot" class="frame frame--split frame--tall stage-soft span-6 start-7">
-          <img class="stage-soft__shot" src="/screens/recepcionista.webp" :alt="shot.alt" width="592" height="580" loading="lazy" decoding="async">
+          <img class="stage-soft__shot" src="/screens/recepcionista.webp" :alt="shot.alt" width="592" height="706" loading="lazy" decoding="async">
         </div>
         <div v-else class="frame frame--split frame--lit frame--tall span-6 start-7">
           <div class="stage stage--fade-b">
