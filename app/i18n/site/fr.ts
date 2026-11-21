@@ -207,7 +207,26 @@ export const siteFr = {
       },
     },
     money: {
-      h2: 'Paiements, factures et app',
+      h2: 'Paiements et factures',
+    },
+    patientApp: {
+      h2: 'L’app de vos patients',
+      lead: 'Ils confirment ou déplacent leur rendez-vous, voient les séances qui leur restent et paient leurs factures depuis leur téléphone. La même app sur iPhone et Android.',
+      alts: ['L’accueil de l’app patient avec le prochain rendez-vous confirmé et les séances restantes', 'Les rendez-vous du patient, le prochain à confirmer et les précédents', 'La facturation du patient avec son forfait, ce qui reste dû et ses paiements'],
+      labels: ['Accueil', 'Rendez-vous', 'Facturation'],
+    },
+    teamApp: {
+      h2: 'Le cabinet dans le téléphone de votre équipe',
+      lead: 'L’agenda du jour, le dossier de chaque patient et la messagerie WhatsApp, aussi depuis le téléphone. Connexion avec Face ID et une alerte à chaque nouvelle réservation.',
+      rows: ['Qui est en séance et qui arrive', 'Le dossier avec le plan, les notes et les paiements', 'Appeler, écrire ou réserver sans aller à l’ordinateur'],
+      alts: ['Ma journée dans l’app de l’équipe, avec le chiffre d’affaires et les séances de la semaine', 'L’agenda du jour sur le téléphone, chaque patient avec son statut', 'Le dossier d’une patiente sur le téléphone, avec son plan de soins'],
+    },
+    automations: {
+      h2: 'Des automatisations que vous créez',
+      lead: 'Vous choisissez ce qui la déclenche, comme un rendez-vous manqué, et ce qui se passe ensuite : messages, attentes et un chemin différent selon la réponse.',
+      example: 'Dans cet exemple, quand un patient ne vient pas, elle lui écrit sur WhatsApp pour reprogrammer et, sans réponse en deux jours, prévient son praticien.',
+      link: 'Voir les automatisations',
+      alt: 'L’éditeur d’automatisations avec le parcours rendez-vous manqué : étiquette, message WhatsApp, attente de la réponse et alerte au praticien',
     },
     specialties: {
       h2: 'Pour la chiropraxie, la kinésithérapie, l’ostéopathie et la podologie',

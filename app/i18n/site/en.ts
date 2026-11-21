@@ -207,7 +207,26 @@ export const siteEn = {
       },
     },
     money: {
-      h2: 'Payments, invoices and the app',
+      h2: 'Payments and invoices',
+    },
+    patientApp: {
+      h2: 'Your patients’ app',
+      lead: 'Patients confirm or move their appointment, see the sessions left on their package and pay their invoices from their phone. The same app on iPhone and Android.',
+      alts: ['The patient app home screen with the next appointment confirmed and the sessions left', 'The patient’s appointments, the next one to confirm and the past ones', 'The patient’s billing with the package, what is due and the charges'],
+      labels: ['Home', 'Appointments', 'Billing'],
+    },
+    teamApp: {
+      h2: 'The clinic on your team’s phone',
+      lead: 'Today’s calendar, every patient’s record and the WhatsApp inbox, from the phone too. Sign in with Face ID and get a notice for every new booking.',
+      rows: ['Who is in session and who is arriving', 'The record with the plan, notes and payments', 'Call, message or book without going to the desk'],
+      alts: ['My day in the team app, with takings and this week’s visits', 'Today’s calendar on the phone, each patient with their status', 'A patient record on the phone, with her care plan'],
+    },
+    automations: {
+      h2: 'Automations you build yourself',
+      lead: 'You choose what starts it, such as an appointment the patient missed, and what happens next: messages, waits and a different path depending on the reply.',
+      example: 'In this example, when a patient misses a visit it writes to them on WhatsApp to rebook and, if they have not replied in two days, tells their practitioner.',
+      link: 'See the automations',
+      alt: 'The automation editor with the no-show flow: a tag, a WhatsApp message, a wait for the reply and a notice to the practitioner',
     },
     specialties: {
       h2: 'For chiropractic, physiotherapy, osteopathy and podiatry',

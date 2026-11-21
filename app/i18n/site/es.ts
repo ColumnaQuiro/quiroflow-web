@@ -212,7 +212,26 @@ export const siteEs = {
       },
     },
     money: {
-      h2: 'Cobros, facturas y la app',
+      h2: 'Cobros y facturas',
+    },
+    patientApp: {
+      h2: 'La app de tus pacientes',
+      lead: 'Confirman o cambian la cita, ven las sesiones que les quedan del bono y pagan sus facturas desde el móvil. Es la misma app para iPhone y Android.',
+      alts: ['La pantalla de inicio de la app del paciente con su próxima cita confirmada y sus sesiones restantes', 'Las citas del paciente, con la próxima por confirmar y las anteriores', 'La facturación del paciente con su bono, lo pendiente y sus cargos'],
+      labels: ['Inicio', 'Citas', 'Facturación'],
+    },
+    teamApp: {
+      h2: 'La clínica en el móvil de tu equipo',
+      lead: 'La agenda del día, la ficha de cada paciente y la bandeja de WhatsApp, también desde el móvil. Entras con Face ID y te avisa de cada reserva nueva.',
+      rows: ['Quién está en consulta y quién llega ahora', 'La ficha con su plan, sus notas y sus cobros', 'Llamar, escribir o reservar sin ir al ordenador'],
+      alts: ['Mi día en la app del equipo, con los ingresos y las visitas de la semana', 'La agenda del día en el móvil, con cada paciente y su estado', 'La ficha de una paciente en el móvil, con su plan de cuidados'],
+    },
+    automations: {
+      h2: 'Automatizaciones que montas tú',
+      lead: 'Eliges qué la pone en marcha, como una cita a la que el paciente no vino, y qué pasa después: mensajes, esperas y un camino distinto según responda.',
+      example: 'En este ejemplo, si un paciente no viene, le escribe por WhatsApp para reprogramar y, si en dos días no ha respondido, avisa a su profesional.',
+      link: 'Ver las automatizaciones',
+      alt: 'El editor de automatizaciones con el flujo No asistió: etiqueta, mensaje de WhatsApp, espera a que responda y aviso al profesional',
     },
     specialties: {
       h2: 'Para quiropráctica, fisioterapia, osteopatía y podología',

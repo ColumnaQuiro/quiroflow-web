@@ -5,8 +5,14 @@
 export const SCREENS = {
   calendario: { src: '/screens/calendario.webp', w: 1280, h: 800 },
   bandeja: { src: '/screens/bandeja.webp', w: 1280, h: 800 },
+  automatizacion: { src: '/screens/automatizacion.webp', w: 1280, h: 800 },
   recepcionista: { src: '/screens/recepcionista.webp', w: 592, h: 706 },
-  appPaciente: { src: '/screens/app-paciente-inicio.webp', w: 416, h: 870 },
+  pacienteInicio: { src: '/screens/paciente-inicio.webp', w: 416, h: 870 },
+  pacienteCitas: { src: '/screens/paciente-citas.webp', w: 416, h: 870 },
+  pacienteFacturas: { src: '/screens/paciente-facturas.webp', w: 416, h: 870 },
+  equipoDia: { src: '/screens/equipo-dia.webp', w: 416, h: 870 },
+  equipoAgenda: { src: '/screens/equipo-agenda.webp', w: 416, h: 870 },
+  equipoFicha: { src: '/screens/equipo-ficha.webp', w: 416, h: 870 },
 } as const
 
 export type ScreenKey = keyof typeof SCREENS

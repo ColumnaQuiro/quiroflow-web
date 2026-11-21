@@ -24,7 +24,7 @@ const moneyCards = computed(() => [
 const moreCards = computed(() => [
   { ...f.value.more.booking, tones: ['', '', '', 's2'] },
   { ...f.value.more.automations },
-  { ...f.value.more.app, shot: { screen: 'appPaciente' as const, alt: alt.value.app, phone: true } },
+  { ...f.value.more.app },
   { ...f.value.more.reminders, tones: ['', 's2', ''] },
 ])
 </script>

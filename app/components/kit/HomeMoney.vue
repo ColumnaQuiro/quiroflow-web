@@ -4,6 +4,7 @@
 const c = useCopy()
 const f = computed(() => c('home.features'))
 const h2 = computed(() => c('home.money.h2'))
+const pay = computed(() => c('featuresPage.money.payments'))
 </script>
 
 <template>
@@ -24,9 +25,9 @@ const h2 = computed(() => c('home.money.h2'))
           <KitIll kind="invoice" :rows="f.verifactu.rows" />
         </article>
         <article class="card card--row card--open span-4">
-          <h3>{{ f.app.title }}</h3>
-          <p>{{ f.app.body }}</p>
-          <KitShotPanel screen="appPaciente" :alt="c('site.shots.app')" phone />
+          <h3>{{ pay.title }}</h3>
+          <p>{{ pay.body }}</p>
+          <KitIll kind="list" :rows="pay.rows" />
         </article>
       </div>
     </div>

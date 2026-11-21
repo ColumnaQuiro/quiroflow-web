@@ -63,7 +63,10 @@ usePageSeo({
       :shot="{ alt: c('site.shots.recepcionista') }"
     />
     <KitHomeMoney />
+    <KitHomePatientApp />
     <KitStatement id="ficha" :copy="home.statement" />
+    <KitHomeTeamApp />
+    <KitHomeAutomations />
     <KitHomeSpecialties />
     <KitHomeSwitch />
     <KitHomePricing />

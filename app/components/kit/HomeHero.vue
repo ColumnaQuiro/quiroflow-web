@@ -22,7 +22,7 @@ const h = computed(() => c('home.hero'))
                illustrations; layout.js crossfades the three sets. -->
           <div class="ly-collage__set is-on">
             <div class="ly-piece pc-screen" style="left: 4%; top: 10%; width: 74%"><img src="/screens/calendario.webp" alt="" width="1280" height="800"></div>
-            <div class="ly-piece pc-shot--phone" style="left: 64%; top: 30%; width: 30%; height: 64%"><img src="/screens/app-paciente-inicio.webp" alt=""></div>
+            <div class="ly-piece pc-shot--phone" style="left: 64%; top: 30%; width: 30%; height: 64%"><img src="/screens/paciente-inicio.webp" alt=""></div>
           </div>
           <div class="ly-collage__set" aria-hidden="true">
             <div class="ly-piece pc-ill" style="left: 2%; top: 4%; width: 96%; height: 46%"><KitIll kind="bono" :rows="c('home.features.billing.rows')" /></div>
