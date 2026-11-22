@@ -272,7 +272,7 @@ export const siteEs = {
       items: [
         { q: '¿Dónde se guardan los datos de mis pacientes?', a: 'En servidores dentro de la Unión Europea, con copia diaria. Tu clínica es la responsable y QuiroFlow firma el contrato de encargado del tratamiento.' },
         { q: '¿Puedo llevarme mis datos si me voy?', a: 'Sí. Pacientes, citas, notas, formularios y facturación se exportan en CSV y PDF desde tu cuenta, sin coste.' },
-        { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes con 1.000 respuestas, o incluida en Practice y Clinic. Cada 1.000 respuestas más son 15 €.' },
+        { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes con 1.000 respuestas, o incluida en Practice y Clinic. Las de más, a 19 € cada 1.000, solo las que uses.' },
         { q: '¿Cuesta algo VeriFactu?', a: 'No. Está incluido en todos los planes, también cuando envías de verdad a la AEAT.' },
         { q: '¿Qué incluye la prueba de 15 días?', a: 'El producto entero, sin tarjeta. Si te quedas, migramos tus datos antes de que empieces a pagar.' },
       ],
@@ -321,7 +321,7 @@ export const siteEs = {
       items: [
         { q: '¿Cómo se cuentan los profesionales?', a: 'Solo cuenta quien pasa consulta. Recepción, administración y dirección son usuarios gratis e ilimitados, y los pacientes no se cuentan nunca.' },
         { q: '¿Qué incluye la prueba de 15 días?', a: 'El producto entero, sin tarjeta. Si te quedas, migramos tus datos antes de que empieces a pagar.' },
-        { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes (17 € en anual) con 1.000 respuestas, o incluida en Growth, Practice y Clinic. Cada 1.000 respuestas más son 15 €, y puedes ponerle un límite.' },
+        { q: '¿Cuánto cuesta la recepcionista con IA?', a: '19 € al mes (17 € en anual) con 1.000 respuestas, o incluida en Growth, Practice y Clinic. Las de más, a 19 € cada 1.000, solo las que uses, y puedes ponerle un límite.' },
         { q: '¿Cuesta algo VeriFactu?', a: 'No. Está incluido en todos los planes, también cuando envías de verdad a la AEAT.' },
         { q: '¿Los precios llevan IVA?', a: 'No. Se añade un 21 % de IVA en la factura.' },
       ],

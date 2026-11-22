@@ -267,7 +267,7 @@ export const siteFr = {
       items: [
         { q: 'Où sont stockées les données de mes patients ?', a: 'Sur des serveurs dans l’Union européenne, sauvegardés chaque jour. Votre cabinet est responsable du traitement et QuiroFlow signe le contrat de sous-traitance.' },
         { q: 'Puis-je récupérer mes données si je pars ?', a: 'Oui. Patients, rendez-vous, notes, formulaires et facturation s’exportent en CSV et PDF depuis votre compte, sans frais.' },
-        { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois avec 1 000 réponses, ou incluse dans Practice et Clinic. Chaque tranche de 1 000 réponses en plus coûte 15 €.' },
+        { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois avec 1 000 réponses, ou incluse dans Practice et Clinic. Au-delà, 19 € les 1 000, uniquement celles utilisées.' },
         { q: 'VeriFactu est-il payant ?', a: 'Non. Il est inclus dans toutes les formules, y compris pour l’envoi réel à l’AEAT.' },
         { q: 'Que comprend l’essai de 15 jours ?', a: 'Tout le produit, sans carte bancaire. Si vous restez, nous migrons vos données avant votre premier paiement.' },
       ],
@@ -316,7 +316,7 @@ export const siteFr = {
       items: [
         { q: 'Comment sont comptés les praticiens ?', a: 'Seuls ceux qui consultent comptent. L’accueil, l’administration et la direction sont des utilisateurs gratuits et illimités, et les patients ne sont jamais comptés.' },
         { q: 'Que comprend l’essai de 15 jours ?', a: 'Tout le produit, sans carte bancaire. Si vous restez, nous migrons vos données avant votre premier paiement.' },
-        { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois (17 € en annuel) avec 1 000 réponses, ou incluse dans Growth, Practice et Clinic. Chaque tranche de 1 000 réponses en plus coûte 15 €, avec un plafond mensuel si vous le souhaitez.' },
+        { q: 'Combien coûte la réceptionniste IA ?', a: '19 € par mois (17 € en annuel) avec 1 000 réponses, ou incluse dans Growth, Practice et Clinic. Au-delà, 19 € les 1 000, uniquement celles utilisées, avec un plafond mensuel si vous le souhaitez.' },
         { q: 'VeriFactu est-il payant ?', a: 'Non. Il est inclus dans toutes les formules, y compris pour l’envoi réel à l’AEAT.' },
         { q: 'Les prix incluent-ils la TVA ?', a: 'Non. La TVA espagnole de 21 % s’ajoute sur la facture.' },
       ],
