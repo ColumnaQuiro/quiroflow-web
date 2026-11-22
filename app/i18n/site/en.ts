@@ -267,7 +267,7 @@ export const siteEn = {
       items: [
         { q: 'Where is my patients’ data stored?', a: 'On servers inside the European Union, backed up daily. Your clinic is the data controller and QuiroFlow signs the data processing agreement.' },
         { q: 'Can I take my data with me if I leave?', a: 'Yes. Patients, appointments, notes, forms and invoicing export as CSV and PDF from your account, at no cost.' },
-        { q: 'What does the AI receptionist cost?', a: '€19 a month with 1,000 replies, or included in Practice and Clinic. Each extra 1,000 replies is €15.' },
+        { q: 'What does the AI receptionist cost?', a: '€19 a month with 1,000 replies, or included in Practice and Clinic. Past them, €19 per 1,000, only the ones used.' },
         { q: 'Does VeriFactu cost extra?', a: 'No. It is included in every plan, also once you send to the AEAT for real.' },
         { q: 'What is included in the 15-day trial?', a: 'The whole product, with no card. If you stay, we move your data over before you start paying.' },
       ],
@@ -316,7 +316,7 @@ export const siteEn = {
       items: [
         { q: 'How are practitioners counted?', a: 'Only people who see patients count. Front desk, admin and management are free and unlimited, and patients are never counted.' },
         { q: 'What is included in the 15-day trial?', a: 'The whole product, with no card. If you stay, we move your data over before you start paying.' },
-        { q: 'What does the AI receptionist cost?', a: '€19 a month (€17 billed yearly) with 1,000 replies, or included in Growth, Practice and Clinic. Each extra 1,000 replies is €15, and you can set a monthly cap.' },
+        { q: 'What does the AI receptionist cost?', a: '€19 a month (€17 billed yearly) with 1,000 replies, or included in Growth, Practice and Clinic. Past them, €19 per 1,000, only the ones used, and you can set a monthly cap.' },
         { q: 'Does VeriFactu cost extra?', a: 'No. It is included in every plan, also once you send to the AEAT for real.' },
         { q: 'Do prices include VAT?', a: 'No. 21% Spanish VAT is added on the invoice.' },
       ],

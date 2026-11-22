@@ -431,7 +431,7 @@ export const fr: Messages = {
     exVat: 'HT',
     vatNote: "Prix hors taxes. 21 % de TVA s'ajoutent sur la facture.",
     verifactuNote: "VeriFactu : inclus dans toutes les formules, sans frais, y compris pour l'envoi réel à l'AEAT.",
-    receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et dans les formules Practice et Clinic. 1 000 réponses par mois incluses ; chaque 1 000 de plus, 15 €.',
+    receptionistNote: 'Réceptionniste IA : 19 €/mois (17 €/mois en annuel) seule, ou incluse dans Growth et dans les formules Practice et Clinic. 1 000 réponses par mois incluses ; au-delà, 19 € les 1 000, uniquement celles utilisées.',
     ctaNote: "15 jours d'essai. Sans carte bancaire. Migration incluse.",
     anchor: {
       title: "Le prix d'un créneau perdu par semaine",
@@ -496,7 +496,7 @@ export const fr: Messages = {
       },
       {
         q: 'Que fait la réceptionniste IA et combien coûte-t-elle ?',
-        a: "Elle répond sur WhatsApp à vos patients et aux personnes qui écrivent pour la première fois, avec les informations que vous lui donnez sur la clinique et les vrais créneaux libres de votre agenda, et réserve ou déplace le rendez-vous quand le patient choisit une heure. Vous choisissez si elle répond seule (en dehors des horaires, ou aussi pendant) ou si elle laisse des brouillons à valider, et ce qui ne la concerne pas passe à une personne. Elle coûte 19 €/mois (17 €/mois en annuel) et inclut 1 000 réponses par mois ; chaque 1 000 de plus coûte 15 €, et vous pouvez fixer une limite mensuelle. Elle est incluse dans Growth et dans les formules Practice et Clinic.",
+        a: "Elle répond sur WhatsApp à vos patients et aux personnes qui écrivent pour la première fois, avec les informations que vous lui donnez sur la clinique et les vrais créneaux libres de votre agenda, et réserve ou déplace le rendez-vous quand le patient choisit une heure. Vous choisissez si elle répond seule (en dehors des horaires, ou aussi pendant) ou si elle laisse des brouillons à valider, et ce qui ne la concerne pas passe à une personne. Elle coûte 19 €/mois (17 €/mois en annuel) et inclut 1 000 réponses par mois ; au-delà, 19 € les 1 000, facturées uniquement si elles sont utilisées, et vous pouvez fixer une limite mensuelle. Elle est incluse dans Growth et dans les formules Practice et Clinic.",
       },
       {
         q: 'QuiroFlow est-il prêt pour VeriFactu ?',

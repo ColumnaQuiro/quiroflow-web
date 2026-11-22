@@ -476,7 +476,7 @@ export const es = {
     // VeriFactu has been free since 2026-11-20 (it used to be 7,50 €/month
     // per location from go-live). Keep in step with the app's billing.
     verifactuNote: 'VeriFactu: incluido en todos los planes, sin coste, también cuando envías de verdad a la AEAT.',
-    receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en los planes Practice y Clinic. 1.000 respuestas al mes incluidas; cada 1.000 más, 15 €.',
+    receptionistNote: 'Recepcionista con IA: 19 €/mes (17 €/mes en anual) por sí sola, o incluida en Growth y en los planes Practice y Clinic. 1.000 respuestas al mes incluidas; las de más, a 19 € cada 1.000, solo las que uses.',
     ctaNote: '15 días de prueba. Sin tarjeta. Migración incluida.',
     anchor: {
       title: 'Con lo que cuesta un hueco perdido a la semana',
@@ -541,7 +541,7 @@ export const es = {
       },
       {
         q: '¿Qué hace la recepcionista con IA y cuánto cuesta?',
-        a: 'Contesta los WhatsApp de tus pacientes y de quien te escribe por primera vez, con la información que tú le das de la clínica y los huecos reales de tu agenda, y reserva o mueve la cita cuando el paciente elige una hora. Tú eliges si contesta sola (fuera de horario, o también en horario) o si deja borradores para que los apruebes, y lo que no le corresponde lo pasa a una persona. Cuesta 19 €/mes (17 €/mes en anual) e incluye 1.000 respuestas al mes; cada 1.000 más son 15 €, y puedes ponerle un límite mensual. Está incluida en Growth y en los planes Practice y Clinic.',
+        a: 'Contesta los WhatsApp de tus pacientes y de quien te escribe por primera vez, con la información que tú le das de la clínica y los huecos reales de tu agenda, y reserva o mueve la cita cuando el paciente elige una hora. Tú eliges si contesta sola (fuera de horario, o también en horario) o si deja borradores para que los apruebes, y lo que no le corresponde lo pasa a una persona. Cuesta 19 €/mes (17 €/mes en anual) e incluye 1.000 respuestas al mes; las de más, a 19 € cada 1.000, pagando solo las que uses, y puedes ponerle un límite mensual. Está incluida en Growth y en los planes Practice y Clinic.',
       },
       {
         q: '¿QuiroFlow está preparado para VeriFactu?',

@@ -431,7 +431,7 @@ export const en: Messages = {
     exVat: 'ex. VAT',
     vatNote: 'Prices exclude VAT. 21% is added on the invoice.',
     verifactuNote: 'VeriFactu: included in every plan at no cost, also once you send to the AEAT for real.',
-    receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and in the Practice and Clinic plans. 1,000 replies a month included; each further 1,000 is €15.',
+    receptionistNote: 'AI receptionist: €19/mo (€17/mo billed annually) on its own, or included in Growth and in the Practice and Clinic plans. 1,000 replies a month included; past them, €19 per 1,000, only the ones used.',
     ctaNote: '15-day trial. No card required. Migration included.',
     anchor: {
       title: 'About what one lost slot a week costs you',
@@ -496,7 +496,7 @@ export const en: Messages = {
       },
       {
         q: 'What does the AI receptionist do, and what does it cost?',
-        a: 'It answers WhatsApp from your patients and from people writing for the first time, using what you tell it about the clinic and the real free times in your calendar, and books or moves the visit once the patient picks a time. You choose whether it answers on its own (outside clinic hours, or during them too) or leaves drafts for you to approve, and it hands anything that is not its to answer to a person. It costs €19/mo (€17/mo billed annually) and includes 1,000 replies a month; each further 1,000 is €15, and you can set a monthly limit. It is included in Growth and in the Practice and Clinic plans.',
+        a: 'It answers WhatsApp from your patients and from people writing for the first time, using what you tell it about the clinic and the real free times in your calendar, and books or moves the visit once the patient picks a time. You choose whether it answers on its own (outside clinic hours, or during them too) or leaves drafts for you to approve, and it hands anything that is not its to answer to a person. It costs €19/mo (€17/mo billed annually) and includes 1,000 replies a month; past them, €19 per 1,000, charged only for the ones used, and you can set a monthly limit. It is included in Growth and in the Practice and Clinic plans.',
       },
       {
         q: 'Is QuiroFlow ready for VeriFactu?',
