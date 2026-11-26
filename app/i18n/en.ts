@@ -598,6 +598,7 @@ export const en: Messages = {
     edge: {
       title: 'What decides a chiropractic practice\'s year',
       description: 'Chiropractic is not decided in the adjustment. It is decided by whether the patient finishes the plan, and whether the calendar leaves holes along the way.',
+      compareLink: 'Comparing software? Read our comparison of chiropractic practice management software →',
       items: [
         {
           title: 'It warns you before a patient abandons the plan',

@@ -1,4 +1,5 @@
 import type { Locale } from '~/composables/useLocale'
+import { CHIROPRACTIC_SOFTWARE_COMPARISON } from '~/content/articles/chiropractic-software-comparison'
 import { CHOOSING_SOFTWARE } from '~/content/articles/choosing-software'
 import { REDUCING_NO_SHOWS } from '~/content/articles/reducing-no-shows'
 
@@ -33,7 +34,7 @@ export interface Post {
   body: Record<Locale, PostBlock[]>
 }
 
-export const posts: Post[] = [CHOOSING_SOFTWARE, REDUCING_NO_SHOWS]
+export const posts: Post[] = [CHIROPRACTIC_SOFTWARE_COMPARISON, CHOOSING_SOFTWARE, REDUCING_NO_SHOWS]
 
 /**
  * With a locale, only that locale's slug matches: /en/resources/<spanish slug>
