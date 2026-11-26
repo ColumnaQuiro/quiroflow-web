@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { BOOKING_URL, SIGNUP_URL } from '~/utils/links'
 import type { LocalisedText } from '~/composables/usePageSeo'
+import { CHIROPRACTIC_SOFTWARE_COMPARISON } from '~/content/articles/chiropractic-software-comparison'
 
 // Localised slugs rather than /en/software-quiropractica -- same reasoning as
 // the legal pages, and it matters more here: this page exists to rank, and the
@@ -11,6 +12,8 @@ definePageMeta({
 
 const t = useT()
 const { tm, rt } = useI18n()
+const { locale } = useLocale()
+const localePath = useLocalePath()
 
 // "software para quiroprácticos" leads the Spanish title on purpose: it is the
 // only chiropractic-software phrase Google's own suggestion index will admit
@@ -180,6 +183,15 @@ usePageSeo({
             <p class="text-[14.5px] leading-[1.7] text-ink-muted">{{ item.body }}</p>
           </div>
         </div>
+        <!-- The one internal link into the comparison article: this page and
+             that article target neighbouring searches, and the link tells
+             Google which one answers "which program" and which "this program". -->
+        <NuxtLink
+          :to="localePath({ name: 'recursos-slug', params: { slug: CHIROPRACTIC_SOFTWARE_COMPARISON.slug[locale] } })"
+          class="mx-auto text-center text-[14.5px] font-semibold text-brand-text hover:underline"
+        >
+          {{ t('quiropractica.edge.compareLink') }}
+        </NuxtLink>
       </div>
     </section>
 

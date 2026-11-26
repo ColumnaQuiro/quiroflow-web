@@ -643,6 +643,7 @@ export const es = {
     edge: {
       title: 'Lo que decide el año de una consulta quiropráctica',
       description: 'La quiropráctica no se juega en el ajuste. Se juega en si el paciente completa el plan y en si la agenda no deja huecos por el camino.',
+      compareLink: '¿Comparando programas? Lee nuestra comparativa de programas de gestión para clínicas de quiropráctica →',
       items: [
         {
           title: 'Te avisa antes de que un paciente abandone el plan',

@@ -598,6 +598,7 @@ export const fr: Messages = {
     edge: {
       title: "Ce qui décide l'année d'un cabinet de chiropraxie",
       description: "La chiropraxie ne se joue pas sur l'ajustement. Elle se joue sur le fait que le patient termine son plan, et que l'agenda ne laisse pas de trous en chemin.",
+      compareLink: 'Vous comparez des logiciels ? Lisez notre comparatif des logiciels de gestion pour cabinets de chiropraxie →',
       items: [
         {
           title: "Vous êtes prévenu avant qu'un patient abandonne le plan",
